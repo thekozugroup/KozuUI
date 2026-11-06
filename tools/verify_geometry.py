@@ -23,6 +23,57 @@ def radii(layer):
     value = layer.get('cornerRadius', 0)
     return [float(value)] * 4 if isinstance(value, (int, float)) else list(value)
 
+def paired_icon_issues(slot, parent):
+    labels = [child for child in parent.get('children', []) if child.get('type') == 'TEXT']
+    if not labels:
+        return []  # Icon-only controls keep their independent sizing rules.
+    prefix = f"{slot['id']} {slot['name']} in {parent['id']} {parent.get('name')}"
+    if (len(labels) != 1 or labels[0].get('leadingTrim') != 'capHeight'
+            or any(c in labels[0].get('characters', '') for c in '\n\r\u2028\u2029')
+            or labels[0].get('height', 0) <= 0):
+        return [f"{prefix}: paired icon needs one single-line capHeight-trimmed label"]
+    issues = []
+    width, height = parent.get('width', 0), parent.get('height', 0)
+    x, y = slot.get('x', 0), slot.get('y', 0)
+    end_x = min((0, width-height), key=lambda end: abs(x-end))
+    if (height <= 0 or abs(slot.get('width', 0)-height) > TOLERANCE
+            or abs(slot.get('height', 0)-height) > TOLERANCE
+            or abs(y) > TOLERANCE or abs(x-end_x) > TOLERANCE):
+        issues.append(f"{prefix}: slot must be {height:g} square at (0, 0) or ({width-height:g}, 0)")
+    parent_bounds = parent.get('absoluteBounds')
+    if not parent_bounds:
+        return issues + [f"{prefix}: parent absoluteBounds are required for visible-ink measurement"]
+    ink = []
+    for leaf, ancestors in layers(slot):
+        if leaf.get('children') or leaf.get('type') not in ('VECTOR', 'LINE', 'RECTANGLE', 'ELLIPSE', 'POLYGON', 'STAR', 'FRAME'):
+            continue
+        if any(not node.get('visible', True) or node.get('opacity', 1) <= 0 for node in (*ancestors, leaf)):
+            continue
+        stroke = leaf.get('strokeWeight', 0)/2 if any(
+            paint.get('visible', True) and paint.get('opacity', 1) > 0
+            for paint in leaf.get('strokes', [])) else 0
+        if not stroke and not any(paint.get('visible', True) and paint.get('opacity', 1) > 0
+                                  for paint in leaf.get('fills', [])):
+            continue
+        bounds = leaf.get('absoluteBounds')
+        if not bounds:
+            issues.append(f"{prefix}: icon leaf {leaf['id']} has no absoluteBounds")
+            continue
+        ink.append((bounds['x']-stroke, bounds['y']-stroke,
+                    bounds['x']+bounds['width']+stroke, bounds['y']+bounds['height']+stroke))
+    if not ink:
+        return issues + [f"{prefix}: no visible icon leaf geometry"]
+    left, top = min(box[0] for box in ink), min(box[1] for box in ink)
+    right, bottom = max(box[2] for box in ink), max(box[3] for box in ink)
+    cap_height = labels[0]['height']
+    if abs(bottom-top-cap_height) > TOLERANCE:
+        issues.append(f"{prefix}: visible icon ink height {bottom-top:g}, expected label cap height {cap_height:g}")
+    cx, cy = (left+right)/2, (top+bottom)/2
+    ex, ey = parent_bounds['x']+end_x+height/2, parent_bounds['y']+height/2
+    if abs(cx-ex) > TOLERANCE or abs(cy-ey) > TOLERANCE:
+        issues.append(f"{prefix}: visible icon ink center ({cx:g}, {cy:g}), expected endcap center ({ex:g}, {ey:g})")
+    return issues
+
 def geometry_issues(document):
     issues = []
     for layer, ancestors in layers(document):
@@ -48,6 +99,8 @@ def geometry_issues(document):
         if not ancestors:
             continue
         parent = ancestors[-1]
+        if name == 'Icon slot / concentric endcap':
+            issues.extend(paired_icon_issues(layer, parent))
         x, y = layer.get('x', 0), layer.get('y', 0)
         width, height = layer.get('width', 0), layer.get('height', 0)
         pw, ph = parent.get('width', 0), parent.get('height', 0)
@@ -95,7 +148,8 @@ def geometry_issues(document):
         if name.startswith('Aria /') and legacy_rail and x < 100:
             issues.append(f"{layer['id']} {name}: rail icon needs an explicit centered circular target")
 
-        is_button = any(s in name.lower() for s in ('button /','state=','capsule','/ action /','native text button','resume featured film','wearables / list / selected'))
+        is_button = (any(s in name.lower() for s in ('button /','state=','capsule','/ action /','native text button','resume featured film','wearables / list / selected'))
+                     or any(c.get('name') == 'Icon slot / concentric endcap' for c in layer.get('children', [])))
         compact_scroll_row = name.startswith('Transforming row /') and height <= 44
         if (is_button or compact_scroll_row or name.startswith(('Avatar /', 'Chip /'))) and height <= 110:
             for child in layer.get('children', []):
@@ -222,6 +276,85 @@ def self_test():
     assert any('button label' in issue for issue in geometry_issues(button_fixture))
     label.update(x=48, width=144)
     assert not geometry_issues(button_fixture)
+    paired_label = {'id':23, 'type':'TEXT', 'name':'Save', 'characters':'Save', 'leadingTrim':'capHeight',
+                    'x':40, 'y':16, 'width':120, 'height':16}
+    leaves = [
+        {'id':24, 'type':'VECTOR', 'name':'Upper stroke', 'strokeWeight':2,
+         'strokes':[{'type':'solid', 'color':'#FFFFFF'}],
+         'absoluteBounds':{'x':119, 'y':217, 'width':10, 'height':5}},
+        {'id':25, 'type':'VECTOR', 'name':'Lower stroke', 'strokeWeight':2,
+         'strokes':[{'type':'solid', 'color':'#FFFFFF'}],
+         'absoluteBounds':{'x':119, 'y':226, 'width':10, 'height':5}}]
+    paired_slot = {'id':22, 'type':'FRAME', 'name':'Icon slot / concentric endcap',
+                   'x':0, 'y':0, 'width':48, 'height':48, 'children':leaves}
+    paired_button = {'id':21, 'type':'FRAME', 'name':'Button / paired', 'width':200, 'height':48,
+                     'absoluteBounds':{'x':100, 'y':200, 'width':200, 'height':48},
+                     'children':[paired_slot, paired_label]}
+    assert not geometry_issues(paired_button)
+    leaves[0]['absoluteBounds']['y'] -= 1
+    leaves[1]['absoluteBounds']['y'] += 1
+    assert any('ink height' in issue for issue in geometry_issues(paired_button))
+    assert not any('ink center' in issue for issue in geometry_issues(paired_button))
+    leaves[0]['absoluteBounds']['y'] += 1
+    leaves[1]['absoluteBounds']['y'] -= 1
+    for axis in ('x', 'y'):
+        for leaf in leaves:
+            leaf['absoluteBounds'][axis] += 1
+        assert any('ink center' in issue for issue in geometry_issues(paired_button)), axis
+        assert not any('ink height' in issue for issue in geometry_issues(paired_button)), axis
+        for leaf in leaves:
+            leaf['absoluteBounds'][axis] -= 1
+    paired_slot['width'] = 47
+    assert any('slot must be' in issue for issue in geometry_issues(paired_button))
+    paired_slot.update(width=48, x=1)
+    assert any('slot must be' in issue for issue in geometry_issues(paired_button))
+    paired_slot.update(x=0, y=1)
+    assert any('slot must be' in issue for issue in geometry_issues(paired_button))
+    paired_slot.update(y=0, x=152)
+    for leaf in leaves:
+        leaf['absoluteBounds']['x'] += 152
+    assert not geometry_issues(paired_button)
+    hidden = {'id':26, 'type':'VECTOR', 'name':'Hidden geometry', 'visible':False,
+              'strokes':[{'type':'solid', 'color':'#FFFFFF'}], 'strokeWeight':2,
+              'absoluteBounds':{'x':0, 'y':0, 'width':1000, 'height':1000}}
+    paired_slot['children'].append(hidden)
+    assert not geometry_issues(paired_button)
+    pause_bars = [
+        {'id':27, 'type':'FRAME', 'name':'Pause bar', 'width':4, 'height':16,
+         'fills':[{'type':'solid', 'color':'#FFFFFF'}],
+         'absoluteBounds':{'x':270, 'y':216, 'width':4, 'height':16}},
+        {'id':28, 'type':'FRAME', 'name':'Pause bar', 'width':4, 'height':16,
+         'fills':[{'type':'solid', 'color':'#FFFFFF'}],
+         'absoluteBounds':{'x':278, 'y':216, 'width':4, 'height':16}}]
+    paired_slot['children'] = pause_bars
+    assert not geometry_issues(paired_button)
+    pause_bars[0]['absoluteBounds'].update(y=215, height=18)
+    assert any('ink height' in issue for issue in geometry_issues(paired_button))
+    assert not any('ink center' in issue for issue in geometry_issues(paired_button))
+    pause_bars[0]['absoluteBounds'].update(y=216, height=16)
+    for bar in pause_bars:
+        bar['absoluteBounds']['x'] += 1
+    assert any('ink center' in issue for issue in geometry_issues(paired_button))
+    rotated_line = {'id':29, 'type':'LINE', 'name':'Rotated stroke', 'rotation':45,
+                    'width':19.8, 'height':0, 'strokeWeight':2,
+                    'strokes':[{'type':'solid', 'color':'#FFFFFF'}],
+                    'absoluteBounds':{'x':269, 'y':217, 'width':14, 'height':14}}
+    paired_slot['children'] = [rotated_line]
+    assert not geometry_issues(paired_button)
+    rotated_line['absoluteBounds'].update(y=216, height=16)
+    assert any('ink height' in issue for issue in geometry_issues(paired_button))
+    paired_slot['children'] = leaves
+    paired_label['leadingTrim'] = 'none'
+    assert any('capHeight-trimmed label' in issue for issue in geometry_issues(paired_button))
+    paired_label.update(leadingTrim='capHeight', characters='Save\nnow')
+    assert any('single-line' in issue for issue in geometry_issues(paired_button))
+    paired_label['characters'] = 'Save'
+    paired_button['children'] = [paired_slot]
+    paired_slot['width'] = 24
+    assert not geometry_issues(paired_button)
+    paired_button['children'] = [paired_slot, paired_label]
+    paired_slot['name'] = 'Row icon'
+    assert not geometry_issues(paired_button)
     print('Geometry guardrail self-test passed')
 
 if __name__ == '__main__':

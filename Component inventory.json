@@ -533,6 +533,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:130",
       "gap": "VariableID:19",
       "paddingHorizontal": "VariableID:21"
     }
@@ -573,6 +574,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:130",
       "gap": "VariableID:19",
       "paddingHorizontal": "VariableID:21"
     }
@@ -613,6 +615,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:130",
       "gap": "VariableID:19",
       "paddingHorizontal": "VariableID:21"
     }
@@ -1166,18 +1169,18 @@
     "id": 554,
     "name": "Button / primary / rest",
     "width": 190.0,
-    "height": 66.0,
+    "height": 48.0,
     "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
-        12.0,
-        20.0,
-        12.0,
-        20.0
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",
@@ -1198,9 +1201,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
-      "fill": "VariableID:16",
-      "gap": "VariableID:19",
-      "paddingHorizontal": "VariableID:21"
+      "fill": "VariableID:16"
     }
   },
   {
@@ -1212,13 +1213,13 @@
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
-        12.0,
-        20.0,
-        12.0,
-        20.0
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",
@@ -1239,9 +1240,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
-      "fill": "VariableID:7",
-      "gap": "VariableID:19",
-      "paddingHorizontal": "VariableID:21"
+      "fill": "VariableID:7"
     }
   },
   {
@@ -1568,19 +1567,19 @@
   {
     "id": 683,
     "name": "Button / primary / rest",
-    "width": 174.0,
-    "height": 66.0,
+    "width": 200.0,
+    "height": 48.0,
     "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
-        12.0,
-        20.0,
-        12.0,
-        20.0
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",
@@ -1601,9 +1600,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
-      "fill": "VariableID:16",
-      "gap": "VariableID:19",
-      "paddingHorizontal": "VariableID:21"
+      "fill": "VariableID:16"
     }
   },
   {
@@ -1782,13 +1779,13 @@
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
-        12.0,
-        20.0,
-        12.0,
-        20.0
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",
@@ -1809,9 +1806,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
-      "fill": "VariableID:7",
-      "gap": "VariableID:19",
-      "paddingHorizontal": "VariableID:21"
+      "fill": "VariableID:7"
     }
   },
   {
@@ -1948,7 +1943,8 @@
     "height": 36.0,
     "description": "",
     "boundVariables": {
-      "effects/0/radius": "VariableID:28"
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:10"
     }
   },
   {
@@ -2064,13 +2060,13 @@
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
-        12.0,
-        20.0,
-        12.0,
-        20.0
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",
@@ -2091,9 +2087,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
-      "fill": "VariableID:16",
-      "gap": "VariableID:19",
-      "paddingHorizontal": "VariableID:21"
+      "fill": "VariableID:16"
     }
   },
   {
@@ -2778,13 +2772,13 @@
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
-        12.0,
-        20.0,
-        12.0,
-        20.0
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",
@@ -2805,9 +2799,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
-      "fill": "VariableID:7",
-      "gap": "VariableID:19",
-      "paddingHorizontal": "VariableID:21"
+      "fill": "VariableID:7"
     }
   },
   {
@@ -2868,6 +2860,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:130",
       "gap": "VariableID:19",
       "paddingHorizontal": "VariableID:21"
     }
@@ -3009,6 +3002,7 @@
     "boundVariables": {
       "cornerRadius": "VariableID:24",
       "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:130",
       "gap": "VariableID:19",
       "paddingHorizontal": "VariableID:21"
     }
@@ -3018,147 +3012,210 @@
     "name": "Icon button / Back to projects",
     "width": 48.0,
     "height": 48.0,
-    "description": "Back to projects; 48 point target; editable Aria SVG paths."
+    "description": "Back to projects; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3426,
     "name": "Icon button / Undo",
     "width": 48.0,
     "height": 48.0,
-    "description": "Undo; 48 point target; editable Aria SVG paths."
+    "description": "Undo; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3430,
     "name": "Icon button / Search project",
     "width": 48.0,
     "height": 48.0,
-    "description": "Search project; 48 point target; editable Aria SVG paths."
+    "description": "Search project; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3434,
     "name": "Icon button / Project collaborators",
     "width": 48.0,
     "height": 48.0,
-    "description": "Project collaborators; 48 point target; editable Aria SVG paths."
+    "description": "Project collaborators; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3440,
     "name": "Icon button / Export project",
     "width": 48.0,
     "height": 48.0,
-    "description": "Export project; 48 point target; editable Aria SVG paths."
+    "description": "Export project; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3445,
     "name": "Icon button / Workspace settings",
     "width": 48.0,
     "height": 48.0,
-    "description": "Workspace settings; 48 point target; editable Aria SVG paths."
+    "description": "Workspace settings; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3449,
     "name": "Icon button / More project actions",
     "width": 48.0,
     "height": 48.0,
-    "description": "More project actions; 48 point target; editable Aria SVG paths."
+    "description": "More project actions; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3509,
     "name": "Icon button / Return to start",
     "width": 48.0,
     "height": 48.0,
-    "description": "Return to start; 48 point target; editable Aria SVG paths."
+    "description": "Return to start; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3512,
     "name": "Icon button / Play arrangement",
     "width": 48.0,
     "height": 48.0,
-    "description": "Play arrangement; 48 point target; editable Aria SVG paths."
+    "description": "Play arrangement; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3516,
     "name": "Icon button / Stop playback",
     "width": 48.0,
     "height": 48.0,
-    "description": "Stop playback; 48 point target; editable Aria SVG paths."
+    "description": "Stop playback; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3519,
     "name": "Icon button / Record",
     "width": 48.0,
     "height": 48.0,
-    "description": "Record; 48 point target; editable Aria SVG paths."
+    "description": "Record; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3522,
     "name": "Icon button / Loop selection",
     "width": 48.0,
     "height": 48.0,
-    "description": "Loop selection; 48 point target; editable Aria SVG paths."
+    "description": "Loop selection; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 3534,
     "name": "Icon button / Output monitoring",
     "width": 48.0,
     "height": 48.0,
-    "description": "Output monitoring; 48 point target; editable Aria SVG paths."
+    "description": "Output monitoring; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 4205,
     "name": "Icon button / Select notes",
     "width": 48.0,
     "height": 48.0,
-    "description": "Select notes; 48 point target; editable Aria SVG paths."
+    "description": "Select notes; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 4209,
     "name": "Icon button / Add note",
     "width": 48.0,
     "height": 48.0,
-    "description": "Add note; 48 point target; editable Aria SVG paths."
+    "description": "Add note; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 4213,
     "name": "Icon button / Duplicate region",
     "width": 48.0,
     "height": 48.0,
-    "description": "Duplicate region; 48 point target; editable Aria SVG paths."
+    "description": "Duplicate region; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 4217,
     "name": "Icon button / Record audio",
     "width": 48.0,
     "height": 48.0,
-    "description": "Record audio; 48 point target; editable Aria SVG paths."
+    "description": "Record audio; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 4222,
     "name": "Icon button / Edit selected region",
     "width": 48.0,
     "height": 48.0,
-    "description": "Edit selected region; 48 point target; editable Aria SVG paths."
+    "description": "Edit selected region; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 4233,
     "name": "Icon button / Delete selected region",
     "width": 48.0,
     "height": 48.0,
-    "description": "Delete selected region; 48 point target; editable Aria SVG paths."
+    "description": "Delete selected region; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 4380,
     "name": "Icon button / Next frame",
     "width": 48.0,
     "height": 48.0,
-    "description": "Next frame; 48 point target; editable Aria SVG paths."
+    "description": "Next frame; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 4390,
     "name": "Icon button / Toggle preview overlays",
     "width": 48.0,
     "height": 48.0,
-    "description": "Toggle preview overlays; 48 point target; editable Aria SVG paths."
+    "description": "Toggle preview overlays; 48 point target; editable Aria SVG paths.",
+    "boundVariables": {
+      "fill": "VariableID:7"
+    }
   },
   {
     "id": 4984,
@@ -3820,13 +3877,13 @@
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
         0.0,
-        16.0,
         0.0,
-        16.0
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",
@@ -3857,13 +3914,13 @@
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
         0.0,
-        16.0,
         0.0,
-        16.0
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",
@@ -3976,13 +4033,13 @@
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
-        16.0,
-        16.0,
-        16.0,
-        16.0
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",
@@ -4013,13 +4070,13 @@
     "layout": {
       "mode": "horizontal",
       "wrap": false,
-      "gap": 12.0,
+      "gap": 0.0,
       "cross_gap": 10.0,
       "padding": [
-        16.0,
-        16.0,
-        16.0,
-        16.0
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "main_align": "center",
       "cross_align": "center",

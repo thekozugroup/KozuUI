@@ -7,7 +7,7 @@ Open Kozu Universal UI Kit.figcraft in FigCraft. Choose a page in the left sideb
 This project-agnostic foundation contains 39 boards, 208 component masters, 181 linked instances and 131 variables. 73 masters expose component properties; 72 use auto layout. Dense creative examples include illustrative compositions alongside reusable controls.
 
 DEFAULTS
-Typography: Source Serif 4 headings; Inter body, labels and controls. Source Serif 4 is installed with the internal family name RR Serif. Apps may explicitly override the font family.
+Typography: Source Serif 4 headings; Inter body, labels and controls. The native heading family is RR Serif. Fonts/Kozu-SourceSerif4.ttf supplies that alias as an unchanged copy of the authoring font; see Fonts/README.md for setup after cloning. Apps may explicitly override the font family.
 Icons: Aria Icons, https://icons.leularia.com/. Use one coherent Lucide line collection by default. Icons contains the SVG assets, source IDs and upstream license. Preserve semantic icon strokes and checkmarks when removing outer state borders. Aria is a catalog; check the selected collection's license when adding icons.
 Materials: circular top actions, icon-only floating toolbars and selected surfaces use frosted backing with sampled background blur. Default control blur is 28 logical units; menu/overlay blur is 40. Increase backing opacity or use a solid fallback over busy content and for reduced transparency. Content panels remain stable reading surfaces.
 Geometry: innerRadius = max(0, outerRadius - inset). Keep nested circles concentric. Use symmetric container padding and centered icon targets. Derive each inner radius from its actual inset.
@@ -99,7 +99,7 @@ Canonical GitHub repository: https://github.com/thekozugroup/KozuUI. Use the loc
 FigCraft CLI 0.15.1 is registered as the figcraft MCP server, with the command:
 /Users/michaelwong/Developer/Tools/figcraft/figcraft-cli-0.15.1-macos-universal/figcraft-cli mcp
 The reusable CLI folder occupies about 194.3 MiB. It remains installed for future authoring. Aria MCP is registered at https://icons.leularia.com/api/mcp.
-The default heading font remains installed at /Users/michaelwong/Library/Fonts/Kozu-SourceSerif4.ttf (264 KiB allocated).
+Portable font setup: after cloning, install Fonts/Kozu-SourceSerif4.ttf with the operating system's font manager, then reopen FigCraft if needed. Confirm heading layers resolve to RR Serif rather than a fallback; keep existing family names, styles and weights. Inter must also be available for body and controls and is not bundled in this heading-font pack. Cloning alone does not register fonts. Fonts/OFL-SourceSerif4.txt contains the complete version-matched Adobe OFL-1.1 license; Fonts/SourceSerif4.source.json records embedded names, source/license references, variable axes and hashes. Packaging changes no font bytes or metrics. Fresh-machine rendering remains untested.
 Earlier research and a preserved review file remain separately at /Users/michaelwong/Developer/Tools/figcraft/Research archive. They are outside this project-agnostic kit.
 The earlier open 19-page version was preserved as a separate review copy. Use this 39-page native file for the current kit. Page 37 includes the “Wear OS / Scroll and text motion” prototype flow: present it, drag or press Down/Up, and press R to reset.
 

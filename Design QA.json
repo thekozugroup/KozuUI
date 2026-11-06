@@ -2,7 +2,7 @@
   "edition": "0.5-review",
   "projectAgnostic": true,
   "boards": 39,
-  "nativeNodes": 6255,
+  "nativeNodes": 6313,
   "componentMasters": 210,
   "instances": 190,
   "variables": 140,
@@ -84,7 +84,7 @@
     "Android widgets": "opaque/tonal; portable backdrop blur excluded",
     "Apple widgets": "host-provided glass conditional on appearance/rendering/accessibility"
   },
-  "reviewStatus": "Refining latest paired-icon and corner-action requests; final exports and QA pending.",
+  "reviewStatus": "Native patches applied; refreshed39PNG/PDF; adversarial visual confirmation in progress.",
   "TVVisibility": {
     "scrimTextWorstWhiteImageContrast": 12.0,
     "textStartsAfterStop": 0.6,
@@ -139,5 +139,27 @@
       }
     ],
     "minimumFocusContrast": 4.81
+  },
+  "nativePreviews": {
+    "count": 39,
+    "PDFPages": 39,
+    "legacyProjectNameMatches": 0
+  },
+  "pairedControls": {
+    "explicitEndcapSlots": 42,
+    "capHeightRatioInter": 0.72772727272727,
+    "leadingCenter": "(H/2,H/2)",
+    "trailingCenter": "(W-H/2,H/2)",
+    "wholeLabelCentered": true,
+    "buttonWrapRepairs": [
+      554,
+      683
+    ]
+  },
+  "cornerActions": {
+    "annotatedCases": 15,
+    "changedCases": 13,
+    "alreadyCorrectCases": 2,
+    "rule": "outerRadius = actionRadius + equal right/bottom inset"
   }
 }

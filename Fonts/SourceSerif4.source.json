@@ -1,0 +1,230 @@
+{
+  "font_file": "Kozu-SourceSerif4.ttf",
+  "role": "Kozu heading font",
+  "upstream_family": "Source Serif 4",
+  "native_family": "RR Serif",
+  "subfamily": "Regular",
+  "full_name": "RR Serif Regular",
+  "postscript_name": "RRSerifRoman-Regular",
+  "version": "Version 4.004;hotconv 1.0.116;makeotfexe 2.5.65601",
+  "size_bytes": 267384,
+  "sha256": "85a36b2d243f1ccb5901a7a5c6fcc2d68dc5d500db3fe248009cf9e5a4578c1f",
+  "provenance": {
+    "packaging_source": "Existing installed authoring font, already using the RR Serif alias.",
+    "packaging_operation": "Byte-for-byte copy; no font tables, names, metrics, outlines, hinting or variation axes changed.",
+    "earlier_modification_history": "The existing font is a renamed derivative. Its complete earlier modification history is not established here.",
+    "upstream_binary_identity_verified": false,
+    "upstream_project": "https://github.com/adobe-fonts/source-serif",
+    "license_reference_tag": "4.004",
+    "license_reference_commit": "a41b27ad8146dbe8d43e387b8183f000a8254939",
+    "inspected_with": "Python standard library struct parser for SFNT/name/fvar/OS2 tables; no fontTools dependency."
+  },
+  "license": {
+    "spdx": "OFL-1.1",
+    "file": "OFL-SourceSerif4.txt",
+    "source": "https://raw.githubusercontent.com/adobe-fonts/source-serif/a41b27ad8146dbe8d43e387b8183f000a8254939/LICENSE.md",
+    "source_page": "https://github.com/adobe-fonts/source-serif/blob/a41b27ad8146dbe8d43e387b8183f000a8254939/LICENSE.md",
+    "sha256": "b1b24694f749be60b4fc9b0ca0367eb232533c5357cf94284c3f589cb7cf0059",
+    "reserved_font_name": "Source",
+    "embedded_copyright": "© 2014 - 2021 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name ‘Source’.",
+    "embedded_license_url": "http://scripts.sil.org/OFL",
+    "embedded_license_description_present": false,
+    "verification": "The version-matched official Adobe license matches the embedded copyright holder/year range and OFL link; it permits redistribution of modified and unmodified copies with its copyright and license. The packaged primary family remains RR Serif."
+  },
+  "variable_axes": [
+    {
+      "tag": "wght",
+      "minimum": 200.0,
+      "default": 400.0,
+      "maximum": 900.0
+    },
+    {
+      "tag": "opsz",
+      "minimum": 8.0,
+      "default": 20.0,
+      "maximum": 60.0
+    }
+  ],
+  "os2_fs_type": 0,
+  "name_records": [
+    {
+      "platform_id": 3,
+      "encoding_id": 1,
+      "language_id": 1033,
+      "name_id": 0,
+      "value": "© 2014 - 2021 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name ‘Source’."
+    },
+    {
+      "platform_id": 3,
+      "encoding_id": 1,
+      "language_id": 1033,
+      "name_id": 1,
+      "value": "RR Serif"
+    },
+    {
+      "platform_id": 3,
+      "encoding_id": 1,
+      "language_id": 1033,
+      "name_id": 2,
+      "value": "Regular"
+    },
+    {
+      "platform_id": 3,
+      "encoding_id": 1,
+      "language_id": 1033,
+      "name_id": 3,
+      "value": "4.004;RR;RRSerifRoman-Regular"
+    },
+    {
+      "platform_id": 3,
+      "encoding_id": 1,
+      "language_id": 1033,
+      "name_id": 4,
+      "value": "RR Serif Regular"
+    },
+    {
+      "platform_id": 3,
+      "encoding_id": 1,
+      "language_id": 1033,
+      "name_id": 5,
+      "value": "Version 4.004;hotconv 1.0.116;makeotfexe 2.5.65601"
+    },
+    {
+      "platform_id": 3,
+      "encoding_id": 1,
+      "language_id": 1033,
+      "name_id": 6,
+      "value": "RRSerifRoman-Regular"
+    },
+    {
+      "platform_id": 3,
+      "encoding_id": 1,
+      "language_id": 1033,
+      "name_id": 14,
+      "value": "http://scripts.sil.org/OFL"
+    }
+  ],
+  "sfnt_tables": {
+    "BASE": {
+      "offset": 32392,
+      "length": 70,
+      "directory_checksum": "54ff6e08",
+      "sha256": "ec13f424db60f4a06427772838427a9eb7a1bdcd14c161e7f912303f05df6135"
+    },
+    "GDEF": {
+      "offset": 32464,
+      "length": 17525,
+      "directory_checksum": "3ab3947d",
+      "sha256": "485c567a105a6a04d36dcf185be727af794eda96d107fe67dae9f3a30e6552b4"
+    },
+    "GPOS": {
+      "offset": 49992,
+      "length": 61786,
+      "directory_checksum": "8be07376",
+      "sha256": "da633192ba92270cf77f9a19065bb4d59e3813365434f4d1186b2efdffd3805a"
+    },
+    "GSUB": {
+      "offset": 111780,
+      "length": 2176,
+      "directory_checksum": "e13ec4f8",
+      "sha256": "124dd8471733336db2a57c4c3cf8fb3afb7175f9a11d51839ccc16af8ba8a840"
+    },
+    "HVAR": {
+      "offset": 113956,
+      "length": 2394,
+      "directory_checksum": "15c8816e",
+      "sha256": "964b7c8b3bd02f972b0709601992d9728e0c97e24f1f70c9a35dee9678402cdf"
+    },
+    "OS/2": {
+      "offset": 456,
+      "length": 96,
+      "directory_checksum": "5e3c9b17",
+      "sha256": "bca6fda3b016f662094eb98ee5bd00c56ac087bd4aee695b50917a91f8eb7c6d"
+    },
+    "STAT": {
+      "offset": 116352,
+      "length": 388,
+      "directory_checksum": "72b967fb",
+      "sha256": "a0f343f8cf7f71b38c0523b678f20aef58f267499970af77c62a7cf94a4fdd22"
+    },
+    "avar": {
+      "offset": 116740,
+      "length": 48,
+      "directory_checksum": "1a062005",
+      "sha256": "9cb68fd286499fa865d6a59d41c737773a2109f6d76075f0fb589f7616a6d086"
+    },
+    "cmap": {
+      "offset": 1936,
+      "length": 622,
+      "directory_checksum": "f7ce7fba",
+      "sha256": "8aa5efcd5ea86aa1cbdea0a9dcbdc27c1f65335bdf01f9d840850ed8d2a764ca"
+    },
+    "fvar": {
+      "offset": 116788,
+      "length": 168,
+      "directory_checksum": "0016f2c7",
+      "sha256": "f9ef174708283021934092964e11d782e5d3c1aed48be92e0295af8fc9725c91"
+    },
+    "gasp": {
+      "offset": 32384,
+      "length": 8,
+      "directory_checksum": "00000010",
+      "sha256": "4ca731f86ad506ac0e320283dc9461926346de3c4d91d539ea7f6620d3826940"
+    },
+    "glyf": {
+      "offset": 3256,
+      "length": 26882,
+      "directory_checksum": "44e9cc3a",
+      "sha256": "6aab73dc851029f1e467b3b656f3e25083c4c5ef2ac655181a5e6a7082a2c5f9"
+    },
+    "gvar": {
+      "offset": 116956,
+      "length": 150428,
+      "directory_checksum": "dedd297e",
+      "sha256": "69e0901a7117298d83039fb1f52bd9a7d87396fbdf7768d406944ca568eb5406"
+    },
+    "head": {
+      "offset": 332,
+      "length": 54,
+      "directory_checksum": "2dea4cc6",
+      "sha256": "942b1c316e96bf3515d42b118605bfc966ec3d5ab599529ec67054e7d9d5c9b2"
+    },
+    "hhea": {
+      "offset": 388,
+      "length": 36,
+      "directory_checksum": "07d40408",
+      "sha256": "003b8e46a71981488942f89e7ae7bd478b498f81dbd1f29c4f6b53a7ec8b75b7"
+    },
+    "hmtx": {
+      "offset": 552,
+      "length": 1384,
+      "directory_checksum": "68211c65",
+      "sha256": "e921c9de1e4ca54d0bd81aeef1533b98fab3e3fe768c318ee6d1494405360e2f"
+    },
+    "loca": {
+      "offset": 2560,
+      "length": 694,
+      "directory_checksum": "bb96a2ce",
+      "sha256": "92b6d5e86a28b9fa2bd9d14c072900bc0f66add276ee49e22d3baeb6f42ae3a1"
+    },
+    "maxp": {
+      "offset": 424,
+      "length": 32,
+      "directory_checksum": "0172010b",
+      "sha256": "5329c311aaffee5eb613915a3564a392412f890aaccc65c4c5c480f6a3fc4465"
+    },
+    "name": {
+      "offset": 30140,
+      "length": 2210,
+      "directory_checksum": "b45a70ee",
+      "sha256": "46abb3d055454e108c792b05f69cec9d3edd1d6838bc57a00290aca016cb33f7"
+    },
+    "post": {
+      "offset": 32352,
+      "length": 32,
+      "directory_checksum": "ffd10032",
+      "sha256": "a884d5ca6f3f1c957a513c4075d0f620ee618a243f428ec62013a314a9c77833"
+    }
+  },
+  "rendering_validation": "Not tested on a clean machine. Users must make RR Serif and Inter available to the authoring application."
+}
