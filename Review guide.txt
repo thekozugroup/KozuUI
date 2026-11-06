@@ -116,3 +116,8 @@ The latest critique addressed mixed navigation/actions, duplicate creative tools
 
 SOURCE AND REVIEW COPIES
 The GitHub checkout at ~/Developer/KozuUI is the canonical development source on main. The Documents folder is the review export. Update the review export from main; avoid editing both copies concurrently.
+
+FINAL CLEANUP AND REVIEW WINDOW
+Completed the proportional review/refinement run and removed its owned scratch root: /private/tmp/ai-development/kozu-review-refinement-1793999344164009000-44041-0 (6,098,944 allocated bytes before removal; this is not a free-space reclamation claim). All six review agents are closed. No task-owned VM, emulator, container or background service remains.
+Retained intentionally: FigCraft MCP CLI at /Users/michaelwong/Developer/Tools/figcraft/figcraft-cli-0.15.1-macos-universal (199,008 KiB allocated) for ongoing authoring; font /Users/michaelwong/Library/Fonts/Kozu-SourceSerif4.ttf (264 KiB allocated); preserved user review archive /Users/michaelwong/Developer/Tools/figcraft/Research archive (344 KiB allocated). The persistent Codex-managed MCP and FigCraft app are kept for review.
+The review window was observed with39pages and140variables. Final window input returned noWindowsAvailable, so the repository copy could not be reopened automatically. Open ~/Developer/KozuUI/Kozu Universal UI Kit.figcraft to review the latest source.
