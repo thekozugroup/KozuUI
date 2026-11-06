@@ -1,0 +1,4141 @@
+[
+  {
+    "id": 347,
+    "name": "Toolbar / floating / icon only",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "Icon-only bottom toolbar. 48 dp targets, 8 dp padding, 16 dp content clearance, bottom inset = platform safe area + 16. Navigation items use familiar icons.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "main_align": "min",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:29",
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 372,
+    "name": "Select / frosted menu",
+    "width": 274.0,
+    "height": 216.0,
+    "description": "Overlay: 40 dp blur. Selected row: tinted frosted fill plus checkmark. Contrast uses an opaque enough backing tint.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:30",
+      "fill": "VariableID:9"
+    }
+  },
+  {
+    "id": 394,
+    "name": "Toolbar / floating / icon only",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "Icon-only bottom toolbar. 48 dp targets, 8 dp padding, 16 dp content clearance, bottom inset = platform safe area + 16. Navigation items use familiar icons.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "main_align": "min",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:29",
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 419,
+    "name": "Select / frosted menu",
+    "width": 274.0,
+    "height": 216.0,
+    "description": "Overlay: 40 dp blur. Selected row: tinted frosted fill plus checkmark. Contrast uses an opaque enough backing tint.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:30",
+      "fill": "VariableID:9"
+    }
+  },
+  {
+    "id": 455,
+    "name": "State=Rest",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Save changes"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:16",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 457,
+    "name": "State=Hover",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Save changes"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:16",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 460,
+    "name": "State=Pressed",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Save changes"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:16",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 463,
+    "name": "State=Focus",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Save changes"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "effects/1/color": "VariableID:133",
+      "fill": "VariableID:134",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 466,
+    "name": "State=Disabled",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Save changes"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:64",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 469,
+    "name": "State=Rest",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "View details"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 471,
+    "name": "State=Hover",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "View details"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 474,
+    "name": "State=Pressed",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "View details"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 477,
+    "name": "State=Focus",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "View details"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "effects/1/color": "VariableID:133",
+      "fill": "VariableID:132",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 480,
+    "name": "State=Disabled",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "View details"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:64",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 483,
+    "name": "State=Rest",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Add to list"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 485,
+    "name": "State=Hover",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Add to list"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 488,
+    "name": "State=Pressed",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Add to list"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 491,
+    "name": "State=Focus",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Add to list"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "effects/1/color": "VariableID:133",
+      "fill": "VariableID:132",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 494,
+    "name": "State=Disabled",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Add to list"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:64",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 497,
+    "name": "State=Rest",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Cancel"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 499,
+    "name": "State=Hover",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Cancel"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 502,
+    "name": "State=Pressed",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Cancel"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 505,
+    "name": "State=Focus",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Cancel"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "effects/1/color": "VariableID:133",
+      "fill": "VariableID:132",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 508,
+    "name": "State=Disabled",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Cancel"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:64",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 511,
+    "name": "State=Rest",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Delete item"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:63",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 513,
+    "name": "State=Hover",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Delete item"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:63",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 516,
+    "name": "State=Pressed",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Delete item"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:63",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 519,
+    "name": "State=Focus",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Delete item"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 522,
+    "name": "State=Disabled",
+    "width": 248.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Delete item"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:64",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 528,
+    "name": "Icon button / arrow-left",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "48 dp minimum touch target; icon-only controls require an accessible name and keyboard tooltip.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 533,
+    "name": "Icon button / plus",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "48 dp minimum touch target; icon-only controls require an accessible name and keyboard tooltip.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 538,
+    "name": "Icon button / search",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "48 dp minimum touch target; icon-only controls require an accessible name and keyboard tooltip.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 543,
+    "name": "Icon button / ellipsis",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "48 dp minimum touch target; icon-only controls require an accessible name and keyboard tooltip.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 549,
+    "name": "Icon button / x",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "48 dp minimum touch target; icon-only controls require an accessible name and keyboard tooltip.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 554,
+    "name": "Button / primary / rest",
+    "width": 190.0,
+    "height": 66.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Create item"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:16",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 559,
+    "name": "Button / frost / rest",
+    "width": 160.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Saved"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 580,
+    "name": "Icon button / arrow-left",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "48 dp minimum touch target; icon-only controls require an accessible name and keyboard tooltip.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 596,
+    "name": "Icon button / arrow-left",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "48 dp minimum touch target; icon-only controls require an accessible name and keyboard tooltip.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 613,
+    "name": "Toolbar / floating / icon only",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "Icon-only bottom toolbar. 48 dp targets, 8 dp padding, 16 dp content clearance, bottom inset = platform safe area + 16. Navigation items use familiar icons.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "main_align": "min",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:29",
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 637,
+    "name": "Toolbar / floating / icon only",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "Icon-only bottom toolbar. 48 dp targets, 8 dp padding, 16 dp content clearance, bottom inset = platform safe area + 16. Navigation items use familiar icons.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "main_align": "min",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:29",
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 658,
+    "name": "Icon button / plus",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "48 dp minimum touch target; icon-only controls require an accessible name and keyboard tooltip.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 666,
+    "name": "Chip / selected",
+    "width": 184.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 668,
+    "name": "Chip / rest",
+    "width": 184.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 670,
+    "name": "Chip / rest",
+    "width": 184.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 672,
+    "name": "Chip / selected",
+    "width": 148.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 674,
+    "name": "Chip / rest",
+    "width": 148.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 676,
+    "name": "Chip / rest",
+    "width": 148.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 678,
+    "name": "Chip / rest",
+    "width": 148.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 683,
+    "name": "Button / primary / rest",
+    "width": 174.0,
+    "height": 66.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "New project"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:16",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 728,
+    "name": "Field / rest",
+    "width": 310.0,
+    "height": 82.0,
+    "description": "Complete field: persistent label, value, optional helper/error. Label and error remain inside the component. 56 dp input; wrap helper text; grow vertically.",
+    "layout": {
+      "mode": "vertical",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "min",
+      "cross_align": "min",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Display name"
+      },
+      "Value": {
+        "type": "text",
+        "default": "Michael Wong"
+      }
+    }
+  },
+  {
+    "id": 732,
+    "name": "Field / focus",
+    "width": 336.0,
+    "height": 82.0,
+    "description": "Complete field: persistent label, value, optional helper/error. Label and error remain inside the component. 56 dp input; wrap helper text; grow vertically.",
+    "layout": {
+      "mode": "vertical",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "min",
+      "cross_align": "min",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Project name"
+      },
+      "Value": {
+        "type": "text",
+        "default": "Kozu UI kit"
+      }
+    }
+  },
+  {
+    "id": 736,
+    "name": "Field / error",
+    "width": 310.0,
+    "height": 107.0,
+    "description": "Complete field: persistent label, value, optional helper/error. Label and error remain inside the component. 56 dp input; wrap helper text; grow vertically.",
+    "layout": {
+      "mode": "vertical",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "min",
+      "cross_align": "min",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Error": {
+        "type": "text",
+        "default": "Enter a valid email address."
+      },
+      "Label": {
+        "type": "text",
+        "default": "Email address"
+      },
+      "Value": {
+        "type": "text",
+        "default": "michael@"
+      }
+    }
+  },
+  {
+    "id": 741,
+    "name": "Field / rest",
+    "width": 336.0,
+    "height": 82.0,
+    "description": "Complete field: persistent label, value, optional helper/error. Label and error remain inside the component. 56 dp input; wrap helper text; grow vertically.",
+    "layout": {
+      "mode": "vertical",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "min",
+      "cross_align": "min",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Optional note"
+      },
+      "Value": {
+        "type": "text",
+        "default": "Enter a value"
+      }
+    }
+  },
+  {
+    "id": 745,
+    "name": "Search / frosted",
+    "width": 682.0,
+    "height": 56.0,
+    "description": "",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 753,
+    "name": "Button / frost / rest",
+    "width": 320.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Recently added"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 757,
+    "name": "Select / open",
+    "width": 320.0,
+    "height": 215.0,
+    "description": "Keyboard: arrows move active option; Enter selects; Escape closes; focus returns to trigger. Typeahead for long lists.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:30",
+      "fill": "VariableID:9"
+    }
+  },
+  {
+    "id": 765,
+    "name": "Chip / rest",
+    "width": 230.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 767,
+    "name": "Chip / selected",
+    "width": 230.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 769,
+    "name": "Chip / rest",
+    "width": 230.0,
+    "height": 40.0,
+    "description": "40 dp visual height inside a 48 dp minimum touch region. Selected state uses text weight plus tinted fill.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 774,
+    "name": "Switch / off",
+    "width": 60.0,
+    "height": 36.0,
+    "description": "",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28"
+    }
+  },
+  {
+    "id": 777,
+    "name": "Checkbox / unchecked",
+    "width": 32.0,
+    "height": 32.0,
+    "description": "",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28"
+    }
+  },
+  {
+    "id": 779,
+    "name": "Switch / on",
+    "width": 60.0,
+    "height": 36.0,
+    "description": "",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28"
+    }
+  },
+  {
+    "id": 782,
+    "name": "Checkbox / checked",
+    "width": 32.0,
+    "height": 32.0,
+    "description": "",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 791,
+    "name": "Icon button / volume-2",
+    "width": 40.0,
+    "height": 40.0,
+    "description": "48 dp minimum touch target; icon-only controls require an accessible name and keyboard tooltip.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 815,
+    "name": "List row / Design review",
+    "width": 686.0,
+    "height": 80.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:1"
+    }
+  },
+  {
+    "id": 832,
+    "name": "List row / Weekend with friends",
+    "width": 686.0,
+    "height": 80.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:1"
+    }
+  },
+  {
+    "id": 843,
+    "name": "List row / Saved inspiration",
+    "width": 686.0,
+    "height": 80.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:1"
+    }
+  },
+  {
+    "id": 853,
+    "name": "Banner / Saved successfully",
+    "width": 706.0,
+    "height": 82.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:53"
+    }
+  },
+  {
+    "id": 858,
+    "name": "Banner / Check your connection",
+    "width": 706.0,
+    "height": 82.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:55"
+    }
+  },
+  {
+    "id": 865,
+    "name": "Banner / Could not save",
+    "width": 706.0,
+    "height": 82.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:57"
+    }
+  },
+  {
+    "id": 875,
+    "name": "Dialog / destructive confirmation",
+    "width": 682.0,
+    "height": 282.0,
+    "description": "",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:30",
+      "fill": "VariableID:9"
+    }
+  },
+  {
+    "id": 885,
+    "name": "Sheet / quick actions",
+    "width": 702.0,
+    "height": 282.0,
+    "description": "",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:30",
+      "fill": "VariableID:9"
+    }
+  },
+  {
+    "id": 1651,
+    "name": "Button / primary / rest",
+    "width": 260.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Create item"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:16",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 1656,
+    "name": "Field / rest",
+    "width": 620.0,
+    "height": 82.0,
+    "description": "Complete field: persistent label, value, optional helper/error. Label and error remain inside the component. 56 dp input; wrap helper text; grow vertically.",
+    "layout": {
+      "mode": "vertical",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "min",
+      "cross_align": "min",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Project name"
+      },
+      "Value": {
+        "type": "text",
+        "default": "Kozu workspace"
+      }
+    }
+  },
+  {
+    "id": 1681,
+    "name": "List row / adaptive master",
+    "width": 682.0,
+    "height": 90.0,
+    "description": "Resizable complete row. Content wraps, row grows. Trailing affordance is optional. Preserve a 48 dp minimum interaction target.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 20.0,
+      "cross_gap": 10.0,
+      "padding": [
+        20.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "main_align": "min",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Show trailing action": {
+        "type": "boolean",
+        "default": true
+      },
+      "Supporting text": {
+        "type": "text",
+        "default": "Today \u00b7 10:00\u201310:45 \u00b7 Studio"
+      },
+      "Title": {
+        "type": "text",
+        "default": "Design system review"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:1"
+    }
+  },
+  {
+    "id": 1726,
+    "name": "Button / primary / rest",
+    "width": 180.0,
+    "height": 66.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Save changes to workspace"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:16",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 1728,
+    "name": "Button / primary / hover",
+    "width": 180.0,
+    "height": 66.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Save changes to workspace"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:16",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 1731,
+    "name": "Button / primary / pressed",
+    "width": 180.0,
+    "height": 66.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Save changes to workspace"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:16",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 1734,
+    "name": "Button / primary / focus",
+    "width": 180.0,
+    "height": 66.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Save changes to workspace"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "effects/1/color": "VariableID:133",
+      "fill": "VariableID:134",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 1747,
+    "name": "radio / off",
+    "width": 682.0,
+    "height": 56.0,
+    "description": "Complete labeled target. Radio groups allow one selection; arrows move and select. Checkbox supports mixed state. Selected state uses fill, not borders.",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Personal workspace"
+      }
+    }
+  },
+  {
+    "id": 1750,
+    "name": "radio / on",
+    "width": 682.0,
+    "height": 56.0,
+    "description": "Complete labeled target. Radio groups allow one selection; arrows move and select. Checkbox supports mixed state. Selected state uses fill, not borders.",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Team workspace"
+      }
+    }
+  },
+  {
+    "id": 1754,
+    "name": "checkbox / mixed",
+    "width": 682.0,
+    "height": 56.0,
+    "description": "Complete labeled target. Radio groups allow one selection; arrows move and select. Checkbox supports mixed state. Selected state uses fill, not borders.",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Some items selected"
+      }
+    }
+  },
+  {
+    "id": 1758,
+    "name": "checkbox / on",
+    "width": 682.0,
+    "height": 56.0,
+    "description": "Complete labeled target. Radio groups allow one selection; arrows move and select. Checkbox supports mixed state. Selected state uses fill, not borders.",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Include completed items"
+      }
+    }
+  },
+  {
+    "id": 1763,
+    "name": "checkbox / off",
+    "width": 682.0,
+    "height": 56.0,
+    "description": "Complete labeled target. Radio groups allow one selection; arrows move and select. Checkbox supports mixed state. Selected state uses fill, not borders.",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Send a weekly summary"
+      }
+    }
+  },
+  {
+    "id": 1766,
+    "name": "radio / disabled",
+    "width": 682.0,
+    "height": 56.0,
+    "description": "Complete labeled target. Radio groups allow one selection; arrows move and select. Checkbox supports mixed state. Selected state uses fill, not borders.",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Managed by your workspace"
+      }
+    }
+  },
+  {
+    "id": 1771,
+    "name": "Field / rest",
+    "width": 702.0,
+    "height": 82.0,
+    "description": "Complete field: persistent label, value, optional helper/error. Label and error remain inside the component. 56 dp input; wrap helper text; grow vertically.",
+    "layout": {
+      "mode": "vertical",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "min",
+      "cross_align": "min",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Assign to"
+      },
+      "Value": {
+        "type": "text",
+        "default": "Search people\u2026"
+      }
+    }
+  },
+  {
+    "id": 1775,
+    "name": "Combobox / options",
+    "width": 330.0,
+    "height": 208.0,
+    "description": "Editable combobox: input owns focus, arrows change active descendant, Enter chooses, Escape closes. Announce result count.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:30",
+      "fill": "VariableID:9"
+    }
+  },
+  {
+    "id": 1788,
+    "name": "Date picker / compact",
+    "width": 346.0,
+    "height": 385.0,
+    "description": "48 dp calendar cells. Arrow keys navigate days, Home/End week, PageUp/PageDown month. Selected date uses a tinted fill.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:30",
+      "fill": "VariableID:9"
+    }
+  },
+  {
+    "id": 1861,
+    "name": "Textarea / complete",
+    "width": 682.0,
+    "height": 146.0,
+    "description": "",
+    "nativeProperties": {
+      "Value": {
+        "type": "text",
+        "default": "Keep the task, selected record and unsaved input when the window changes size."
+      }
+    },
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28"
+    }
+  },
+  {
+    "id": 1864,
+    "name": "Field / rest",
+    "width": 682.0,
+    "height": 82.0,
+    "description": "Complete field: persistent label, value, optional helper/error. Label and error remain inside the component. 56 dp input; wrap helper text; grow vertically.",
+    "layout": {
+      "mode": "vertical",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "min",
+      "cross_align": "min",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Password"
+      },
+      "Show reveal action": {
+        "type": "boolean",
+        "default": true
+      },
+      "Value": {
+        "type": "text",
+        "default": "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022"
+      }
+    }
+  },
+  {
+    "id": 1874,
+    "name": "Field / rest",
+    "width": 702.0,
+    "height": 82.0,
+    "description": "Complete field: persistent label, value, optional helper/error. Label and error remain inside the component. 56 dp input; wrap helper text; grow vertically.",
+    "layout": {
+      "mode": "vertical",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "min",
+      "cross_align": "min",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Workspace ID \u00b7 read-only"
+      },
+      "Value": {
+        "type": "text",
+        "default": "kozu-workspace-01"
+      }
+    }
+  },
+  {
+    "id": 1878,
+    "name": "Field / rest",
+    "width": 702.0,
+    "height": 82.0,
+    "description": "Complete field: persistent label, value, optional helper/error. Label and error remain inside the component. 56 dp input; wrap helper text; grow vertically.",
+    "layout": {
+      "mode": "vertical",
+      "wrap": false,
+      "gap": 8.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "min",
+      "cross_align": "min",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Billing contact \u00b7 unavailable"
+      },
+      "Value": {
+        "type": "text",
+        "default": "Set up a workspace first"
+      }
+    }
+  },
+  {
+    "id": 1904,
+    "name": "Table row / Kozu universal system",
+    "width": 1472.0,
+    "height": 60.0,
+    "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection.",
+    "boundVariables": {
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 1912,
+    "name": "Table row / Kitchen collection",
+    "width": 1472.0,
+    "height": 60.0,
+    "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection.",
+    "boundVariables": {
+      "fill": "VariableID:1"
+    }
+  },
+  {
+    "id": 1919,
+    "name": "Table row / Community connection flow",
+    "width": 1472.0,
+    "height": 60.0,
+    "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection.",
+    "boundVariables": {
+      "fill": "VariableID:1"
+    }
+  },
+  {
+    "id": 1926,
+    "name": "Table row / Planner planning view",
+    "width": 1472.0,
+    "height": 60.0,
+    "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection.",
+    "boundVariables": {
+      "fill": "VariableID:1"
+    }
+  },
+  {
+    "id": 1943,
+    "name": "Button / frost / rest",
+    "width": 230.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Touch action"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 1946,
+    "name": "Button / pointer compact",
+    "width": 230.0,
+    "height": 36.0,
+    "description": "36 dp visual height; minimum pointer target 32 dp. Use only in explicit compact density. Keep keyboard focus unobscured.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 1970,
+    "name": "Empty state / complete",
+    "width": 322.0,
+    "height": 264.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:1"
+    }
+  },
+  {
+    "id": 1975,
+    "name": "Button / frost / rest",
+    "width": 278.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Browse items"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 1977,
+    "name": "Error state / recoverable",
+    "width": 336.0,
+    "height": 264.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:57"
+    }
+  },
+  {
+    "id": 1988,
+    "name": "Button / frost / rest",
+    "width": 292.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Try again"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 1997,
+    "name": "Command menu",
+    "width": 702.0,
+    "height": 264.0,
+    "description": "Command palette: logical focus scope; arrows navigate; Enter runs; Escape dismisses. Use Control shortcuts on Linux/Android, Command on macOS.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:30",
+      "fill": "VariableID:9"
+    }
+  },
+  {
+    "id": 2012,
+    "name": "Snackbar / undo",
+    "width": 700.0,
+    "height": 72.0,
+    "description": "Announce politely. Undo extends or pauses timeout on focus/hover. Never hide critical status solely behind a timeout.",
+    "boundVariables": {
+      "effects/0/radius": "VariableID:28",
+      "fill": "VariableID:7"
+    }
+  },
+  {
+    "id": 2014,
+    "name": "Button / tonal / rest",
+    "width": 174.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Undo"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 2016,
+    "name": "Loading / skeleton",
+    "width": 706.0,
+    "height": 72.0,
+    "description": "Stable placeholder layout; no motion when reduced motion is requested. Set busy state once, announce completion.",
+    "boundVariables": {
+      "fill": "VariableID:1"
+    }
+  },
+  {
+    "id": 2027,
+    "name": "Tooltip / create",
+    "width": 278.0,
+    "height": 56.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:3"
+    }
+  },
+  {
+    "id": 2475,
+    "name": "Toolbar / configurable selection",
+    "width": 296.0,
+    "height": 72.0,
+    "description": "Set navigation policy at the app frame: Shared accent or Per tab. Set destination mode at each item. Override tab colors in the app theme. Keep targets, frost and focus behavior unchanged.",
+    "boundVariables": {
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 2501,
+    "name": "Toolbar / configurable selection",
+    "width": 296.0,
+    "height": 72.0,
+    "description": "Set navigation policy at the app frame: Shared accent or Per tab. Set destination mode at each item. Override tab colors in the app theme. Keep targets, frost and focus behavior unchanged.",
+    "boundVariables": {
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 2530,
+    "name": "Toolbar / configurable selection",
+    "width": 296.0,
+    "height": 72.0,
+    "description": "Set navigation policy at the app frame: Shared accent or Per tab. Set destination mode at each item. Override tab colors in the app theme. Keep targets, frost and focus behavior unchanged.",
+    "boundVariables": {
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 2556,
+    "name": "Toolbar / configurable selection",
+    "width": 296.0,
+    "height": 72.0,
+    "description": "Set navigation policy at the app frame: Shared accent or Per tab. Set destination mode at each item. Override tab colors in the app theme. Keep targets, frost and focus behavior unchanged.",
+    "boundVariables": {
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 2584,
+    "name": "Toolbar / configurable selection",
+    "width": 296.0,
+    "height": 72.0,
+    "description": "Set navigation policy at the app frame: Shared accent or Per tab. Set destination mode at each item. Override tab colors in the app theme. Keep targets, frost and focus behavior unchanged.",
+    "boundVariables": {
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 2612,
+    "name": "Toolbar / configurable selection",
+    "width": 296.0,
+    "height": 72.0,
+    "description": "Set navigation policy at the app frame: Shared accent or Per tab. Set destination mode at each item. Override tab colors in the app theme. Keep targets, frost and focus behavior unchanged.",
+    "boundVariables": {
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 2651,
+    "name": "Card / outer radius 40",
+    "width": 666.0,
+    "height": 270.0,
+    "description": "Concentric nested surface: outer radius 40, uniform inset 16, inner radius 24. Recompute radius when changing padding."
+  },
+  {
+    "id": 2722,
+    "name": "Palette / undo and redo",
+    "width": 64.0,
+    "height": 120.0,
+    "description": "Vertical drawing palette. All 48-unit targets and 24-unit icons are centered. Selected tint follows the tool accent."
+  },
+  {
+    "id": 2864,
+    "name": "Poster / native editable content",
+    "width": 826.0,
+    "height": 756.0,
+    "description": "Native editable poster content, not a flattened UI screenshot. Selection handles belong to document editing; app control selection remains borderless."
+  },
+  {
+    "id": 3405,
+    "name": "Button / tonal / rest",
+    "width": 174.0,
+    "height": 48.0,
+    "description": "Height 48; radius 24; use clear verbs; frosted tint stays present for primary, secondary and selected controls.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        12.0,
+        20.0,
+        12.0,
+        20.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Undo"
+      }
+    },
+    "boundVariables": {
+      "cornerRadius": "VariableID:24",
+      "effects/0/radius": "VariableID:28",
+      "gap": "VariableID:19",
+      "paddingHorizontal": "VariableID:21"
+    }
+  },
+  {
+    "id": 3419,
+    "name": "Icon button / Back to projects",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Back to projects; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3426,
+    "name": "Icon button / Undo",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Undo; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3430,
+    "name": "Icon button / Search project",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Search project; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3434,
+    "name": "Icon button / Project collaborators",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Project collaborators; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3440,
+    "name": "Icon button / Export project",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Export project; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3445,
+    "name": "Icon button / Workspace settings",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Workspace settings; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3449,
+    "name": "Icon button / More project actions",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "More project actions; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3509,
+    "name": "Icon button / Return to start",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Return to start; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3512,
+    "name": "Icon button / Play arrangement",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Play arrangement; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3516,
+    "name": "Icon button / Stop playback",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Stop playback; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3519,
+    "name": "Icon button / Record",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Record; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3522,
+    "name": "Icon button / Loop selection",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Loop selection; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 3534,
+    "name": "Icon button / Output monitoring",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Output monitoring; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 4205,
+    "name": "Icon button / Select notes",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Select notes; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 4209,
+    "name": "Icon button / Add note",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Add note; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 4213,
+    "name": "Icon button / Duplicate region",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Duplicate region; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 4217,
+    "name": "Icon button / Record audio",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Record audio; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 4222,
+    "name": "Icon button / Edit selected region",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Edit selected region; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 4233,
+    "name": "Icon button / Delete selected region",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Delete selected region; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 4380,
+    "name": "Icon button / Next frame",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Next frame; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 4390,
+    "name": "Icon button / Toggle preview overlays",
+    "width": 48.0,
+    "height": 48.0,
+    "description": "Toggle preview overlays; 48 point target; editable Aria SVG paths."
+  },
+  {
+    "id": 4984,
+    "name": "Widget / Android / 2\u00d72 / Weather reference",
+    "width": 180.0,
+    "height": 180.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5001,
+    "name": "Widget / Android / 4\u00d71 / Music",
+    "width": 376.0,
+    "height": 82.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5014,
+    "name": "Widget / Android / 4\u00d72 / Agenda",
+    "width": 376.0,
+    "height": 180.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5033,
+    "name": "Widget / Android / 4\u00d74 / Calendar",
+    "width": 376.0,
+    "height": 376.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5124,
+    "name": "Widget / Android / 2\u00d72 / Weather",
+    "width": 180.0,
+    "height": 180.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5140,
+    "name": "Widget / Android / 2\u00d72 / Activity",
+    "width": 180.0,
+    "height": 180.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5150,
+    "name": "Widget / Android / 4\u00d71 / Music",
+    "width": 376.0,
+    "height": 82.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5162,
+    "name": "Widget / Android / 4\u00d72 / Recipe",
+    "width": 376.0,
+    "height": 180.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5176,
+    "name": "Widget / Android / 4\u00d72 / Tasks",
+    "width": 376.0,
+    "height": 180.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5189,
+    "name": "Widget / Android / 4\u00d72 / Agenda",
+    "width": 376.0,
+    "height": 180.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5228,
+    "name": "Widget / Android / 4\u00d74 / Calendar",
+    "width": 376.0,
+    "height": 376.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5281,
+    "name": "Widget / Android / 4\u00d74 / Creative project",
+    "width": 376.0,
+    "height": 376.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5303,
+    "name": "Widget / Apple / systemSmall / Day",
+    "width": 158.0,
+    "height": 158.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5308,
+    "name": "Widget / Apple / systemMedium / Agenda",
+    "width": 338.0,
+    "height": 158.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5317,
+    "name": "Widget / Apple / systemLarge / Daily agenda",
+    "width": 338.0,
+    "height": 354.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5358,
+    "name": "Widget / Apple / systemExtraLarge / Weekly agenda",
+    "width": 726.0,
+    "height": 350.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:77"
+    }
+  },
+  {
+    "id": 5420,
+    "name": "TV / Action / default",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 0.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Open"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:96"
+    }
+  },
+  {
+    "id": 5426,
+    "name": "TV / Action / focused",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 0.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Open"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:135"
+    }
+  },
+  {
+    "id": 5433,
+    "name": "TV / Action / selected",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 0.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Saved"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 5439,
+    "name": "TV / Action / selected-focused",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 0.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Saved"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:137"
+    }
+  },
+  {
+    "id": 5446,
+    "name": "TV / Action / pressed",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 0.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Open"
+      }
+    }
+  },
+  {
+    "id": 5452,
+    "name": "TV / Full-bleed card / default",
+    "width": 300.0,
+    "height": 168.75,
+    "description": "",
+    "nativeProperties": {
+      "Title": {
+        "type": "text",
+        "default": "Coastal study"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:96"
+    }
+  },
+  {
+    "id": 5457,
+    "name": "TV / Full-bleed card / focused",
+    "width": 318.0,
+    "height": 178.875,
+    "description": "",
+    "nativeProperties": {
+      "Title": {
+        "type": "text",
+        "default": "Mountain light"
+      }
+    }
+  },
+  {
+    "id": 5463,
+    "name": "TV / Full-bleed card / selected",
+    "width": 300.0,
+    "height": 168.75,
+    "description": "",
+    "nativeProperties": {
+      "Title": {
+        "type": "text",
+        "default": "Open water"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 5478,
+    "name": "TV / Circular action / search",
+    "width": 72.0,
+    "height": 72.0,
+    "description": ""
+  },
+  {
+    "id": 5483,
+    "name": "TV / Circular action / settings",
+    "width": 72.0,
+    "height": 72.0,
+    "description": ""
+  },
+  {
+    "id": 5488,
+    "name": "TV / Circular action / bookmark / selected",
+    "width": 72.0,
+    "height": 72.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:10"
+    }
+  },
+  {
+    "id": 5491,
+    "name": "TV / Frosted contextual toolbar",
+    "width": 360.0,
+    "height": 84.0,
+    "description": ""
+  },
+  {
+    "id": 5507,
+    "name": "TV / Status / Downloaded",
+    "width": 212.0,
+    "height": 48.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 0.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    }
+  },
+  {
+    "id": 5511,
+    "name": "TV / Status / Unavailable",
+    "width": 212.0,
+    "height": 48.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 0.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    }
+  },
+  {
+    "id": 5520,
+    "name": "TV / Navigation / selected",
+    "width": 198.0,
+    "height": 64.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 0.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "boundVariables": {
+      "fill": "VariableID:98"
+    }
+  },
+  {
+    "id": 5617,
+    "name": "Aria / heart / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5619,
+    "name": "Aria / sun / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5629,
+    "name": "Aria / play / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5631,
+    "name": "Aria / check / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5633,
+    "name": "Aria / plus / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5636,
+    "name": "Aria / bookmark / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5638,
+    "name": "Aria / chevron-right / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5640,
+    "name": "Aria / chevron-left / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5642,
+    "name": "Aria / circle-alert / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5646,
+    "name": "Aria / wifi-off / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5654,
+    "name": "Aria / clock / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5657,
+    "name": "Aria / square / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5659,
+    "name": "Aria / bell / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5662,
+    "name": "Aria / x / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5665,
+    "name": "Aria / moon / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5667,
+    "name": "Aria / ellipsis / 24",
+    "width": 24.0,
+    "height": 24.0,
+    "description": ""
+  },
+  {
+    "id": 5675,
+    "name": "Wearables / Action / Rest",
+    "width": 56.0,
+    "height": 56.0,
+    "description": "48+ logical hit area. Selected/pressed tint and icon share the same semantic accent."
+  },
+  {
+    "id": 5679,
+    "name": "Wearables / Action / Selected",
+    "width": 56.0,
+    "height": 56.0,
+    "description": "48+ logical hit area. Selected/pressed tint and icon share the same semantic accent.",
+    "boundVariables": {
+      "fill": "VariableID:140"
+    }
+  },
+  {
+    "id": 5683,
+    "name": "Wearables / Action / Pressed",
+    "width": 56.0,
+    "height": 56.0,
+    "description": "48+ logical hit area. Selected/pressed tint and icon share the same semantic accent.",
+    "boundVariables": {
+      "fill": "VariableID:106"
+    }
+  },
+  {
+    "id": 5687,
+    "name": "Wearables / Action / Focus",
+    "width": 64.0,
+    "height": 64.0,
+    "description": "Separate focus indicator, 4 units outside the 56-unit button. Focus is independent of selection."
+  },
+  {
+    "id": 5693,
+    "name": "Wearables / Capsule / Primary",
+    "width": 200.0,
+    "height": 56.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Start"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:105"
+    }
+  },
+  {
+    "id": 5698,
+    "name": "Wearables / Capsule / Material",
+    "width": 200.0,
+    "height": 56.0,
+    "description": "",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        0.0,
+        16.0,
+        0.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Add"
+      }
+    }
+  },
+  {
+    "id": 5704,
+    "name": "Wearables / List / Selected",
+    "width": 248.0,
+    "height": 64.0,
+    "description": "",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Saved place"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:140"
+    }
+  },
+  {
+    "id": 5711,
+    "name": "Wearables / Complication / Circular",
+    "width": 64.0,
+    "height": 64.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:125"
+    }
+  },
+  {
+    "id": 5718,
+    "name": "Wearables / List / Rest",
+    "width": 248.0,
+    "height": 64.0,
+    "description": "",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Nearby place"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:125"
+    }
+  },
+  {
+    "id": 5725,
+    "name": "Wearables / Complication / Inline",
+    "width": 176.0,
+    "height": 48.0,
+    "description": "",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "18\u00b0 Clear"
+      }
+    }
+  },
+  {
+    "id": 5738,
+    "name": "Wearables / Status / Success",
+    "width": 144.0,
+    "height": 48.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:113"
+    }
+  },
+  {
+    "id": 5743,
+    "name": "Wearables / Status / Warning",
+    "width": 168.0,
+    "height": 48.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:116"
+    }
+  },
+  {
+    "id": 5750,
+    "name": "Wearables / Status / Error",
+    "width": 144.0,
+    "height": 48.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:118"
+    }
+  },
+  {
+    "id": 5964,
+    "name": "Wearables / Apple / Capsule primary",
+    "width": 240.0,
+    "height": 56.0,
+    "description": "Full-width 56-unit capsule. System typography and materials can override this portable reference.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        16.0,
+        16.0,
+        16.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Pause"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:105"
+    }
+  },
+  {
+    "id": 5969,
+    "name": "Wearables / Apple / Capsule secondary",
+    "width": 240.0,
+    "height": 56.0,
+    "description": "Full-width 56-unit capsule. System typography and materials can override this portable reference.",
+    "layout": {
+      "mode": "horizontal",
+      "wrap": false,
+      "gap": 12.0,
+      "cross_gap": 10.0,
+      "padding": [
+        16.0,
+        16.0,
+        16.0,
+        16.0
+      ],
+      "main_align": "center",
+      "cross_align": "center",
+      "content_align": "auto",
+      "grid_columns": 2,
+      "grid_rows": 2,
+      "column_tracks": [],
+      "row_tracks": [],
+      "strokes_included": true,
+      "reverse_z": false
+    },
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Cancel"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:120"
+    }
+  },
+  {
+    "id": 6088,
+    "name": "Wearables / Apple / Rectangular complication",
+    "width": 280.0,
+    "height": 132.0,
+    "description": "Representative rectangular complication. The system determines actual family bounds and masks; support tinted rendering.",
+    "boundVariables": {
+      "fill": "VariableID:125"
+    }
+  },
+  {
+    "id": 6161,
+    "name": "Rail item / Overview / selected",
+    "width": 56.0,
+    "height": 56.0,
+    "description": "56 \u00d7 56 circular navigation target. The 24 \u00d7 24 icon sits at (16,16). Shared/per-tab color policy is inherited from the app; focus is separate.",
+    "boundVariables": {
+      "fill": "VariableID:51"
+    }
+  },
+  {
+    "id": 6162,
+    "name": "Rail item / Schedule / default",
+    "width": 56.0,
+    "height": 56.0,
+    "description": "56 \u00d7 56 circular navigation target. The 24 \u00d7 24 icon sits at (16,16). Shared/per-tab color policy is inherited from the app; focus is separate."
+  },
+  {
+    "id": 6163,
+    "name": "Rail item / Messages / default",
+    "width": 56.0,
+    "height": 56.0,
+    "description": "56 \u00d7 56 circular navigation target. The 24 \u00d7 24 icon sits at (16,16). Shared/per-tab color policy is inherited from the app; focus is separate."
+  },
+  {
+    "id": 6164,
+    "name": "Rail item / Saved / default",
+    "width": 56.0,
+    "height": 56.0,
+    "description": "56 \u00d7 56 circular navigation target. The 24 \u00d7 24 icon sits at (16,16). Shared/per-tab color policy is inherited from the app; focus is separate."
+  },
+  {
+    "id": 6222,
+    "name": "Avatar / centered initial",
+    "width": 56.0,
+    "height": 56.0,
+    "description": "",
+    "nativeProperties": {
+      "Initial": {
+        "type": "text",
+        "default": "A"
+      }
+    },
+    "boundVariables": {
+      "fill": "VariableID:130"
+    }
+  },
+  {
+    "id": 6242,
+    "name": "Wear OS / EdgeButton / expanded",
+    "width": 320.0,
+    "height": 89.6,
+    "description": "Illustrative EdgeButtonSize.Small: 200 dp screen shown at 1.6\u00d7. Use the native ScreenScaffold edgeButton slot; native geometry and content padding are authoritative.",
+    "nativeProperties": {
+      "Label": {
+        "type": "text",
+        "default": "Add place"
+      }
+    }
+  },
+  {
+    "id": 6245,
+    "name": "Wear OS / EdgeButton / revealing",
+    "width": 320.0,
+    "height": 44.8,
+    "description": "Same configured Small edge button, partially revealed by scroll position. This is a scroll state, not a different size token."
+  },
+  {
+    "id": 6463,
+    "name": "TV / Top navigation / shared accent",
+    "width": 648.0,
+    "height": 72.0,
+    "description": "Centered tvOS-inspired top navigation. Selected destination uses one app accent; remote focus uses lift and tone without a border.",
+    "boundVariables": {
+      "fill": "VariableID:8"
+    }
+  },
+  {
+    "id": 6597,
+    "name": "Toolbar / floating / contextual / four actions",
+    "width": 232.0,
+    "height": 64.0,
+    "description": "",
+    "boundVariables": {
+      "fill": "VariableID:8"
+    }
+  }
+]

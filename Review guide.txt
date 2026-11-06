@@ -1,0 +1,115 @@
+Kozu Universal UI Kit — review edition 0.4
+November 6, 2026
+
+OPEN AND COMMENT
+Open Kozu Universal UI Kit.figcraft in FigCraft. Choose a page in the left sidebar. Press C or choose Comment, then pin feedback to a component or screen. Fourteen existing review comments identify decisions for discussion. The native document is the editable source; the 39-page PDF and 39 PNG previews are reference exports.
+
+This project-agnostic foundation contains 39 boards, 208 component masters, 181 linked instances and 131 variables. 73 masters expose component properties; 72 use auto layout. Dense creative examples include illustrative compositions alongside reusable controls.
+
+DEFAULTS
+Typography: Source Serif 4 headings; Inter body, labels and controls. Source Serif 4 is installed with the internal family name RR Serif. Apps may explicitly override the font family.
+Icons: Aria Icons, https://icons.leularia.com/. Use one coherent Lucide line collection by default. Icons contains the SVG assets, source IDs and upstream license. Preserve semantic icon strokes and checkmarks when removing outer state borders. Aria is a catalog; check the selected collection's license when adding icons.
+Materials: circular top actions, icon-only floating toolbars and selected surfaces use frosted backing with sampled background blur. Default control blur is 28 logical units; menu/overlay blur is 40. Increase backing opacity or use a solid fallback over busy content and for reduced transparency. Content panels remain stable reading surfaces.
+Geometry: innerRadius = max(0, outerRadius - inset). Keep nested circles concentric. Use symmetric container padding and centered icon targets. Derive each inner radius from its actual inset.
+Centering: in text buttons, match the paired icon's optical height (actual visible ink) to the label's cap height at its font, size and weight. The icon frame, font size and line height are not the matching measurement. Center icon and label vertically; balance leading and trailing slots to keep the label centered within the whole button. Keep the icon-only default at a 24-unit icon in a 48-unit target and retain larger platform hit areas. Center icons within chips, navigation targets and toolbar cells, with only explicit optical corrections for asymmetric glyphs.
+Paired icon geometry: measure button-local coordinates from the top-left. Leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position the visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2), with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border. This rule also applies to TV text buttons; retain the large hit areas.
+States: no outer state, focus, selected or pressed borders anywhere. Keyboard and TV remote focus use native tone, lift or scale; selection retains its own tint/checkmarks and selected semantics. Press uses tone/fill. Reduced motion uses static tone and text weight, with no animated zoom, scale or parallax. Keep focus visible independently from selection.
+
+COLOR CONFIGURATION
+Use Kozu / navigation policy to choose Shared accent or Per tab. Shared accent resolves every destination to the app accent. Per tab resolves each destination to its configured color. Set Kozu / accent theme to Blue, Violet, Orange, Teal, Rose, Amber, Sky or Emerald, then set destination scopes as needed.
+The selected icon and tinted background resolve from the same accent. Light selections mix 16% accent with light backing; dark selections mix 32% accent with neutral dark backing. Change foreground and selected background together. Page 19 compares both policies; page 24 defines color roles and states.
+The palette uses Tailwind-inspired RGB families, without claiming exact Tailwind version parity. Semantic roles remain separate from decorative accents: green for success, amber for caution, red for error/destructive actions, sky for information. Status messages also include a label, icon or shape.
+Kozu.tokens.json includes readable roles, resolved pairs, geometry rules, platform guidance and the exact native variable export. Component inventory.json records master IDs and exposed properties.
+
+LIGHT AND DARK VISIBILITY
+Page 25 includes examples and rules for both modes. Use semantic foreground/background pairs. Target WCAG contrast of 4.5:1 for normal text, 3:1 for large text and essential control graphics. Disabled states must remain understandable, although inactive controls have different contrast requirements.
+Test frosted controls over the lightest, darkest and busiest expected backdrops. Increase backing opacity before increasing blur. Provide a solid reduced-transparency fallback. Do not depend on shadows alone for separation in dark mode. Show focus, selection, validation and disabled behavior independently.
+
+PAGE CATALOG
+00 Start here — overview and generic app-family examples.
+01 Foundations — typography, spacing, shapes, color and themes.
+02 Frosted materials — light/dark controls, menus and fallback surfaces.
+03 Actions and states — buttons, hover, press, focus and disabled.
+04 Navigation and toolbars — circular top actions, floating icon bars, tabs and filters.
+05 Inputs and selection — fields, search, selection and progress.
+06 Content and feedback — rows, cards, banners, dialogs and sheets.
+07 Adaptive layouts — compact and expanded application shells.
+08 Tablet and Googlebook — rail, touch and keyboard guidance.
+09 Desktop and dark — Linux/macOS window and pointer conventions.
+10 Theme examples and dark — app-family examples in dark mode.
+11 Accessibility and motion — targets, contrast, focus, text and motion.
+12 Review and implementation — customization and implementation checklist.
+13 Reusable composition — properties, linked instances and wrapping states.
+14 Extended forms — radio, mixed checkbox, combobox, full calendar, textarea and password.
+15 Data and density — tables, sorting, pagination and pointer density.
+16 Overlays and async states — command menu, recovery, undo, loading and tooltips.
+17 Same task across sizes — selected record on phone, tablet and laptop.
+18 Boundary behavior — 600/840-unit boundaries and dual-pane minimums.
+19 Navigation color policies — shared accent versus per-destination colors.
+20 Concentric geometry — radius, inset, focus and alignment rules.
+21 Sketching on a tablet — artwork canvas, brushes, layers and frosted tools.
+22 Vector illustration workspace — editable poster, layers and properties.
+23 More app patterns — notes/documents and analytics examples.
+24 Color roles and states — accent families, semantics and selected colors.
+25 Visibility in light and dark — contrast, material backing and state distinctions.
+26 Core components sheet — consolidated linked component instances.
+27 Music creation studio — arrangement, piano roll, mixer and transport.
+28 Video editing studio — preview, timeline, clips and inspector.
+29 Android widget sizes — representative grid footprints and resizing.
+30 Android widget content — media, calendar, activity and utility examples.
+31 Apple widget families — iOS/iPadOS/macOS families and host guidance.
+32 TV components — remote focus, actions, search, media and playback controls.
+33 TV Media home — large-screen browsing and focused content selection.
+34 Wear OS round faces — circular faces, complications and reusable parts.
+35 Wear OS app tiles — lists, media, summaries and round-screen safe areas.
+36 Apple Watch — conceptual faces, complications and application controls.
+37 Native Wear OS edge and scroll — bezel-following controls, three scroll positions, native text-motion contract and a simulated motion flow.
+38 Accent and material defaults — one accent per app, near-white canvas, airy states and platform material capabilities.
+
+ADAPTIVE RULES
+Below 600: compact navigation and one primary content pane.
+600–719: rail plus one content pane; details replace the master list when necessary.
+720–839: rail plus master/detail only if a 240-unit master and a detail pane of at least 280 units both fit.
+840+: sidebar; add panes only when each minimum width fits. The overview inspector begins at 1100.
+Preserve selected records, drafts and scroll position across layout changes. Keep workspace navigation separate from record actions. Respect native window controls, safe areas, IME behavior and platform shortcuts.
+
+WIDGET AND WEARABLE SIZING
+Android is the primary widget reference. The illustrated grid uses an 82dp cell and 16dp gap: 2x2 = 180x180, 4x1 = 376x82, 4x2 = 376x180, 4x4 = 376x376. These are representative canvases; launcher-provided bounds and resize ranges are authoritative. Home-screen widgets cannot reproduce application backdrop blur on every host.
+Apple examples use standard widget families, with representative device rows documented on page 31. Dimensions vary by device, OS and host. Use WidgetKit family bounds and system margins instead of hardcoding preview dimensions.
+Wear OS round canvases and Apple Watch canvases are logical design references, not physical device pixel specifications. Validate round-screen safe regions. Apple Watch faces are concepts: deliver supported app views and complication families; this kit does not imply unrestricted third-party system watch-face installation.
+TV uses a tvOS-inspired centered top navigation row and full-bleed image cards. The 1440×810 preview uses 300×168.75 cards (16:9); the focused card is 318×178.875 (1.06×). The image reaches every card edge, with no inset thumbnail or separate opaque text panel. A bottom-up dark scrim is transparent through 25% of card height, reaches 82% black at 60%, and 94% at the bottom. Place titles and metadata below 60% and check at least 4.5:1 contrast against the actual composited image; strengthen the scrim or use an opaque fallback when needed. The contrast threshold is an acceptance requirement, not a claim that all imagery has passed.
+TV text-button labels use Inter at 22 logical units, like the top category labels. Match the paired icon's actual ink height to the label's cap height and center both vertically. Balance icon slots to keep the label centered within the whole button; keep the large hit area.
+TV focus uses native tone/lift/scale while persistent selection retains tint/check. Reduced motion uses static tone and text weight, with no animated zoom. Check directional movement, focus return, Back behavior, viewing-distance legibility and safe regions on target hardware. The 72-unit preview side inset maps to 96 pt at 1920 width, exceeding Apple's 80 pt side guidance. Verify top/bottom safe areas separately; native framework safe areas and focus geometry are authoritative. The centered navigation, card sizes and scrim stops are Kozu choices, not mandatory Apple dimensions. Official Apple references are recorded in Platform references.json.
+
+REUSE AND REVIEW
+Create instances from native masters. Change exposed Label, Value, Error, Title and Supporting text properties where available. Set semantic modes and accent/navigation policies before duplicating components. Page 26 is the main component review sheet; pages 21–23 and 27–36 demonstrate composition across app types and platforms.
+Review hierarchy and task flow first, then visibility, active colors, concentricity, centering, density, overflow and interaction states. Pin comments to the specific component or screen and describe the trigger and desired result.
+AGENTS.md records defaults for future work. After native edits, run:
+python3 tools/verify_geometry.py --self-test
+python3 tools/verify_geometry.py
+The guard requires the installed FigCraft CLI. Use its results as scoped static geometry evidence for curved insets, toolbar padding and icon/button centering; they do not prove runtime focus or accessibility behavior.
+
+QA AND LIMITS
+Recorded static review results, not rerun for this documentation update: two independent critique agents reviewed the work, with subjective grades of 9.0/10 for foundations and targeted examples and 9.2/10 for corrected TV/watch visuals. Those targeted reviews reported no blocking issues. Recorded automated inspection reported no text overflow, legacy project names or geometry/centering failures, and 144 native shared/per-tab icon/tint checks across both modes and all eight app accents. Recorded selected-label contrast was at least 4.65:1 on the defined canvas; 16 primary-label pairs were at least 5.48:1. Design QA.json records counts and limitations. These earlier results do not certify the current revision, runtime behavior or contrast over arbitrary imagery.
+This is a static editable design kit. Screen-reader behavior, 200% text scaling, remote/rotary navigation, native widget behavior, blur performance and hardware rendering require implementation and platform testing.
+Platform references.json links primary palette, icon, widget, TV and wearable references. Assets contains the original creative artwork used by the mockups and its source note.
+
+LOCAL SETUP
+Canonical GitHub repository: https://github.com/thekozugroup/KozuUI. Use the local checkout at /Users/michaelwong/Developer/KozuUI (~/Developer/KozuUI). The user has authorized work on main.
+FigCraft CLI 0.15.1 is registered as the figcraft MCP server, with the command:
+/Users/michaelwong/Developer/Tools/figcraft/figcraft-cli-0.15.1-macos-universal/figcraft-cli mcp
+The reusable CLI folder occupies about 194.3 MiB. It remains installed for future authoring. Aria MCP is registered at https://icons.leularia.com/api/mcp.
+The default heading font remains installed at /Users/michaelwong/Library/Fonts/Kozu-SourceSerif4.ttf (264 KiB allocated).
+Earlier research and a preserved review file remain separately at /Users/michaelwong/Developer/Tools/figcraft/Research archive. They are outside this project-agnostic kit.
+The earlier open 19-page version was preserved as a separate review copy. Use this 39-page native file for the current kit. Page 37 includes the “Wear OS / Scroll and text motion” prototype flow: present it, drag or press Down/Up, and press R to reset.
+
+EARLIER CLEANUP RECORD
+The earlier authoring pass recorded removal of its task-owned scratch, authoring scripts, intermediate native files, logs and orchestration runs. The Codex-managed MCP server and FigCraft app remained available. That pass recorded no VM, emulator or container creation. This documentation update performs no resource deletion.
+
+EDITION 0.4 DEFAULTS
+Light canvas: #FCFCFC. White containers sit above the near-white base. Shared accent is the default per app; cards, chips, actions, avatars and selection marks inherit that family. Per-tab palettes are opt-in. Neutralize a card or derive its tint from the local action when deliberately using another accent. Unrelated decorative accent fills should not touch. Status colors and meaningful data categories retain their explicit roles.
+Rail items: 56-unit circles, 24-unit icons at (16,16), 8-unit gaps, centered in an 88-unit rail. Avatars expose Initial and center Inter text in a 56-unit circle. Geometry checks cover rail targets, initials, chips and whole-button labels.
+Frost backing is reduced by 10 percentage points: controls about 58% light/65% dark, toolbars 62%/70%, overlays 84%. The heavy 28/40-unit blur remains. Pale checkbox/radio/mixed fills use clear accent marks rather than opaque saturated state blocks. Blue and orange foreground tones are stronger to retain label contrast.
+Wear OS uses ScreenScaffold, TransformingLazyColumn, SurfaceTransformation and native EdgeButton geometry. Rows and their text transform together. Edge-button text follows native reveal height; add no delayed custom text fade or separate scroll entrance delay. FadingExpandingLabel is for changing multiline content, not scroll reveal. Respect LocalReduceMotion; reduced-motion focus uses static tone and text weight without animated zoom. Keep native typography and native device/font-scale previews. The FigCraft transition is a simulation; it does not prove native continuous-scroll behavior.
+Wear OS and Android home widgets exclude portable backdrop blur by default and use native tonal surfaces. Apple widgets use host-provided Liquid Glass only where supported by the chosen appearance and rendering mode; retain full-color and accessibility fallbacks. Tiles do not scroll.
+The latest critique addressed mixed navigation/actions, duplicate creative tools, chart units/values, a conflicting music playhead, watch-label alignment and a missing error icon. New guidance is on pages 37–38. Dynamic imagery still needs implementation-specific contrast and performance checks. No static kit can prove all runtime metrics.

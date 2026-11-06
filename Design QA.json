@@ -1,0 +1,143 @@
+{
+  "edition": "0.5-review",
+  "projectAgnostic": true,
+  "boards": 39,
+  "nativeNodes": 6255,
+  "componentMasters": 210,
+  "instances": 190,
+  "variables": 140,
+  "mastersWithProperties": 73,
+  "autoLayoutMasters": 75,
+  "geometryAndCenteringGuard": "passed including explicit circular rails, avatars, chips and expanded reparented subtrees",
+  "guardSelfTest": "passed",
+  "textOverflow": "No visible clipping reported in the reviewed previews; runtime font-scale verification remains required.",
+  "legacyProjectNameMatches": 0,
+  "importBindingRepair": {
+    "reboundLayers": 899,
+    "reboundFields": 899,
+    "imports": 4
+  },
+  "selectedColorPolicy": [
+    "Shared accent",
+    "Per tab"
+  ],
+  "critique": {
+    "foundationAndTargetedMockups": 9.0,
+    "latestTVAndWatchVisuals": 9.2
+  },
+  "limits": [
+    "Static editable design kit; not production app code",
+    "Runtime screen reader, 200% text scaling, hardware blur and remote/watch behavior need platform validation",
+    "Widget dimensions are representative; the host supplies exact bounds",
+    "Apple watch faces are concepts; implement supported app UI and complication families"
+  ],
+  "dynamicNativeColorChecks": {
+    "passed": 144,
+    "themes": [
+      "Light",
+      "Dark"
+    ],
+    "accentFamilies": 8,
+    "policies": [
+      "Shared accent",
+      "Per tab"
+    ],
+    "iconAndDerivedTintMatch": true,
+    "minSelectedLabelContrastOnDefinedCanvas": 4.65,
+    "savedTestEdits": false
+  },
+  "cleanup": {
+    "scratchRemoved": "/private/tmp/ai-development/kozu-selection-colors-1793994838314247000-93910-0",
+    "authoringProcessesStopped": true,
+    "retainedMCPProcess": "Codex-managed FigCraft MCP",
+    "retainedToolFolder": "/Users/michaelwong/Developer/Tools/figcraft/figcraft-cli-0.15.1-macos-universal",
+    "retainedToolAllocatedKiB": 199008,
+    "retainedFont": "/Users/michaelwong/Library/Fonts/Kozu-SourceSerif4.ttf",
+    "retainedFontAllocatedKiB": 264
+  },
+  "primaryLabelContrast": {
+    "pairsPassed": 16,
+    "minimumOnDefinedCanvas": 5.48
+  },
+  "wearMotionPrototype": {
+    "flow": "Wear OS / Scroll and text motion",
+    "start": 6404,
+    "frames": [
+      6404,
+      6418,
+      6432
+    ],
+    "interactions": 12,
+    "transition": "smartAnimate",
+    "simulationOnly": true,
+    "runtimeUntested": true
+  },
+  "impeccableDetector": {
+    "availableForNativeArtifact": false,
+    "attempted": true,
+    "result": "Native file scan returned ENOENT; native geometry, token and image review are the applicable checks."
+  },
+  "backgroundLight": "#FCFCFC",
+  "frostBackingReductionPercentagePoints": 10,
+  "nativeMaterialFallbacks": {
+    "Wear OS": "tonal; portable backdrop blur excluded",
+    "Android widgets": "opaque/tonal; portable backdrop blur excluded",
+    "Apple widgets": "host-provided glass conditional on appearance/rendering/accessibility"
+  },
+  "reviewStatus": "Refining latest paired-icon and corner-action requests; final exports and QA pending.",
+  "TVVisibility": {
+    "scrimTextWorstWhiteImageContrast": 12.0,
+    "textStartsAfterStop": 0.6,
+    "focusForegroundPairsOverWhiteAndBlack": [
+      {
+        "surface": "135",
+        "mode": "VariableCollectionId:7/mode1",
+        "backdrop": 0,
+        "contrast": 13.29
+      },
+      {
+        "surface": "135",
+        "mode": "VariableCollectionId:7/mode1",
+        "backdrop": 1,
+        "contrast": 19.42
+      },
+      {
+        "surface": "135",
+        "mode": "VariableCollectionId:7/mode2",
+        "backdrop": 0,
+        "contrast": 17.66
+      },
+      {
+        "surface": "135",
+        "mode": "VariableCollectionId:7/mode2",
+        "backdrop": 1,
+        "contrast": 10.5
+      },
+      {
+        "surface": "137",
+        "mode": "VariableCollectionId:7/mode1",
+        "backdrop": 0,
+        "contrast": 5.08
+      },
+      {
+        "surface": "137",
+        "mode": "VariableCollectionId:7/mode1",
+        "backdrop": 1,
+        "contrast": 7.73
+      },
+      {
+        "surface": "137",
+        "mode": "VariableCollectionId:7/mode2",
+        "backdrop": 0,
+        "contrast": 8.48
+      },
+      {
+        "surface": "137",
+        "mode": "VariableCollectionId:7/mode2",
+        "backdrop": 1,
+        "contrast": 4.81
+      }
+    ],
+    "minimumFocusContrast": 4.81
+  }
+}

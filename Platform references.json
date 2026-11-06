@@ -1,0 +1,477 @@
+{
+  "Tailwind CSS": {
+    "url": "https://tailwindcss.com/docs/colors",
+    "use": "Accent family and step conventions"
+  },
+  "Aria Icons": {
+    "url": "https://icons.leularia.com/",
+    "use": "Default icon catalog",
+    "text_pairing": "Match a text-paired icon's optical height (actual visible ink) to the label's cap height at its font, size and weight. Center icon and label vertically. Balance leading and trailing slots to keep the label centered within the whole button. Do not match the icon frame to the font size or line height. In button-local coordinates from the top-left, leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2) with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border.",
+    "icon_only_default": "Keep the 24-unit icon in a 48-unit target; retain larger platform hit areas."
+  },
+  "Widget references": [
+    {
+      "url": "https://developer.android.com/design/ui/mobile/guides/widgets/sizing",
+      "application": "Grid spans are placement requests. Cell shape and host bounds vary; fill the allocation and change content at tested size thresholds."
+    },
+    {
+      "url": "https://developer.android.com/develop/ui/views/appwidgets/layouts",
+      "application": "targetCellWidth/targetCellHeight, responsive layouts, host size options and launcher-provided exact sizes."
+    },
+    {
+      "url": "https://developer.apple.com/design/human-interface-guidelines/widgets",
+      "application": "Selected iOS 390\u00d7844 pt row: 158\u00d7158, 338\u00d7158, 338\u00d7354 pt. Selected iPad 954\u00d71373 pt row: 726\u00d7350 pt extra large. Current family availability includes extra large on iPad and Mac."
+    },
+    {
+      "url": "https://developer.android.com/develop/ui/compose/glance/build-ui",
+      "application": "SizeMode.Responsive and native font support limitations."
+    },
+    {
+      "url": "https://developer.android.com/develop/ui/compose/glance/create-app-widget",
+      "application": "Use the Android system outer radius and subtract content inset for inner radii."
+    },
+    {
+      "url": "https://developer.apple.com/documentation/widgetkit/optimizing-your-widget-for-accented-rendering-mode-and-liquid-glass",
+      "application": "Respect system margins, container background and widget rendering modes."
+    }
+  ],
+  "TV references": {
+    "document": "Kozu Universal UI Kit \u2014 TV guidance",
+    "native_file": "Kozu Universal UI Kit.figcraft",
+    "reviewed": "2026-11-06",
+    "pages": [
+      "TV \u00b7 Components",
+      "TV \u00b7 Media Home"
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "title": "Design for TV",
+        "url": "https://developer.android.com/design/ui/tv/guides/foundations/design-for-tv",
+        "application": "Keep the TV experience glanceable at about 3 m / 10 ft, with short text and immediate remote feedback."
+      },
+      {
+        "id": "S2",
+        "title": "Focus system",
+        "url": "https://developer.android.com/design/ui/tv/guides/styles/focus-system",
+        "application": "Distinguish focused and pressed states from persistent selection. Keep one focus target in the implementation. Kozu uses native tone/lift/scale without outer state borders; reduced motion uses static tone and text weight."
+      },
+      {
+        "id": "S3",
+        "title": "Navigation on TV",
+        "url": "https://developer.android.com/design/ui/tv/guides/foundations/navigation-on-tv",
+        "application": "Use spatial D-pad paths, Select to activate, and remote Back to return. Preserve the originating focus target; do not duplicate remote Back onscreen or gate exit."
+      },
+      {
+        "id": "S4",
+        "title": "Typography",
+        "url": "https://developer.android.com/design/ui/tv/guides/styles/typography",
+        "application": "Use Source Serif 4 (internal RR Serif) for headings and Inter for body and controls. Preserve distant readability; native platform typography may override these defaults."
+      },
+      {
+        "id": "S5",
+        "title": "Layouts",
+        "url": "https://developer.android.com/design/ui/tv/guides/styles/layouts",
+        "application": "Use a 16:9 TV canvas, aligned spatial groups, and approximately 5% safety margins; let background artwork extend beyond safe content."
+      },
+      {
+        "id": "S6",
+        "title": "Buttons",
+        "url": "https://developer.android.com/design/ui/tv/guides/components/buttons",
+        "application": "Use clear action labels, fully rounded action containers and icon buttons for compact actions. Apply the Kozu text-button rule: Inter 22 like top categories; actual icon ink matches label cap height, both center vertically, and balanced icon slots keep the label centered within the whole button. Retain large hit areas. In button-local coordinates from the top-left, leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2) with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border."
+      },
+      {
+        "id": "S7",
+        "title": "Cards",
+        "url": "https://developer.android.com/design/ui/tv/guides/components/cards",
+        "application": "Use one content item per aligned card. Kozu uses full-bleed 16:9 imagery and an overlaid bottom-up dark scrim for titles and metadata, without an inset thumbnail."
+      },
+      {
+        "id": "S8",
+        "title": "Apple HIG \u2014 Focus and selection",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/focus-and-selection",
+        "application": "Allow room for native tvOS focus enlargement and lift without covering nearby content. Keep focus separate from persistent selection. Kozu omits outer focus/state borders."
+      },
+      {
+        "id": "S9",
+        "title": "Apple HIG \u2014 Tab bars",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+        "application": "Use the tvOS top navigation pattern as a reference. Kozu centers one top destination row; preserve native remote navigation and focus return in the implementation."
+      },
+      {
+        "id": "S10",
+        "title": "Apple HIG \u2014 Accessibility",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+        "application": "Check foreground/background contrast over actual imagery and honor Reduce Motion. Kozu requires at least 4.5:1 for card titles and metadata; reduced-motion focus uses static tone and text weight without animated zoom, scale or parallax."
+      },
+      {
+        "id": "S11",
+        "title": "Apple HIG \u2014 Layout",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+        "application": "Apple gives 80 pt side and 60 pt top/bottom safe-area guidance. At 1920 width, the 72-unit side inset in the 1440-wide Kozu preview maps to 96 pt. Verify vertical safe areas separately; native framework bounds and focus geometry are authoritative."
+      }
+    ],
+    "adaptation": {
+      "canvas": [
+        1440,
+        810
+      ],
+      "artboards": [
+        1600,
+        1300
+      ],
+      "design_units_per_dp": 1.5,
+      "safe_insets": [
+        40.5,
+        72,
+        40.5,
+        72
+      ],
+      "typefaces": {
+        "heading": "Source Serif 4 (actual native family: RR Serif)",
+        "body": "Inter"
+      },
+      "palette": "Tailwind Slate 50 / 950; blue selection, violet category, teal completion, rose error",
+      "focus": "No outer state, focus, selected or pressed borders. Native tone/lift/scale identifies focus; selection retains tint/checkmarks and semantics. Reduced motion uses static tone and text weight, with no animated zoom, scale or parallax.",
+      "blur": {
+        "surface": 28,
+        "overlay": 40,
+        "fallback": "opaque Slate 900"
+      },
+      "source_interpretation": "Centered navigation, card dimensions, scrim stops, fonts, palette and selection colors are Kozu adaptations inspired by tvOS and Android TV, not universal platform requirements. The 1.5 design-units-per-dp value describes the original Android drawing scale, not a cross-platform unit conversion.",
+      "navigation": "One tvOS-inspired centered top destination row. Contextual actions apply to the current content; do not duplicate destinations.",
+      "cards": {
+        "normal_size": [
+          300,
+          168.75
+        ],
+        "focused_size": [
+          318,
+          178.875
+        ],
+        "aspect_ratio": "16:9",
+        "focus_scale": 1.06,
+        "image": "Full bleed to every card edge; no inset thumbnail or separate opaque metadata panel.",
+        "scrim": "Bottom-up black gradient: transparent through 25% of card height, 82% opacity at 60%, 94% opacity at the bottom.",
+        "text_placement": "Titles and metadata below 60% of card height.",
+        "contrast": "Require at least 4.5:1 for titles and metadata against the actual composited image at every supported state and crop. Strengthen the scrim or use an opaque fallback if necessary; the gradient recipe alone does not prove contrast.",
+        "reduced_motion": "Static tone and text weight at the unfocused size; no animated zoom, scale or parallax."
+      },
+      "safe_area_interpretation": "Preview coordinates are 1440\u00d7810. The 72-unit side inset maps to 96 pt at 1920 width, exceeding Apple\u2019s 80 pt side guidance. The existing vertical preview inset is not a claim of tvOS safe-area compliance. Use native framework safe areas and focus geometry; verify top/bottom clearance separately.",
+      "text_buttons": {
+        "label_family": "Inter",
+        "label_size": 22,
+        "reference": "Same label size as the top categories.",
+        "paired_icon": "Match a text-paired icon's optical height (actual visible ink) to the label's cap height at its font, size and weight. Center icon and label vertically. Balance leading and trailing slots to keep the label centered within the whole button. Do not match the icon frame to the font size or line height. In button-local coordinates from the top-left, leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2) with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border.",
+        "hit_area": "Keep the large TV hit areas; reducing label and paired-icon size does not reduce the target."
+      }
+    },
+    "icon_source": {
+      "provider": "https://icons.leularia.com/",
+      "collection": "Lucide line",
+      "logical_grid": 24,
+      "stroke": 1.8,
+      "license_file": "tv-icons-LICENSE.txt",
+      "preservation": "Preserve semantic icon strokes and checkmarks when removing outer state borders."
+    },
+    "art": {
+      "sha256": "f2faa6b1bc55b3f65fe105666d8446871f9bcbc27bf9142cf253765cc2e2b32c",
+      "provenance": "User-supplied original artwork"
+    },
+    "annotations": [
+      {
+        "node": 11,
+        "text": "64 design units / 42.7 dp high. Use Inter 22 like the top category labels. Match the paired icon's actual ink height to the label's cap height and center both vertically. Balance leading/trailing slots to keep the label centered within the whole button; retain the large hit area. Selection uses blue tint and a check; remote focus uses native tone/lift/scale independently. Press uses a deeper fill. In button-local coordinates from the top-left, leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2) with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 18,
+        "text": "64 design units / 42.7 dp high. Use Inter 22 like the top category labels. Match the paired icon's actual ink height to the label's cap height and center both vertically. Balance leading/trailing slots to keep the label centered within the whole button; retain the large hit area. Selection uses blue tint and a check; remote focus uses native tone/lift/scale independently. Press uses a deeper fill. In button-local coordinates from the top-left, leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2) with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 26,
+        "text": "64 design units / 42.7 dp high. Use Inter 22 like the top category labels. Match the paired icon's actual ink height to the label's cap height and center both vertically. Balance leading/trailing slots to keep the label centered within the whole button; retain the large hit area. Selection uses blue tint and a check; remote focus uses native tone/lift/scale independently. Press uses a deeper fill. In button-local coordinates from the top-left, leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2) with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 33,
+        "text": "64 design units / 42.7 dp high. Use Inter 22 like the top category labels. Match the paired icon's actual ink height to the label's cap height and center both vertically. Balance leading/trailing slots to keep the label centered within the whole button; retain the large hit area. Selection uses blue tint and a check; remote focus uses native tone/lift/scale independently. Press uses a deeper fill. In button-local coordinates from the top-left, leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2) with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 41,
+        "text": "64 design units / 42.7 dp high. Use Inter 22 like the top category labels. Match the paired icon's actual ink height to the label's cap height and center both vertically. Balance leading/trailing slots to keep the label centered within the whole button; retain the large hit area. Selection uses blue tint and a check; remote focus uses native tone/lift/scale independently. Press uses a deeper fill. In button-local coordinates from the top-left, leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2) with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 48,
+        "text": "Full-bleed 300 \u00d7 168.75 card (16:9); focused size 318 \u00d7 178.875 (1.06\u00d7). No inset thumbnail or outer state border. Bottom-up dark scrim: transparent through 25%, 82% black at 60%, 94% at the bottom. Titles and metadata below 60% require at least 4.5:1 contrast over the composited image. Focus uses native tone/lift/scale; selection persists with tint/check. Reduced motion uses static tone and text weight without animated zoom.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS7 Cards: https://developer.android.com/design/ui/tv/guides/components/cards"
+      },
+      {
+        "node": 53,
+        "text": "Full-bleed 300 \u00d7 168.75 card (16:9); focused size 318 \u00d7 178.875 (1.06\u00d7). No inset thumbnail or outer state border. Bottom-up dark scrim: transparent through 25%, 82% black at 60%, 94% at the bottom. Titles and metadata below 60% require at least 4.5:1 contrast over the composited image. Focus uses native tone/lift/scale; selection persists with tint/check. Reduced motion uses static tone and text weight without animated zoom.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS7 Cards: https://developer.android.com/design/ui/tv/guides/components/cards"
+      },
+      {
+        "node": 59,
+        "text": "Full-bleed 300 \u00d7 168.75 card (16:9); focused size 318 \u00d7 178.875 (1.06\u00d7). No inset thumbnail or outer state border. Bottom-up dark scrim: transparent through 25%, 82% black at 60%, 94% at the bottom. Titles and metadata below 60% require at least 4.5:1 contrast over the composited image. Focus uses native tone/lift/scale; selection persists with tint/check. Reduced motion uses static tone and text weight without animated zoom.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS7 Cards: https://developer.android.com/design/ui/tv/guides/components/cards"
+      },
+      {
+        "node": 74,
+        "text": "Accessible name: Search. 72 units / 48 dp target. Centered 32-unit icon. Native background blur 28; use opaque Slate 900 fallback when contrast or frame time suffers.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 79,
+        "text": "Accessible name: Settings. 72 units / 48 dp target. Centered 32-unit icon. Native background blur 28; use opaque Slate 900 fallback when contrast or frame time suffers.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 84,
+        "text": "Accessible name: Saved. 72 units / 48 dp target. Centered 32-unit icon. Native background blur 28; use opaque Slate 900 fallback when contrast or frame time suffers.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 7,
+        "text": "Component state catalog, not a simultaneous runtime screen. Canvas is 1440 \u00d7 810, 16:9; all values shown are design units at 1.5\u00d7 the Android 960 \u00d7 540 dp model. Kozu choices: Slate 50/950, blue selection, violet creative category, teal completion. No outer state, focus, selected or pressed borders. Preserve semantic icon strokes and checkmarks.\nS1 Design for TV: https://developer.android.com/design/ui/tv/guides/foundations/design-for-tv\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS4 Typography: https://developer.android.com/design/ui/tv/guides/styles/typography\nS5 Layouts: https://developer.android.com/design/ui/tv/guides/styles/layouts"
+      },
+      {
+        "node": 88,
+        "text": "Floating actions apply to the current content only. This is not a destination bar. Native blur 28; overlay blur token 40. Opaque fallback #0F172A. Do not rely on blur for text contrast. Radius 42 \u2212 inset 12 = inner circular radius 30.\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 105,
+        "text": "Teal is completion/availability, not a generic accent. Pair status with explicit text and check. Unavailable uses rose, alert icon and text. Violet denotes a content category only.\nS1 Design for TV: https://developer.android.com/design/ui/tv/guides/foundations/design-for-tv"
+      },
+      {
+        "node": 131,
+        "text": "Media-home reference. 1440 \u00d7 810 = 16:9. Design scale 1.5\u00d7 MDPI 960 \u00d7 540; divide units by 1.5 for dp/sp. Approximate 5% safe area is x72..1368, y40.5..769.5. Background may fill the full canvas. The 72-unit side inset maps to 96 pt at 1920 width, exceeding Apple\u2019s 80 pt side guidance. Verify vertical clearance separately; native safe areas and focus geometry are authoritative. Top destinations remain in one centered, tvOS-inspired navigation row; contextual actions operate on the featured content.\nS1 Design for TV: https://developer.android.com/design/ui/tv/guides/foundations/design-for-tv\nS3 Navigation on TV: https://developer.android.com/design/ui/tv/guides/foundations/navigation-on-tv\nS5 Layouts: https://developer.android.com/design/ui/tv/guides/styles/layouts"
+      },
+      {
+        "node": 138,
+        "text": "Persistent selected destination: selected=true; icon and text match blue tint. Focus is currently elsewhere. Moving focus never changes the active destination; Select commits navigation.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS3 Navigation on TV: https://developer.android.com/design/ui/tv/guides/foundations/navigation-on-tv"
+      },
+      {
+        "node": 182,
+        "text": "Reference state intent: focused=true, selected=false. One focus target is intended for the runtime screen, shown through native tone/lift/scale without an outer border. Launch requests Resume; Down enters remembered first card. Left/right move among four cards, clamping at edges. Up returns to the closest hero action; Down at the final row holds focus. Select opens detail/playback; remote Back returns to this card and restores scroll.\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS3 Navigation on TV: https://developer.android.com/design/ui/tv/guides/foundations/navigation-on-tv"
+      },
+      {
+        "node": 159,
+        "text": "Launch focus target. Left/right swaps Resume and Details; Down restores the last focused content card; Up returns to the active destination. On returning from detail, restore the originating card. Home/Back remain system controls; do not add a duplicate onscreen Back.\nS3 Navigation on TV: https://developer.android.com/design/ui/tv/guides/foundations/navigation-on-tv\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 165,
+        "text": "Original artwork supplied at assets/creative-art.png. Cards use full-bleed imagery with a bottom-up dark scrim: transparent through 25%, 82% black at 60%, 94% at the bottom. Place titles and metadata below 60% and verify at least 4.5:1 contrast over actual imagery; strengthen the scrim or use an opaque fallback when needed. Floating controls: Saved (selected, blue matching glyph/tint) and More options; expose accessible names and focused tooltips in the app. Focus order follows visible horizontal positions.\nS4 Typography: https://developer.android.com/design/ui/tv/guides/styles/typography\nS6 Buttons: https://developer.android.com/design/ui/tv/guides/components/buttons"
+      },
+      {
+        "node": 126,
+        "text": "Implementation acceptance checks: D-pad reachability and edge behavior; one focus target; focus return after dialogs/playback; selected semantics independent from focus; TalkBack names; 200% text without clipped labels; display safe area; card title/metadata contrast of at least 4.5:1 over real imagery; reduced-motion static tone and text weight without animated zoom; no outer state/focus/selected/pressed borders; semantic icon strokes preserved; 10-foot readability; real-device blur/frame-time measurement. These static native boards do not prove runtime behavior.\nS1 Design for TV: https://developer.android.com/design/ui/tv/guides/foundations/design-for-tv\nS2 Focus system: https://developer.android.com/design/ui/tv/guides/styles/focus-system\nS3 Navigation on TV: https://developer.android.com/design/ui/tv/guides/foundations/navigation-on-tv\nS4 Typography: https://developer.android.com/design/ui/tv/guides/styles/typography"
+      }
+    ],
+    "verification": {
+      "pages": 2,
+      "components": 15,
+      "native_nodes": 201,
+      "fonts": {
+        "embeddedFontFiles": 0,
+        "externalPenpotFontRefs": [],
+        "fontLicenseNotices": 0,
+        "fonts": [
+          {
+            "available": true,
+            "family": "Inter",
+            "layers": [
+              "01",
+              "12 min left",
+              "4 columns300-unit cards24-unit gutters72-unit safe sides",
+              "Blue tint + check",
+              "Both remain visible",
+              "Coastal study",
+              "Deeper fill on press",
+              "Default",
+              "FOCUSED CARD",
+              "Focus moves. Selection stays. Every state has one clear meaning.",
+              "KOZU  /  UNIVERSAL UI  /  TV",
+              "Mountain light",
+              "Neutral surface",
+              "Open",
+              "Open water",
+              "Outline + 6 gap",
+              "Pressed",
+              "Remote focus",
+              "Remote states, reusable controls and a stock content grid. A shared foun",
+              "SELECTED CARD",
+              "STANDARD CARD",
+              "Saved",
+              "Selected",
+              "Selected + focus",
+              "Single focus targetin a live screen."
+            ]
+          },
+          {
+            "available": true,
+            "family": "RR Serif",
+            "layers": [
+              "A slower kindof evening",
+              "Coastal study",
+              "Continue watching",
+              "Designed for the remote",
+              "Media home",
+              "Stock grid",
+              "TV components"
+            ]
+          }
+        ],
+        "missing": 0,
+        "total": 2
+      },
+      "runtime_tested": false,
+      "native_reopened": true,
+      "annotations": 20,
+      "previews_exported_and_visually_inspected": [
+        "tv-components.png",
+        "tv-media-home.png"
+      ],
+      "icon_imports": "Sequential SVG imports; editable native vectors",
+      "status": "Historical static checks only; current geometry, image contrast, remote navigation and reduced-motion behavior still require scoped verification in the implementation.",
+      "scope": "Historical static source-document snapshot, including legacy layer labels and the retired outline check. Not rerun for this documentation update; not evidence of current kit conformance or runtime behavior.",
+      "single_focus_target_in_static_example": true,
+      "historical_outline_safe_area_check": true
+    },
+    "annotation_scope": "Documentation guidance associated with historical source node IDs; these strings do not assert current native annotation contents or runtime behavior."
+  },
+  "Wearable references": {
+    "document": "Wearable Examples",
+    "accessed": "2026-11-06",
+    "sources": [
+      {
+        "id": "A1",
+        "title": "Wear OS app quality",
+        "url": "https://developer.android.com/develop/adaptive-apps/quality-guidelines/wear-app-quality",
+        "used_for": "Minimum 48 by 48 dp app touch targets, user font scaling, swipe dismissal, ongoing activity and state preservation."
+      },
+      {
+        "id": "A2",
+        "title": "Common adaptive design layouts",
+        "url": "https://developer.android.com/design/ui/wear/guides/foundations/common-layouts",
+        "used_for": "Non-scrolling tiles; scrolling app lists; focused non-scrolling media and activity layouts."
+      },
+      {
+        "id": "A3",
+        "title": "Common layouts for tiles",
+        "url": "https://developer.android.com/design/ui/wear/guides/foundations/common-layouts/tiles",
+        "used_for": "Proportional margins, responsive slots and avoiding clipping; 225 dp is a layout breakpoint, not the size of these specimens."
+      },
+      {
+        "id": "A4",
+        "title": "Get started with tiles",
+        "url": "https://developer.android.com/training/wearables/tiles/get_started",
+        "used_for": "Title, main and bottom slots. Tiles do not scroll or offer the app shape-morphing behavior."
+      },
+      {
+        "id": "A5",
+        "title": "Design quality tiers",
+        "url": "https://developer.android.com/design/ui/wear/guides/foundations/quality-tiers",
+        "used_for": "Round-screen shape, percentage margins and constrained central content."
+      },
+      {
+        "id": "H1",
+        "title": "Designing for watchOS",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-watchos",
+        "used_for": "Quick glanceable interactions, shallow navigation, Digital Crown scrolling and useful complications."
+      },
+      {
+        "id": "H2",
+        "title": "Buttons",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/buttons",
+        "used_for": "Capsule inline controls, materials for contrast and full-width primary actions."
+      },
+      {
+        "id": "H3",
+        "title": "Complications",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/complications",
+        "used_for": "Representative circular, inline and rectangular families, system masks and device-dependent bounds."
+      },
+      {
+        "id": "H4",
+        "title": "Widgets",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/widgets",
+        "used_for": "Smart Stack context, meaningful backgrounds and timely widget information."
+      },
+      {
+        "id": "H5",
+        "title": "Accessibility",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+        "used_for": "watchOS recommended default controls are 44 by 44 pt. This reference intentionally uses a more generous 48-unit shared target."
+      },
+      {
+        "id": "H6",
+        "title": "Layout",
+        "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+        "used_for": "Few controls per row; prefer full-width text buttons."
+      }
+    ],
+    "design_decisions": {
+      "dimensions": "Each page contains one native 1600 \u00d7 1300 frame. Round specimens are 320 \u00d7 320 logical units. Apple display specimens are 280 \u00d7 352 logical units. These are representative drawing bounds; they are neither universal device dp/pt sizes nor physical pixels.",
+      "typography": "Source Serif 4 (installed internal family RR Serif) is the core heading font; Inter is the core body/control font. Compact watch labels, dates, metadata, list titles and complication values use Inter for short-form legibility. Face time and larger headings use RR Serif. Native platform APIs may impose system typography, particularly tiles and complications.",
+      "color": "Tailwind Slate 50 #F8FAFC and Slate 950 #020617 anchor light documentation and dark watch content. Blue is primary action, violet is secondary emphasis and teal is selection/active content. Green success, amber warning and rose error each include text and an icon.",
+      "selection": "Selected icon and container resolve from the same app accent, with tint/checkmarks, text weight and selected semantics. Pressed controls use tone/fill. No outer state, focus, selected or pressed borders. Focus uses native tone/lift/scale independently from selection; reduced motion uses static tone and text weight without animated zoom, scale or parallax.",
+      "materials": "Wear OS and Android home widgets exclude portable backdrop blur by default; use native tonal surfaces. Apple widgets use host-provided glass only in supported appearances, with full-color and accessibility fallbacks. Other supported app controls use blur 28 and transient overlays blur 40 only after contrast and performance checks; opaque fallbacks remain required.",
+      "geometry": "Icons use the supplied Aria-distributed Lucide SVG source at 24 logical units, with native 1.8-unit strokes. Preserve semantic icon strokes and checkmarks. Circular controls have centered 24-unit icons; nested curved surfaces remain concentric. Apple display corner radius is 52; a uniform 12-unit inset would use radius 40. For text-paired icons, match actual ink height to label cap height and center both vertically; balance slots to keep the label centered within the whole button. Retain native touch targets and icon-only defaults. In button-local coordinates from the top-left, leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2) with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border.",
+      "touch": "Most control targets are 48\u201364 logical units; shared capsule controls are 56 units tall. Android runtime targets must meet 48 dp. Apple recommends 44 pt default controls; this reference uses a more generous shared 48-unit floor.",
+      "native_editability": "All authored objects are native frames, components, instances, text, vector paths, ellipses and semantic color variables. No page is a flattened image.",
+      "native_scroll_and_text": "Use native ScreenScaffold, TransformingLazyColumn, SurfaceTransformation and bezel-following EdgeButton. Rows and their text transform together; EdgeButton text follows native reveal height. Do not add delayed custom text fades or a separate scroll entrance delay. FadingExpandingLabel is for changing multiline content only. Respect LocalReduceMotion and native typography, touch and rotary behavior; FigCraft motion previews are simulations."
+    },
+    "limits": [
+      "Static reference only: no runnable application, watch-face package, complications extension or widget timeline.",
+      "Apple face compositions illustrate contexts and are not installable custom system faces.",
+      "No hardware validation of blur, battery, Always On, font scaling, rotary input, screen reader names, focus traversal, safe areas or native widget masks.",
+      "Actual device dimensions, system fonts, system materials and widget rendering can override this portable design reference.",
+      "Preview raster dimensions describe exports, not physical device resolution."
+    ],
+    "verification": {
+      "pages": 3,
+      "boards": [
+        "Wear OS / Round faces & components",
+        "Wear OS / App tiles, lists & media",
+        "Apple Watch / Faces, complications & controls"
+      ],
+      "board_bounds": [
+        1600,
+        1300
+      ],
+      "control_masters": 16,
+      "native_components_including_icons": 32,
+      "native_instances": 56,
+      "native_nodes": 541,
+      "raster_nodes": 0,
+      "fonts": [
+        "RR Serif",
+        "Inter"
+      ],
+      "standalone": true,
+      "base_document_opened": false,
+      "reopened_successfully": true,
+      "control_masters_reopened": 16,
+      "semantic_variables": 27,
+      "background_blur_effects": 13,
+      "capsule_centering": "All four capsule masters checked geometrically; label and icon groups centered.",
+      "preview_review": "All three complete page exports viewed twice; final visual check performed inline.",
+      "sampled_solid_text_contrast_min": 4.94,
+      "excluded_name_check": "Passed on document tree, script, notes and native archive entries.",
+      "cleanup": "Synchronous authoring and verification MCP subprocesses terminated. No build, dependency installation, service or emulator created.",
+      "scope": "Historical static source-document snapshot, retained for provenance and not rerun for this documentation update. These figures do not certify current native behavior, blur support, image contrast or hardware accessibility."
+    },
+    "tooling_limits": [
+      "The named context-mode:context-mode skill file was not present in the installed package. Available Context Mode MCP tools were used directly.",
+      "No subagent capability was available. Final visual review ran inline. Native design artifacts do not use the HTML/CSS detector."
+    ]
+  },
+  "Native Wear OS and materials": {
+    "lists": "https://developer.android.com/training/wearables/compose/lists",
+    "previews": "https://developer.android.com/training/wearables/compose/previews",
+    "edgeButton": "https://developer.android.com/reference/kotlin/androidx/wear/compose/material3/EdgeButton.composable",
+    "fadingExpandingLabel": "https://developer.android.com/reference/kotlin/androidx/wear/compose/material3/FadingExpandingLabel.composable",
+    "androidWidgets": "https://developer.android.com/develop/ui/compose/glance/build-ui",
+    "appleWidgets": "https://developer.apple.com/documentation/widgetkit/optimizing-your-widget-for-accented-rendering-mode-and-liquid-glass"
+  },
+  "Canonical source": {
+    "repository": "https://github.com/thekozugroup/KozuUI",
+    "local_checkout": "/Users/michaelwong/Developer/KozuUI",
+    "home_relative_checkout": "~/Developer/KozuUI",
+    "branch": "main",
+    "branch_authorization": "The user has authorized work on main."
+  }
+}

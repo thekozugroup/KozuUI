@@ -1,0 +1,268 @@
+{
+  "provider": "https://icons.leularia.com/",
+  "collection": "lucide",
+  "fetched": "2026-11-06",
+  "licenseFile": "LICENSE.txt",
+  "icons": [
+    {
+      "name": "search",
+      "id": "lucide:search"
+    },
+    {
+      "name": "volume-2",
+      "id": "lucide:volume-2"
+    },
+    {
+      "name": "house",
+      "id": "lucide:house"
+    },
+    {
+      "name": "circle",
+      "id": "lucide:circle"
+    },
+    {
+      "name": "chevron-down",
+      "id": "lucide:chevron-down"
+    },
+    {
+      "name": "check-check",
+      "id": "lucide:check-check"
+    },
+    {
+      "name": "circle-alert",
+      "id": "lucide:circle-alert"
+    },
+    {
+      "name": "message-circle",
+      "id": "lucide:message-circle"
+    },
+    {
+      "name": "sparkles",
+      "id": "lucide:sparkles"
+    },
+    {
+      "name": "x",
+      "id": "lucide:x"
+    },
+    {
+      "name": "chevron-right",
+      "id": "lucide:chevron-right"
+    },
+    {
+      "name": "sliders-horizontal",
+      "id": "lucide:sliders-horizontal"
+    },
+    {
+      "name": "settings",
+      "id": "lucide:settings"
+    },
+    {
+      "name": "loader-circle",
+      "id": "lucide:loader-circle"
+    },
+    {
+      "name": "utensils",
+      "id": "lucide:utensils"
+    },
+    {
+      "name": "download",
+      "id": "lucide:download"
+    },
+    {
+      "name": "bell",
+      "id": "lucide:bell"
+    },
+    {
+      "name": "plus",
+      "id": "lucide:plus"
+    },
+    {
+      "name": "check",
+      "id": "lucide:check"
+    },
+    {
+      "name": "mic",
+      "id": "lucide:mic"
+    },
+    {
+      "name": "square",
+      "id": "lucide:square"
+    },
+    {
+      "name": "play",
+      "id": "lucide:play"
+    },
+    {
+      "name": "send",
+      "id": "lucide:send"
+    },
+    {
+      "name": "wifi-off",
+      "id": "lucide:wifi-off"
+    },
+    {
+      "name": "chef-hat",
+      "id": "lucide:chef-hat"
+    },
+    {
+      "name": "sun",
+      "id": "lucide:sun"
+    },
+    {
+      "name": "trash-2",
+      "id": "lucide:trash-2"
+    },
+    {
+      "name": "clock",
+      "id": "lucide:clock"
+    },
+    {
+      "name": "arrow-up",
+      "id": "lucide:arrow-up"
+    },
+    {
+      "name": "arrow-left",
+      "id": "lucide:arrow-left"
+    },
+    {
+      "name": "ellipsis",
+      "id": "lucide:ellipsis"
+    },
+    {
+      "name": "bookmark",
+      "id": "lucide:bookmark"
+    },
+    {
+      "name": "users",
+      "id": "lucide:users"
+    },
+    {
+      "name": "moon",
+      "id": "lucide:moon"
+    },
+    {
+      "name": "calendar-days",
+      "id": "lucide:calendar-days"
+    },
+    {
+      "name": "heart",
+      "id": "lucide:heart"
+    },
+    {
+      "name": "eye",
+      "id": "lucide:eye"
+    },
+    {
+      "name": "eye-off",
+      "id": "lucide:eye-off"
+    },
+    {
+      "name": "grip-vertical",
+      "id": "lucide:grip-vertical"
+    },
+    {
+      "name": "chevron-left",
+      "id": "lucide:chevron-left"
+    },
+    {
+      "name": "copy",
+      "id": "lucide:copy"
+    },
+    {
+      "name": "folder",
+      "id": "lucide:folder"
+    },
+    {
+      "name": "file-text",
+      "id": "lucide:file-text"
+    },
+    {
+      "name": "keyboard",
+      "id": "lucide:keyboard"
+    },
+    {
+      "name": "mouse-pointer-2",
+      "id": "lucide:mouse-pointer-2"
+    },
+    {
+      "name": "panel-left",
+      "id": "lucide:panel-left"
+    },
+    {
+      "name": "undo-2",
+      "id": "lucide:undo-2"
+    },
+    {
+      "name": "refresh-cw",
+      "id": "lucide:refresh-cw"
+    },
+    {
+      "name": "paintbrush",
+      "id": "lucide:paintbrush"
+    },
+    {
+      "name": "pen-tool",
+      "id": "lucide:pen-tool"
+    },
+    {
+      "name": "layers",
+      "id": "lucide:layers"
+    },
+    {
+      "name": "eraser",
+      "id": "lucide:eraser"
+    },
+    {
+      "name": "redo-2",
+      "id": "lucide:redo-2"
+    },
+    {
+      "name": "music-2",
+      "id": "lucide:music-2"
+    },
+    {
+      "name": "scissors",
+      "id": "lucide:scissors"
+    },
+    {
+      "name": "video",
+      "id": "lucide:video"
+    },
+    {
+      "name": "zoom-in",
+      "id": "lucide:zoom-in"
+    },
+    {
+      "name": "zoom-out",
+      "id": "lucide:zoom-out"
+    },
+    {
+      "name": "folder-open",
+      "id": "lucide:folder-open"
+    },
+    {
+      "name": "square-dashed",
+      "id": "lucide:square-dashed"
+    },
+    {
+      "name": "rotate-ccw",
+      "id": "lucide:rotate-ccw"
+    },
+    {
+      "name": "crop",
+      "id": "lucide:crop"
+    },
+    {
+      "name": "image",
+      "id": "lucide:image"
+    },
+    {
+      "name": "tv",
+      "id": "lucide:tv"
+    },
+    {
+      "name": "watch",
+      "id": "lucide:watch"
+    }
+  ]
+}
