@@ -4,7 +4,7 @@ November 6, 2026
 OPEN AND COMMENT
 Open Kozu Universal UI Kit.figcraft in FigCraft. Choose a page in the left sidebar. Press C or choose Comment, then pin feedback to a component or screen. Fourteen existing review comments identify decisions for discussion. The native document is the editable source; the 39-page PDF and 39 PNG previews are reference exports.
 
-This project-agnostic foundation contains 39 boards, 208 component masters, 181 linked instances and 131 variables. 73 masters expose component properties; 72 use auto layout. Dense creative examples include illustrative compositions alongside reusable controls.
+This project-agnostic foundation contains 39 boards, 210 component masters, 190 linked instances and 140 variables. 73 masters expose component properties; 75 use auto layout. Dense creative examples include illustrative compositions alongside reusable controls.
 
 DEFAULTS
 Typography: Source Serif 4 headings; Inter body, labels and controls. The native heading family is RR Serif. Fonts/Kozu-SourceSerif4.ttf supplies that alias as an unchanged copy of the authoring font; see Fonts/README.md for setup after cloning. Apps may explicitly override the font family.
@@ -113,3 +113,6 @@ Frost backing is reduced by 10 percentage points: controls about 58% light/65% d
 Wear OS uses ScreenScaffold, TransformingLazyColumn, SurfaceTransformation and native EdgeButton geometry. Rows and their text transform together. Edge-button text follows native reveal height; add no delayed custom text fade or separate scroll entrance delay. FadingExpandingLabel is for changing multiline content, not scroll reveal. Respect LocalReduceMotion; reduced-motion focus uses static tone and text weight without animated zoom. Keep native typography and native device/font-scale previews. The FigCraft transition is a simulation; it does not prove native continuous-scroll behavior.
 Wear OS and Android home widgets exclude portable backdrop blur by default and use native tonal surfaces. Apple widgets use host-provided Liquid Glass only where supported by the chosen appearance and rendering mode; retain full-color and accessibility fallbacks. Tiles do not scroll.
 The latest critique addressed mixed navigation/actions, duplicate creative tools, chart units/values, a conflicting music playhead, watch-label alignment and a missing error icon. New guidance is on pages 37–38. Dynamic imagery still needs implementation-specific contrast and performance checks. No static kit can prove all runtime metrics.
+
+SOURCE AND REVIEW COPIES
+The GitHub checkout at ~/Developer/KozuUI is the canonical development source on main. The Documents folder is the review export. Update the review export from main; avoid editing both copies concurrently.

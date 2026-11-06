@@ -49,11 +49,13 @@ def paired_icon_issues(slot, parent):
             continue
         if any(not node.get('visible', True) or node.get('opacity', 1) <= 0 for node in (*ancestors, leaf)):
             continue
-        stroke = leaf.get('strokeWeight', 0)/2 if any(
+        has_stroke = leaf.get('strokeWeight', 0) > 0 and any(
             paint.get('visible', True) and paint.get('opacity', 1) > 0
-            for paint in leaf.get('strokes', [])) else 0
-        if not stroke and not any(paint.get('visible', True) and paint.get('opacity', 1) > 0
-                                  for paint in leaf.get('fills', [])):
+            for paint in leaf.get('strokes', []))
+        stroke = (leaf['strokeWeight'] * {'inside':0, 'outside':1}.get(leaf.get('strokeAlign'), 0.5)
+                  if has_stroke else 0)
+        if not has_stroke and not any(paint.get('visible', True) and paint.get('opacity', 1) > 0
+                                      for paint in leaf.get('fills', [])):
             continue
         bounds = leaf.get('absoluteBounds')
         if not bounds:
@@ -106,7 +108,18 @@ def geometry_issues(document):
         pw, ph = parent.get('width', 0), parent.get('height', 0)
         inner, outer = radii(layer), radii(parent)
         gaps = [(x, y), (pw-x-width, y), (pw-x-width, ph-y-height), (x, ph-y-height)]
+        corner_action = any(annotation.get('label', '').startswith('[corner-action]')
+                            for annotation in layer.get('annotations', []))
+        if corner_action:
+            right, bottom = gaps[2]
+            if abs(right-bottom) > TOLERANCE:
+                issues.append(f"{layer['id']} {name}: corner action insets {right:g} right, {bottom:g} bottom must be equal")
+            expected = inner[2]+right
+            if abs(outer[2]-expected) > TOLERANCE:
+                issues.append(f"{layer['id']} {name}: parent {parent['id']} bottom-right radius {outer[2]:g}, expected action radius + inset {expected:g}")
         for corner, (horizontal, vertical) in enumerate(gaps):
+            if corner_action and corner == 2:
+                continue  # The explicit corner-action check also covers independent controls.
             # Adjacent rounded edges with a uniform inset must share a corner center.
             # Independent circular controls are not curved insets of their cards.
             independent_circle = name.startswith(('Avatar /', 'Icon button /', 'Rail item /', 'Selected check'))
@@ -270,6 +283,30 @@ def self_test():
     icon.update(x=16, y=16)
     independent={'id':0,'type':'FRAME','name':'Card','width':200,'height':200,'cornerRadius':28,'children':[target]}
     assert not geometry_issues(independent)
+    corner_target = {'id':30, 'type':'FRAME', 'name':'Icon button / corner', 'x':136, 'y':96,
+                     'width':48, 'height':48, 'cornerRadius':24,
+                     'annotations':[{'label':'[corner-action] Bottom-right anchor'}]}
+    corner_card = {'id':31, 'type':'FRAME', 'name':'Card', 'width':200, 'height':160,
+                   'cornerRadius':40, 'children':[corner_target]}
+    assert not geometry_issues(corner_card)
+    corner_target['y'] = 94
+    assert any('corner action insets' in issue for issue in geometry_issues(corner_card))
+    corner_target['y'] = 96
+    corner_card['cornerRadius'] = [5, 6, 39, 7]
+    assert any('bottom-right radius' in issue for issue in geometry_issues(corner_card))
+    corner_card['cornerRadius'] = [5, 6, 40, 7]
+    assert not geometry_issues(corner_card)
+    corner_target.update(name='Button / corner', width=100, x=84, cornerRadius=12)
+    corner_card['cornerRadius'] = [5, 6, 28, 7]
+    assert not geometry_issues(corner_card)
+    corner_target['cornerRadius'] = [1, 2, 11, 3]
+    assert any('bottom-right radius' in issue for issue in geometry_issues(corner_card))
+    corner_target.update(name='Icon button / unmarked', width=48, x=135, y=94, cornerRadius=24,
+                         annotations=[{'description':'[corner-action] This is not an annotation label'}],
+                         description='[corner-action] Component description is not the marker')
+    assert not geometry_issues(corner_card)
+    corner_target['annotations'] = [{'label':'Notes: [corner-action] is not a prefix'}]
+    assert not geometry_issues(corner_card)
     label={'id':9,'type':'TEXT','name':'Pause','x':111,'y':16,'width':54,'height':24}
     capsule={'id':8,'type':'COMPONENT','name':'Wearables / Apple / Capsule primary','width':240,'height':56,'children':[label]}
     button_fixture={'id':0,'type':'PAGE','children':[capsule]}
@@ -343,6 +380,21 @@ def self_test():
     assert not geometry_issues(paired_button)
     rotated_line['absoluteBounds'].update(y=216, height=16)
     assert any('ink height' in issue for issue in geometry_issues(paired_button))
+    aligned_outline = {'id':32, 'type':'RECTANGLE', 'name':'Outlined glyph',
+                       'strokeWeight':2, 'strokeAlign':'inside',
+                       'strokes':[{'type':'solid', 'color':'#FFFFFF'}],
+                       'absoluteBounds':{'x':272, 'y':216, 'width':8, 'height':16}}
+    paired_slot['children'] = [aligned_outline]
+    assert not geometry_issues(paired_button)
+    aligned_outline['strokeAlign'] = 'outside'
+    assert any('ink height' in issue for issue in geometry_issues(paired_button))
+    assert not any('ink center' in issue for issue in geometry_issues(paired_button))
+    aligned_outline['absoluteBounds'].update(x=274, y=218, width=4, height=12)
+    assert not geometry_issues(paired_button)
+    aligned_outline['strokeAlign'] = 'center'
+    assert any('ink height' in issue for issue in geometry_issues(paired_button))
+    aligned_outline['absoluteBounds'].update(x=273, y=217, width=6, height=14)
+    assert not geometry_issues(paired_button)
     paired_slot['children'] = leaves
     paired_label['leadingTrim'] = 'none'
     assert any('capHeight-trimmed label' in issue for issue in geometry_issues(paired_button))

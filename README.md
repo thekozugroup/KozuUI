@@ -15,7 +15,7 @@ The kit includes 39 editable reference boards: foundations, component states, ad
 
 Default type: Source Serif 4 headings and Inter controls/body. The FigCraft file uses heading-family alias `RR Serif`; install the unchanged, licensed [font pack](Fonts/README.md) before opening it. Inter is separate. Icons come from [Aria Icons](https://icons.leularia.com/) using Lucide geometry; licenses are retained in [Icons](Icons).
 
-This is an editable design reference, not production app code. Native accessibility, remote focus, watch scrolling, text scaling and device blur need runtime validation. The kit includes cap-height paired icons, concentric button endcaps and card-corner actions, borderless states, and platform material fallbacks. Final visual confirmation is in progress.
+This is an editable design reference, not production app code. Native accessibility, remote focus, watch scrolling, text scaling and device blur need runtime validation. The kit includes cap-height paired icons, concentric button endcaps and card-corner actions, borderless states, and platform material fallbacks. All actionable findings in the final bounded source and static visual reviews are resolved. Device validation remains open.
 
 Geometry verification uses Python's standard library and an installed FigCraft CLI:
 
