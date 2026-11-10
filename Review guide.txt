@@ -1,10 +1,10 @@
-Kozu Universal UI Kit — review edition 0.4
-November 6, 2026
+Kozu Universal UI Kit — review edition 0.6
+November 10, 2026
 
 OPEN AND COMMENT
-Open Kozu Universal UI Kit.figcraft in FigCraft. Choose a page in the left sidebar. Press C or choose Comment, then pin feedback to a component or screen. Fourteen existing review comments identify decisions for discussion. The native document is the editable source; the 39-page PDF and 39 PNG previews are reference exports.
+Open Kozu Universal UI Kit.figcraft in FigCraft. Choose a page in the left sidebar. Press C or choose Comment, then pin feedback to a component or screen. Fourteen existing review comments identify decisions for discussion. The native document is the editable source; the 46-page PDF and 46 PNG previews are reference exports.
 
-This project-agnostic foundation contains 39 boards, 210 component masters, 190 linked instances and 140 variables. 73 masters expose component properties; 75 use auto layout. Dense creative examples include illustrative compositions alongside reusable controls.
+This project-agnostic foundation contains 46 boards, 277 component masters (9 of them variant sets), 388 linked instances and 147 variables. 100 masters expose component properties; 106 use auto layout. Dense creative examples include illustrative compositions alongside reusable controls.
 
 DEFAULTS
 Typography: Source Serif 4 headings; Inter body, labels and controls. The native heading family is RR Serif. Fonts/Kozu-SourceSerif4.ttf supplies that alias as an unchanged copy of the authoring font; see Fonts/README.md for setup after cloning. Apps may explicitly override the font family.
@@ -16,9 +16,9 @@ Paired icon geometry: measure button-local coordinates from the top-left. Leadin
 States: no outer state, focus, selected or pressed borders anywhere. Keyboard and TV remote focus use native tone, lift or scale; selection retains its own tint/checkmarks and selected semantics. Press uses tone/fill. Reduced motion uses static tone and text weight, with no animated zoom, scale or parallax. Keep focus visible independently from selection.
 
 COLOR CONFIGURATION
-Use Kozu / navigation policy to choose Shared accent or Per tab. Shared accent resolves every destination to the app accent. Per tab resolves each destination to its configured color. Set Kozu / accent theme to Blue, Violet, Orange, Teal, Rose, Amber, Sky or Emerald, then set destination scopes as needed.
-The selected icon and tinted background resolve from the same accent. Light selections mix 16% accent with light backing; dark selections mix 32% accent with neutral dark backing. Change foreground and selected background together. Page 19 compares both policies; page 24 defines color roles and states.
-The palette uses Tailwind-inspired RGB families, without claiming exact Tailwind version parity. Semantic roles remain separate from decorative accents: green for success, amber for caution, red for error/destructive actions, sky for information. Status messages also include a label, icon or shape.
+Use Kozu / navigation policy to choose Shared accent or Per tab. Shared accent resolves every destination to the app accent. Per tab resolves each destination to its configured color. Set Kozu / accent theme to one of the twelve Kozu Spectrum families (Cobalt, Azure, Lagoon, Jade, Fern, Citron, Saffron, Tangerine, Vermilion, Berry, Orchid or Iris), then set destination scopes as needed. Review 0.6 renamed the earlier modes (Blue to Cobalt, Violet to Iris, Orange to Tangerine, Teal to Jade, Rose to Berry, Amber to Saffron, Sky to Azure, Emerald to Fern) and kept their mode IDs, so existing bindings follow.
+The selected icon and tinted background resolve from the same accent. Light selections mix 16% accent with light backing; dark selections mix 32% accent with neutral dark backing. Accent text and icons use each family's measured text step on light surfaces and its dark text step on dark. Change foreground and selected background together. Page 19 compares both policies; page 24 defines color roles and states.
+The palette is the Kozu Spectrum. Each family follows one Tailwind CSS v4 family's lightness and chroma step for step and is turned plus or minus 2 to 4 degrees to its own hue (median OKLab distance 0.007 to the matching Tailwind step). Roles are measured per family: Tangerine, Saffron, Citron, Fern, Jade and Lagoon fill at 500 with ink labels; Cobalt, Azure, Vermilion, Berry, Orchid and Iris fill at 600 with white labels; accent text uses each family's measured text step. Semantic roles remain separate from decorative accents: Success, Warning, Danger and Info follow Tailwind green, amber, red and sky. Status messages also include a label, icon or shape. Page 39 shows every ramp, the live modes, the measured roles and the color-vision-checked sets.
 Kozu.tokens.json includes readable roles, resolved pairs, geometry rules, platform guidance and the exact native variable export. Component inventory.json records master IDs and exposed properties.
 
 LIGHT AND DARK VISIBILITY
@@ -27,7 +27,7 @@ Test frosted controls over the lightest, darkest and busiest expected backdrops.
 
 PAGE CATALOG
 00 Start here — overview and generic app-family examples.
-01 Foundations — typography, spacing, shapes, color and themes.
+01 Foundations — typography, spacing, shapes, color roles and the Kozu Spectrum at a glance.
 02 Frosted materials — light/dark controls, menus and fallback surfaces.
 03 Actions and states — buttons, hover, press, focus and disabled.
 04 Navigation and toolbars — circular top actions, floating icon bars, tabs and filters.
@@ -65,6 +65,13 @@ PAGE CATALOG
 36 Apple Watch — conceptual faces, complications and application controls.
 37 Native Wear OS edge and scroll — bezel-following controls, three scroll positions, native text-motion contract and a simulated motion flow.
 38 Accent and material defaults — one accent per app, near-white canvas, airy states and platform material capabilities.
+39 Kozu Spectrum — twelve families on Tailwind's curves with Kozu hues, live accent modes, measured roles and color-vision-checked sets.
+40 Web foundations — frame and grid, web type, section grounds instead of borders, states and motion.
+41 Web components — icons, buttons, navigation, forms, cards, callouts, code, cart and page close masters.
+42 Website · Portfolio — a studio portfolio at 1440 and 390 (Experience mode).
+43 Website · Landing page — Paperboy, a public Kozu project, at 1440 and 390 (Persuade mode).
+44 Website · Ecommerce — collection, product page, bag sheet and phone product page with editable product photography.
+45 Website · Docs and articles — a documentation page and a changelog article (Read mode).
 
 ADAPTIVE RULES
 Below 600: compact navigation and one primary content pane.
@@ -121,3 +128,11 @@ FINAL CLEANUP AND REVIEW WINDOW
 Completed the proportional review/refinement run and removed its owned scratch root: /private/tmp/ai-development/kozu-review-refinement-1793999344164009000-44041-0 (6,098,944 allocated bytes before removal; this is not a free-space reclamation claim). All six review agents are closed. No task-owned VM, emulator, container or background service remains.
 Retained intentionally: FigCraft MCP CLI at /Users/michaelwong/Developer/Tools/figcraft/figcraft-cli-0.15.1-macos-universal (199,008 KiB allocated) for ongoing authoring; font /Users/michaelwong/Library/Fonts/Kozu-SourceSerif4.ttf (264 KiB allocated); preserved user review archive /Users/michaelwong/Developer/Tools/figcraft/Research archive (344 KiB allocated). The persistent Codex-managed MCP and FigCraft app are kept for review.
 The review window was observed with39pages and140variables. Final window input returned noWindowsAvailable, so the repository copy could not be reopened automatically. Open ~/Developer/KozuUI/Kozu Universal UI Kit.figcraft to review the latest source.
+
+EDITION 0.6 — COLOR, WEB AND FEWER LINES
+Kozu Spectrum: twelve accent families on Tailwind CSS v4 lightness and chroma with plus or minus 2 to 4 degree Kozu hue offsets (median OKLab distance 0.007 to the matching Tailwind step), the Graphite neutral and Tailwind-based status ramps. Roles are measured per family; every supported role pair is at least 4.5:1 and web focus changes a control by at least 3:1 in both themes. Native app focus keeps the platform focus treatment plus tone and lift. Accent modes were renamed with their IDs kept (Blue to Cobalt, Violet to Iris, Orange to Tangerine, Teal to Jade, Rose to Berry, Amber to Saffron, Sky to Azure, Emerald to Fern) and Vermilion, Citron, Lagoon and Orchid were added. Hard-coded Tailwind and slate colors on every earlier board, component, gradient, shadow and platform variable now use Spectrum or Graphite values.
+Borders: device and window outlines became neutral layered shadows, swatch outlines a tonal well, fader outlines a knob shadow; footer and wearable header rules were removed. Icon strokes, unchecked checkbox and radio outlines and pro-tool dividers stay because they carry meaning.
+Foundations: the App theme overrides card was removed at the owner's request and replaced by a live Kozu Spectrum card; Token architecture now reads Spectrum, primitive, semantic, component.
+Web: page 40 (frame and grid, type, section grounds, states, motion), page 41 (13 Web / * masters and 31 icon masters), and four sites at 1440 and 390 on pages 42 to 45. web/kozu.css, web/kozu.tailwind.css and web/README.md carry the tokens to real sites.
+QA: three independent review agents (palette, web mockups, tokens and CSS) found blockers that were fixed and re-checked; the geometry guard passes; 447 website text layers measured with no contrast failures. Design QA.json records the evidence. Static boards still cannot prove browser focus, zoom or motion.
+Authoring: this edition was built through FigCraft's MCP server (figcraft-cli 0.15.1 mcp) driven from a task-local bridge; no FigCraft settings or app state were changed.

@@ -1,0 +1,559 @@
+/* Kozu UI tokens · review 0.6 · generated from Kozu.tokens.json.
+   Families follow Tailwind CSS v4 lightness and chroma with Kozu hue offsets; roles are contrast-checked.
+   Theme: follows the OS; data-theme="light" or "dark" on any element forces it for that subtree.
+   Accent: data-accent="<family>" on any element (default cobalt). Needs light-dark() support (2024+ browsers). */
+
+:root {
+  color-scheme: light dark;
+  --kz-cobalt-50: #EFF6FF;
+  --kz-cobalt-100: #DCEAFF;
+  --kz-cobalt-200: #C0DAFF;
+  --kz-cobalt-300: #96C4FF;
+  --kz-cobalt-400: #5FA1FF;
+  --kz-cobalt-500: #417EFF;
+  --kz-cobalt-600: #2C5AFC;
+  --kz-cobalt-700: #2844E6;
+  --kz-cobalt-800: #2539B8;
+  --kz-cobalt-900: #23378E;
+  --kz-cobalt-950: #1A2456;
+  --kz-azure-50: #F0F9FF;
+  --kz-azure-100: #E0F2FF;
+  --kz-azure-200: #B9E6FF;
+  --kz-azure-300: #7DD3FF;
+  --kz-azure-400: #15BAFF;
+  --kz-azure-500: #00A4EE;
+  --kz-azure-600: #007BBF;
+  --kz-azure-700: #0068A5;
+  --kz-azure-800: #005889;
+  --kz-azure-900: #084971;
+  --kz-azure-950: #082F4B;
+  --kz-lagoon-50: #ECFEFE;
+  --kz-lagoon-100: #CEFAFC;
+  --kz-lagoon-200: #A2F4FA;
+  --kz-lagoon-300: #52EBF8;
+  --kz-lagoon-400: #00D2E7;
+  --kz-lagoon-500: #00B7CF;
+  --kz-lagoon-600: #0092AE;
+  --kz-lagoon-700: #00758E;
+  --kz-lagoon-800: #005F75;
+  --kz-lagoon-900: #0B4F63;
+  --kz-lagoon-950: #023444;
+  --kz-jade-50: #EBFDF5;
+  --kz-jade-100: #CFFAE6;
+  --kz-jade-200: #A2F4D2;
+  --kz-jade-300: #59EAB8;
+  --kz-jade-400: #00D299;
+  --kz-jade-500: #00B985;
+  --kz-jade-600: #00966C;
+  --kz-jade-700: #00785A;
+  --kz-jade-800: #005F48;
+  --kz-jade-900: #004E3C;
+  --kz-jade-950: #002C23;
+  --kz-fern-50: #F0FDF4;
+  --kz-fern-100: #DCFCE6;
+  --kz-fern-200: #BBF7CD;
+  --kz-fern-300: #80F1A4;
+  --kz-fern-400: #29DE6C;
+  --kz-fern-500: #00C74D;
+  --kz-fern-600: #00A43C;
+  --kz-fern-700: #008132;
+  --kz-fern-800: #0E662D;
+  --kz-fern-900: #135429;
+  --kz-fern-950: #052E14;
+  --kz-citron-50: #F8FEE7;
+  --kz-citron-100: #EEFCC9;
+  --kz-citron-200: #DCF997;
+  --kz-citron-300: #C1F24B;
+  --kz-citron-400: #A5E300;
+  --kz-citron-500: #8BCB00;
+  --kz-citron-600: #6BA200;
+  --kz-citron-700: #517B00;
+  --kz-citron-800: #416200;
+  --kz-citron-900: #37530A;
+  --kz-citron-950: #1B2E01;
+  --kz-saffron-50: #FEFCE8;
+  --kz-saffron-100: #FFF8C6;
+  --kz-saffron-200: #FFEF93;
+  --kz-saffron-300: #FFDF50;
+  --kz-saffron-400: #FBC700;
+  --kz-saffron-500: #EDB100;
+  --kz-saffron-600: #CD8900;
+  --kz-saffron-700: #A46000;
+  --kz-saffron-800: #894A00;
+  --kz-saffron-900: #743D0E;
+  --kz-saffron-950: #431F06;
+  --kz-tangerine-50: #FFF7ED;
+  --kz-tangerine-100: #FFEDD4;
+  --kz-tangerine-200: #FED7A7;
+  --kz-tangerine-300: #FFBA6B;
+  --kz-tangerine-400: #FF8C04;
+  --kz-tangerine-500: #F87400;
+  --kz-tangerine-600: #E85B00;
+  --kz-tangerine-700: #C14300;
+  --kz-tangerine-800: #9C3200;
+  --kz-tangerine-900: #7E2B06;
+  --kz-tangerine-950: #441304;
+  --kz-vermilion-50: #FEF2F2;
+  --kz-vermilion-100: #FFE2E1;
+  --kz-vermilion-200: #FFCAC8;
+  --kz-vermilion-300: #FFA4A1;
+  --kz-vermilion-400: #FF6663;
+  --kz-vermilion-500: #FB2D2D;
+  --kz-vermilion-600: #E40200;
+  --kz-vermilion-700: #BE0500;
+  --kz-vermilion-800: #9F0907;
+  --kz-vermilion-900: #821815;
+  --kz-vermilion-950: #460806;
+  --kz-berry-50: #FCF2F9;
+  --kz-berry-100: #FBE7F4;
+  --kz-berry-200: #FACFEB;
+  --kz-berry-300: #FBA6DB;
+  --kz-berry-400: #F865BF;
+  --kz-berry-500: #F335A4;
+  --kz-berry-600: #E10081;
+  --kz-berry-700: #C10065;
+  --kz-berry-800: #A10054;
+  --kz-berry-900: #841149;
+  --kz-berry-950: #500428;
+  --kz-orchid-50: #FCF4FF;
+  --kz-orchid-100: #F9E8FF;
+  --kz-orchid-200: #F3D1FF;
+  --kz-orchid-300: #EEABFF;
+  --kz-orchid-400: #E673FF;
+  --kz-orchid-500: #DD30FF;
+  --kz-orchid-600: #C200DF;
+  --kz-orchid-700: #A400B9;
+  --kz-orchid-800: #880598;
+  --kz-orchid-900: #71157A;
+  --kz-orchid-950: #4A0151;
+  --kz-iris-50: #F5F3FF;
+  --kz-iris-100: #ECE9FF;
+  --kz-iris-200: #DCD6FF;
+  --kz-iris-300: #C2B5FF;
+  --kz-iris-400: #A288FF;
+  --kz-iris-500: #8859FF;
+  --kz-iris-600: #7B28FF;
+  --kz-iris-700: #6C0FE9;
+  --kz-iris-800: #5A12C2;
+  --kz-iris-900: #4A199B;
+  --kz-iris-950: #2D0E69;
+  --kz-success-50: #F0FDF4;
+  --kz-success-100: #DCFCE7;
+  --kz-success-200: #B9F8CF;
+  --kz-success-300: #7BF1A8;
+  --kz-success-400: #05DF72;
+  --kz-success-500: #00C65A;
+  --kz-success-600: #00883A;
+  --kz-success-700: #00813A;
+  --kz-success-800: #016630;
+  --kz-success-900: #0D542B;
+  --kz-success-950: #032E15;
+  --kz-warning-50: #FFFBEB;
+  --kz-warning-100: #FEF3C6;
+  --kz-warning-200: #FEE685;
+  --kz-warning-300: #FFD237;
+  --kz-warning-400: #FABC00;
+  --kz-warning-500: #F69E00;
+  --kz-warning-600: #DA7700;
+  --kz-warning-700: #B55200;
+  --kz-warning-800: #953D00;
+  --kz-warning-900: #7B3306;
+  --kz-warning-950: #461901;
+  --kz-danger-50: #FEF2F2;
+  --kz-danger-100: #FFE2E2;
+  --kz-danger-200: #FFCACA;
+  --kz-danger-300: #FFA3A4;
+  --kz-danger-400: #FF6568;
+  --kz-danger-500: #FB2C36;
+  --kz-danger-600: #E40016;
+  --kz-danger-700: #BF000F;
+  --kz-danger-800: #9F0712;
+  --kz-danger-900: #82181A;
+  --kz-danger-950: #460809;
+  --kz-info-50: #F0F9FF;
+  --kz-info-100: #DFF2FE;
+  --kz-info-200: #B8E6FE;
+  --kz-info-300: #78D4FF;
+  --kz-info-400: #00BBFD;
+  --kz-info-500: #00A5EA;
+  --kz-info-600: #007BBB;
+  --kz-info-700: #0069A2;
+  --kz-info-800: #005986;
+  --kz-info-900: #024A70;
+  --kz-info-950: #052F4A;
+  --kz-graphite-50: #F6F7FA;
+  --kz-graphite-100: #EDEEF2;
+  --kz-graphite-200: #DBDDE1;
+  --kz-graphite-300: #C0C2C8;
+  --kz-graphite-400: #A3A5AC;
+  --kz-graphite-500: #8C8F96;
+  --kz-graphite-600: #70737A;
+  --kz-graphite-700: #5A5C63;
+  --kz-graphite-800: #43454B;
+  --kz-graphite-900: #303238;
+  --kz-graphite-950: #202126;
+
+  --kz-font-display: "Source Serif 4", ui-serif, Georgia, serif;
+  --kz-font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --kz-text-display: clamp(2.75rem, 1.6rem + 4.2vw, 4.75rem);
+  --kz-text-heading: clamp(1.75rem, 0.8rem + 2.1vw, 2.375rem);
+  --kz-text-title: 1.375rem;
+  --kz-text-lead: 1.3125rem;
+  --kz-text-body: 1.0625rem;
+  --kz-text-small: 0.9375rem;
+  --kz-text-meta: 0.8125rem;
+  --kz-radius-field: 16px;
+  --kz-radius-control: 24px;
+  --kz-radius-card: 28px;
+  --kz-target: 48px;
+  --kz-target-compact: 40px;
+  --kz-blur-control: 28px;
+  --kz-blur-overlay: 40px;
+  --kz-ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --kz-shadow-float: 0 12px 32px -6px rgb(15 16 18 / 0.10), 0 2px 6px rgb(15 16 18 / 0.06);
+
+  --kz-canvas: light-dark(#FCFCFC, #0A0B0D);
+  --kz-container: light-dark(#FFFFFF, #151619);
+  --kz-subtle: light-dark(#F6F7FA, #151619);
+  --kz-input: light-dark(#EDEEF2, #242529);
+  --kz-ink: light-dark(#0F1012, #F5F6F8);
+  --kz-ink-secondary: light-dark(#5A5C63, #C0C2C8);
+  --kz-frost-control: light-dark(rgb(255 255 255 / 0.58), rgb(21 22 25 / 0.65));
+  --kz-frost-toolbar: light-dark(rgb(255 255 255 / 0.62), rgb(21 22 25 / 0.70));
+  --kz-frost-overlay: light-dark(rgb(255 255 255 / 0.84), rgb(21 22 25 / 0.84));
+  --kz-success-fg: light-dark(#00813A, #05DF72);
+  --kz-success-bg: light-dark(#F0FDF4, #032E15);
+  --kz-success-fill: #00883A;
+  --kz-success-on-fill: #FFFFFF;
+  --kz-warning-fg: light-dark(#B55200, #FABC00);
+  --kz-warning-bg: light-dark(#FFFBEB, #461901);
+  --kz-warning-fill: #F69E00;
+  --kz-warning-on-fill: #0F1012;
+  --kz-danger-fg: light-dark(#BF000F, #FFA3A4);
+  --kz-danger-bg: light-dark(#FEF2F2, #460809);
+  --kz-danger-fill: #E40016;
+  --kz-danger-on-fill: #FFFFFF;
+  --kz-info-fg: light-dark(#0069A2, #78D4FF);
+  --kz-info-bg: light-dark(#F0F9FF, #052F4A);
+  --kz-info-fill: #007BBB;
+  --kz-info-on-fill: #FFFFFF;
+
+  /* default accent: Cobalt */
+  --kz-accent-fill: light-dark(#2C5AFC, #96C4FF);
+  --kz-accent-on-fill: light-dark(#FFFFFF, #0F1012);
+  --kz-accent-text: light-dark(#2844E6, #96C4FF);
+  --kz-accent-link: light-dark(#2C5AFC, #96C4FF);
+  --kz-accent-tint: light-dark(#DCEAFF, #23378E);
+  --kz-focus-fill: light-dark(#0F1012, #23378E);
+  --kz-on-focus: light-dark(#FCFCFC, #96C4FF);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #96C4FF);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+
+[data-theme="light"] { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+
+[data-accent="cobalt"] {
+  --kz-accent-fill: light-dark(#2C5AFC, #96C4FF);
+  --kz-accent-on-fill: light-dark(#FFFFFF, #0F1012);
+  --kz-accent-text: light-dark(#2844E6, #96C4FF);
+  --kz-accent-link: light-dark(#2C5AFC, #96C4FF);
+  --kz-accent-tint: light-dark(#DCEAFF, #23378E);
+  --kz-focus-fill: light-dark(#0F1012, #23378E);
+  --kz-on-focus: light-dark(#FCFCFC, #96C4FF);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #96C4FF);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="azure"] {
+  --kz-accent-fill: light-dark(#007BBF, #7DD3FF);
+  --kz-accent-on-fill: light-dark(#FFFFFF, #0F1012);
+  --kz-accent-text: light-dark(#0068A5, #7DD3FF);
+  --kz-accent-link: light-dark(#0068A5, #7DD3FF);
+  --kz-accent-tint: light-dark(#E0F2FF, #084971);
+  --kz-focus-fill: light-dark(#0F1012, #084971);
+  --kz-on-focus: light-dark(#FCFCFC, #7DD3FF);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #7DD3FF);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="lagoon"] {
+  --kz-accent-fill: light-dark(#00B7CF, #00D2E7);
+  --kz-accent-on-fill: light-dark(#0F1012, #0F1012);
+  --kz-accent-text: light-dark(#00758E, #00D2E7);
+  --kz-accent-link: light-dark(#00758E, #00D2E7);
+  --kz-accent-tint: light-dark(#CEFAFC, #0B4F63);
+  --kz-focus-fill: light-dark(#0F1012, #0B4F63);
+  --kz-on-focus: light-dark(#FCFCFC, #00D2E7);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #00D2E7);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="jade"] {
+  --kz-accent-fill: light-dark(#00B985, #00D299);
+  --kz-accent-on-fill: light-dark(#0F1012, #0F1012);
+  --kz-accent-text: light-dark(#00785A, #00D299);
+  --kz-accent-link: light-dark(#00785A, #00D299);
+  --kz-accent-tint: light-dark(#CFFAE6, #004E3C);
+  --kz-focus-fill: light-dark(#0F1012, #004E3C);
+  --kz-on-focus: light-dark(#FCFCFC, #00D299);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #00D299);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="fern"] {
+  --kz-accent-fill: light-dark(#00C74D, #29DE6C);
+  --kz-accent-on-fill: light-dark(#0F1012, #0F1012);
+  --kz-accent-text: light-dark(#008132, #29DE6C);
+  --kz-accent-link: light-dark(#008132, #29DE6C);
+  --kz-accent-tint: light-dark(#DCFCE6, #135429);
+  --kz-focus-fill: light-dark(#0F1012, #135429);
+  --kz-on-focus: light-dark(#FCFCFC, #29DE6C);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #29DE6C);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="citron"] {
+  --kz-accent-fill: light-dark(#8BCB00, #A5E300);
+  --kz-accent-on-fill: light-dark(#0F1012, #0F1012);
+  --kz-accent-text: light-dark(#517B00, #A5E300);
+  --kz-accent-link: light-dark(#517B00, #A5E300);
+  --kz-accent-tint: light-dark(#EEFCC9, #37530A);
+  --kz-focus-fill: light-dark(#0F1012, #37530A);
+  --kz-on-focus: light-dark(#FCFCFC, #A5E300);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #A5E300);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="saffron"] {
+  --kz-accent-fill: light-dark(#EDB100, #FBC700);
+  --kz-accent-on-fill: light-dark(#0F1012, #0F1012);
+  --kz-accent-text: light-dark(#A46000, #FBC700);
+  --kz-accent-link: light-dark(#A46000, #FBC700);
+  --kz-accent-tint: light-dark(#FFF8C6, #743D0E);
+  --kz-focus-fill: light-dark(#0F1012, #743D0E);
+  --kz-on-focus: light-dark(#FCFCFC, #FBC700);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #FBC700);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="tangerine"] {
+  --kz-accent-fill: light-dark(#F87400, #FFBA6B);
+  --kz-accent-on-fill: light-dark(#0F1012, #0F1012);
+  --kz-accent-text: light-dark(#9C3200, #FFBA6B);
+  --kz-accent-link: light-dark(#9C3200, #FFBA6B);
+  --kz-accent-tint: light-dark(#FFEDD4, #7E2B06);
+  --kz-focus-fill: light-dark(#0F1012, #7E2B06);
+  --kz-on-focus: light-dark(#FCFCFC, #FFBA6B);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #FFBA6B);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="vermilion"] {
+  --kz-accent-fill: light-dark(#E40200, #FFA4A1);
+  --kz-accent-on-fill: light-dark(#FFFFFF, #0F1012);
+  --kz-accent-text: light-dark(#BE0500, #FFA4A1);
+  --kz-accent-link: light-dark(#E40200, #FFA4A1);
+  --kz-accent-tint: light-dark(#FFE2E1, #821815);
+  --kz-focus-fill: light-dark(#0F1012, #821815);
+  --kz-on-focus: light-dark(#FCFCFC, #FFA4A1);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #FFA4A1);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="berry"] {
+  --kz-accent-fill: light-dark(#E10081, #FBA6DB);
+  --kz-accent-on-fill: light-dark(#FFFFFF, #0F1012);
+  --kz-accent-text: light-dark(#C10065, #FBA6DB);
+  --kz-accent-link: light-dark(#E10081, #FBA6DB);
+  --kz-accent-tint: light-dark(#FBE7F4, #841149);
+  --kz-focus-fill: light-dark(#0F1012, #841149);
+  --kz-on-focus: light-dark(#FCFCFC, #FBA6DB);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #FBA6DB);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="orchid"] {
+  --kz-accent-fill: light-dark(#C200DF, #EEABFF);
+  --kz-accent-on-fill: light-dark(#FFFFFF, #0F1012);
+  --kz-accent-text: light-dark(#A400B9, #EEABFF);
+  --kz-accent-link: light-dark(#C200DF, #EEABFF);
+  --kz-accent-tint: light-dark(#F9E8FF, #71157A);
+  --kz-focus-fill: light-dark(#0F1012, #71157A);
+  --kz-on-focus: light-dark(#FCFCFC, #EEABFF);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #EEABFF);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+[data-accent="iris"] {
+  --kz-accent-fill: light-dark(#7B28FF, #C2B5FF);
+  --kz-accent-on-fill: light-dark(#FFFFFF, #0F1012);
+  --kz-accent-text: light-dark(#7B28FF, #C2B5FF);
+  --kz-accent-link: light-dark(#7B28FF, #C2B5FF);
+  --kz-accent-tint: light-dark(#ECE9FF, #4A199B);
+  --kz-focus-fill: light-dark(#0F1012, #4A199B);
+  --kz-on-focus: light-dark(#FCFCFC, #C2B5FF);
+  --kz-focus-fill-quiet: light-dark(#0F1012, #C2B5FF);
+  --kz-on-focus-quiet: light-dark(#FCFCFC, #0F1012);
+}
+
+/* Browsers without light-dark() (before Chrome 123, Firefox 120, Safari 17.5) get the light theme. */
+@supports not (color: light-dark(#000, #fff)) {
+  :root {
+    --kz-canvas: #FCFCFC;
+    --kz-container: #FFFFFF;
+    --kz-subtle: #F6F7FA;
+    --kz-input: #EDEEF2;
+    --kz-ink: #0F1012;
+    --kz-ink-secondary: #5A5C63;
+    --kz-frost-control: rgb(255 255 255 / 0.58);
+    --kz-frost-toolbar: rgb(255 255 255 / 0.62);
+    --kz-frost-overlay: rgb(255 255 255 / 0.84);
+    --kz-success-fg: #00813A;
+    --kz-success-bg: #F0FDF4;
+    --kz-warning-fg: #B55200;
+    --kz-warning-bg: #FFFBEB;
+    --kz-danger-fg: #BF000F;
+    --kz-danger-bg: #FEF2F2;
+    --kz-info-fg: #0069A2;
+    --kz-info-bg: #F0F9FF;
+    --kz-accent-fill: #2C5AFC;
+    --kz-accent-on-fill: #FFFFFF;
+    --kz-accent-text: #2844E6;
+    --kz-accent-link: #2C5AFC;
+    --kz-accent-tint: #DCEAFF;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="cobalt"] {
+    --kz-accent-fill: #2C5AFC;
+    --kz-accent-on-fill: #FFFFFF;
+    --kz-accent-text: #2844E6;
+    --kz-accent-link: #2C5AFC;
+    --kz-accent-tint: #DCEAFF;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="azure"] {
+    --kz-accent-fill: #007BBF;
+    --kz-accent-on-fill: #FFFFFF;
+    --kz-accent-text: #0068A5;
+    --kz-accent-link: #0068A5;
+    --kz-accent-tint: #E0F2FF;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="lagoon"] {
+    --kz-accent-fill: #00B7CF;
+    --kz-accent-on-fill: #0F1012;
+    --kz-accent-text: #00758E;
+    --kz-accent-link: #00758E;
+    --kz-accent-tint: #CEFAFC;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="jade"] {
+    --kz-accent-fill: #00B985;
+    --kz-accent-on-fill: #0F1012;
+    --kz-accent-text: #00785A;
+    --kz-accent-link: #00785A;
+    --kz-accent-tint: #CFFAE6;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="fern"] {
+    --kz-accent-fill: #00C74D;
+    --kz-accent-on-fill: #0F1012;
+    --kz-accent-text: #008132;
+    --kz-accent-link: #008132;
+    --kz-accent-tint: #DCFCE6;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="citron"] {
+    --kz-accent-fill: #8BCB00;
+    --kz-accent-on-fill: #0F1012;
+    --kz-accent-text: #517B00;
+    --kz-accent-link: #517B00;
+    --kz-accent-tint: #EEFCC9;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="saffron"] {
+    --kz-accent-fill: #EDB100;
+    --kz-accent-on-fill: #0F1012;
+    --kz-accent-text: #A46000;
+    --kz-accent-link: #A46000;
+    --kz-accent-tint: #FFF8C6;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="tangerine"] {
+    --kz-accent-fill: #F87400;
+    --kz-accent-on-fill: #0F1012;
+    --kz-accent-text: #9C3200;
+    --kz-accent-link: #9C3200;
+    --kz-accent-tint: #FFEDD4;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="vermilion"] {
+    --kz-accent-fill: #E40200;
+    --kz-accent-on-fill: #FFFFFF;
+    --kz-accent-text: #BE0500;
+    --kz-accent-link: #E40200;
+    --kz-accent-tint: #FFE2E1;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="berry"] {
+    --kz-accent-fill: #E10081;
+    --kz-accent-on-fill: #FFFFFF;
+    --kz-accent-text: #C10065;
+    --kz-accent-link: #E10081;
+    --kz-accent-tint: #FBE7F4;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="orchid"] {
+    --kz-accent-fill: #C200DF;
+    --kz-accent-on-fill: #FFFFFF;
+    --kz-accent-text: #A400B9;
+    --kz-accent-link: #C200DF;
+    --kz-accent-tint: #F9E8FF;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+  [data-accent="iris"] {
+    --kz-accent-fill: #7B28FF;
+    --kz-accent-on-fill: #FFFFFF;
+    --kz-accent-text: #7B28FF;
+    --kz-accent-link: #7B28FF;
+    --kz-accent-tint: #ECE9FF;
+    --kz-focus-fill: #0F1012;
+    --kz-on-focus: #FCFCFC;
+    --kz-focus-fill-quiet: #0F1012;
+    --kz-on-focus-quiet: #FCFCFC;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --kz-frost-control: var(--kz-container);
+    --kz-frost-toolbar: var(--kz-container);
+    --kz-frost-overlay: var(--kz-container);
+  }
+}

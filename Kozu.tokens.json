@@ -1,6 +1,6 @@
 {
   "name": "Kozu Universal App Standards",
-  "version": "0.5-review",
+  "version": "0.6-review",
   "projectAgnostic": true,
   "units": "Logical dp/pt; exact host and device bounds take precedence",
   "platforms": [
@@ -13,7 +13,8 @@
     "Android TV / Google TV",
     "Wear OS",
     "watchOS",
-    "tvOS"
+    "tvOS",
+    "Web"
   ],
   "type": {
     "headingFamily": "Source Serif 4",
@@ -55,128 +56,1462 @@
     }
   },
   "color": {
-    "inspiration": "https://tailwindcss.com/docs/colors",
-    "note": "Tailwind-inspired families and steps; these RGB values are the canonical tokens, not a claim to reproduce every current OKLCH value",
+    "system": "Kozu Spectrum",
+    "note": "Twelve accent families built on Tailwind CSS v4: each follows one Tailwind family's lightness and chroma step for step, turned plus or minus 2 to 4 degrees to its own Kozu hue. Roles are chosen per family by measured WCAG contrast; a role step is nudged only when it misses its target (Azure 600 carries white text).",
+    "closeness": {
+      "medianDeltaE": 0.0072,
+      "maxDeltaE": 0.0336,
+      "note": "OKLab distance from each step to the same step of its Tailwind v4 family"
+    },
+    "rules": [
+      "One accent family per app. Per-tab colors are opt-in and use a color-vision-checked set from color.sets.",
+      "Fills: Tangerine, Saffron, Citron, Fern, Jade and Lagoon at 500 with an ink label; Cobalt, Azure, Vermilion, Berry, Orchid and Iris at 600 with a white label. Every label pair is at least 4.5:1.",
+      "Accent text and icons use roleSteps.text on light surfaces and tints (700 for most, 800 for Tangerine, 600 for Iris) and roleSteps.textDark on dark (300 or 400).",
+      "Web selection uses the tint (step 100 light, 900 dark). Native app selection uses the selected mix: 16% accent over light frost, 32% over the night backing. Neither uses a border.",
+      "Status ramps (Success, Warning, Danger, Info) follow Tailwind green, amber, red and sky, stay separate from accents and always pair color with an icon and words.",
+      "Use Kozu tokens rather than raw Tailwind values, so the hue offsets and contrast nudges hold.",
+      "Supported pairs, all at least 4.5:1: labels on fills; accent text on canvas, container and tint; links on canvas and container; dark text on the dark canvas, container and dark tint. Accent text does not sit on input fills, and links do not sit on tints."
+    ],
     "accentFamilies": {
-      "Blue": {
-        "light": "#1D4ED8",
-        "dark": "#93C5FD"
+      "Cobalt": {
+        "tailwindBase": "blue",
+        "hueOffset": 3.0,
+        "hue": 262.81,
+        "note": "ultramarine blue",
+        "fillStep": "600",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "300",
+          "fillDark": "300"
+        },
+        "light": "#2844E6",
+        "dark": "#96C4FF",
+        "roles": {
+          "fill": "#2C5AFC",
+          "onFill": "#FFFFFF",
+          "text": "#2844E6",
+          "textOnTint": "#2844E6",
+          "link": "#2C5AFC",
+          "textStrong": "#2539B8",
+          "tint": "#DCEAFF",
+          "tintStrong": "#C0DAFF",
+          "fillDark": "#96C4FF",
+          "onFillDark": "#0F1012",
+          "textDark": "#96C4FF",
+          "tintDark": "#23378E"
+        },
+        "steps": {
+          "50": "#EFF6FF",
+          "100": "#DCEAFF",
+          "200": "#C0DAFF",
+          "300": "#96C4FF",
+          "400": "#5FA1FF",
+          "500": "#417EFF",
+          "600": "#2C5AFC",
+          "700": "#2844E6",
+          "800": "#2539B8",
+          "900": "#23378E",
+          "950": "#1A2456"
+        },
+        "oklch": {
+          "50": [
+            0.97,
+            0.014,
+            257.6
+          ],
+          "100": [
+            0.932,
+            0.032,
+            258.59
+          ],
+          "200": [
+            0.882,
+            0.0581,
+            257.13
+          ],
+          "300": [
+            0.809,
+            0.0976,
+            254.81
+          ],
+          "400": [
+            0.707,
+            0.1543,
+            257.62
+          ],
+          "500": [
+            0.623,
+            0.2028,
+            262.81
+          ],
+          "600": [
+            0.546,
+            0.245,
+            265.88
+          ],
+          "700": [
+            0.488,
+            0.243,
+            267.38
+          ],
+          "800": [
+            0.424,
+            0.199,
+            268.64
+          ],
+          "900": [
+            0.379,
+            0.146,
+            268.52
+          ],
+          "950": [
+            0.282,
+            0.091,
+            270.94
+          ]
+        },
+        "nudgedSteps": []
       },
-      "Violet": {
-        "light": "#7C3AED",
-        "dark": "#C4B5FD"
+      "Azure": {
+        "tailwindBase": "sky",
+        "hueOffset": 2.0,
+        "hue": 239.32,
+        "note": "clear cerulean",
+        "fillStep": "600",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "300",
+          "fillDark": "300"
+        },
+        "light": "#0068A5",
+        "dark": "#7DD3FF",
+        "roles": {
+          "fill": "#007BBF",
+          "onFill": "#FFFFFF",
+          "text": "#0068A5",
+          "textOnTint": "#0068A5",
+          "link": "#0068A5",
+          "textStrong": "#005889",
+          "tint": "#E0F2FF",
+          "tintStrong": "#B9E6FF",
+          "fillDark": "#7DD3FF",
+          "onFillDark": "#0F1012",
+          "textDark": "#7DD3FF",
+          "tintDark": "#084971"
+        },
+        "steps": {
+          "50": "#F0F9FF",
+          "100": "#E0F2FF",
+          "200": "#B9E6FF",
+          "300": "#7DD3FF",
+          "400": "#15BAFF",
+          "500": "#00A4EE",
+          "600": "#007BBF",
+          "700": "#0068A5",
+          "800": "#005889",
+          "900": "#084971",
+          "950": "#082F4B"
+        },
+        "oklch": {
+          "50": [
+            0.977,
+            0.0123,
+            238.62
+          ],
+          "100": [
+            0.951,
+            0.026,
+            238.82
+          ],
+          "200": [
+            0.901,
+            0.0579,
+            232.9
+          ],
+          "300": [
+            0.828,
+            0.1041,
+            232.32
+          ],
+          "400": [
+            0.746,
+            0.1542,
+            234.66
+          ],
+          "500": [
+            0.685,
+            0.1551,
+            239.32
+          ],
+          "600": [
+            0.56,
+            0.138,
+            243.97
+          ],
+          "700": [
+            0.5,
+            0.1252,
+            244.75
+          ],
+          "800": [
+            0.443,
+            0.1067,
+            242.79
+          ],
+          "900": [
+            0.391,
+            0.09,
+            242.88
+          ],
+          "950": [
+            0.293,
+            0.066,
+            245.16
+          ]
+        },
+        "nudgedSteps": [
+          "600"
+        ]
       },
-      "Orange": {
-        "light": "#9A3412",
-        "dark": "#FDBA74"
+      "Lagoon": {
+        "tailwindBase": "cyan",
+        "hueOffset": -4.0,
+        "hue": 211.22,
+        "note": "aqua",
+        "fillStep": "500",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "400",
+          "fillDark": "400"
+        },
+        "light": "#00758E",
+        "dark": "#00D2E7",
+        "roles": {
+          "fill": "#00B7CF",
+          "onFill": "#0F1012",
+          "text": "#00758E",
+          "textOnTint": "#00758E",
+          "link": "#00758E",
+          "textStrong": "#005F75",
+          "tint": "#CEFAFC",
+          "tintStrong": "#A2F4FA",
+          "fillDark": "#00D2E7",
+          "onFillDark": "#0F1012",
+          "textDark": "#00D2E7",
+          "tintDark": "#0B4F63"
+        },
+        "steps": {
+          "50": "#ECFEFE",
+          "100": "#CEFAFC",
+          "200": "#A2F4FA",
+          "300": "#52EBF8",
+          "400": "#00D2E7",
+          "500": "#00B7CF",
+          "600": "#0092AE",
+          "700": "#00758E",
+          "800": "#005F75",
+          "900": "#0B4F63",
+          "950": "#023444"
+        },
+        "oklch": {
+          "50": [
+            0.984,
+            0.019,
+            196.87
+          ],
+          "100": [
+            0.956,
+            0.045,
+            199.39
+          ],
+          "200": [
+            0.917,
+            0.08,
+            201.04
+          ],
+          "300": [
+            0.865,
+            0.127,
+            203.08
+          ],
+          "400": [
+            0.789,
+            0.1355,
+            207.53
+          ],
+          "500": [
+            0.715,
+            0.1242,
+            211.22
+          ],
+          "600": [
+            0.609,
+            0.1092,
+            217.72
+          ],
+          "700": [
+            0.52,
+            0.0941,
+            219.13
+          ],
+          "800": [
+            0.45,
+            0.0821,
+            220.28
+          ],
+          "900": [
+            0.398,
+            0.07,
+            223.39
+          ],
+          "950": [
+            0.302,
+            0.056,
+            225.69
+          ]
+        },
+        "nudgedSteps": []
       },
-      "Teal": {
-        "light": "#0F766E",
-        "dark": "#5EEAD4"
+      "Jade": {
+        "tailwindBase": "emerald",
+        "hueOffset": 2.0,
+        "hue": 164.48,
+        "note": "sea green",
+        "fillStep": "500",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "400",
+          "fillDark": "400"
+        },
+        "light": "#00785A",
+        "dark": "#00D299",
+        "roles": {
+          "fill": "#00B985",
+          "onFill": "#0F1012",
+          "text": "#00785A",
+          "textOnTint": "#00785A",
+          "link": "#00785A",
+          "textStrong": "#005F48",
+          "tint": "#CFFAE6",
+          "tintStrong": "#A2F4D2",
+          "fillDark": "#00D299",
+          "onFillDark": "#0F1012",
+          "textDark": "#00D299",
+          "tintDark": "#004E3C"
+        },
+        "steps": {
+          "50": "#EBFDF5",
+          "100": "#CFFAE6",
+          "200": "#A2F4D2",
+          "300": "#59EAB8",
+          "400": "#00D299",
+          "500": "#00B985",
+          "600": "#00966C",
+          "700": "#00785A",
+          "800": "#005F48",
+          "900": "#004E3C",
+          "950": "#002C23"
+        },
+        "oklch": {
+          "50": [
+            0.979,
+            0.021,
+            168.11
+          ],
+          "100": [
+            0.95,
+            0.052,
+            165.05
+          ],
+          "200": [
+            0.905,
+            0.093,
+            166.15
+          ],
+          "300": [
+            0.845,
+            0.143,
+            166.98
+          ],
+          "400": [
+            0.765,
+            0.1604,
+            165.22
+          ],
+          "500": [
+            0.696,
+            0.1474,
+            164.48
+          ],
+          "600": [
+            0.596,
+            0.1249,
+            165.22
+          ],
+          "700": [
+            0.508,
+            0.1033,
+            167.61
+          ],
+          "800": [
+            0.432,
+            0.0866,
+            168.91
+          ],
+          "900": [
+            0.378,
+            0.0741,
+            170.94
+          ],
+          "950": [
+            0.262,
+            0.0496,
+            174.55
+          ]
+        },
+        "nudgedSteps": []
       },
-      "Rose": {
-        "light": "#BE123C",
-        "dark": "#FDA4AF"
+      "Fern": {
+        "tailwindBase": "green",
+        "hueOffset": -2.0,
+        "hue": 147.58,
+        "note": "leaf green",
+        "fillStep": "500",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "400",
+          "fillDark": "400"
+        },
+        "light": "#008132",
+        "dark": "#29DE6C",
+        "roles": {
+          "fill": "#00C74D",
+          "onFill": "#0F1012",
+          "text": "#008132",
+          "textOnTint": "#008132",
+          "link": "#008132",
+          "textStrong": "#0E662D",
+          "tint": "#DCFCE6",
+          "tintStrong": "#BBF7CD",
+          "fillDark": "#29DE6C",
+          "onFillDark": "#0F1012",
+          "textDark": "#29DE6C",
+          "tintDark": "#135429"
+        },
+        "steps": {
+          "50": "#F0FDF4",
+          "100": "#DCFCE6",
+          "200": "#BBF7CD",
+          "300": "#80F1A4",
+          "400": "#29DE6C",
+          "500": "#00C74D",
+          "600": "#00A43C",
+          "700": "#008132",
+          "800": "#0E662D",
+          "900": "#135429",
+          "950": "#052E14"
+        },
+        "oklch": {
+          "50": [
+            0.982,
+            0.018,
+            153.83
+          ],
+          "100": [
+            0.962,
+            0.044,
+            154.74
+          ],
+          "200": [
+            0.925,
+            0.084,
+            154.0
+          ],
+          "300": [
+            0.871,
+            0.15,
+            152.45
+          ],
+          "400": [
+            0.792,
+            0.209,
+            149.71
+          ],
+          "500": [
+            0.723,
+            0.2116,
+            147.58
+          ],
+          "600": [
+            0.627,
+            0.1853,
+            147.21
+          ],
+          "700": [
+            0.527,
+            0.1523,
+            148.07
+          ],
+          "800": [
+            0.448,
+            0.119,
+            149.33
+          ],
+          "900": [
+            0.393,
+            0.095,
+            150.53
+          ],
+          "950": [
+            0.266,
+            0.065,
+            150.93
+          ]
+        },
+        "nudgedSteps": []
       },
-      "Amber": {
-        "light": "#92400E",
-        "dark": "#FCD34D"
+      "Citron": {
+        "tailwindBase": "lime",
+        "hueOffset": -2.0,
+        "hue": 128.85,
+        "note": "lemon-lime",
+        "fillStep": "500",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "400",
+          "fillDark": "400"
+        },
+        "light": "#517B00",
+        "dark": "#A5E300",
+        "roles": {
+          "fill": "#8BCB00",
+          "onFill": "#0F1012",
+          "text": "#517B00",
+          "textOnTint": "#517B00",
+          "link": "#517B00",
+          "textStrong": "#416200",
+          "tint": "#EEFCC9",
+          "tintStrong": "#DCF997",
+          "fillDark": "#A5E300",
+          "onFillDark": "#0F1012",
+          "textDark": "#A5E300",
+          "tintDark": "#37530A"
+        },
+        "steps": {
+          "50": "#F8FEE7",
+          "100": "#EEFCC9",
+          "200": "#DCF997",
+          "300": "#C1F24B",
+          "400": "#A5E300",
+          "500": "#8BCB00",
+          "600": "#6BA200",
+          "700": "#517B00",
+          "800": "#416200",
+          "900": "#37530A",
+          "950": "#1B2E01"
+        },
+        "oklch": {
+          "50": [
+            0.986,
+            0.031,
+            118.76
+          ],
+          "100": [
+            0.967,
+            0.067,
+            120.33
+          ],
+          "200": [
+            0.938,
+            0.127,
+            122.32
+          ],
+          "300": [
+            0.897,
+            0.196,
+            124.67
+          ],
+          "400": [
+            0.841,
+            0.2165,
+            126.85
+          ],
+          "500": [
+            0.768,
+            0.2032,
+            128.85
+          ],
+          "600": [
+            0.648,
+            0.1736,
+            129.68
+          ],
+          "700": [
+            0.532,
+            0.1423,
+            129.59
+          ],
+          "800": [
+            0.453,
+            0.12,
+            128.93
+          ],
+          "900": [
+            0.405,
+            0.101,
+            129.06
+          ],
+          "950": [
+            0.274,
+            0.072,
+            130.11
+          ]
+        },
+        "nudgedSteps": []
       },
-      "Sky": {
-        "light": "#0369A1",
-        "dark": "#7DD3FC"
+      "Saffron": {
+        "tailwindBase": "yellow",
+        "hueOffset": -2.0,
+        "hue": 84.05,
+        "note": "golden yellow",
+        "fillStep": "500",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "400",
+          "fillDark": "400"
+        },
+        "light": "#A46000",
+        "dark": "#FBC700",
+        "roles": {
+          "fill": "#EDB100",
+          "onFill": "#0F1012",
+          "text": "#A46000",
+          "textOnTint": "#A46000",
+          "link": "#A46000",
+          "textStrong": "#894A00",
+          "tint": "#FFF8C6",
+          "tintStrong": "#FFEF93",
+          "fillDark": "#FBC700",
+          "onFillDark": "#0F1012",
+          "textDark": "#FBC700",
+          "tintDark": "#743D0E"
+        },
+        "steps": {
+          "50": "#FEFCE8",
+          "100": "#FFF8C6",
+          "200": "#FFEF93",
+          "300": "#FFDF50",
+          "400": "#FBC700",
+          "500": "#EDB100",
+          "600": "#CD8900",
+          "700": "#A46000",
+          "800": "#894A00",
+          "900": "#743D0E",
+          "950": "#431F06"
+        },
+        "oklch": {
+          "50": [
+            0.987,
+            0.026,
+            100.21
+          ],
+          "100": [
+            0.973,
+            0.0648,
+            101.19
+          ],
+          "200": [
+            0.945,
+            0.114,
+            99.54
+          ],
+          "300": [
+            0.905,
+            0.1591,
+            96.11
+          ],
+          "400": [
+            0.852,
+            0.1741,
+            89.94
+          ],
+          "500": [
+            0.795,
+            0.1632,
+            84.05
+          ],
+          "600": [
+            0.681,
+            0.1444,
+            73.83
+          ],
+          "700": [
+            0.554,
+            0.1249,
+            64.44
+          ],
+          "800": [
+            0.476,
+            0.1117,
+            59.91
+          ],
+          "900": [
+            0.421,
+            0.095,
+            55.71
+          ],
+          "950": [
+            0.286,
+            0.066,
+            51.81
+          ]
+        },
+        "nudgedSteps": []
       },
-      "Emerald": {
-        "light": "#047857",
-        "dark": "#6EE7B7"
+      "Tangerine": {
+        "tailwindBase": "orange",
+        "hueOffset": 2.0,
+        "hue": 49.6,
+        "note": "clear orange",
+        "fillStep": "500",
+        "roleSteps": {
+          "text": "800",
+          "textDark": "300",
+          "fillDark": "300"
+        },
+        "light": "#9C3200",
+        "dark": "#FFBA6B",
+        "roles": {
+          "fill": "#F87400",
+          "onFill": "#0F1012",
+          "text": "#9C3200",
+          "textOnTint": "#9C3200",
+          "link": "#9C3200",
+          "textStrong": "#9C3200",
+          "tint": "#FFEDD4",
+          "tintStrong": "#FED7A7",
+          "fillDark": "#FFBA6B",
+          "onFillDark": "#0F1012",
+          "textDark": "#FFBA6B",
+          "tintDark": "#7E2B06"
+        },
+        "steps": {
+          "50": "#FFF7ED",
+          "100": "#FFEDD4",
+          "200": "#FED7A7",
+          "300": "#FFBA6B",
+          "400": "#FF8C04",
+          "500": "#F87400",
+          "600": "#E85B00",
+          "700": "#C14300",
+          "800": "#9C3200",
+          "900": "#7E2B06",
+          "950": "#441304"
+        },
+        "oklch": {
+          "50": [
+            0.98,
+            0.016,
+            75.68
+          ],
+          "100": [
+            0.954,
+            0.038,
+            77.16
+          ],
+          "200": [
+            0.901,
+            0.076,
+            72.7
+          ],
+          "300": [
+            0.837,
+            0.125,
+            68.29
+          ],
+          "400": [
+            0.75,
+            0.1789,
+            57.93
+          ],
+          "500": [
+            0.705,
+            0.1874,
+            49.6
+          ],
+          "600": [
+            0.646,
+            0.1909,
+            43.12
+          ],
+          "700": [
+            0.553,
+            0.1722,
+            40.4
+          ],
+          "800": [
+            0.47,
+            0.1496,
+            39.3
+          ],
+          "900": [
+            0.408,
+            0.123,
+            40.17
+          ],
+          "950": [
+            0.266,
+            0.079,
+            38.26
+          ]
+        },
+        "nudgedSteps": []
+      },
+      "Vermilion": {
+        "tailwindBase": "red",
+        "hueOffset": 2.0,
+        "hue": 27.33,
+        "note": "tomato red",
+        "fillStep": "600",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "300",
+          "fillDark": "300"
+        },
+        "light": "#BE0500",
+        "dark": "#FFA4A1",
+        "roles": {
+          "fill": "#E40200",
+          "onFill": "#FFFFFF",
+          "text": "#BE0500",
+          "textOnTint": "#BE0500",
+          "link": "#E40200",
+          "textStrong": "#9F0907",
+          "tint": "#FFE2E1",
+          "tintStrong": "#FFCAC8",
+          "fillDark": "#FFA4A1",
+          "onFillDark": "#0F1012",
+          "textDark": "#FFA4A1",
+          "tintDark": "#821815"
+        },
+        "steps": {
+          "50": "#FEF2F2",
+          "100": "#FFE2E1",
+          "200": "#FFCAC8",
+          "300": "#FFA4A1",
+          "400": "#FF6663",
+          "500": "#FB2D2D",
+          "600": "#E40200",
+          "700": "#BE0500",
+          "800": "#9F0907",
+          "900": "#821815",
+          "950": "#460806"
+        },
+        "oklch": {
+          "50": [
+            0.971,
+            0.013,
+            19.38
+          ],
+          "100": [
+            0.936,
+            0.032,
+            19.72
+          ],
+          "200": [
+            0.885,
+            0.0606,
+            20.33
+          ],
+          "300": [
+            0.808,
+            0.1089,
+            21.57
+          ],
+          "400": [
+            0.704,
+            0.1875,
+            24.22
+          ],
+          "500": [
+            0.637,
+            0.237,
+            27.33
+          ],
+          "600": [
+            0.577,
+            0.2361,
+            29.32
+          ],
+          "700": [
+            0.505,
+            0.2055,
+            29.52
+          ],
+          "800": [
+            0.444,
+            0.177,
+            28.9
+          ],
+          "900": [
+            0.396,
+            0.141,
+            27.72
+          ],
+          "950": [
+            0.258,
+            0.092,
+            28.04
+          ]
+        },
+        "nudgedSteps": []
+      },
+      "Berry": {
+        "tailwindBase": "pink",
+        "hueOffset": -4.0,
+        "hue": 350.31,
+        "note": "raspberry pink",
+        "fillStep": "600",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "300",
+          "fillDark": "300"
+        },
+        "light": "#C10065",
+        "dark": "#FBA6DB",
+        "roles": {
+          "fill": "#E10081",
+          "onFill": "#FFFFFF",
+          "text": "#C10065",
+          "textOnTint": "#C10065",
+          "link": "#E10081",
+          "textStrong": "#A10054",
+          "tint": "#FBE7F4",
+          "tintStrong": "#FACFEB",
+          "fillDark": "#FBA6DB",
+          "onFillDark": "#0F1012",
+          "textDark": "#FBA6DB",
+          "tintDark": "#841149"
+        },
+        "steps": {
+          "50": "#FCF2F9",
+          "100": "#FBE7F4",
+          "200": "#FACFEB",
+          "300": "#FBA6DB",
+          "400": "#F865BF",
+          "500": "#F335A4",
+          "600": "#E10081",
+          "700": "#C10065",
+          "800": "#A10054",
+          "900": "#841149",
+          "950": "#500428"
+        },
+        "oklch": {
+          "50": [
+            0.971,
+            0.014,
+            339.2
+          ],
+          "100": [
+            0.948,
+            0.028,
+            338.26
+          ],
+          "200": [
+            0.899,
+            0.061,
+            339.23
+          ],
+          "300": [
+            0.823,
+            0.12,
+            342.02
+          ],
+          "400": [
+            0.718,
+            0.202,
+            345.76
+          ],
+          "500": [
+            0.656,
+            0.241,
+            350.31
+          ],
+          "600": [
+            0.592,
+            0.242,
+            356.58
+          ],
+          "700": [
+            0.525,
+            0.2129,
+            359.96
+          ],
+          "800": [
+            0.459,
+            0.1862,
+            359.81
+          ],
+          "900": [
+            0.408,
+            0.153,
+            358.43
+          ],
+          "950": [
+            0.284,
+            0.109,
+            359.91
+          ]
+        },
+        "nudgedSteps": []
+      },
+      "Orchid": {
+        "tailwindBase": "fuchsia",
+        "hueOffset": -2.0,
+        "hue": 320.15,
+        "note": "purple magenta",
+        "fillStep": "600",
+        "roleSteps": {
+          "text": "700",
+          "textDark": "300",
+          "fillDark": "300"
+        },
+        "light": "#A400B9",
+        "dark": "#EEABFF",
+        "roles": {
+          "fill": "#C200DF",
+          "onFill": "#FFFFFF",
+          "text": "#A400B9",
+          "textOnTint": "#A400B9",
+          "link": "#C200DF",
+          "textStrong": "#880598",
+          "tint": "#F9E8FF",
+          "tintStrong": "#F3D1FF",
+          "fillDark": "#EEABFF",
+          "onFillDark": "#0F1012",
+          "textDark": "#EEABFF",
+          "tintDark": "#71157A"
+        },
+        "steps": {
+          "50": "#FCF4FF",
+          "100": "#F9E8FF",
+          "200": "#F3D1FF",
+          "300": "#EEABFF",
+          "400": "#E673FF",
+          "500": "#DD30FF",
+          "600": "#C200DF",
+          "700": "#A400B9",
+          "800": "#880598",
+          "900": "#71157A",
+          "950": "#4A0151"
+        },
+        "oklch": {
+          "50": [
+            0.977,
+            0.0168,
+            318.06
+          ],
+          "100": [
+            0.952,
+            0.0345,
+            316.85
+          ],
+          "200": [
+            0.903,
+            0.0724,
+            317.62
+          ],
+          "300": [
+            0.833,
+            0.1338,
+            319.43
+          ],
+          "400": [
+            0.74,
+            0.221,
+            320.16
+          ],
+          "500": [
+            0.667,
+            0.2924,
+            320.15
+          ],
+          "600": [
+            0.591,
+            0.2823,
+            320.9
+          ],
+          "700": [
+            0.518,
+            0.2461,
+            321.95
+          ],
+          "800": [
+            0.452,
+            0.211,
+            322.59
+          ],
+          "900": [
+            0.401,
+            0.17,
+            323.61
+          ],
+          "950": [
+            0.293,
+            0.136,
+            323.66
+          ]
+        },
+        "nudgedSteps": []
+      },
+      "Iris": {
+        "tailwindBase": "violet",
+        "hueOffset": -2.0,
+        "hue": 290.72,
+        "note": "blue violet",
+        "fillStep": "600",
+        "roleSteps": {
+          "text": "600",
+          "textDark": "300",
+          "fillDark": "300"
+        },
+        "light": "#7B28FF",
+        "dark": "#C2B5FF",
+        "roles": {
+          "fill": "#7B28FF",
+          "onFill": "#FFFFFF",
+          "text": "#7B28FF",
+          "textOnTint": "#7B28FF",
+          "link": "#7B28FF",
+          "textStrong": "#5A12C2",
+          "tint": "#ECE9FF",
+          "tintStrong": "#DCD6FF",
+          "fillDark": "#C2B5FF",
+          "onFillDark": "#0F1012",
+          "textDark": "#C2B5FF",
+          "tintDark": "#4A199B"
+        },
+        "steps": {
+          "50": "#F5F3FF",
+          "100": "#ECE9FF",
+          "200": "#DCD6FF",
+          "300": "#C2B5FF",
+          "400": "#A288FF",
+          "500": "#8859FF",
+          "600": "#7B28FF",
+          "700": "#6C0FE9",
+          "800": "#5A12C2",
+          "900": "#4A199B",
+          "950": "#2D0E69"
+        },
+        "oklch": {
+          "50": [
+            0.969,
+            0.0159,
+            291.76
+          ],
+          "100": [
+            0.943,
+            0.029,
+            292.59
+          ],
+          "200": [
+            0.894,
+            0.0558,
+            291.28
+          ],
+          "300": [
+            0.811,
+            0.1032,
+            291.57
+          ],
+          "400": [
+            0.702,
+            0.1702,
+            291.54
+          ],
+          "500": [
+            0.606,
+            0.2325,
+            290.72
+          ],
+          "600": [
+            0.541,
+            0.2784,
+            291.01
+          ],
+          "700": [
+            0.491,
+            0.27,
+            290.58
+          ],
+          "800": [
+            0.432,
+            0.232,
+            290.76
+          ],
+          "900": [
+            0.38,
+            0.189,
+            291.75
+          ],
+          "950": [
+            0.283,
+            0.141,
+            289.09
+          ]
+        },
+        "nudgedSteps": []
+      }
+    },
+    "accentModeOrder": [
+      "Cobalt",
+      "Azure",
+      "Lagoon",
+      "Jade",
+      "Fern",
+      "Citron",
+      "Saffron",
+      "Tangerine",
+      "Vermilion",
+      "Berry",
+      "Orchid",
+      "Iris"
+    ],
+    "defaultAccent": "Cobalt",
+    "renamedModes": {
+      "Blue": "Cobalt",
+      "Violet": "Iris",
+      "Orange": "Tangerine",
+      "Teal": "Jade",
+      "Rose": "Berry",
+      "Amber": "Saffron",
+      "Sky": "Azure",
+      "Emerald": "Fern"
+    },
+    "addedModes": [
+      "Vermilion",
+      "Citron",
+      "Lagoon",
+      "Orchid"
+    ],
+    "neutral": {
+      "name": "Graphite",
+      "hue": 272.0,
+      "steps": {
+        "50": "#F6F7FA",
+        "100": "#EDEEF2",
+        "200": "#DBDDE1",
+        "300": "#C0C2C8",
+        "400": "#A3A5AC",
+        "500": "#8C8F96",
+        "600": "#70737A",
+        "700": "#5A5C63",
+        "800": "#43454B",
+        "900": "#303238",
+        "950": "#202126"
+      },
+      "named": {
+        "white": "#FFFFFF",
+        "canvas": "#FCFCFC",
+        "ink": "#0F1012",
+        "night": "#0A0B0D",
+        "nightContainer": "#151619",
+        "nightRaised": "#1F2024",
+        "nightInput": "#242529",
+        "paper": "#F5F6F8"
       }
     },
     "semanticSurfaces": {
       "surface/canvas": [
         "#FCFCFC",
-        "#020617"
+        "#0A0B0D"
       ],
       "surface/container": [
         "#FFFFFF",
-        "#0F172A"
+        "#151619"
+      ],
+      "surface/subtle": [
+        "#F6F7FA",
+        "#151619"
+      ],
+      "surface/input": [
+        "#EDEEF2",
+        "#242529"
       ],
       "content/primary": [
-        "#0F172A",
-        "#F8FAFC"
+        "#0F1012",
+        "#F5F6F8"
       ],
       "content/secondary": [
-        "#475569",
-        "#CBD5E1"
+        "#5A5C63",
+        "#C0C2C8"
       ],
       "outline/default": [
-        "#E2E8F0",
-        "#334155"
+        "#DBDDE1",
+        "#43454B"
       ],
       "surface/frostControl": [
         "#FFFFFF94",
-        "#0F172AA6"
+        "#151619A6"
       ],
       "surface/frostToolbar": [
         "#FFFFFF9F",
-        "#0F172AB3"
+        "#151619B3"
       ],
       "surface/frostOverlay": [
         "#FFFFFFD7",
-        "#0F172AD7"
-      ],
-      "surface/accentContainer": [
-        "#E8EDFB",
-        "#1F2732"
+        "#151619D7"
       ],
       "action/primaryFill": [
-        "#1E40AFCF",
-        "#93C5FDCF"
+        "accent/fill",
+        "accent/fillDark"
       ],
       "content/onAccent": [
-        "#FFFFFF",
-        "#0F172A"
+        "accent/onFill",
+        "accent/onFillDark"
       ]
     },
     "status": {
       "success": {
+        "family": "Success",
+        "tailwindBase": "green",
         "light": {
-          "foreground": "#065F46",
-          "background": "#ECFDF5"
+          "foreground": "#00813A",
+          "background": "#F0FDF4"
         },
         "dark": {
-          "foreground": "#6EE7B7",
-          "background": "#022C22"
+          "foreground": "#05DF72",
+          "background": "#032E15"
+        },
+        "fill": "#00883A",
+        "onFill": "#FFFFFF",
+        "steps": {
+          "50": "#F0FDF4",
+          "100": "#DCFCE7",
+          "200": "#B9F8CF",
+          "300": "#7BF1A8",
+          "400": "#05DF72",
+          "500": "#00C65A",
+          "600": "#00883A",
+          "700": "#00813A",
+          "800": "#016630",
+          "900": "#0D542B",
+          "950": "#032E15"
         }
       },
       "warning": {
+        "family": "Warning",
+        "tailwindBase": "amber",
         "light": {
-          "foreground": "#78350F",
+          "foreground": "#B55200",
           "background": "#FFFBEB"
         },
         "dark": {
-          "foreground": "#FDE68A",
-          "background": "#451A03"
+          "foreground": "#FABC00",
+          "background": "#461901"
+        },
+        "fill": "#F69E00",
+        "onFill": "#0F1012",
+        "steps": {
+          "50": "#FFFBEB",
+          "100": "#FEF3C6",
+          "200": "#FEE685",
+          "300": "#FFD237",
+          "400": "#FABC00",
+          "500": "#F69E00",
+          "600": "#DA7700",
+          "700": "#B55200",
+          "800": "#953D00",
+          "900": "#7B3306",
+          "950": "#461901"
         }
       },
       "error": {
+        "family": "Danger",
+        "tailwindBase": "red",
         "light": {
-          "foreground": "#B91C1C",
+          "foreground": "#BF000F",
           "background": "#FEF2F2"
         },
         "dark": {
-          "foreground": "#FCA5A5",
-          "background": "#450A0A"
+          "foreground": "#FFA3A4",
+          "background": "#460809"
+        },
+        "fill": "#E40016",
+        "onFill": "#FFFFFF",
+        "steps": {
+          "50": "#FEF2F2",
+          "100": "#FFE2E2",
+          "200": "#FFCACA",
+          "300": "#FFA3A4",
+          "400": "#FF6568",
+          "500": "#FB2C36",
+          "600": "#E40016",
+          "700": "#BF000F",
+          "800": "#9F0712",
+          "900": "#82181A",
+          "950": "#460809"
         }
       },
       "info": {
+        "family": "Info",
+        "tailwindBase": "sky",
         "light": {
-          "foreground": "#075985",
+          "foreground": "#0069A2",
           "background": "#F0F9FF"
         },
         "dark": {
-          "foreground": "#7DD3FC",
-          "background": "#082F49"
+          "foreground": "#78D4FF",
+          "background": "#052F4A"
+        },
+        "fill": "#007BBB",
+        "onFill": "#FFFFFF",
+        "steps": {
+          "50": "#F0F9FF",
+          "100": "#DFF2FE",
+          "200": "#B8E6FE",
+          "300": "#78D4FF",
+          "400": "#00BBFD",
+          "500": "#00A5EA",
+          "600": "#007BBB",
+          "700": "#0069A2",
+          "800": "#005986",
+          "900": "#024A70",
+          "950": "#052F4A"
         }
+      }
+    },
+    "sets": {
+      "perTab4": {
+        "families": [
+          "Cobalt",
+          "Tangerine",
+          "Saffron",
+          "Berry"
+        ],
+        "minDeltaE": 0.08
+      },
+      "perTab5": {
+        "families": [
+          "Cobalt",
+          "Tangerine",
+          "Saffron",
+          "Jade",
+          "Orchid"
+        ],
+        "minDeltaE": 0.054
+      },
+      "chart6": {
+        "families": [
+          "Tangerine",
+          "Saffron",
+          "Lagoon",
+          "Cobalt",
+          "Orchid",
+          "Berry"
+        ],
+        "minDeltaE": 0.053
       }
     },
     "usage": {
@@ -206,14 +1541,21 @@
     "foregroundToken": "navigation/activeIcon",
     "backgroundToken": "navigation/activeBackground",
     "derivedSurfaceToken": "navigation/selectedSurface",
-    "perTabOverride": "tab/<destination>Light and tab/<destination>Dark, in the app-selected accent theme mode",
+    "perTabOverride": {
+      "schedule": "Orchid",
+      "messages": "Jade",
+      "saved": "Saffron",
+      "recipes": "Vermilion",
+      "people": "Jade",
+      "note": "Per-tab colors use each family's text and textDark roles."
+    },
     "selectionMix": {
       "light": {
         "base": "#FFFFFF9F",
         "accentFraction": 0.16
       },
       "dark": {
-        "base": "#09090BB7",
+        "base": "#0A0B0DB7",
         "accentFraction": 0.32
       }
     },
@@ -237,12 +1579,12 @@
     "toolbarBlur": 28,
     "overlayBlur": 40,
     "lightControlBacking": "#FFFFFF94",
-    "darkControlBacking": "#0F172AA6",
+    "darkControlBacking": "#151619A6",
     "lightToolbarBacking": "#FFFFFF9F",
-    "darkToolbarBacking": "#0F172AB3",
+    "darkToolbarBacking": "#151619B3",
     "busyContentBacking": {
       "light": "#FFFFFFD7",
-      "dark": "#0F172AD7"
+      "dark": "#151619D7"
     },
     "fallback": "Opaque semantic container with the same selected hue",
     "grain": 0,
@@ -418,7 +1760,7 @@
     "feedbackMs": 120,
     "stateMs": 200,
     "transitionMs": 320,
-    "reducedMs": "0\u201380",
+    "reducedMs": "0–80",
     "wearOS": {
       "rowText": "Transforms and fades with SurfaceTransformation; no independent label entrance delay.",
       "edgeText": "Native EdgeButton content opacity/scaling follows its allocated height.",
@@ -490,7 +1832,8 @@
             "VariableID:130",
             "VariableID:132",
             "VariableID:133",
-            "VariableID:134"
+            "VariableID:134",
+            "VariableID:147"
           ]
         },
         "VariableCollectionId:2": {
@@ -501,35 +1844,51 @@
           "modes": [
             {
               "modeId": "VariableCollectionId:2/mode1",
-              "name": "Blue"
-            },
-            {
-              "modeId": "VariableCollectionId:2/mode2",
-              "name": "Violet"
-            },
-            {
-              "modeId": "VariableCollectionId:2/mode3",
-              "name": "Orange"
-            },
-            {
-              "modeId": "VariableCollectionId:2/mode4",
-              "name": "Teal"
-            },
-            {
-              "modeId": "VariableCollectionId:2/mode5",
-              "name": "Rose"
-            },
-            {
-              "modeId": "VariableCollectionId:2/mode6",
-              "name": "Amber"
+              "name": "Cobalt"
             },
             {
               "modeId": "VariableCollectionId:2/mode7",
-              "name": "Sky"
+              "name": "Azure"
+            },
+            {
+              "modeId": "VariableCollectionId:2/mode11",
+              "name": "Lagoon"
+            },
+            {
+              "modeId": "VariableCollectionId:2/mode4",
+              "name": "Jade"
             },
             {
               "modeId": "VariableCollectionId:2/mode8",
-              "name": "Emerald"
+              "name": "Fern"
+            },
+            {
+              "modeId": "VariableCollectionId:2/mode10",
+              "name": "Citron"
+            },
+            {
+              "modeId": "VariableCollectionId:2/mode6",
+              "name": "Saffron"
+            },
+            {
+              "modeId": "VariableCollectionId:2/mode3",
+              "name": "Tangerine"
+            },
+            {
+              "modeId": "VariableCollectionId:2/mode9",
+              "name": "Vermilion"
+            },
+            {
+              "modeId": "VariableCollectionId:2/mode5",
+              "name": "Berry"
+            },
+            {
+              "modeId": "VariableCollectionId:2/mode12",
+              "name": "Orchid"
+            },
+            {
+              "modeId": "VariableCollectionId:2/mode2",
+              "name": "Iris"
             }
           ],
           "name": "Kozu / accent theme",
@@ -556,7 +1915,13 @@
             "VariableID:44",
             "VariableID:45",
             "VariableID:46",
-            "VariableID:131"
+            "VariableID:131",
+            "VariableID:141",
+            "VariableID:142",
+            "VariableID:143",
+            "VariableID:144",
+            "VariableID:145",
+            "VariableID:146"
           ]
         },
         "VariableCollectionId:3": {
@@ -750,7 +2115,7 @@
             },
             {
               "modeId": "VariableCollectionId:8/mode2",
-              "name": "Blue app controls"
+              "name": "Cobalt app controls"
             }
           ],
           "name": "Wearable semantic tokens",
@@ -810,9 +2175,9 @@
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.05098039284348488,
+              "g": 0.04313725605607033,
+              "r": 0.03921568766236305
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -856,15 +2221,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9725490212440491,
+              "g": 0.9647058844566345,
+              "r": 0.9607843160629272
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -884,15 +2249,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.9960784316062927,
+              "b": 1.0,
               "g": 0.8392156958580017,
-              "r": 0.8666666746139526
+              "r": 0.8627451062202454
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.8509804010391235,
-              "g": 0.1568627506494522,
-              "r": 0.4274509847164154
+              "b": 0.9137254953384399,
+              "g": 0.05882352963089943,
+              "r": 0.42352941632270813
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -912,15 +2277,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.8941176533699036,
-              "g": 0.9647058844566345,
-              "r": 0.6000000238418579
+              "b": 0.658823549747467,
+              "g": 0.9450980424880981,
+              "r": 0.48235294222831726
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.3490196168422699,
-              "g": 0.3686274588108063,
-              "r": 0.06666667014360428
+              "b": 0.1882352977991104,
+              "g": 0.4000000059604645,
+              "r": 0.003921568859368563
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -940,15 +2305,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9803921580314636,
+              "g": 0.9686274528503418,
+              "r": 0.9647058844566345
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9803921580314636,
+              "g": 0.9686274528503418,
+              "r": 0.9647058844566345
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -968,15 +2333,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.772549033164978,
-              "r": 0.5764706134796143
+              "b": 1.0,
+              "g": 0.7686274647712708,
+              "r": 0.5882353186607361
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.772549033164978,
-              "r": 0.5764706134796143
+              "b": 1.0,
+              "g": 0.7686274647712708,
+              "r": 0.5882353186607361
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -996,15 +2361,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.9215686321258545,
-              "g": 0.38823530077934265,
-              "r": 0.14509804546833038
+              "b": 0.9882352948188782,
+              "g": 0.3529411852359772,
+              "r": 0.1725490242242813
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.9215686321258545,
-              "g": 0.38823530077934265,
-              "r": 0.14509804546833038
+              "b": 0.9882352948188782,
+              "g": 0.3529411852359772,
+              "r": 0.1725490242242813
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1024,15 +2389,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.3294117748737335,
-              "g": 0.14509804546833038,
-              "r": 0.09019608050584793
+              "b": 0.5568627715110779,
+              "g": 0.21568627655506134,
+              "r": 0.13725490868091583
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.3294117748737335,
-              "g": 0.14509804546833038,
-              "r": 0.09019608050584793
+              "b": 0.5568627715110779,
+              "g": 0.21568627655506134,
+              "r": 0.13725490868091583
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1052,15 +2417,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.9921568632125854,
+              "b": 1.0,
               "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "r": 0.7607843279838562
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.9921568632125854,
+              "b": 1.0,
               "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "r": 0.7607843279838562
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1080,15 +2445,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 1.0,
+              "g": 0.1568627506494522,
+              "r": 0.48235294222831726
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 1.0,
+              "g": 0.1568627506494522,
+              "r": 0.48235294222831726
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1108,22 +2473,22 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.3960784375667572,
-              "g": 0.062745101749897,
-              "r": 0.18039216101169586
+              "b": 0.6078431606292725,
+              "g": 0.09803921729326248,
+              "r": 0.29019609093666077
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.3960784375667572,
-              "g": 0.062745101749897,
-              "r": 0.18039216101169586
+              "b": 0.6078431606292725,
+              "g": 0.09803921729326248,
+              "r": 0.29019609093666077
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
         },
         "VariableID:11": {
           "codeSyntax": {},
-          "description": "Project-agnostic accent family. Choose a palette at the app frame; validate each foreground/background pair.",
+          "description": "Kozu Spectrum step 600 of the app's family (links on white).",
           "hiddenFromPublishing": false,
           "id": "VariableID:11",
           "key": "VariableID:11",
@@ -1136,51 +2501,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.9215686321258545,
-              "g": 0.38823530077934265,
-              "r": 0.14509804546833038
+              "b": 0.9882352948188782,
+              "g": 0.3529411852359772,
+              "r": 0.1725490242242813
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.6352941393852234,
+              "r": 0.41960784792900085
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.6823529601097107,
+              "g": 0.572549045085907,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.8745098114013672,
+              "g": 0.0,
+              "r": 0.7607843279838562
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 1.0,
+              "g": 0.1568627506494522,
+              "r": 0.48235294222831726
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.0470588244497776,
-              "g": 0.2549019753932953,
-              "r": 0.7607843279838562
+              "b": 0.0,
+              "g": 0.35686275362968445,
+              "r": 0.9098039269447327
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.42352941632270813,
+              "g": 0.5882353186607361,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.23529411852359772,
-              "g": 0.07058823853731155,
-              "r": 0.7450980544090271
+              "b": 0.5058823823928833,
+              "g": 0.0,
+              "r": 0.8823529481887817
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.5372549295425415,
+              "r": 0.8039215803146362
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.6313725709915161,
-              "g": 0.4117647111415863,
-              "r": 0.0117647061124444
+              "b": 0.7490196228027344,
+              "g": 0.48235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.34117648005485535,
-              "g": 0.47058823704719543,
-              "r": 0.01568627543747425
+              "b": 0.23529411852359772,
+              "g": 0.6431372761726379,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.007843137718737125,
+              "r": 0.8941176533699036
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -1200,15 +2589,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1228,15 +2617,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.29019609093666077,
+              "b": 0.23529411852359772,
               "g": 0.30588236451148987,
-              "r": 0.07450980693101883
+              "r": 0.0
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.29019609093666077,
+              "b": 0.23529411852359772,
               "g": 0.30588236451148987,
-              "r": 0.07450980693101883
+              "r": 0.0
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1256,15 +2645,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.6745098233222961,
-              "g": 0.9372549057006836,
-              "r": 0.5254902243614197
+              "b": 0.4470588266849518,
+              "g": 0.8745098114013672,
+              "r": 0.019607843831181526
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.6745098233222961,
-              "g": 0.9372549057006836,
-              "r": 0.5254902243614197
+              "b": 0.4470588266849518,
+              "g": 0.8745098114013672,
+              "r": 0.019607843831181526
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1284,15 +2673,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.1764705926179886,
-              "g": 0.32549020648002625,
-              "r": 0.0784313753247261
+              "b": 0.16862745583057404,
+              "g": 0.3294117748737335,
+              "r": 0.05098039284348488
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.1764705926179886,
-              "g": 0.32549020648002625,
-              "r": 0.0784313753247261
+              "b": 0.16862745583057404,
+              "g": 0.3294117748737335,
+              "r": 0.05098039284348488
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1312,15 +2701,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1340,15 +2729,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7372549176216125,
+              "r": 0.9803921580314636
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7372549176216125,
+              "r": 0.9803921580314636
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1368,15 +2757,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.0117647061124444,
-              "g": 0.10196078568696976,
-              "r": 0.2705882489681244
+              "b": 0.0235294122248888,
+              "g": 0.20000000298023224,
+              "r": 0.48235294222831726
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.0117647061124444,
-              "g": 0.10196078568696976,
-              "r": 0.2705882489681244
+              "b": 0.0235294122248888,
+              "g": 0.20000000298023224,
+              "r": 0.48235294222831726
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1396,15 +2785,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.686274528503418,
-              "g": 0.6431372761726379,
-              "r": 0.9921568632125854
+              "b": 0.6431372761726379,
+              "g": 0.6392157077789307,
+              "r": 1.0
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.686274528503418,
-              "g": 0.6431372761726379,
-              "r": 0.9921568632125854
+              "b": 0.6431372761726379,
+              "g": 0.6392157077789307,
+              "r": 1.0
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1424,15 +2813,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.09803921729326248,
-              "g": 0.019607843831181526,
-              "r": 0.2980392277240753
+              "b": 0.10196078568696976,
+              "g": 0.0941176488995552,
+              "r": 0.5098039507865906
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.09803921729326248,
-              "g": 0.019607843831181526,
-              "r": 0.2980392277240753
+              "b": 0.10196078568696976,
+              "g": 0.0941176488995552,
+              "r": 0.5098039507865906
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1452,22 +2841,22 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.27843138575553894,
-              "g": 0.8784313797950745,
-              "r": 0.9921568632125854
+              "b": 0.3137255012989044,
+              "g": 0.8745098114013672,
+              "r": 1.0
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.27843138575553894,
-              "g": 0.8784313797950745,
-              "r": 0.9921568632125854
+              "b": 0.3137255012989044,
+              "g": 0.8745098114013672,
+              "r": 1.0
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
         },
         "VariableID:12": {
           "codeSyntax": {},
-          "description": "Project-agnostic accent family. Choose a palette at the app frame; validate each foreground/background pair.",
+          "description": "Accent text and icons on light surfaces and tints (step 700, at least 5.7:1 on tints).",
           "hiddenFromPublishing": false,
           "id": "VariableID:12",
           "key": "VariableID:12",
@@ -1480,51 +2869,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.8470588326454163,
-              "g": 0.30588236451148987,
-              "r": 0.11372549086809158
+              "b": 0.9019607901573181,
+              "g": 0.2666666805744171,
+              "r": 0.1568627506494522
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.48235294222831726,
+              "r": 0.3176470696926117
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.5568627715110779,
+              "g": 0.4588235318660736,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 1.0,
+              "g": 0.1568627506494522,
+              "r": 0.48235294222831726
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.20392157137393951,
-              "r": 0.6039215922355652
+              "b": 0.0,
+              "g": 0.19607843458652496,
+              "r": 0.6117647290229797
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.23529411852359772,
-              "g": 0.07058823853731155,
-              "r": 0.7450980544090271
+              "b": 0.3960784375667572,
+              "g": 0.0,
+              "r": 0.7568627595901489
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.6313725709915161,
-              "g": 0.4117647111415863,
-              "r": 0.0117647061124444
+              "b": 0.6470588445663452,
+              "g": 0.40784314274787903,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.34117648005485535,
-              "g": 0.47058823704719543,
-              "r": 0.01568627543747425
+              "b": 0.19607843458652496,
+              "g": 0.5058823823928833,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -1544,15 +2957,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 0.7529411911964417,
-              "b": 0.23137255012989044,
-              "g": 0.16078431904315948,
-              "r": 0.11764705926179886
+              "b": 0.16078431904315948,
+              "g": 0.14509804546833038,
+              "r": 0.1411764770746231
             },
             "VariableCollectionId:8/mode2": {
               "a": 0.7529411911964417,
-              "b": 0.23137255012989044,
-              "g": 0.16078431904315948,
-              "r": 0.11764705926179886
+              "b": 0.16078431904315948,
+              "g": 0.14509804546833038,
+              "r": 0.1411764770746231
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1571,16 +2984,16 @@
           ],
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
-              "a": 0.8039215803146362,
-              "b": 0.29019609093666077,
+              "a": 0.800000011920929,
+              "b": 0.23529411852359772,
               "g": 0.30588236451148987,
-              "r": 0.07450980693101883
+              "r": 0.0
             },
             "VariableCollectionId:8/mode2": {
-              "a": 0.8039215803146362,
-              "b": 0.29019609093666077,
+              "a": 0.800000011920929,
+              "b": 0.23529411852359772,
               "g": 0.30588236451148987,
-              "r": 0.07450980693101883
+              "r": 0.0
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1600,15 +3013,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 0.8039215803146362,
-              "b": 0.3294117748737335,
-              "g": 0.14509804546833038,
-              "r": 0.09019608050584793
+              "b": 0.33725491166114807,
+              "g": 0.1411764770746231,
+              "r": 0.10196078568696976
             },
             "VariableCollectionId:8/mode2": {
               "a": 0.8039215803146362,
-              "b": 0.3294117748737335,
-              "g": 0.14509804546833038,
-              "r": 0.09019608050584793
+              "b": 0.33725491166114807,
+              "g": 0.1411764770746231,
+              "r": 0.10196078568696976
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1628,15 +3041,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.4117647111415863,
-              "g": 0.3333333432674408,
-              "r": 0.27843138575553894
+              "b": 0.38823530077934265,
+              "g": 0.3607843220233917,
+              "r": 0.3529411852359772
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.4117647111415863,
-              "g": 0.3333333432674408,
-              "r": 0.27843138575553894
+              "b": 0.38823530077934265,
+              "g": 0.3607843220233917,
+              "r": 0.3529411852359772
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1656,15 +3069,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.05098039284348488,
+              "g": 0.04313725605607033,
+              "r": 0.03921568766236305
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.05098039284348488,
+              "g": 0.04313725605607033,
+              "r": 0.03921568766236305
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1684,15 +3097,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1712,15 +3125,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.23137255012989044,
-              "g": 0.16078431904315948,
-              "r": 0.11764705926179886
+              "b": 0.16078431904315948,
+              "g": 0.14509804546833038,
+              "r": 0.1411764770746231
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.23137255012989044,
-              "g": 0.16078431904315948,
-              "r": 0.11764705926179886
+              "b": 0.16078431904315948,
+              "g": 0.14509804546833038,
+              "r": 0.1411764770746231
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1740,15 +3153,15 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9725490212440491,
+              "g": 0.9647058844566345,
+              "r": 0.9607843160629272
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9725490212440491,
+              "g": 0.9647058844566345,
+              "r": 0.9607843160629272
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1769,14 +3182,14 @@
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
               "b": 0.8823529481887817,
-              "g": 0.8352941274642944,
-              "r": 0.7960784435272217
+              "g": 0.8666666746139526,
+              "r": 0.8588235378265381
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
               "b": 0.8823529481887817,
-              "g": 0.8352941274642944,
-              "r": 0.7960784435272217
+              "g": 0.8666666746139526,
+              "r": 0.8588235378265381
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
@@ -1796,22 +3209,22 @@
           "valuesByMode": {
             "VariableCollectionId:8/mode1": {
               "a": 1.0,
-              "b": 0.7215686440467834,
-              "g": 0.6392157077789307,
-              "r": 0.5803921818733215
+              "b": 0.6745098233222961,
+              "g": 0.6470588445663452,
+              "r": 0.6392157077789307
             },
             "VariableCollectionId:8/mode2": {
               "a": 1.0,
-              "b": 0.7215686440467834,
-              "g": 0.6392157077789307,
-              "r": 0.5803921818733215
+              "b": 0.6745098233222961,
+              "g": 0.6470588445663452,
+              "r": 0.6392157077789307
             }
           },
           "variableCollectionId": "VariableCollectionId:8"
         },
         "VariableID:13": {
           "codeSyntax": {},
-          "description": "Project-agnostic accent family. Choose a palette at the app frame; validate each foreground/background pair.",
+          "description": "Accent text and icons on dark surfaces (step 300).",
           "hiddenFromPublishing": false,
           "id": "VariableID:13",
           "key": "VariableID:13",
@@ -1824,51 +3237,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.772549033164978,
-              "r": 0.5764706134796143
+              "b": 1.0,
+              "g": 0.7686274647712708,
+              "r": 0.5882353186607361
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.8901960849761963,
+              "r": 0.6470588445663452
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.9058823585510254,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.9921568632125854,
+              "b": 1.0,
               "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "r": 0.7607843279838562
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.45490196347236633,
+              "b": 0.41960784792900085,
               "g": 0.729411780834198,
-              "r": 0.9921568632125854
+              "r": 1.0
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.686274528503418,
-              "g": 0.6431372761726379,
-              "r": 0.9921568632125854
+              "b": 0.8588235378265381,
+              "g": 0.6509804129600525,
+              "r": 0.9843137264251709
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.9882352948188782,
+              "b": 1.0,
               "g": 0.8274509906768799,
               "r": 0.4901960790157318
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.7176470756530762,
-              "g": 0.9058823585510254,
-              "r": 0.4313725531101227
+              "b": 0.42352941632270813,
+              "g": 0.8705882430076599,
+              "r": 0.16078431904315948
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -1888,22 +3325,22 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.9847058653831482,
-              "g": 0.9305881857872009,
-              "r": 0.9113725423812866
+              "b": 0.9901960492134094,
+              "g": 0.9266666173934937,
+              "r": 0.9156862497329712
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.19498038291931152,
-              "g": 0.1532549113035202,
-              "r": 0.1218823567032814
+              "b": 0.20282351970672607,
+              "g": 0.15921568870544434,
+              "r": 0.12705883383750916
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
         },
         "VariableID:131": {
           "codeSyntax": {},
-          "description": "Deeper tone of the same app accent preserves white-label contrast at 81% backing opacity.",
+          "description": "Step 700. Kept for older bindings; new work uses accent/fill.",
           "hiddenFromPublishing": false,
           "id": "VariableID:131",
           "key": "VariableID:131",
@@ -1916,51 +3353,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.686274528503418,
-              "g": 0.250980406999588,
-              "r": 0.11764705926179886
+              "b": 0.9019607901573181,
+              "g": 0.2666666805744171,
+              "r": 0.1568627506494522
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.48235294222831726,
+              "r": 0.3176470696926117
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.5568627715110779,
+              "g": 0.4588235318660736,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.7137255072593689,
-              "g": 0.12941177189350128,
-              "r": 0.35686275362968445
+              "b": 0.9137254953384399,
+              "g": 0.05882352963089943,
+              "r": 0.42352941632270813
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.1764705926179886,
-              "r": 0.48627451062202454
+              "b": 0.0,
+              "g": 0.26274511218070984,
+              "r": 0.7568627595901489
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.29019609093666077,
-              "g": 0.30588236451148987,
-              "r": 0.07450980693101883
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.21568627655506134,
-              "g": 0.07450980693101883,
-              "r": 0.5333333611488342
+              "b": 0.3960784375667572,
+              "g": 0.0,
+              "r": 0.7568627595901489
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.05882352963089943,
-              "g": 0.2078431397676468,
-              "r": 0.47058823704719543
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.29019609093666077,
-              "r": 0.0470588244497776
+              "b": 0.6470588445663452,
+              "g": 0.40784314274787903,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.23137255012989044,
-              "g": 0.30588236451148987,
-              "r": 0.0235294122248888
+              "b": 0.19607843458652496,
+              "g": 0.5058823823928833,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -1980,15 +3441,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.9571765065193176,
-              "g": 0.805647075176239,
-              "r": 0.7518431544303894
+              "b": 0.9725490808486938,
+              "g": 0.7946667075157166,
+              "r": 0.7639216184616089
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.4037647247314453,
-              "g": 0.3154509961605072,
-              "r": 0.24094118177890778
+              "b": 0.4116078317165375,
+              "g": 0.31882354617118835,
+              "r": 0.24784314632415771
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -2008,15 +3469,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 0.23999999463558197,
-              "b": 0.8470588326454163,
-              "g": 0.30588236451148987,
-              "r": 0.11372549086809158
+              "b": 0.9019607901573181,
+              "g": 0.2666666805744171,
+              "r": 0.1568627506494522
             },
             "VariableCollectionId:1/mode2": {
               "a": 0.23999999463558197,
-              "b": 0.9921568632125854,
-              "g": 0.772549033164978,
-              "r": 0.5764706134796143
+              "b": 1.0,
+              "g": 0.7686274647712708,
+              "r": 0.5882353186607361
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -2035,16 +3496,16 @@
           ],
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
-              "a": 0.9100000262260437,
-              "b": 0.686274528503418,
-              "g": 0.250980406999588,
-              "r": 0.11764705926179886
+              "a": 1.0,
+              "b": 0.8781176209449768,
+              "g": 0.3181176483631134,
+              "r": 0.15890197455883026
             },
             "VariableCollectionId:1/mode2": {
-              "a": 0.9100000262260437,
-              "b": 0.9921568632125854,
-              "g": 0.772549033164978,
-              "r": 0.5764706134796143
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.8056471347808838,
+              "r": 0.6541177034378052
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -2064,15 +3525,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 0.8392156958580017,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9803921580314636,
+              "g": 0.9686274528503418,
+              "r": 0.9647058844566345
             },
             "VariableCollectionId:7/mode2": {
               "a": 0.8392156958580017,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -2092,15 +3553,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9725490212440491,
+              "g": 0.9647058844566345,
+              "r": 0.9607843160629272
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -2120,15 +3581,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 0.8392156958580017,
-              "b": 0.9960784316062927,
-              "g": 0.8588235378265381,
-              "r": 0.7490196228027344
+              "b": 1.0,
+              "g": 0.8549019694328308,
+              "r": 0.7529411911964417
             },
             "VariableCollectionId:7/mode2": {
               "a": 0.8392156958580017,
-              "b": 0.8470588326454163,
-              "g": 0.30588236451148987,
-              "r": 0.11372549086809158
+              "b": 0.9019607901573181,
+              "g": 0.2666666805744171,
+              "r": 0.1568627506494522
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -2148,9 +3609,9 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.5411764979362488,
-              "g": 0.22745098173618317,
-              "r": 0.11764705926179886
+              "b": 0.7215686440467834,
+              "g": 0.2235294133424759,
+              "r": 0.14509804546833038
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
@@ -2200,51 +3661,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 0.6837646961212158,
-              "b": 0.9755294322967529,
-              "g": 0.88894122838974,
-              "r": 0.8581961393356323
+              "b": 0.9843137264251709,
+              "g": 0.8826667070388794,
+              "r": 0.8650980591773987
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 0.6837646961212158,
+              "b": 0.8400000333786011,
+              "g": 0.9171764850616455,
+              "r": 0.8908235430717468
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 0.6837646961212158,
+              "b": 0.9290980696678162,
+              "g": 0.9134117960929871,
+              "r": 0.8400000333786011
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 0.6837646961212158,
+              "b": 0.9560784697532654,
+              "g": 0.8400000333786011,
+              "r": 0.9429019689559937
             },
             "VariableCollectionId:2/mode2": {
               "a": 0.6837646961212158,
-              "b": 0.9887059330940247,
-              "g": 0.8763921856880188,
-              "r": 0.917803943157196
+              "b": 1.0,
+              "g": 0.8650980591773987,
+              "r": 0.9171764850616455
             },
             "VariableCollectionId:2/mode3": {
               "a": 0.6837646961212158,
-              "b": 0.8512941598892212,
-              "g": 0.8726274967193604,
-              "r": 0.9366275072097778
+              "b": 0.8400000333786011,
+              "g": 0.8713725805282593,
+              "r": 0.9378823637962341
             },
             "VariableCollectionId:2/mode4": {
               "a": 0.6837646961212158,
-              "b": 0.9090196490287781,
-              "g": 0.9140392541885376,
-              "r": 0.8494117856025696
+              "b": 0.8964706063270569,
+              "g": 0.9152941703796387,
+              "r": 0.8400000333786011
             },
             "VariableCollectionId:2/mode5": {
               "a": 0.6837646961212158,
-              "b": 0.8776471018791199,
-              "g": 0.8512941598892212,
-              "r": 0.9592157006263733
+              "b": 0.903372585773468,
+              "g": 0.8400000333786011,
+              "r": 0.9610980749130249
             },
             "VariableCollectionId:2/mode6": {
               "a": 0.6837646961212158,
-              "b": 0.848784327507019,
-              "g": 0.8801568746566772,
-              "r": 0.9316079020500183
+              "b": 0.8400000333786011,
+              "g": 0.9002353549003601,
+              "r": 0.9429019689559937
             },
             "VariableCollectionId:2/mode7": {
               "a": 0.6837646961212158,
-              "b": 0.9410196542739868,
-              "g": 0.9058823585510254,
-              "r": 0.8418824076652527
+              "b": 0.9435294270515442,
+              "g": 0.9052549600601196,
+              "r": 0.8400000333786011
             },
             "VariableCollectionId:2/mode8": {
               "a": 0.6837646961212158,
-              "b": 0.89458829164505,
-              "g": 0.9152941703796387,
-              "r": 0.8425098657608032
+              "b": 0.8713725805282593,
+              "g": 0.9209412336349487,
+              "r": 0.8400000333786011
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 0.6837646961212158,
+              "b": 0.8400000333786011,
+              "g": 0.843137264251709,
+              "r": 0.9592157006263733
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -2273,6 +3758,562 @@
           },
           "variableCollectionId": "VariableCollectionId:8"
         },
+        "VariableID:141": {
+          "codeSyntax": {},
+          "description": "Bright fill for primary actions and selection marks (light theme). Pair with accent/onFill.",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:141",
+          "key": "VariableID:141",
+          "name": "accent/fill",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:2/mode1": {
+              "a": 1.0,
+              "b": 0.9882352948188782,
+              "g": 0.3529411852359772,
+              "r": 0.1725490242242813
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.7960784435272217,
+              "r": 0.545098066329956
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.8117647171020508,
+              "g": 0.7176470756530762,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.8745098114013672,
+              "g": 0.0,
+              "r": 0.7607843279838562
+            },
+            "VariableCollectionId:2/mode2": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.1568627506494522,
+              "r": 0.48235294222831726
+            },
+            "VariableCollectionId:2/mode3": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.45490196347236633,
+              "r": 0.9725490212440491
+            },
+            "VariableCollectionId:2/mode4": {
+              "a": 1.0,
+              "b": 0.5215686559677124,
+              "g": 0.7254902124404907,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode5": {
+              "a": 1.0,
+              "b": 0.5058823823928833,
+              "g": 0.0,
+              "r": 0.8823529481887817
+            },
+            "VariableCollectionId:2/mode6": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.6941176652908325,
+              "r": 0.929411768913269
+            },
+            "VariableCollectionId:2/mode7": {
+              "a": 1.0,
+              "b": 0.7490196228027344,
+              "g": 0.48235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode8": {
+              "a": 1.0,
+              "b": 0.3019607961177826,
+              "g": 0.7803921699523926,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.007843137718737125,
+              "r": 0.8941176533699036
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:2"
+        },
+        "VariableID:142": {
+          "codeSyntax": {},
+          "description": "Label and icon color on accent/fill. White or ink, chosen for 4.5:1.",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:142",
+          "key": "VariableID:142",
+          "name": "accent/onFill",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:2/mode1": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 1.0,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 1.0,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode2": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 1.0,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode3": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode4": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode5": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 1.0,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode6": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode7": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 1.0,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode8": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 1.0,
+              "r": 1.0
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:2"
+        },
+        "VariableID:143": {
+          "codeSyntax": {},
+          "description": "Fill for primary actions in the dark theme (step 300). Pair with accent/onFillDark.",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:143",
+          "key": "VariableID:143",
+          "name": "accent/fillDark",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:2/mode1": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.7686274647712708,
+              "r": 0.5882353186607361
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.8901960849761963,
+              "r": 0.6470588445663452
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.9058823585510254,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
+            },
+            "VariableCollectionId:2/mode2": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.7098039388656616,
+              "r": 0.7607843279838562
+            },
+            "VariableCollectionId:2/mode3": {
+              "a": 1.0,
+              "b": 0.41960784792900085,
+              "g": 0.729411780834198,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode4": {
+              "a": 1.0,
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode5": {
+              "a": 1.0,
+              "b": 0.8588235378265381,
+              "g": 0.6509804129600525,
+              "r": 0.9843137264251709
+            },
+            "VariableCollectionId:2/mode6": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
+            },
+            "VariableCollectionId:2/mode7": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.8274509906768799,
+              "r": 0.4901960790157318
+            },
+            "VariableCollectionId:2/mode8": {
+              "a": 1.0,
+              "b": 0.42352941632270813,
+              "g": 0.8705882430076599,
+              "r": 0.16078431904315948
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:2"
+        },
+        "VariableID:144": {
+          "codeSyntax": {},
+          "description": "Label color on accent/fillDark (ink).",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:144",
+          "key": "VariableID:144",
+          "name": "accent/onFillDark",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:2/mode1": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode2": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode3": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode4": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode5": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode6": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode7": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode8": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:2"
+        },
+        "VariableID:145": {
+          "codeSyntax": {},
+          "description": "Pale accent container (step 100). Text on it uses accent/actionLight (step 700).",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:145",
+          "key": "VariableID:145",
+          "name": "accent/tint",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:2/mode1": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.9176470637321472,
+              "r": 0.8627451062202454
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.7882353067398071,
+              "g": 0.9882352948188782,
+              "r": 0.9333333373069763
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.9882352948188782,
+              "g": 0.9803921580314636,
+              "r": 0.8078431487083435
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.9098039269447327,
+              "r": 0.9764705896377563
+            },
+            "VariableCollectionId:2/mode2": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.9137254953384399,
+              "r": 0.9254902005195618
+            },
+            "VariableCollectionId:2/mode3": {
+              "a": 1.0,
+              "b": 0.8313725590705872,
+              "g": 0.929411768913269,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode4": {
+              "a": 1.0,
+              "b": 0.9019607901573181,
+              "g": 0.9803921580314636,
+              "r": 0.8117647171020508
+            },
+            "VariableCollectionId:2/mode5": {
+              "a": 1.0,
+              "b": 0.95686274766922,
+              "g": 0.9058823585510254,
+              "r": 0.9843137264251709
+            },
+            "VariableCollectionId:2/mode6": {
+              "a": 1.0,
+              "b": 0.7764706015586853,
+              "g": 0.9725490212440491,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode7": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.9490196108818054,
+              "r": 0.8784313797950745
+            },
+            "VariableCollectionId:2/mode8": {
+              "a": 1.0,
+              "b": 0.9019607901573181,
+              "g": 0.9882352948188782,
+              "r": 0.8627451062202454
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.8823529481887817,
+              "g": 0.886274516582489,
+              "r": 1.0
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:2"
+        },
+        "VariableID:146": {
+          "codeSyntax": {},
+          "description": "Deep accent container for the dark theme (step 900). Text uses accent/actionDark.",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:146",
+          "key": "VariableID:146",
+          "name": "accent/tintDark",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:2/mode1": {
+              "a": 1.0,
+              "b": 0.5568627715110779,
+              "g": 0.21568627655506134,
+              "r": 0.13725490868091583
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.03921568766236305,
+              "g": 0.32549020648002625,
+              "r": 0.21568627655506134
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.38823530077934265,
+              "g": 0.30980393290519714,
+              "r": 0.04313725605607033
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.47843137383461,
+              "g": 0.08235294371843338,
+              "r": 0.4431372582912445
+            },
+            "VariableCollectionId:2/mode2": {
+              "a": 1.0,
+              "b": 0.6078431606292725,
+              "g": 0.09803921729326248,
+              "r": 0.29019609093666077
+            },
+            "VariableCollectionId:2/mode3": {
+              "a": 1.0,
+              "b": 0.0235294122248888,
+              "g": 0.16862745583057404,
+              "r": 0.4941176474094391
+            },
+            "VariableCollectionId:2/mode4": {
+              "a": 1.0,
+              "b": 0.23529411852359772,
+              "g": 0.30588236451148987,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode5": {
+              "a": 1.0,
+              "b": 0.2862745225429535,
+              "g": 0.06666667014360428,
+              "r": 0.5176470875740051
+            },
+            "VariableCollectionId:2/mode6": {
+              "a": 1.0,
+              "b": 0.054901961237192154,
+              "g": 0.239215686917305,
+              "r": 0.45490196347236633
+            },
+            "VariableCollectionId:2/mode7": {
+              "a": 1.0,
+              "b": 0.4431372582912445,
+              "g": 0.2862745225429535,
+              "r": 0.0313725508749485
+            },
+            "VariableCollectionId:2/mode8": {
+              "a": 1.0,
+              "b": 0.16078431904315948,
+              "g": 0.3294117748737335,
+              "r": 0.07450980693101883
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.08235294371843338,
+              "g": 0.0941176488995552,
+              "r": 0.5098039507865906
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:2"
+        },
+        "VariableID:147": {
+          "codeSyntax": {},
+          "description": "One tone step from the canvas: web section grounds, grouped lists, sunken wells. Replaces borders.",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:147",
+          "key": "VariableID:147",
+          "name": "surface/subtle",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:1/mode1": {
+              "a": 1.0,
+              "b": 0.9803921580314636,
+              "g": 0.9686274528503418,
+              "r": 0.9647058844566345
+            },
+            "VariableCollectionId:1/mode2": {
+              "a": 1.0,
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:1"
+        },
         "VariableID:15": {
           "codeSyntax": {},
           "description": "Project-agnostic accent family. Choose a palette at the app frame; validate each foreground/background pair.",
@@ -2288,51 +4329,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 0.8079999685287476,
-              "b": 0.346823513507843,
-              "g": 0.27121567726135254,
-              "r": 0.20847059786319733
+              "b": 0.35466665029525757,
+              "g": 0.27529412508010864,
+              "r": 0.21490196883678436
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 0.8079999685287476,
+              "b": 0.03466666862368584,
+              "g": 0.31419605016708374,
+              "r": 0.23372550308704376
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 0.8079999685287476,
+              "b": 0.32454901933670044,
+              "g": 0.29286274313926697,
+              "r": 0.02666666731238365
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 0.8079999685287476,
+              "b": 0.35466665029525757,
+              "g": 0.24392157793045044,
+              "r": 0.3253333270549774
             },
             "VariableCollectionId:2/mode2": {
               "a": 0.8079999685287476,
-              "b": 0.346823513507843,
-              "g": 0.25113725662231445,
-              "r": 0.26996079087257385
+              "b": 0.35466665029525757,
+              "g": 0.25647059082984924,
+              "r": 0.2701176404953003
             },
             "VariableCollectionId:2/mode3": {
               "a": 0.8079999685287476,
-              "b": 0.17490196228027344,
-              "g": 0.25741174817085266,
-              "r": 0.3414901793003082
+              "b": 0.1689411848783493,
+              "g": 0.26274508237838745,
+              "r": 0.3466666638851166
             },
             "VariableCollectionId:2/mode4": {
               "a": 0.8079999685287476,
-              "b": 0.29537254571914673,
-              "g": 0.3176470398902893,
-              "r": 0.14196078479290009
+              "b": 0.2266666740179062,
+              "g": 0.29286274313926697,
+              "r": 0.02666666731238365
             },
             "VariableCollectionId:2/mode5": {
               "a": 0.8079999685287476,
-              "b": 0.24894118309020996,
-              "g": 0.2298039346933365,
-              "r": 0.3414901793003082
+              "b": 0.3094901740550995,
+              "g": 0.23764707148075104,
+              "r": 0.34164705872535706
             },
             "VariableCollectionId:2/mode6": {
               "a": 0.8079999685287476,
-              "b": 0.12596078217029572,
-              "g": 0.28878429532051086,
-              "r": 0.34023526310920715
+              "b": 0.03466666862368584,
+              "g": 0.2790588140487671,
+              "r": 0.34164705872535706
             },
             "VariableCollectionId:2/mode7": {
               "a": 0.8079999685287476,
-              "b": 0.34556859731674194,
-              "g": 0.28878429532051086,
-              "r": 0.18086273968219757
+              "b": 0.35466665029525757,
+              "g": 0.29411762952804565,
+              "r": 0.18352940678596497
             },
             "VariableCollectionId:2/mode8": {
               "a": 0.8079999685287476,
-              "b": 0.258980393409729,
-              "g": 0.31388235092163086,
-              "r": 0.16203922033309937
+              "b": 0.17019608616828918,
+              "g": 0.30792155861854553,
+              "r": 0.07811765372753143
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 0.8079999685287476,
+              "b": 0.23670588433742523,
+              "g": 0.23513726890087128,
+              "r": 0.3466666638851166
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -2351,16 +4416,12 @@
           ],
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
-              "a": 0.8100000023841858,
-              "b": 0.686274528503418,
-              "g": 0.250980406999588,
-              "r": 0.11764705926179886
+              "id": "VariableID:141",
+              "type": "VARIABLE_ALIAS"
             },
             "VariableCollectionId:1/mode2": {
-              "a": 0.8100000023841858,
-              "b": 0.9921568632125854,
-              "g": 0.772549033164978,
-              "r": 0.5764706134796143
+              "id": "VariableID:143",
+              "type": "VARIABLE_ALIAS"
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -2437,9 +4498,9 @@
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -2629,15 +4690,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
               "r": 0.05882352963089943
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9725490212440491,
+              "g": 0.9647058844566345,
+              "r": 0.9607843160629272
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -2676,6 +4737,18 @@
               "id": "VariableID:12",
               "type": "VARIABLE_ALIAS"
             },
+            "VariableCollectionId:2/mode10": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode11": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode12": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
             "VariableCollectionId:2/mode2": {
               "id": "VariableID:12",
               "type": "VARIABLE_ALIAS"
@@ -2701,6 +4774,10 @@
               "type": "VARIABLE_ALIAS"
             },
             "VariableCollectionId:2/mode8": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode9": {
               "id": "VariableID:12",
               "type": "VARIABLE_ALIAS"
             }
@@ -2724,6 +4801,18 @@
               "id": "VariableID:13",
               "type": "VARIABLE_ALIAS"
             },
+            "VariableCollectionId:2/mode10": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode11": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode12": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
             "VariableCollectionId:2/mode2": {
               "id": "VariableID:13",
               "type": "VARIABLE_ALIAS"
@@ -2749,6 +4838,10 @@
               "type": "VARIABLE_ALIAS"
             },
             "VariableCollectionId:2/mode8": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode9": {
               "id": "VariableID:13",
               "type": "VARIABLE_ALIAS"
             }
@@ -2770,51 +4863,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.929411768913269,
-              "g": 0.22745098173618317,
-              "r": 0.48627451062202454
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.7254902124404907,
+              "g": 0.0,
+              "r": 0.6431372761726379
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -2834,51 +4951,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 1.0,
+              "g": 0.6705882549285889,
+              "r": 0.9333333373069763
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -2898,51 +5039,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -2962,51 +5127,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -3026,51 +5215,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -3090,51 +5303,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -3154,51 +5391,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.20392157137393951,
-              "r": 0.6039215922355652
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.20392157137393951,
-              "r": 0.6039215922355652
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.20392157137393951,
-              "r": 0.6039215922355652
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.20392157137393951,
-              "r": 0.6039215922355652
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.20392157137393951,
-              "r": 0.6039215922355652
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.20392157137393951,
-              "r": 0.6039215922355652
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.20392157137393951,
-              "r": 0.6039215922355652
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.07058823853731155,
-              "g": 0.20392157137393951,
-              "r": 0.6039215922355652
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.0,
+              "g": 0.019607843831181526,
+              "r": 0.7450980544090271
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -3218,15 +5479,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.4117647111415863,
-              "g": 0.3333333432674408,
-              "r": 0.27843138575553894
+              "b": 0.38823530077934265,
+              "g": 0.3607843220233917,
+              "r": 0.3529411852359772
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.8823529481887817,
-              "g": 0.8352941274642944,
-              "r": 0.7960784435272217
+              "b": 0.7843137383460999,
+              "g": 0.7607843279838562,
+              "r": 0.7529411911964417
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -3246,51 +5507,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.45490196347236633,
-              "g": 0.729411780834198,
-              "r": 0.9921568632125854
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.45490196347236633,
-              "g": 0.729411780834198,
-              "r": 0.9921568632125854
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.45490196347236633,
-              "g": 0.729411780834198,
-              "r": 0.9921568632125854
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.45490196347236633,
-              "g": 0.729411780834198,
-              "r": 0.9921568632125854
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.45490196347236633,
-              "g": 0.729411780834198,
-              "r": 0.9921568632125854
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.45490196347236633,
-              "g": 0.729411780834198,
-              "r": 0.9921568632125854
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.45490196347236633,
-              "g": 0.729411780834198,
-              "r": 0.9921568632125854
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.45490196347236633,
-              "g": 0.729411780834198,
-              "r": 0.9921568632125854
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.6313725709915161,
+              "g": 0.6431372761726379,
+              "r": 1.0
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -3310,51 +5595,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -3374,51 +5683,75 @@
           "valuesByMode": {
             "VariableCollectionId:2/mode1": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode10": {
+              "a": 1.0,
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode11": {
+              "a": 1.0,
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode12": {
+              "a": 1.0,
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode2": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode3": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode4": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode5": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode6": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode7": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             },
             "VariableCollectionId:2/mode8": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
+            },
+            "VariableCollectionId:2/mode9": {
+              "a": 1.0,
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             }
           },
           "variableCollectionId": "VariableCollectionId:2"
@@ -3440,6 +5773,18 @@
               "id": "VariableID:12",
               "type": "VARIABLE_ALIAS"
             },
+            "VariableCollectionId:2/mode10": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode11": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode12": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
             "VariableCollectionId:2/mode2": {
               "id": "VariableID:12",
               "type": "VARIABLE_ALIAS"
@@ -3465,6 +5810,10 @@
               "type": "VARIABLE_ALIAS"
             },
             "VariableCollectionId:2/mode8": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode9": {
               "id": "VariableID:12",
               "type": "VARIABLE_ALIAS"
             }
@@ -3488,6 +5837,18 @@
               "id": "VariableID:13",
               "type": "VARIABLE_ALIAS"
             },
+            "VariableCollectionId:2/mode10": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode11": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode12": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
             "VariableCollectionId:2/mode2": {
               "id": "VariableID:13",
               "type": "VARIABLE_ALIAS"
@@ -3513,6 +5874,10 @@
               "type": "VARIABLE_ALIAS"
             },
             "VariableCollectionId:2/mode8": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode9": {
               "id": "VariableID:13",
               "type": "VARIABLE_ALIAS"
             }
@@ -3536,6 +5901,18 @@
               "id": "VariableID:12",
               "type": "VARIABLE_ALIAS"
             },
+            "VariableCollectionId:2/mode10": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode11": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode12": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
             "VariableCollectionId:2/mode2": {
               "id": "VariableID:12",
               "type": "VARIABLE_ALIAS"
@@ -3561,6 +5938,10 @@
               "type": "VARIABLE_ALIAS"
             },
             "VariableCollectionId:2/mode8": {
+              "id": "VariableID:12",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode9": {
               "id": "VariableID:12",
               "type": "VARIABLE_ALIAS"
             }
@@ -3584,6 +5965,18 @@
               "id": "VariableID:13",
               "type": "VARIABLE_ALIAS"
             },
+            "VariableCollectionId:2/mode10": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode11": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode12": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
             "VariableCollectionId:2/mode2": {
               "id": "VariableID:13",
               "type": "VARIABLE_ALIAS"
@@ -3609,6 +6002,10 @@
               "type": "VARIABLE_ALIAS"
             },
             "VariableCollectionId:2/mode8": {
+              "id": "VariableID:13",
+              "type": "VARIABLE_ALIAS"
+            },
+            "VariableCollectionId:2/mode9": {
               "id": "VariableID:13",
               "type": "VARIABLE_ALIAS"
             }
@@ -3750,15 +6147,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.9411764740943909,
-              "g": 0.9098039269447327,
-              "r": 0.886274516582489
+              "b": 0.8823529481887817,
+              "g": 0.8666666746139526,
+              "r": 0.8588235378265381
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.3333333432674408,
-              "g": 0.2549019753932953,
-              "r": 0.20000000298023224
+              "b": 0.29411765933036804,
+              "g": 0.2705882489681244,
+              "r": 0.26274511218070984
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -3826,15 +6223,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.27450981736183167,
-              "g": 0.37254902720451355,
-              "r": 0.0235294122248888
+              "b": 0.22745098173618317,
+              "g": 0.5058823823928833,
+              "r": 0.0
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.7176470756530762,
-              "g": 0.9058823585510254,
-              "r": 0.4313725531101227
+              "b": 0.4470588266849518,
+              "g": 0.8745098114013672,
+              "r": 0.019607843831181526
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -3854,15 +6251,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.9607843160629272,
+              "b": 0.95686274766922,
               "g": 0.9921568632125854,
-              "r": 0.9254902005195618
+              "r": 0.9411764740943909
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.13333334028720856,
-              "g": 0.1725490242242813,
-              "r": 0.007843137718737125
+              "b": 0.08235294371843338,
+              "g": 0.18039216101169586,
+              "r": 0.0117647061124444
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -3882,15 +6279,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.05882352963089943,
-              "g": 0.2078431397676468,
-              "r": 0.47058823704719543
+              "b": 0.0,
+              "g": 0.32156863808631897,
+              "r": 0.7098039388656616
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.5411764979362488,
-              "g": 0.9019607901573181,
-              "r": 0.9921568632125854
+              "b": 0.0,
+              "g": 0.7372549176216125,
+              "r": 0.9803921580314636
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -3916,9 +6313,9 @@
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.0117647061124444,
-              "g": 0.10196078568696976,
-              "r": 0.2705882489681244
+              "b": 0.003921568859368563,
+              "g": 0.09803921729326248,
+              "r": 0.27450981736183167
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -3938,15 +6335,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.10980392247438431,
-              "g": 0.10980392247438431,
-              "r": 0.7254902124404907
+              "b": 0.05882352963089943,
+              "g": 0.0,
+              "r": 0.7490196228027344
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.6470588445663452,
-              "g": 0.6470588445663452,
-              "r": 0.9882352948188782
+              "b": 0.6431372761726379,
+              "g": 0.6392157077789307,
+              "r": 1.0
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -3972,9 +6369,9 @@
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.03921568766236305,
-              "g": 0.03921568766236305,
-              "r": 0.2705882489681244
+              "b": 0.03529411926865578,
+              "g": 0.0313725508749485,
+              "r": 0.27450981736183167
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -3994,15 +6391,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.5215686559677124,
-              "g": 0.3490196168422699,
-              "r": 0.027450980618596077
+              "b": 0.6352941393852234,
+              "g": 0.4117647111415863,
+              "r": 0.0
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.8274509906768799,
-              "r": 0.4901960790157318
+              "b": 1.0,
+              "g": 0.8313725590705872,
+              "r": 0.47058823704719543
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -4028,9 +6425,9 @@
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.2862745225429535,
+              "b": 0.29019609093666077,
               "g": 0.18431372940540314,
-              "r": 0.0313725508749485
+              "r": 0.019607843831181526
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -4074,15 +6471,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 0.6837646961212158,
-              "b": 0.9755294322967529,
-              "g": 0.88894122838974,
-              "r": 0.8581961393356323
+              "b": 0.9843137264251709,
+              "g": 0.8826667070388794,
+              "r": 0.8650980591773987
             },
             "VariableCollectionId:1/mode2": {
               "a": 0.8079999685287476,
-              "b": 0.346823513507843,
-              "g": 0.27121567726135254,
-              "r": 0.20847059786319733
+              "b": 0.35466665029525757,
+              "g": 0.27529412508010864,
+              "r": 0.21490196883678436
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -4101,16 +6498,12 @@
           ],
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
-              "a": 1.0,
-              "b": 1.0,
-              "g": 1.0,
-              "r": 1.0
+              "id": "VariableID:142",
+              "type": "VARIABLE_ALIAS"
             },
             "VariableCollectionId:1/mode2": {
-              "a": 1.0,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "id": "VariableID:144",
+              "type": "VARIABLE_ALIAS"
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -4158,15 +6551,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.10980392247438431,
-              "g": 0.10980392247438431,
-              "r": 0.7254902124404907
+              "b": 0.08627451211214066,
+              "g": 0.0,
+              "r": 0.8941176533699036
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.10980392247438431,
-              "g": 0.10980392247438431,
-              "r": 0.7254902124404907
+              "b": 0.08627451211214066,
+              "g": 0.0,
+              "r": 0.8941176533699036
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -4186,15 +6579,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.9764705896377563,
-              "g": 0.9607843160629272,
-              "r": 0.9450980424880981
+              "b": 0.9490196108818054,
+              "g": 0.9333333373069763,
+              "r": 0.929411768913269
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.23137255012989044,
-              "g": 0.16078431904315948,
-              "r": 0.11764705926179886
+              "b": 0.1411764770746231,
+              "g": 0.125490203499794,
+              "r": 0.12156862765550613
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -4214,15 +6607,15 @@
           "valuesByMode": {
             "VariableCollectionId:1/mode1": {
               "a": 1.0,
-              "b": 0.9764705896377563,
-              "g": 0.9607843160629272,
-              "r": 0.9450980424880981
+              "b": 0.9490196108818054,
+              "g": 0.9333333373069763,
+              "r": 0.929411768913269
             },
             "VariableCollectionId:1/mode2": {
               "a": 1.0,
-              "b": 0.23137255012989044,
-              "g": 0.16078431904315948,
-              "r": 0.11764705926179886
+              "b": 0.16078431904315948,
+              "g": 0.14509804546833038,
+              "r": 0.1411764770746231
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -4242,15 +6635,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9803921580314636,
+              "g": 0.9686274528503418,
+              "r": 0.9647058844566345
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.05098039284348488,
+              "g": 0.04313725605607033,
+              "r": 0.03921568766236305
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4270,15 +6663,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.4313725531101227,
-              "g": 0.4627451002597809,
-              "r": 0.05882352963089943
+              "b": 0.3529411852359772,
+              "g": 0.47058823704719543,
+              "r": 0.0
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.8313725590705872,
-              "g": 0.9176470637321472,
-              "r": 0.3686274588108063
+              "b": 0.6000000238418579,
+              "g": 0.8235294222831726,
+              "r": 0.0
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4298,15 +6691,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.9450980424880981,
-              "g": 0.9843137264251709,
-              "r": 0.800000011920929
+              "b": 0.9019607901573181,
+              "g": 0.9803921580314636,
+              "r": 0.8117647171020508
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.18039216101169586,
-              "g": 0.18431372940540314,
-              "r": 0.01568627543747425
+              "b": 0.23529411852359772,
+              "g": 0.30588236451148987,
+              "r": 0.0
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4326,15 +6719,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.03529411926865578,
-              "g": 0.32549020648002625,
-              "r": 0.7058823704719543
+              "b": 0.0,
+              "g": 0.3764705955982208,
+              "r": 0.6431372761726379
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.3019607961177826,
-              "g": 0.8274509906768799,
-              "r": 0.9882352948188782
+              "b": 0.0,
+              "g": 0.7803921699523926,
+              "r": 0.9843137264251709
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4360,9 +6753,9 @@
             },
             "VariableCollectionId:1/mode2": {
               "a": 0.6509804129600525,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -4382,15 +6775,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.7803921699523926,
-              "g": 0.9529411792755127,
-              "r": 0.9960784316062927
+              "b": 0.7764706015586853,
+              "g": 0.9725490212440491,
+              "r": 1.0
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.0117647061124444,
-              "g": 0.10196078568696976,
-              "r": 0.2705882489681244
+              "b": 0.054901961237192154,
+              "g": 0.239215686917305,
+              "r": 0.45490196347236633
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4410,15 +6803,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.34117648005485535,
-              "g": 0.47058823704719543,
-              "r": 0.01568627543747425
+              "b": 0.22745098173618317,
+              "g": 0.5058823823928833,
+              "r": 0.0
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.7176470756530762,
-              "g": 0.9058823585510254,
-              "r": 0.4313725531101227
+              "b": 0.4470588266849518,
+              "g": 0.8745098114013672,
+              "r": 0.019607843831181526
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4438,15 +6831,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.9607843160629272,
+              "b": 0.95686274766922,
               "g": 0.9921568632125854,
-              "r": 0.9254902005195618
+              "r": 0.9411764740943909
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.13333334028720856,
-              "g": 0.1725490242242813,
-              "r": 0.007843137718737125
+              "b": 0.08235294371843338,
+              "g": 0.18039216101169586,
+              "r": 0.0117647061124444
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4466,15 +6859,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.10980392247438431,
-              "g": 0.10980392247438431,
-              "r": 0.7254902124404907
+              "b": 0.05882352963089943,
+              "g": 0.0,
+              "r": 0.7490196228027344
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.6470588445663452,
-              "g": 0.6470588445663452,
-              "r": 0.9882352948188782
+              "b": 0.6431372761726379,
+              "g": 0.6392157077789307,
+              "r": 1.0
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4500,9 +6893,9 @@
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.03921568766236305,
-              "g": 0.03921568766236305,
-              "r": 0.2705882489681244
+              "b": 0.03529411926865578,
+              "g": 0.0313725508749485,
+              "r": 0.27450981736183167
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4522,15 +6915,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.32156863808631897,
+              "r": 0.7098039388656616
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.5411764979362488,
-              "g": 0.9019607901573181,
-              "r": 0.9921568632125854
+              "b": 0.0,
+              "g": 0.7372549176216125,
+              "r": 0.9803921580314636
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4556,9 +6949,9 @@
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.0117647061124444,
-              "g": 0.10196078568696976,
-              "r": 0.2705882489681244
+              "b": 0.003921568859368563,
+              "g": 0.09803921729326248,
+              "r": 0.27450981736183167
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4584,9 +6977,9 @@
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4606,15 +6999,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.6313725709915161,
+              "b": 0.6352941393852234,
               "g": 0.4117647111415863,
-              "r": 0.0117647061124444
+              "r": 0.0
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.8274509906768799,
-              "r": 0.4901960790157318
+              "b": 1.0,
+              "g": 0.8313725590705872,
+              "r": 0.47058823704719543
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4640,9 +7033,9 @@
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.2862745225429535,
+              "b": 0.29019609093666077,
               "g": 0.18431372940540314,
-              "r": 0.0313725508749485
+              "r": 0.019607843831181526
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4668,9 +7061,9 @@
             },
             "VariableCollectionId:1/mode2": {
               "a": 0.7019608020782471,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -4690,15 +7083,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
               "r": 0.05882352963089943
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9725490212440491,
+              "g": 0.9647058844566345,
+              "r": 0.9607843160629272
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4718,15 +7111,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.4117647111415863,
-              "g": 0.3333333432674408,
-              "r": 0.27843138575553894
+              "b": 0.38823530077934265,
+              "g": 0.3607843220233917,
+              "r": 0.3529411852359772
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
               "b": 0.8823529481887817,
-              "g": 0.8352941274642944,
-              "r": 0.7960784435272217
+              "g": 0.8666666746139526,
+              "r": 0.8588235378265381
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4746,15 +7139,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.9764705896377563,
-              "g": 0.9607843160629272,
-              "r": 0.9450980424880981
+              "b": 0.9803921580314636,
+              "g": 0.9686274528503418,
+              "r": 0.9647058844566345
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.23137255012989044,
-              "g": 0.16078431904315948,
-              "r": 0.11764705926179886
+              "b": 0.16078431904315948,
+              "g": 0.14509804546833038,
+              "r": 0.1411764770746231
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4774,15 +7167,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.8470588326454163,
-              "g": 0.30588236451148987,
-              "r": 0.11372549086809158
+              "b": 0.9019607901573181,
+              "g": 0.2666666805744171,
+              "r": 0.1568627506494522
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.9921568632125854,
-              "g": 0.772549033164978,
-              "r": 0.5764706134796143
+              "b": 1.0,
+              "g": 0.7686274647712708,
+              "r": 0.5882353186607361
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4802,15 +7195,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.9960784316062927,
+              "b": 1.0,
               "g": 0.9176470637321472,
-              "r": 0.8588235378265381
+              "r": 0.8627451062202454
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.3294117748737335,
-              "g": 0.14509804546833038,
-              "r": 0.09019608050584793
+              "b": 0.5568627715110779,
+              "g": 0.21568627655506134,
+              "r": 0.13725490868091583
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4830,15 +7223,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.8509804010391235,
+              "b": 1.0,
               "g": 0.1568627506494522,
-              "r": 0.4274509847164154
+              "r": 0.48235294222831726
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.9921568632125854,
+              "b": 1.0,
               "g": 0.7098039388656616,
-              "r": 0.7686274647712708
+              "r": 0.7607843279838562
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4858,15 +7251,15 @@
           "valuesByMode": {
             "VariableCollectionId:6/mode1": {
               "a": 1.0,
-              "b": 0.9960784316062927,
+              "b": 1.0,
               "g": 0.9137254953384399,
-              "r": 0.929411768913269
+              "r": 0.9254902005195618
             },
             "VariableCollectionId:6/mode2": {
               "a": 1.0,
-              "b": 0.3960784375667572,
-              "g": 0.062745101749897,
-              "r": 0.18039216101169586
+              "b": 0.6078431606292725,
+              "g": 0.09803921729326248,
+              "r": 0.29019609093666077
             }
           },
           "variableCollectionId": "VariableCollectionId:6"
@@ -4886,15 +7279,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.05098039284348488,
+              "g": 0.04313725605607033,
+              "r": 0.03921568766236305
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9803921580314636,
+              "g": 0.9686274528503418,
+              "r": 0.9647058844566345
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -4914,15 +7307,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.5411764979362488,
-              "g": 0.9019607901573181,
-              "r": 0.9921568632125854
+              "b": 0.0,
+              "g": 0.7372549176216125,
+              "r": 0.9803921580314636
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.054901961237192154,
-              "g": 0.250980406999588,
-              "r": 0.572549045085907
+              "b": 0.0,
+              "g": 0.32156863808631897,
+              "r": 0.7098039388656616
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -4942,15 +7335,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.8274509906768799,
-              "g": 0.8039215803146362,
-              "r": 0.9960784316062927
+              "b": 0.6431372761726379,
+              "g": 0.6392157077789307,
+              "r": 1.0
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.2235294133424759,
-              "g": 0.07058823853731155,
-              "r": 0.6235294342041016
+              "b": 0.05882352963089943,
+              "g": 0.0,
+              "r": 0.7490196228027344
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -4976,9 +7369,9 @@
             },
             "VariableCollectionId:1/mode2": {
               "a": 0.843137264251709,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
             }
           },
           "variableCollectionId": "VariableCollectionId:1"
@@ -5088,15 +7481,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.9882352948188782,
-              "g": 0.9803921580314636,
-              "r": 0.9725490212440491
+              "b": 0.9725490212440491,
+              "g": 0.9647058844566345,
+              "r": 0.9607843160629272
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.09019608050584793,
-              "g": 0.0235294122248888,
-              "r": 0.007843137718737125
+              "b": 0.07058823853731155,
+              "g": 0.062745101749897,
+              "r": 0.05882352963089943
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -5116,15 +7509,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.16470588743686676,
-              "g": 0.09019608050584793,
-              "r": 0.05882352963089943
+              "b": 0.09803921729326248,
+              "g": 0.08627451211214066,
+              "r": 0.08235294371843338
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.9411764740943909,
-              "g": 0.9098039269447327,
-              "r": 0.886274516582489
+              "b": 0.9490196108818054,
+              "g": 0.9333333373069763,
+              "r": 0.929411768913269
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -5145,14 +7538,14 @@
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
               "b": 0.8823529481887817,
-              "g": 0.8352941274642944,
-              "r": 0.7960784435272217
+              "g": 0.8666666746139526,
+              "r": 0.8588235378265381
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.4117647111415863,
-              "g": 0.3333333432674408,
-              "r": 0.27843138575553894
+              "b": 0.38823530077934265,
+              "g": 0.3607843220233917,
+              "r": 0.3529411852359772
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -5172,15 +7565,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.5411764979362488,
-              "g": 0.22745098173618317,
-              "r": 0.11764705926179886
+              "b": 0.7215686440467834,
+              "g": 0.2235294133424759,
+              "r": 0.14509804546833038
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.9960784316062927,
+              "b": 1.0,
               "g": 0.9176470637321472,
-              "r": 0.8588235378265381
+              "r": 0.8627451062202454
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -5200,15 +7593,15 @@
           "valuesByMode": {
             "VariableCollectionId:7/mode1": {
               "a": 1.0,
-              "b": 0.9960784316062927,
-              "g": 0.8588235378265381,
-              "r": 0.7490196228027344
+              "b": 1.0,
+              "g": 0.8549019694328308,
+              "r": 0.7529411911964417
             },
             "VariableCollectionId:7/mode2": {
               "a": 1.0,
-              "b": 0.686274528503418,
-              "g": 0.250980406999588,
-              "r": 0.11764705926179886
+              "b": 0.7215686440467834,
+              "g": 0.2235294133424759,
+              "r": 0.14509804546833038
             }
           },
           "variableCollectionId": "VariableCollectionId:7"
@@ -5264,7 +7657,7 @@
       "metadataSize": 16
     },
     "imageVisibility": {
-      "scrimColor": "#020617",
+      "scrimColor": "#0A0B0D",
       "direction": "transparent top to dark bottom",
       "stops": [
         {
@@ -5292,5 +7685,226 @@
     "materials": "Frosted circular actions, top navigation and contextual toolbar. Older/unsupported hardware and Reduce Transparency use tonal surfaces.",
     "reduceMotion": "Disable animated scale, bounce and parallax; retain strong static tone and label weight."
   },
-  "nativeVariableExportNote": "REST-compatible resolved default-mode snapshot. The .figcraft document preserves live aliases, mixes, alpha expressions and scope overrides."
+  "nativeVariableExportNote": "Variables as exported by FigCraft (variable.export, json) for review 0.6. The .figcraft document preserves live aliases, mixes, alpha expressions and modes.",
+  "web": {
+    "breakpoints": {
+      "phone": {
+        "width": 390,
+        "columns": 4,
+        "gutter": 16,
+        "margin": 20
+      },
+      "tablet": {
+        "width": 768,
+        "columns": 8,
+        "gutter": 24,
+        "margin": 32
+      },
+      "laptop": {
+        "width": 1024,
+        "columns": 12,
+        "gutter": 24,
+        "margin": 40
+      },
+      "desktop": {
+        "width": 1440,
+        "columns": 12,
+        "gutter": 24,
+        "margin": 40
+      },
+      "wide": {
+        "width": 1920,
+        "columns": 12,
+        "gutter": 32,
+        "margin": 40,
+        "contentMax": 1760
+      }
+    },
+    "measure": "60 to 72 characters for reading text",
+    "type": {
+      "display": {
+        "family": "Source Serif 4",
+        "weight": 600,
+        "size": 76,
+        "lineHeight": 80,
+        "tracking": -2,
+        "css": "clamp(2.75rem, 1.6rem + 4.2vw, 4.75rem)"
+      },
+      "sectionHeading": {
+        "family": "Source Serif 4",
+        "weight": 600,
+        "size": 38,
+        "lineHeight": 44,
+        "css": "clamp(1.75rem, 0.8rem + 2.1vw, 2.375rem)"
+      },
+      "itemTitle": {
+        "family": "Inter",
+        "weight": 600,
+        "size": 22,
+        "lineHeight": 28
+      },
+      "lead": {
+        "family": "Inter",
+        "weight": 400,
+        "size": 21,
+        "lineHeight": 31
+      },
+      "body": {
+        "family": "Inter",
+        "weight": 400,
+        "size": 17,
+        "lineHeight": 27
+      },
+      "small": {
+        "family": "Inter",
+        "weight": 400,
+        "size": 15,
+        "lineHeight": 22
+      },
+      "meta": {
+        "family": "Inter",
+        "weight": 400,
+        "size": 13,
+        "lineHeight": 18
+      },
+      "rules": [
+        "From 768 up, the display is at least three times the body and section headings at most half the display (the heading clamp is half the display clamp). On phones the display is at least 2.5 times the body.",
+        "Headlines run two lines or fewer at every width.",
+        "Fluid maximum within 2.5 times the minimum so text can double with zoom.",
+        "Running text is 16 px or larger; meta text 13 px."
+      ]
+    },
+    "grounds": [
+      "surface/canvas",
+      "surface/subtle",
+      "ink field (content/primary)",
+      "accent field (accent/fill), once per page"
+    ],
+    "focus": {
+      "rule": "No outline. Light: focused controls turn ink with a canvas label and lift. Dark: primary takes the accent tint (900) with the dark text step; tonal and quiet controls take the dark fill with an ink label.",
+      "minimumLightPrimaryChange": 3.25,
+      "measured": {
+        "Cobalt": {
+          "lightPrimary": 3.6,
+          "darkPrimary": 5.79,
+          "darkPrimaryLabel": 5.79,
+          "lightTonal": 16.42,
+          "darkTonal": 8.48
+        },
+        "Azure": {
+          "lightPrimary": 4.16,
+          "darkPrimary": 5.74,
+          "darkPrimaryLabel": 5.74,
+          "lightTonal": 16.42,
+          "darkTonal": 9.21
+        },
+        "Lagoon": {
+          "lightPrimary": 7.86,
+          "darkPrimary": 4.92,
+          "darkPrimaryLabel": 4.92,
+          "lightTonal": 16.42,
+          "darkTonal": 8.29
+        },
+        "Jade": {
+          "lightPrimary": 7.5,
+          "darkPrimary": 4.96,
+          "darkPrimaryLabel": 4.96,
+          "lightTonal": 16.42,
+          "darkTonal": 7.79
+        },
+        "Fern": {
+          "lightPrimary": 8.41,
+          "darkPrimary": 5.05,
+          "darkPrimaryLabel": 5.05,
+          "lightTonal": 16.42,
+          "darkTonal": 8.57
+        },
+        "Citron": {
+          "lightPrimary": 9.65,
+          "darkPrimary": 5.65,
+          "darkPrimaryLabel": 5.65,
+          "lightTonal": 16.42,
+          "darkTonal": 9.91
+        },
+        "Saffron": {
+          "lightPrimary": 9.87,
+          "darkPrimary": 5.49,
+          "darkPrimaryLabel": 5.49,
+          "lightTonal": 16.42,
+          "darkTonal": 9.68
+        },
+        "Tangerine": {
+          "lightPrimary": 6.79,
+          "darkPrimary": 5.59,
+          "darkPrimaryLabel": 5.59,
+          "lightTonal": 16.42,
+          "darkTonal": 9.1
+        },
+        "Vermilion": {
+          "lightPrimary": 3.9,
+          "darkPrimary": 5.3,
+          "darkPrimaryLabel": 5.3,
+          "lightTonal": 16.42,
+          "darkTonal": 8.08
+        },
+        "Berry": {
+          "lightPrimary": 4.1,
+          "darkPrimary": 5.37,
+          "darkPrimaryLabel": 5.37,
+          "lightTonal": 16.42,
+          "darkTonal": 8.44
+        },
+        "Orchid": {
+          "lightPrimary": 3.95,
+          "darkPrimary": 5.69,
+          "darkPrimaryLabel": 5.69,
+          "lightTonal": 16.42,
+          "darkTonal": 8.68
+        },
+        "Iris": {
+          "lightPrimary": 3.25,
+          "darkPrimary": 5.96,
+          "darkPrimaryLabel": 5.96,
+          "lightTonal": 16.42,
+          "darkTonal": 8.27
+        }
+      }
+    },
+    "motion": {
+      "pressMs": 120,
+      "hoverColorMs": 160,
+      "enterMs": 240,
+      "exitMs": 180,
+      "sheetInMs": 320,
+      "sheetOutMs": 240,
+      "enterEasing": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+      "reduced": "opacity and color only"
+    },
+    "targets": {
+      "touch": 48,
+      "pointerCompact": 40,
+      "note": "Button Size M (40) is for pointer-dense layouts; phones and touch layouts use L (48)."
+    },
+    "components": [
+      "Web / Button (Kind Primary|Tonal|Quiet × Size L 48|M 40 × Icon None|Trailing)",
+      "Web / Nav / Desktop",
+      "Web / Nav / Scrolled (frosted capsule)",
+      "Web / Nav / Mobile",
+      "Web / Field (Validation Rest|Error)",
+      "Web / Quantity",
+      "Web / Option (Selected No|Yes)",
+      "Web / Work card",
+      "Web / Product card",
+      "Web / Callout (Note|Caution)",
+      "Web / Code block",
+      "Web / Cart line",
+      "Web / Footer close",
+      "Icon / * (31 Lucide masters)"
+    ],
+    "files": {
+      "css": "web/kozu.css",
+      "tailwind": "web/kozu.tailwind.css",
+      "guide": "web/README.md"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
   "provider": "https://icons.leularia.com/",
   "collection": "lucide",
-  "fetched": "2026-11-06",
+  "fetched": "2026-11-06; web additions 2026-11-10",
   "licenseFile": "LICENSE.txt",
   "icons": [
     {
@@ -263,6 +263,66 @@
     {
       "name": "watch",
       "id": "lucide:watch"
+    },
+    {
+      "name": "arrow-right",
+      "id": "lucide:arrow-right"
+    },
+    {
+      "name": "arrow-up-right",
+      "id": "lucide:arrow-up-right"
+    },
+    {
+      "name": "external-link",
+      "id": "lucide:external-link"
+    },
+    {
+      "name": "inbox",
+      "id": "lucide:inbox"
+    },
+    {
+      "name": "info",
+      "id": "lucide:info"
+    },
+    {
+      "name": "mail",
+      "id": "lucide:mail"
+    },
+    {
+      "name": "menu",
+      "id": "lucide:menu"
+    },
+    {
+      "name": "minus",
+      "id": "lucide:minus"
+    },
+    {
+      "name": "package",
+      "id": "lucide:package"
+    },
+    {
+      "name": "printer",
+      "id": "lucide:printer"
+    },
+    {
+      "name": "shield-check",
+      "id": "lucide:shield-check"
+    },
+    {
+      "name": "shopping-bag",
+      "id": "lucide:shopping-bag"
+    },
+    {
+      "name": "terminal",
+      "id": "lucide:terminal"
+    },
+    {
+      "name": "truck",
+      "id": "lucide:truck"
+    },
+    {
+      "name": "ban",
+      "id": "lucide:ban"
     }
   ]
 }
