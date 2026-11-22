@@ -4038,6 +4038,37 @@
   "description": "Same configured Small edge button, partially revealed by scroll position. This is a scroll state, not a different size token."
  },
  {
+  "id": 6376,
+  "name": "Navigation / floating rail",
+  "type": "COMPONENT",
+  "page": "26 · Core components sheet",
+  "width": 72.0,
+  "height": 200.0,
+  "description": "Tablet destination rail. Place 16 units inside the leading safe edge, centered vertically in the usable window. Items are 56 units with 8-unit gaps and padding.",
+  "layout": {
+   "mode": "vertical",
+   "wrap": false,
+   "gap": 8.0,
+   "padding": [
+    8.0,
+    8.0,
+    8.0,
+    8.0
+   ],
+   "mainAlign": "center",
+   "crossAlign": "center"
+  },
+  "boundVariables": {
+   "effects/0/radius": "VariableID:29",
+   "fill": "VariableID:8",
+   "fills/1/stops/0/color": "VariableID:2",
+   "fills/1/stops/1/color": "VariableID:130004",
+   "fills/1/stops/2/color": "VariableID:130005",
+   "fills/2/stops/0/color": "VariableID:130006",
+   "fills/2/stops/1/color": "VariableID:130004"
+  }
+ },
+ {
   "id": 6463,
   "name": "TV / Top navigation / shared accent",
   "type": "COMPONENT",
@@ -5709,5 +5740,36 @@
   "width": 79.41,
   "height": 22.24,
   "description": "Three sampled voice amplitude rows. Motion changes the illuminated dots."
+ },
+ {
+  "id": 229113,
+  "name": "Navigation / floating sidebar",
+  "type": "COMPONENT",
+  "page": "18 · Boundary behavior",
+  "width": 176.0,
+  "height": 176.0,
+  "description": "Expanded tablet destinations. Center the frosted container in the usable window, 16 units from the leading safe edge. Each labeled item is 48 units tall.",
+  "layout": {
+   "mode": "vertical",
+   "wrap": false,
+   "gap": 8.0,
+   "padding": [
+    8.0,
+    8.0,
+    8.0,
+    8.0
+   ],
+   "mainAlign": "center",
+   "crossAlign": "center"
+  },
+  "boundVariables": {
+   "effects/0/radius": "VariableID:29",
+   "fill": "VariableID:8",
+   "fills/1/stops/0/color": "VariableID:2",
+   "fills/1/stops/1/color": "VariableID:130004",
+   "fills/1/stops/2/color": "VariableID:130005",
+   "fills/2/stops/0/color": "VariableID:130006",
+   "fills/2/stops/1/color": "VariableID:130004"
+  }
  }
 ]

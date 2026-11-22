@@ -473,5 +473,9 @@
     "home_relative_checkout": "~/Developer/KozuUI",
     "branch": "main",
     "branch_authorization": "The user has authorized work on main."
+  },
+  "Google Gemini Neural Expressive": {
+    "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+    "use": "Reference for color and state transitions in the multi-agent workspace."
   }
 }

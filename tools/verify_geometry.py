@@ -144,6 +144,24 @@ def geometry_issues(document):
                 if any(abs(r-min(width,height)/2) > TOLERANCE for r in inner):
                     issues.append(f"{layer['id']} {name}: capsule radius must equal half its shorter dimension")
 
+        if name in ('Navigation / floating rail', 'Navigation / floating sidebar'):
+            items = layer.get('children', [])
+            inset = 8
+            for item in items:
+                if (abs(item['x'] - 8) > TOLERANCE or abs(width - item['width'] - 16) > TOLERANCE
+                        or abs(item['y'] - inset) > TOLERANCE):
+                    issues.append(f"{layer['id']} {name}: destination padding or spacing is uneven")
+                inset += item['height'] + 8
+            if not items or abs(height - inset) > TOLERANCE:
+                issues.append(f"{layer['id']} {name}: container must hug the destination stack")
+            if parent.get('name', '').startswith(('Window /', 'Adaptive task /')):
+                chrome = next((c['height'] for c in parent.get('children', [])
+                               if c.get('name') == 'Window chrome / platform owned'), 0)
+                if abs(x - 16) > TOLERANCE or abs(y + height / 2 - (ph + chrome) / 2) > TOLERANCE:
+                    issues.append(f"{layer['id']} {name}: navigation must float at the left center of the usable window")
+                if layer.get('constraints') != {'horizontal': 'left', 'vertical': 'center'}:
+                    issues.append(f"{layer['id']} {name}: preserve left-center anchoring when the window resizes")
+
         rail_item = name.startswith('Rail item /')
         if rail_item:
             if abs(width-height) > TOLERANCE or any(abs(r-width/2) > TOLERANCE for r in inner):
@@ -407,6 +425,18 @@ def self_test():
     paired_button['children'] = [paired_slot, paired_label]
     paired_slot['name'] = 'Row icon'
     assert not geometry_issues(paired_button)
+    window = {'id': 41, 'type': 'FRAME', 'name': 'Window / tablet', 'width': 776, 'height': 540}
+    rail = {'id': 42, 'type': 'FRAME', 'name': 'Navigation / floating rail', 'width': 72, 'height': 72,
+            'x': 16, 'y': 266, 'constraints': {'horizontal': 'left', 'vertical': 'center'},
+            'children': [{'id': 43, 'type': 'FRAME', 'name': 'Rail item / example',
+                          'width': 56, 'height': 56, 'cornerRadius': 28, 'x': 8, 'y': 8}]}
+    window['children'] = [{'id': 44, 'type': 'FRAME', 'name': 'Window chrome / platform owned', 'height': 64}, rail]
+    assert not geometry_issues(window)
+    rail['y'] -= 32
+    assert any('usable window' in issue for issue in geometry_issues(window))
+    rail['y'] += 32
+    rail['children'][0]['y'] += 1
+    assert any('spacing is uneven' in issue for issue in geometry_issues(window))
     print('Geometry guardrail self-test passed')
 
 if __name__ == '__main__':

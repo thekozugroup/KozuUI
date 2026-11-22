@@ -34,7 +34,7 @@ Set `data-accent="lagoon"` (or any family) on `<html>` or any section; `data-the
 
 ## Fonts and icons
 
-Inter is the default for all type, including display headings, controls and financial numbers. Source Serif 4 is optional for an individual financial number or editorial heading. FigCraft uses the bundled family name `RR Serif` for those examples. [Font setup and license](Fonts/README.md)
+Inter is the default for all type, including display headings, controls and financial numbers. Source Serif 4 is optional for an individual financial number or editorial heading. FigCraft uses the bundled family name `RR Serif` for those examples. Page 48 uses Helvetica Neue for the task list, voice input and agent monitor. The family and spacing were matched to the supplied Synq images. The source pack does not identify its original typeface. The macOS menu clock uses SF Pro. [Font setup and license](Fonts/README.md)
 
 Icons come from [Aria Icons](https://icons.leularia.com/) using Lucide geometry. [Icon assets, licenses and source IDs](Icons)
 

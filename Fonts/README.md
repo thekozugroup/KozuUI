@@ -2,6 +2,8 @@
 
 Inter is the default for display, headings, body text, numbers and controls. The repository includes one optional font for financial numbers and editorial headings. Its portable name is **Source Serif 4**. The included version 4.004 variable Roman file uses the internal family name **RR Serif**.
 
+Page 48 uses Helvetica Neue for the task list, voice input and agent monitor. The family and spacing were matched to the supplied Synq images. The source pack does not identify its original typeface. The macOS menu clock uses SF Pro. FigCraft uses locally available faces for this study. If Helvetica Neue is unavailable, use Roboto and recheck line breaks and control widths. The PDF and PNG previews preserve the reviewed appearance.
+
 ## Setup after cloning
 
 1. Make **Inter** available to FigCraft or your app. Obtain Inter separately. For the web, load a variable face or the weights your site uses.

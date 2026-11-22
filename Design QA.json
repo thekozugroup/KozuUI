@@ -3,18 +3,20 @@
  "date": "2026-11-21",
  "projectAgnostic": true,
  "boards": 49,
- "nativeNodes": 11446,
- "componentMasters": 317,
+ "nativeNodes": 11448,
+ "componentMasters": 319,
  "componentSets": 12,
  "instances": 503,
- "variables": 147,
+ "variables": 155,
  "mastersWithProperties": 103,
- "autoLayoutMasters": 106,
+ "autoLayoutMasters": 108,
  "changes": [
   "Inter is the default for display, headings, body, controls and balances. Page 47 compares three settings using identical statement data.",
   "The surface audit covered the 46 base pages. Section spacing, tonal control fills and accent fields were revised on 40 pages.",
   "Page 46 adds four linked activity patterns, a dictation prototype, timed and steady pulse variants and numeric progress variants. Pages 16 and 26 reuse these masters.",
-  "Page 48 reproduces the three views of a multi-agent workspace with original blue light artwork, editable dot matrices, service icons and a native agent-detail prototype."
+  "Page 48 reproduces the three views of a multi-agent workspace with original blue light artwork, editable dot matrices, service icons and a native agent-detail prototype.",
+  "Tablet icon rails and labeled sidebars float 16 units inside the leading edge, centered within the usable window.",
+  "The workspace and tablet materials use editable accent-bound gradients over glass surfaces. The Synq study uses measured Helvetica Neue type roles across its board and prototypes."
  ],
  "palette": {
   "base": "Tailwind CSS v4 lightness and chroma per step, with Kozu hue offsets",
@@ -69,9 +71,11 @@
   "nativeHierarchy": "All nodes reached exactly once. Parent, component, source, interaction target, image and variable references resolve.",
   "nativeVariables": "Portable snapshot matches the current FigCraft variable.export output.",
   "fonts": {
-   "Inter": 3359,
+   "Inter": 3155,
    "Liberation Mono": 10,
-   "RR Serif": 2
+   "RR Serif": 2,
+   "Helvetica Neue": 196,
+   "SF Pro": 8
   },
   "baseTextFit": {
    "textLayers": 2992,
@@ -95,9 +99,9 @@
    "Voice request · reduced motion"
   ],
   "workspaceBoardTranscriptMinimumContrast": [
-   5.9,
-   6.33,
-   10.5
+   5.39,
+   6.07,
+   9.76
   ],
   "workspaceProgressPercentages": [
    74,
@@ -106,7 +110,40 @@
   ],
   "workspacePrototypeTransitions": 28,
   "portfolioPreviewPlacementsRefreshed": 10,
-  "pdfExports": "All 49 page sizes match the PNGs. All pages have selectable text. All rendered PDF pages were compared with the corresponding native PNG."
+  "pdfExports": "All 49 page sizes match the PNGs. All pages have selectable text. All rendered PDF pages were compared with the corresponding native PNG.",
+  "tabletNavigation": {
+   "usableWindowCenter": "checked at 600, 776, 840 and 1504 units, including 64-unit window chrome",
+   "leadingInset": 16,
+   "itemGap": 8,
+   "innerPadding": 8,
+   "reusableMasters": [
+    6376,
+    229113
+   ]
+  },
+  "workspaceBoardText": {
+   "measuredLayers": 37,
+   "minimumContrast": 4.63,
+   "method": "Compare authored foreground with the native backing at rendered glyph pixels in the three-panel board."
+  },
+  "workspaceFontFit": {
+   "reference": "QClay Synq",
+   "referenceFamilyIdentification": "inferred from raster letterforms",
+   "testedFamilies": 11,
+   "glyphComparison": [
+    "Scheduling",
+    "Listening",
+    "Nova"
+   ],
+   "meanGlyphMaskOverlap": {
+    "Helvetica Neue Medium": 0.916,
+    "SF Pro Medium": 0.883,
+    "Roboto Medium": 0.871,
+    "Inter Medium": 0.793
+   },
+   "distinctTextBoxes": 87,
+   "prototypeFrames": 15
+  }
  },
  "reviews": [
   {

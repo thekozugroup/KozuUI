@@ -58,6 +58,50 @@
         "weight": 500,
         "lineHeight": 17
       }
+    },
+    "workspaceStudy": {
+      "family": "Helvetica Neue",
+      "fallback": "Roboto",
+      "platformClock": "SF Pro",
+      "referenceFrameWidth": 540,
+      "roles": {
+        "task": {
+          "size": 18,
+          "lineHeight": 22,
+          "trackingPercent": -1,
+          "weight": "Medium"
+        },
+        "prompt": {
+          "size": 20,
+          "lineHeight": 25,
+          "trackingPercent": -2,
+          "weight": "Medium"
+        },
+        "listening": {
+          "size": 18,
+          "lineHeight": 22,
+          "trackingPercent": -2,
+          "weight": "Medium"
+        },
+        "transcript": {
+          "size": 17.75,
+          "lineHeight": 21,
+          "trackingPercent": -1,
+          "weight": "Medium"
+        },
+        "agentName": {
+          "size": 12,
+          "lineHeight": 16,
+          "trackingPercent": -1.5,
+          "weight": "Medium"
+        },
+        "status": {
+          "size": 9,
+          "lineHeight": 12,
+          "trackingPercent": 0,
+          "weight": "Medium"
+        }
+      }
     }
   },
   "activity": {
@@ -77,6 +121,21 @@
       "overlap": 8,
       "labelGap": 12,
       "rule": "Center each glyph in its disc. Stack the discs in reading order, with the later disc on top. One visible text label names the sources. Hide the decorative marks from assistive technology."
+    },
+    "workspaceMaterial": {
+      "glass": "material/glassInk, material/glassBody, material/glassVeil",
+      "lightPools": [
+        "material/shade",
+        "material/light"
+      ],
+      "tabletLightPools": [
+        "material/groundShade",
+        "material/groundLight"
+      ],
+      "controlBlur": 28,
+      "workspaceBlur": 28,
+      "overlayBlur": 40,
+      "fallback": "Use the semantic opaque container when transparency is reduced."
     }
   },
   "color": {
@@ -1658,12 +1717,17 @@
     },
     "guardrail": "tools/verify_geometry.py",
     "rail": {
-      "width": 88,
+      "width": 72,
       "target": 56,
       "radius": 28,
       "icon": 24,
       "iconInset": 16,
-      "gap": 8
+      "gap": 8,
+      "leadingSafeInset": 16,
+      "padding": 8,
+      "outerRadius": 36,
+      "verticalAlignment": "center in usable window",
+      "reservedWidth": 88
     },
     "avatar": {
       "size": 56,
@@ -1673,7 +1737,17 @@
       "horizontal": "center",
       "vertical": "middle"
     },
-    "concentricityScope": "Adjacent nested curved surfaces follow their uniform inset. Full-bleed image and card share a radius. Independent circular controls retain their own center; icon geometry stays centered."
+    "concentricityScope": "Adjacent nested curved surfaces follow their uniform inset. Full-bleed image and card share a radius. Independent circular controls retain their own center; icon geometry stays centered.",
+    "tabletSidebar": {
+      "minimumWindow": 840,
+      "leadingSafeInset": 16,
+      "verticalAlignment": "center in usable window",
+      "padding": 8,
+      "gap": 8,
+      "targetHeight": 48,
+      "outerRadius": 32,
+      "backing": "frost/toolbar"
+    }
   },
   "space": [
     4,
@@ -1857,7 +1931,15 @@
             "VariableID:132",
             "VariableID:133",
             "VariableID:134",
-            "VariableID:147"
+            "VariableID:147",
+            "VariableID:130000",
+            "VariableID:130001",
+            "VariableID:130002",
+            "VariableID:130003",
+            "VariableID:130004",
+            "VariableID:130005",
+            "VariableID:130006",
+            "VariableID:130007"
           ]
         },
         "VariableCollectionId:2": {
@@ -3358,6 +3440,230 @@
               "b": 0.20282351970672607,
               "g": 0.15921568870544434,
               "r": 0.12705883383750916
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:1"
+        },
+        "VariableID:130000": {
+          "codeSyntax": {},
+          "description": "",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:130000",
+          "key": "VariableID:130000",
+          "name": "material/shade",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:1/mode1": {
+              "a": 1.0,
+              "b": 0.8041568994522095,
+              "g": 0.3965098261833191,
+              "r": 0.3845098316669464
+            },
+            "VariableCollectionId:1/mode2": {
+              "a": 1.0,
+              "b": 0.8041568994522095,
+              "g": 0.3965098261833191,
+              "r": 0.3845098316669464
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:1"
+        },
+        "VariableID:130001": {
+          "codeSyntax": {},
+          "description": "",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:130001",
+          "key": "VariableID:130001",
+          "name": "material/light",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:1/mode1": {
+              "a": 1.0,
+              "b": 0.9450980424880981,
+              "g": 0.9058823585510254,
+              "r": 0.6952941417694092
+            },
+            "VariableCollectionId:1/mode2": {
+              "a": 1.0,
+              "b": 0.9450980424880981,
+              "g": 0.9058823585510254,
+              "r": 0.6952941417694092
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:1"
+        },
+        "VariableID:130002": {
+          "codeSyntax": {},
+          "description": "",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:130002",
+          "key": "VariableID:130002",
+          "name": "material/glassInk",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:1/mode1": {
+              "a": 1.0,
+              "b": 0.1420392245054245,
+              "g": 0.07066667079925537,
+              "r": 0.04619608074426651
+            },
+            "VariableCollectionId:1/mode2": {
+              "a": 1.0,
+              "b": 0.1420392245054245,
+              "g": 0.07066667079925537,
+              "r": 0.04619608074426651
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:1"
+        },
+        "VariableID:130003": {
+          "codeSyntax": {},
+          "description": "",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:130003",
+          "key": "VariableID:130003",
+          "name": "material/glassBody",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:1/mode1": {
+              "a": 1.0,
+              "b": 0.30400002002716064,
+              "g": 0.21933335065841675,
+              "r": 0.16858823597431183
+            },
+            "VariableCollectionId:1/mode2": {
+              "a": 1.0,
+              "b": 0.30400002002716064,
+              "g": 0.21933335065841675,
+              "r": 0.16858823597431183
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:1"
+        },
+        "VariableID:130004": {
+          "codeSyntax": {},
+          "description": "",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:130004",
+          "key": "VariableID:130004",
+          "name": "material/clear",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:1/mode1": {
+              "a": 0.0,
+              "b": 1.0,
+              "g": 0.9176470637321472,
+              "r": 0.8627451062202454
+            },
+            "VariableCollectionId:1/mode2": {
+              "a": 0.0,
+              "b": 1.0,
+              "g": 0.9176470637321472,
+              "r": 0.8627451062202454
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:1"
+        },
+        "VariableID:130005": {
+          "codeSyntax": {},
+          "description": "",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:130005",
+          "key": "VariableID:130005",
+          "name": "material/groundShade",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:1/mode1": {
+              "a": 0.3400000035762787,
+              "b": 0.8041568994522095,
+              "g": 0.3965098261833191,
+              "r": 0.3845098316669464
+            },
+            "VariableCollectionId:1/mode2": {
+              "a": 0.20000000298023224,
+              "b": 0.8041568994522095,
+              "g": 0.3965098261833191,
+              "r": 0.3845098316669464
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:1"
+        },
+        "VariableID:130006": {
+          "codeSyntax": {},
+          "description": "",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:130006",
+          "key": "VariableID:130006",
+          "name": "material/groundLight",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:1/mode1": {
+              "a": 0.8799999952316284,
+              "b": 0.9450980424880981,
+              "g": 0.9058823585510254,
+              "r": 0.6952941417694092
+            },
+            "VariableCollectionId:1/mode2": {
+              "a": 0.1599999964237213,
+              "b": 0.9450980424880981,
+              "g": 0.9058823585510254,
+              "r": 0.6952941417694092
+            }
+          },
+          "variableCollectionId": "VariableCollectionId:1"
+        },
+        "VariableID:130007": {
+          "codeSyntax": {},
+          "description": "",
+          "hiddenFromPublishing": false,
+          "id": "VariableID:130007",
+          "key": "VariableID:130007",
+          "name": "material/glassVeil",
+          "remote": false,
+          "resolvedType": "COLOR",
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "valuesByMode": {
+            "VariableCollectionId:1/mode1": {
+              "a": 0.46000000834465027,
+              "b": 0.1420392245054245,
+              "g": 0.07066667079925537,
+              "r": 0.04619608074426651
+            },
+            "VariableCollectionId:1/mode2": {
+              "a": 0.46000000834465027,
+              "b": 0.1420392245054245,
+              "g": 0.07066667079925537,
+              "r": 0.04619608074426651
             }
           },
           "variableCollectionId": "VariableCollectionId:1"

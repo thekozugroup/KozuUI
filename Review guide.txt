@@ -4,7 +4,7 @@ November 21, 2026
 OPEN AND COMMENT
 Open Kozu Universal UI Kit.figcraft in FigCraft. Choose a page in the left sidebar. Press C or choose Comment, then pin feedback to a component or screen. Fourteen existing review comments identify decisions for discussion. The native document is the editable source. The PDF and PNG previews are reference exports.
 
-This project-agnostic foundation contains 49 boards, 317 component masters (including 12 variant sets), 503 linked instances and 147 variables. 103 masters expose component properties and 106 use auto layout. Dense creative examples include illustrative compositions alongside reusable controls.
+This project-agnostic foundation contains 49 boards, 319 component masters (including 12 variant sets), 503 linked instances and 155 variables. 103 masters expose component properties and 108 use auto layout. Dense creative examples include illustrative compositions alongside reusable controls.
 
 DEFAULTS
 Typography uses Inter for display, headings, body, labels, controls and financial numbers. A financial number or editorial heading may use Source Serif 4. Its FigCraft family name is RR Serif. Keep supporting labels and units in Inter. See Fonts/README.md for setup.
@@ -75,7 +75,7 @@ PAGE CATALOG
 45 Website · Docs and articles — a documentation page and a changelog article (Read mode).
 46 Activity and connections — a single accent gradient field, dot indicators, progress, listening states and overlapping service marks with one visible source label.
 47 Financial typography — compare Inter throughout with Source Serif 4 on either the balance or the statement heading.
-48 Multi-agent workspace — task activity, voice input and an agent monitor based on the supplied QClay Synq reference. Choose Nova, Atlas or Orion to inspect its work. The backdrop art is original, and the dot grids, source marks and controls are editable native layers. Prototype flows: Multi-agent workspace, Review an agent, Voice request, Voice request · reduced motion.
+48 Multi-agent workspace — task activity, voice input and an agent monitor based on the supplied QClay Synq reference. Choose Nova, Atlas or Orion to inspect its work. The backdrop art is original, and the dot grids, source marks and controls are editable native layers. Prototype flows: Multi-agent workspace, Review an agent, Voice request, Voice request · reduced motion. Page 48 uses Helvetica Neue for the task list, voice input and agent monitor. The family and spacing were matched to the supplied Synq images. The source pack does not identify its original typeface. The macOS menu clock uses SF Pro.
 
 On page 46, present “Dictate a task instruction” to record, review and add an example instruction.
 
@@ -121,7 +121,7 @@ The earlier authoring pass recorded removal of its task-owned scratch, authoring
 
 HISTORY — EDITION 0.4 DEFAULTS
 Light canvas: #FCFCFC. White containers sit above the near-white base. Shared accent is the default per app; cards, chips, actions, avatars and selection marks inherit that family. Per-tab palettes are opt-in. Neutralize a card or derive its tint from the local action when deliberately using another accent. Unrelated decorative accent fills should not touch. Status colors and meaningful data categories retain their explicit roles.
-Rail items: 56-unit circles, 24-unit icons at (16,16), 8-unit gaps, centered in an 88-unit rail. Avatars expose Initial and center Inter text in a 56-unit circle. Geometry checks cover rail targets, initials, chips and whole-button labels.
+Float the tablet rail 16 units inside the leading safe edge and center it vertically in the usable window. The 72-unit frosted capsule has 8-unit padding, 56-unit circular targets and 8-unit gaps. At expanded tablet widths, use the same placement for 48-unit labeled rows. Center each 24-unit icon within its target. Avatars expose Initial and center Inter text in a 56-unit circle. Geometry checks cover rail targets, initials, chips and whole-button labels.
 Frost backing is reduced by 10 percentage points: controls about 58% light/65% dark, toolbars 62%/70%, overlays 84%. The heavy 28/40-unit blur remains. Pale checkbox/radio/mixed fills use clear accent marks rather than opaque saturated state blocks. Blue and orange foreground tones are stronger to retain label contrast.
 Wear OS uses ScreenScaffold, TransformingLazyColumn, SurfaceTransformation and native EdgeButton geometry. Rows and their text transform together. Edge-button text follows native reveal height; add no delayed custom text fade or separate scroll entrance delay. FadingExpandingLabel is for changing multiline content, not scroll reveal. Respect LocalReduceMotion; reduced-motion focus uses static tone and text weight without animated zoom. Keep native typography and native device/font-scale previews. The FigCraft transition is a simulation; it does not prove native continuous-scroll behavior.
 Wear OS and Android home widgets exclude portable backdrop blur by default and use native tonal surfaces. Apple widgets use host-provided Liquid Glass only where supported by the chosen appearance and rendering mode; retain full-color and accessibility fallbacks. Tiles do not scroll.
