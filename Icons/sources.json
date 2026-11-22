@@ -324,5 +324,13 @@
       "name": "ban",
       "id": "lucide:ban"
     }
-  ]
+  ],
+  "workspaceServiceMarks": {
+    "page": "48 · Multi-agent workspace",
+    "provider": "Aria Icons",
+    "collection": "logos",
+    "upstream": "https://github.com/gilbarbara/logos",
+    "usage": "Editable marks identify the example task’s connected services. The Lucide license applies to the interface icons.",
+    "ids": ["logos:google-gmail-2020", "logos:google-calendar-2020", "logos:zoom", "logos:notion-icon"]
+  }
 }

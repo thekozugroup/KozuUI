@@ -1,22 +1,20 @@
 {
- "edition": "0.6-review",
- "date": "2026-11-10",
+ "edition": "0.7-review",
+ "date": "2026-11-21",
  "projectAgnostic": true,
- "boards": 46,
- "nativeNodes": 8918,
- "componentMasters": 277,
- "componentSets": 9,
- "instances": 388,
+ "boards": 49,
+ "nativeNodes": 11446,
+ "componentMasters": 317,
+ "componentSets": 12,
+ "instances": 503,
  "variables": 147,
- "mastersWithProperties": 100,
+ "mastersWithProperties": 103,
  "autoLayoutMasters": 106,
  "changes": [
-  "Kozu Spectrum: twelve accent families on Tailwind CSS v4 lightness and chroma with 2 to 4 degree Kozu hue offsets; Graphite neutral; status ramps on Tailwind green, amber, red and sky. Accent modes renamed (Blue to Cobalt and so on) with mode IDs kept; Vermilion, Citron, Lagoon and Orchid added.",
-  "Every hard-coded Tailwind and slate color across the 39 earlier boards, components, gradients, shadows and platform variables moved to Spectrum or Graphite values; no Tailwind v3 hex remains in fills or strokes.",
-  "Borders removed where they were decorative: device and window outlines (now neutral layered shadows), swatch outlines (tonal well), fader outlines (knob shadow), footer and wearable header rules. Kept: icon strokes, unchecked checkbox and radio outlines, pro-tool dividers.",
-  "App theme overrides card removed from Foundations at the owner's request; replaced by a live Kozu Spectrum card.",
-  "New pages 39 to 45: Kozu Spectrum, Web foundations, Web components (13 web masters, 31 icon masters), Portfolio, Landing page (Paperboy), Ecommerce, Docs and articles.",
-  "web/kozu.css, web/kozu.tailwind.css and web/README.md for websites."
+  "Inter is the default for display, headings, body, controls and balances. Page 47 compares three settings using identical statement data.",
+  "The surface audit covered the 46 base pages. Section spacing, tonal control fills and accent fields were revised on 40 pages.",
+  "Page 46 adds four linked activity patterns, a dictation prototype, timed and steady pulse variants and numeric progress variants. Pages 16 and 26 reuse these masters.",
+  "Page 48 reproduces the three views of a multi-agent workspace with original blue light artwork, editable dot matrices, service icons and a native agent-detail prototype."
  ],
  "palette": {
   "base": "Tailwind CSS v4 lightness and chroma per step, with Kozu hue offsets",
@@ -67,67 +65,140 @@
  },
  "automatedChecks": {
   "geometryGuardSelfTest": "passed",
-  "geometryGuard": "passed on the 46-board document (no concentricity, centering or border-state issues)",
-  "websiteTextContrast": {
-   "textLayersMeasured": 447,
-   "failures": 0,
-   "minimum": 4.64,
-   "method": "each text layer against its composited backdrop, WCAG 2 thresholds, all website frames"
+  "geometryGuard": "passed on the complete native file",
+  "nativeHierarchy": "All nodes reached exactly once. Parent, component, source, interaction target, image and variable references resolve.",
+  "nativeVariables": "Portable snapshot matches the current FigCraft variable.export output.",
+  "fonts": {
+   "Inter": 3359,
+   "Liberation Mono": 10,
+   "RR Serif": 2
   },
-  "remainingTailwindV3HexInPaints": 0
+  "baseTextFit": {
+   "textLayers": 2992,
+   "inputBoards": 46,
+   "measuredBy": "FigCraft text.refit on each original text layer after the typography pass"
+  },
+  "nativeFinanceVariants": 3,
+  "unchangedReviewComments": 14,
+  "webComponentChecks": [
+   "Tailwind CSS 4.3.3 compilation",
+   "Chrome font loading, progress values, reduced motion, forced colors and 200% text",
+   "Text contrast on CSS accent gradients exceeds 8:1 across 12 families in light and dark"
+  ],
+  "pdfPages": 49,
+  "nativeProgressVariants": "All eleven percentages, from 0% to 100%, switch the dot count and label together across six tested instances.",
+  "webSourceMarks": "Chrome verified 8-unit overlap in LTR and RTL at 100% and 200% text, a single accessible name and at least 4.57:1 glyph contrast in the tested appearances.",
+  "workspaceFlows": [
+   "Multi-agent workspace",
+   "Review an agent",
+   "Voice request",
+   "Voice request · reduced motion"
+  ],
+  "workspaceBoardTranscriptMinimumContrast": [
+   5.9,
+   6.33,
+   10.5
+  ],
+  "workspaceProgressPercentages": [
+   74,
+   41,
+   22
+  ],
+  "workspacePrototypeTransitions": 28,
+  "portfolioPreviewPlacementsRefreshed": 10,
+  "pdfExports": "All 49 page sizes match the PNGs. All pages have selectable text. All rendered PDF pages were compared with the corresponding native PNG."
  },
  "reviews": [
   {
-   "agent": "palette audit (independent model)",
-   "verdict": "not approved on the first draft: CVD collapses, near-Tailwind roles, warning/danger tie",
-   "resolution": "hue optimization, CVD-checked sets, warning lightness split; later superseded by the Tailwind-aligned version"
+   "area": "Existing surfaces, typography and financial comparisons",
+   "result": "193 original layers revised in the surface pass. A native text-fit pass repaired existing missing line clearance on studio, watch and widget labels. Financial variants reconcile to $86,420 and keep small labels sans serif."
   },
   {
-   "agent": "web mockup critique",
-   "scores": {
-    "portfolio": 6.0,
-    "landing": 6.5
-   },
-   "verdict": "not ready: cropped TV tile, stretched buttons packed left, three-line phone headline",
-   "resolution": "portfolio and landing rebuilt: one tile ratio on a tonal ground with whole works visible, distinct works, quiet nav action, aligned 12-column grid, centered and end-slot button content, two-line headlines, real blocked-sender row, no-wrap code, correct icons"
+   "area": "Independent editorial and interaction review",
+   "finding": "Editing measurable progress could desynchronize dots and label. One saved dictation instruction lost “by owner”. The feedback board mixed known and unknown durations and the portfolio still showed prior-edition thumbnails.",
+   "resolution": "Use linked percentage variants, preserve the reviewed transcript, pair each progress example with its own label, and refresh the portfolio thumbnails from current native frames."
   },
   {
-   "agent": "token and CSS audit",
-   "verdict": "first pass not ready (reduced transparency lost in dark, dark focus under 3:1); re-audit of v2: CSS scoping, Tailwind syntax and 187/187 hex parity clean, 298 contrast pairs checked",
-   "resolution": "light-dark() scoping with an @supports light fallback, theme-aware focus tokens (light minimum 3.25:1, dark 4.92:1), @theme inline, contrast-safe link role, heading clamp set to half the display from 768 up, supported-pair wording narrowed, Tailwind leftovers replaced. Native app focus keeps platform focus plus tone and lift; the 3:1 claim is scoped to the web."
+   "area": "Multi-agent workspace compared with all three supplied Synq crops",
+   "finding": "The first transcript had low contrast over the light streak. The Notion mark lost its inner letter, and glass tints obscured the backdrop.",
+   "resolution": "Added a feathered transcript scrim, restored the vector letter and adjusted the glass tints at the illuminated edges. The task-list crop, three-row waveform and expanded Atlas panel follow the reference."
   }
  ],
  "limits": [
-  "Static editable design kit; not production app code",
-  "Runtime screen reader, 200% text scaling, hardware blur and remote/watch behavior need platform validation",
-  "Widget dimensions are representative; the host supplies exact bounds",
-  "Apple watch faces are concepts; implement supported app UI and complication families",
-  "Website mockups are static; browser keyboard focus, zoom, reduced motion and real fonts need a built site to verify.",
-  "light-dark() requires 2024-or-later browsers."
+  "Native prototypes use illustrative data. Real microphone input, scheduling and agent execution belong to an implementation.",
+  "Production screen readers, text scaling on native devices, focus return, presenter timing and GPU blur performance need platform validation.",
+  "Static examples use representative widget bounds. Device hosts choose final sizes.",
+  "Chrome checks cover the portable examples. Safari, Firefox and assistive-technology testing remain outstanding."
  ],
  "previousEdition": {
-  "edition": "0.5-review",
-  "boards": 39,
-  "componentMasters": 210,
-  "variables": 140,
-  "dynamicNativeColorChecks": {
-   "passed": 144,
-   "themes": [
-    "Light",
-    "Dark"
-   ],
-   "accentFamilies": 8,
-   "policies": [
-    "Shared accent",
-    "Per tab"
-   ],
-   "iconAndDerivedTintMatch": true,
-   "minSelectedLabelContrastOnDefinedCanvas": 4.65,
-   "savedTestEdits": false
+  "edition": "0.6-review",
+  "boards": 46,
+  "componentMasters": 277,
+  "variables": 147,
+  "automatedChecks": {
+   "geometryGuardSelfTest": "passed",
+   "geometryGuard": "passed on the 46-board document (no concentricity, centering or border-state issues)",
+   "websiteTextContrast": {
+    "textLayersMeasured": 447,
+    "failures": 0,
+    "minimum": 4.64,
+    "method": "each text layer against its composited backdrop, WCAG 2 thresholds, all website frames"
+   },
+   "remainingTailwindV3HexInPaints": 0
   },
-  "primaryLabelContrast": {
-   "pairsPassed": 16,
-   "minimumOnDefinedCanvas": 5.48
+  "changes": [
+   "Kozu Spectrum: twelve accent families on Tailwind CSS v4 lightness and chroma with 2 to 4 degree Kozu hue offsets; Graphite neutral; status ramps on Tailwind green, amber, red and sky. Accent modes renamed (Blue to Cobalt and so on) with mode IDs kept; Vermilion, Citron, Lagoon and Orchid added.",
+   "Every hard-coded Tailwind and slate color across the 39 earlier boards, components, gradients, shadows and platform variables moved to Spectrum or Graphite values; no Tailwind v3 hex remains in fills or strokes.",
+   "Borders removed where they were decorative: device and window outlines (now neutral layered shadows), swatch outlines (tonal well), fader outlines (knob shadow), footer and wearable header rules. Kept: icon strokes, unchecked checkbox and radio outlines, pro-tool dividers.",
+   "App theme overrides card removed from Foundations at the owner's request; replaced by a live Kozu Spectrum card.",
+   "New pages 39 to 45: Kozu Spectrum, Web foundations, Web components (13 web masters, 31 icon masters), Portfolio, Landing page (Paperboy), Ecommerce, Docs and articles.",
+   "web/kozu.css, web/kozu.tailwind.css and web/README.md for websites."
+  ],
+  "reviews": [
+   {
+    "agent": "palette audit (independent model)",
+    "verdict": "not approved on the first draft: CVD collapses, near-Tailwind roles, warning/danger tie",
+    "resolution": "hue optimization, CVD-checked sets, warning lightness split; later superseded by the Tailwind-aligned version"
+   },
+   {
+    "agent": "web mockup critique",
+    "scores": {
+     "portfolio": 6.0,
+     "landing": 6.5
+    },
+    "verdict": "not ready: cropped TV tile, stretched buttons packed left, three-line phone headline",
+    "resolution": "portfolio and landing rebuilt: one tile ratio on a tonal ground with whole works visible, distinct works, quiet nav action, aligned 12-column grid, centered and end-slot button content, two-line headlines, real blocked-sender row, no-wrap code, correct icons"
+   },
+   {
+    "agent": "token and CSS audit",
+    "verdict": "first pass not ready (reduced transparency lost in dark, dark focus under 3:1); re-audit of v2: CSS scoping, Tailwind syntax and 187/187 hex parity clean, 298 contrast pairs checked",
+    "resolution": "light-dark() scoping with an @supports light fallback, theme-aware focus tokens (light minimum 3.25:1, dark 4.92:1), @theme inline, contrast-safe link role, heading clamp set to half the display from 768 up, supported-pair wording narrowed, Tailwind leftovers replaced. Native app focus keeps platform focus plus tone and lift; the 3:1 claim is scoped to the web."
+   }
+  ],
+  "previousEdition": {
+   "edition": "0.5-review",
+   "boards": 39,
+   "componentMasters": 210,
+   "variables": 140,
+   "dynamicNativeColorChecks": {
+    "passed": 144,
+    "themes": [
+     "Light",
+     "Dark"
+    ],
+    "accentFamilies": 8,
+    "policies": [
+     "Shared accent",
+     "Per tab"
+    ],
+    "iconAndDerivedTintMatch": true,
+    "minSelectedLabelContrastOnDefinedCanvas": 4.65,
+    "savedTestEdits": false
+   },
+   "primaryLabelContrast": {
+    "pairsPassed": 16,
+    "minimumOnDefinedCanvas": 5.48
+   }
   }
  }
 }

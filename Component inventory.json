@@ -1724,7 +1724,8 @@
   "height": 32.0,
   "description": "",
   "boundVariables": {
-   "effects/0/radius": "VariableID:28"
+   "effects/0/radius": "VariableID:28",
+   "fill": "VariableID:4"
   }
  },
  {
@@ -2117,6 +2118,9 @@
   "width": 682.0,
   "height": 56.0,
   "description": "Complete labeled target. Radio groups allow one selection; arrows move and select. Checkbox supports mixed state. Selected state uses fill, not borders.",
+  "boundVariables": {
+   "fill": "VariableID:147"
+  },
   "properties": {
    "Label": {
     "default": "Personal workspace",
@@ -2177,6 +2181,9 @@
   "width": 682.0,
   "height": 56.0,
   "description": "Complete labeled target. Radio groups allow one selection; arrows move and select. Checkbox supports mixed state. Selected state uses fill, not borders.",
+  "boundVariables": {
+   "fill": "VariableID:147"
+  },
   "properties": {
    "Label": {
     "default": "Send a weekly summary",
@@ -2192,6 +2199,9 @@
   "width": 682.0,
   "height": 56.0,
   "description": "Complete labeled target. Radio groups allow one selection; arrows move and select. Checkbox supports mixed state. Selected state uses fill, not borders.",
+  "boundVariables": {
+   "fill": "VariableID:147"
+  },
   "properties": {
    "Label": {
     "default": "Managed by your workspace",
@@ -2394,10 +2404,7 @@
   "page": "15 · Data and density",
   "width": 1472.0,
   "height": 60.0,
-  "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection.",
-  "boundVariables": {
-   "fill": "VariableID:1"
-  }
+  "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection."
  },
  {
   "id": 1919,
@@ -2406,10 +2413,7 @@
   "page": "15 · Data and density",
   "width": 1472.0,
   "height": 60.0,
-  "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection.",
-  "boundVariables": {
-   "fill": "VariableID:1"
-  }
+  "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection."
  },
  {
   "id": 1926,
@@ -2418,10 +2422,7 @@
   "page": "15 · Data and density",
   "width": 1472.0,
   "height": 60.0,
-  "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection.",
-  "boundVariables": {
-   "fill": "VariableID:1"
-  }
+  "description": "One record per row. Row selection tint is independent from keyboard focus. Responsive table may become labeled key-value cards; preserve sorting and selection."
  },
  {
   "id": 1943,
@@ -3998,7 +3999,7 @@
   "id": 6222,
   "name": "Avatar / centered initial",
   "type": "COMPONENT",
-  "page": "00 · Start here",
+  "page": "00 · Kozu UI",
   "width": 56.0,
   "height": 56.0,
   "description": "",
@@ -4743,7 +4744,7 @@
   "name": "Web / Nav / Scrolled",
   "type": "COMPONENT",
   "page": "41 · Web components",
-  "width": 449.0,
+  "width": 452.0,
   "height": 56.0,
   "description": "Condensed frosted capsule for after the first screen. surface/frostToolbar with 28 blur and a float shadow; never covers a headline.",
   "layout": {
@@ -5255,7 +5256,7 @@
   "type": "COMPONENT",
   "page": "41 · Web components",
   "width": 1360.0,
-  "height": 250.0,
+  "height": 206.0,
   "description": "Designed page close: one large line and a quiet legal row, on surface/subtle.",
   "layout": {
    "mode": "vertical",
@@ -5275,7 +5276,7 @@
   },
   "properties": {
    "Closing line": {
-    "default": "Have something in mind? Write to hello@example.com",
+    "default": "Email the studio at hello@example.com",
     "type": "text"
    },
    "Legal": {
@@ -5314,5 +5315,399 @@
   "width": 24.0,
   "height": 24.0,
   "description": "Lucide users from Aria Icons. 24 grid, 1.8 stroke bound to content/primary; vectors scale with the instance."
+ },
+ {
+  "id": 200112,
+  "name": "Activity / Indeterminate pulse",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 136.0,
+  "height": 48.0,
+  "description": "Unknown duration. Vary dot opacity in sequence. Show a steady three-dot sign when motion is reduced.",
+  "properties": {
+   "Label": {
+    "default": "Working",
+    "type": "text"
+   }
+  }
+ },
+ {
+  "id": 200125,
+  "name": "Percentage=60%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200151,
+  "name": "Percentage=100%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200176,
+  "name": "Activity / Listening control",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 288.0,
+  "height": 64.0,
+  "description": "Listening label, a sampled dot waveform, and a 48-unit Stop listening target. Stop capture before reviewing the transcript.",
+  "boundVariables": {
+   "effects/0/radius": "VariableID:29",
+   "fill": "VariableID:8"
+  },
+  "properties": {
+   "Label": {
+    "default": "Listening",
+    "type": "text"
+   }
+  }
+ },
+ {
+  "id": 200248,
+  "name": "Connections / Source discs",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 236.0,
+  "height": 48.0,
+  "description": "Two read-only source marks. Discs overlap by eight units; the 24-unit Lucide icons remain unobscured. Use a separate control to manage connections.",
+  "properties": {
+   "Sources": {
+    "default": "Mail and files",
+    "type": "text"
+   }
+  }
+ },
+ {
+  "id": 200627,
+  "name": "Activity / Pulse phases",
+  "type": "COMPONENT_SET",
+  "page": "46 · Activity and connections",
+  "width": 256.0,
+  "height": 48.0,
+  "description": ""
+ },
+ {
+  "id": 200628,
+  "name": "Phase=Rise",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 34.0,
+  "height": 32.0,
+  "description": "Three-dot progress signal."
+ },
+ {
+  "id": 200632,
+  "name": "Phase=Peak",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 34.0,
+  "height": 32.0,
+  "description": "Three-dot progress signal."
+ },
+ {
+  "id": 200636,
+  "name": "Phase=Fall",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 34.0,
+  "height": 32.0,
+  "description": "Three-dot progress signal."
+ },
+ {
+  "id": 200640,
+  "name": "Phase=Steady",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 34.0,
+  "height": 32.0,
+  "description": "Three-dot progress signal."
+ },
+ {
+  "id": 200649,
+  "name": "Activity / Determinate dots",
+  "type": "COMPONENT_SET",
+  "page": "46 · Activity and connections",
+  "width": 716.0,
+  "height": 272.0,
+  "description": ""
+ },
+ {
+  "id": 200698,
+  "name": "Percentage=0%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200722,
+  "name": "Percentage=10%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200746,
+  "name": "Percentage=20%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200770,
+  "name": "Percentage=30%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200794,
+  "name": "Percentage=40%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200818,
+  "name": "Percentage=50%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200842,
+  "name": "Percentage=70%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200866,
+  "name": "Percentage=80%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 200890,
+  "name": "Percentage=90%",
+  "type": "COMPONENT",
+  "page": "46 · Activity and connections",
+  "width": 216.0,
+  "height": 48.0,
+  "description": "Choose Percentage to update the ten dots and the numeric label together."
+ },
+ {
+  "id": 210013,
+  "name": "Finance / Six-month portfolio statement",
+  "type": "COMPONENT_SET",
+  "page": "47 · Financial typography",
+  "width": 1504.0,
+  "height": 584.0,
+  "description": ""
+ },
+ {
+  "id": 210014,
+  "name": "Typography=Inter",
+  "type": "COMPONENT",
+  "page": "47 · Financial typography",
+  "width": 480.0,
+  "height": 584.0,
+  "description": "Inter throughout",
+  "boundVariables": {
+   "cornerRadius": "VariableID:25",
+   "fill": "VariableID:2"
+  }
+ },
+ {
+  "id": 210034,
+  "name": "Typography=Serif figure",
+  "type": "COMPONENT",
+  "page": "47 · Financial typography",
+  "width": 480.0,
+  "height": 584.0,
+  "description": "Serif portfolio figure",
+  "boundVariables": {
+   "cornerRadius": "VariableID:25",
+   "fill": "VariableID:2"
+  }
+ },
+ {
+  "id": 210054,
+  "name": "Typography=Serif title",
+  "type": "COMPONENT",
+  "page": "47 · Financial typography",
+  "width": 480.0,
+  "height": 584.0,
+  "description": "Serif statement title",
+  "boundVariables": {
+   "cornerRadius": "VariableID:25",
+   "fill": "VariableID:2"
+  }
+ },
+ {
+  "id": 220038,
+  "name": "Workspace / Task signal / Sorting",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 17.47,
+  "height": 17.47,
+  "description": "Static activity signal. The adjacent verb identifies the task."
+ },
+ {
+  "id": 220049,
+  "name": "Workspace / Source / Gmail",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 25.41,
+  "height": 25.41,
+  "description": "Gmail mark. Google LLC. Aria Icons, logos:google-gmail-2020 from SVG Porn / Iconify. Service identification in a simulated workflow; trademarks belong to their owners."
+ },
+ {
+  "id": 220057,
+  "name": "Workspace / Task signal / Scheduling",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 17.47,
+  "height": 17.47,
+  "description": "Static activity signal. The adjacent verb identifies the task."
+ },
+ {
+  "id": 220064,
+  "name": "Workspace / Source / Zoom",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 25.41,
+  "height": 25.41,
+  "description": "Zoom mark. Zoom Communications, Inc.. Aria Icons, logos:zoom from SVG Porn / Iconify. Service identification in a simulated workflow; trademarks belong to their owners."
+ },
+ {
+  "id": 220067,
+  "name": "Workspace / Source / Calendar",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 25.41,
+  "height": 25.41,
+  "description": "Calendar mark. Google LLC. Aria Icons, logos:google-calendar-2020 from SVG Porn / Iconify. Service identification in a simulated workflow; trademarks belong to their owners."
+ },
+ {
+  "id": 220078,
+  "name": "Workspace / Task signal / Organizing",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 17.47,
+  "height": 17.47,
+  "description": "Static activity signal. The adjacent verb identifies the task."
+ },
+ {
+  "id": 220083,
+  "name": "Workspace / Source / Notion",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 25.41,
+  "height": 25.41,
+  "description": "Notion mark. Notion Labs, Inc.. Aria Icons, logos:notion-icon from SVG Porn / Iconify. Service identification in a simulated workflow; trademarks belong to their owners."
+ },
+ {
+  "id": 220095,
+  "name": "Workspace / Waveform / 1",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 79.41,
+  "height": 22.24,
+  "description": "Three sampled voice amplitude rows. Motion changes the illuminated dots."
+ },
+ {
+  "id": 220165,
+  "name": "Workspace / Agent glyph / Nova",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 39.71,
+  "height": 39.71,
+  "description": "Original Kozu vector glyph for the Nova sample role."
+ },
+ {
+  "id": 220179,
+  "name": "Workspace / Determinate progress / 74%",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 101.65,
+  "height": 15.88,
+  "description": "74 percent. Twenty dots, filled in column order; the final dot represents a fractional step."
+ },
+ {
+  "id": 220203,
+  "name": "Workspace / Agent glyph / Atlas",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 39.71,
+  "height": 39.71,
+  "description": "Original Kozu vector glyph for the Atlas sample role."
+ },
+ {
+  "id": 220215,
+  "name": "Workspace / Determinate progress / 41%",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 101.65,
+  "height": 15.88,
+  "description": "41 percent. Twenty dots, filled in column order; the final dot represents a fractional step."
+ },
+ {
+  "id": 220275,
+  "name": "Workspace / Agent glyph / Orion",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 39.71,
+  "height": 39.71,
+  "description": "Original Kozu vector glyph for the Orion sample role."
+ },
+ {
+  "id": 220286,
+  "name": "Workspace / Determinate progress / 22%",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 101.65,
+  "height": 15.88,
+  "description": "22 percent. Twenty dots, filled in column order; the final dot represents a fractional step."
+ },
+ {
+  "id": 220401,
+  "name": "Workspace / Waveform / 2",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 79.41,
+  "height": 22.24,
+  "description": "Three sampled voice amplitude rows. Motion changes the illuminated dots."
+ },
+ {
+  "id": 220438,
+  "name": "Workspace / Waveform / 3",
+  "type": "COMPONENT",
+  "page": "48 · Multi-agent workspace",
+  "width": 79.41,
+  "height": 22.24,
+  "description": "Three sampled voice amplitude rows. Motion changes the illuminated dots."
  }
 ]

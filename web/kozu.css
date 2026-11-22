@@ -1,4 +1,4 @@
-/* Kozu UI tokens · review 0.6 · generated from Kozu.tokens.json.
+/* Kozu UI tokens and web patterns · review 0.7 · based on Kozu.tokens.json.
    Families follow Tailwind CSS v4 lightness and chroma with Kozu hue offsets; roles are contrast-checked.
    Theme: follows the OS; data-theme="light" or "dark" on any element forces it for that subtree.
    Accent: data-accent="<family>" on any element (default cobalt). Needs light-dark() support (2024+ browsers). */
@@ -193,8 +193,11 @@
   --kz-graphite-900: #303238;
   --kz-graphite-950: #202126;
 
-  --kz-font-display: "Source Serif 4", ui-serif, Georgia, serif;
   --kz-font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --kz-font-display: var(--kz-font-sans);
+  --kz-font-serif: "Source Serif 4", "RR Serif", var(--kz-font-sans);
+  --kz-dot-pitch: 0.375rem;
+  --kz-dot-mask: radial-gradient(circle, #000 35%, transparent 45%);
   --kz-text-display: clamp(2.75rem, 1.6rem + 4.2vw, 4.75rem);
   --kz-text-heading: clamp(1.75rem, 0.8rem + 2.1vw, 2.375rem);
   --kz-text-title: 1.375rem;
@@ -556,4 +559,100 @@
     --kz-frost-toolbar: var(--kz-container);
     --kz-frost-overlay: var(--kz-container);
   }
+}
+
+@layer base {
+  :where(body, button, input, optgroup, select, textarea) { font-family: var(--kz-font-sans); }
+}
+
+.kz-editorial-heading, .kz-financial-number { font-family: var(--kz-font-serif); }
+.kz-financial-number { font-variant-numeric: lining-nums tabular-nums; }
+
+.kz-gradient-field {
+  color: var(--kz-ink);
+  background-color: var(--kz-container);
+  background-image: radial-gradient(ellipse at 12% 18%, var(--kz-accent-tint), var(--kz-container) 78%);
+}
+
+/* Decorative marks share one dot grid. Labels and native progress carry the state. */
+.kz-dots, .kz-listening > span {
+  display: inline-block;
+  background-color: currentColor;
+  mask: var(--kz-dot-mask) center / var(--kz-dot-pitch) var(--kz-dot-pitch) repeat;
+}
+.kz-dots {
+  inline-size: calc(3 * var(--kz-dot-pitch));
+  block-size: calc(3 * var(--kz-dot-pitch));
+  vertical-align: middle;
+}
+.kz-listening {
+  display: inline-flex;
+  align-items: center;
+  block-size: calc(5 * var(--kz-dot-pitch));
+  color: var(--kz-accent-text);
+  vertical-align: middle;
+}
+.kz-listening > span { inline-size: var(--kz-dot-pitch); block-size: var(--kz-dot-pitch); }
+.kz-listening > :nth-child(even) { block-size: calc(3 * var(--kz-dot-pitch)); }
+.kz-listening > :nth-child(3) { block-size: 100%; }
+
+@media (prefers-reduced-motion: no-preference) and (forced-colors: none) {
+  .kz-listening > span { animation: kz-listen 1.2s ease-in-out 3; }
+  .kz-listening > :nth-child(even) { animation-delay: 120ms; }
+  .kz-listening > :nth-child(3) { animation-delay: 240ms; }
+}
+@keyframes kz-listen { 50% { opacity: 0.55; } }
+
+/* Keep the platform's progress indicator in forced colors. */
+@media (forced-colors: none) {
+  progress.kz-progress[value] {
+    appearance: none;
+    inline-size: calc(16 * var(--kz-dot-pitch));
+    max-inline-size: 100%;
+    block-size: calc(2 * var(--kz-dot-pitch));
+    border: 0;
+    background: var(--kz-input);
+    mask: var(--kz-dot-mask) 0 0 / var(--kz-dot-pitch) var(--kz-dot-pitch) repeat;
+    vertical-align: middle;
+  }
+  .kz-progress[value]::-webkit-progress-bar { background: var(--kz-input); }
+  .kz-progress[value]::-webkit-progress-value { background: var(--kz-accent-text); }
+  .kz-progress[value]::-moz-progress-bar { background: var(--kz-accent-text); }
+}
+
+.kz-source-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-inline-size: 100%;
+  color: var(--kz-ink);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.kz-source-marks { display: inline-flex; flex: none; }
+.kz-source-marks > span {
+  display: grid;
+  place-items: center;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border-radius: 50%;
+  background: var(--kz-input);
+}
+.kz-source-marks > :first-child { background: var(--kz-accent-tint); color: var(--kz-accent-text); }
+.kz-source-marks > span + span { margin-inline-start: -0.5rem; }
+.kz-source-marks svg {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (forced-colors: active) {
+  .kz-gradient-field { background-image: none; }
+  .kz-dots, .kz-listening > span { forced-color-adjust: none; background-color: CanvasText; }
+  .kz-source-marks > span { forced-color-adjust: none; background: CanvasText; color: Canvas; }
+  .kz-source-marks > :first-child { background: Highlight; color: HighlightText; }
 }

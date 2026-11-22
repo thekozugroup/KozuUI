@@ -1,18 +1,16 @@
-# Kozu heading font
+# Kozu fonts
 
-`Kozu-SourceSerif4.ttf` provides the **RR Serif** family used by the editable Kozu kit. It is the existing renamed Source Serif 4 version 4.004 variable Roman font, copied unchanged from the authoring setup. The portable typography name remains Source Serif 4; the native file resolves its headings through RR Serif.
+Inter is the default for display, headings, body text, numbers and controls. The repository includes one optional font for financial numbers and editorial headings. Its portable name is **Source Serif 4**. The included version 4.004 variable Roman file uses the internal family name **RR Serif**.
 
 ## Setup after cloning
 
-1. Install `Kozu-SourceSerif4.ttf` with your operating system's font manager before opening the native kit. Skip duplicate installation if the same font is already available.
-2. Reopen FigCraft if it does not detect the font. Confirm that heading layers resolve to **RR Serif**, rather than a fallback. Keep the native family's existing styles and weights.
-3. Ensure **Inter** is available for body text and controls. This pack contains the heading font only; it does not bundle Inter.
-
-Cloning the repository does not register fonts with the operating system. A stock Source Serif 4 installation has a different family name and does not by itself resolve the kit's RR Serif references. Do not rename the bundled family or substitute native text styles to work around a missing installation.
+1. Make **Inter** available to FigCraft or your app. Obtain Inter separately. For the web, load a variable face or the weights your site uses.
+2. To view or author a serif example in FigCraft, install `Kozu-SourceSerif4.ttf` with your system font manager. Reopen FigCraft if needed and check that the example resolves to **RR Serif**. Stock Source Serif 4 registers under a different name.
+3. On the web, load the serif face only where you use the optional treatment. [Web setup and examples](../web/README.md#typography)
 
 ## Contents and license
 
-- `Kozu-SourceSerif4.ttf`: variable Roman heading font, with weight 200–900 (default 400) and optical size 8–60 (default 20).
+- `Kozu-SourceSerif4.ttf`: optional variable Roman font, with weight 200–900 (default 400) and optical size 8–60 (default 20).
 - `OFL-SourceSerif4.txt`: the complete, unchanged official Adobe license from the version 4.004 source tag.
 - `SourceSerif4.source.json`: embedded names, variable axes, source references, license evidence and SHA-256 hashes.
 
