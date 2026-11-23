@@ -64,6 +64,14 @@ def verify():
     assert len(nodes) == qa["counts"]["nodes"]
     assert link_count == qa["counts"]["prototypeActions"]
     assert {item["id"] for item in catalog} == {i for i,n in nodes.items() if n["type"] == "component"}
+    # These are adjacent text layers so the cents can use a different ink.
+    for dollars in (n for n in nodes.values() if n.get("characters") == "$117,450"):
+        siblings = nodes[dollars["parent"]]["children"]
+        cents = next(nodes[i] for i in siblings if nodes[i].get("characters") == ".17")
+        size = dollars["style"]["font_size"]
+        assert dollars["width"] >= 4.7 * size, f'Balance may wrap: {dollars["name"]}'
+        assert dollars["transform"][5] == cents["transform"][5]
+        assert dollars["transform"][4] + dollars["width"] == cents["transform"][4]
     for variable in variables.values():
         value = next(iter(variable["values"].values()))["value"]
         if variable["resolvedType"] == "color":

@@ -273,7 +273,8 @@
     "Chrome keyboard and pointer paths, local fonts and images, reduced motion, 320/390/768/1440 viewport widths, 200% text at 390",
     "Tailwind 4.3.3 PostCSS compilation of bg-kozu-panel, text-kozu-ink, font-kozu and backdrop-blur-kozu-overlay",
     "PDF contains 31 populated pages whose media boxes match the artboard inventory.",
-    "Tailwind CSS v4 compiled the panel, ink, font and overlay blur utilities."
+    "Tailwind CSS v4 compiled the panel, ink, font and overlay blur utilities.",
+    "Both the cover and Account home contain the complete $117,450.17 on one line in the rendered PDF."
   ],
   "visualReview": {
     "reviewers": [
