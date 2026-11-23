@@ -1,50 +1,40 @@
 # Kozu UI
 
-A project-agnostic UI kit for apps and websites: expressive shapes, frosted controls, near-white surfaces, one accent family per app, its own color system (the Kozu Spectrum) and native platform adaptations.
+An editable interface system built from three QClay references. Paylane uses blue grain and white sheets for finance. Synq uses directional blue light behind translucent workspaces. Nightshift uses a green halftone field behind a dark incident console. All three share control geometry, type roles, focus behavior and progress indicators.
 
-Open **[Kozu Universal UI Kit.figcraft](Kozu%20Universal%20UI%20Kit.figcraft)** in [FigCraft](https://github.com/storytold/figcraft). Review the [PDF](Kozu%20Universal%20UI%20Kit.pdf) or individual [previews](Previews).
+[Open the FigCraft kit](Kozu%20Universal%20UI%20Kit.figcraft) · [Review the 31-board PDF](Kozu%20Universal%20UI%20Kit.pdf) · [Open the interactive web prototype](web/index.html)
 
-Edition 0.7 includes 49 editable reference boards. They cover foundations, the Kozu Spectrum palette, component states, adaptive phone/tablet/desktop layouts, creative tools, Android and Apple widgets, TV, Wear OS and Apple Watch. The web boards cover foundations, components and four website examples. Page 46 covers activity and connected sources, page 47 shows financial typography, and page 48 shows a multi-agent workspace.
+![Kozu UI cover showing the three product materials](Previews/01%20Kozu%20UI.png)
 
-- On page 48, present **Review an agent** to open Nova, Atlas, or Orion and inspect its work. **Voice request** demonstrates the listening, review and submission states. [Multi-agent workspace preview](Previews/48%20Multi-agent%20workspace.png)
-- [Review guide](Review%20guide.txt): page map, review instructions and limitations.
-- [Tokens](Kozu.tokens.json): portable color, typography, material, geometry, web and platform rules.
-- [Web tokens](web): `kozu.css` (CSS custom properties, light/dark, `data-accent` families) and `kozu.tailwind.css` (Tailwind CSS v4 theme).
-- [Component inventory](Component%20inventory.json): native masters and exposed properties.
-- [Design standards](AGENTS.md): implementation requirements.
-- [QA evidence](Design%20QA.json): measured checks, critique and outstanding validation.
-- [Platform references](Platform%20references.json): primary documentation.
+## Explore the kit
 
-## Color: the Kozu Spectrum
+| FigCraft page | What to open |
+| --- | --- |
+| 01 · Kozu UI | Choose a product on the cover. |
+| 02 · Materials and typography | Compare the six background fields, glass, type and color treatments. |
+| 03 · Paylane | Explore Account home, Analytics, the weekly update, account actions and home-screen widgets. |
+| 04 · Synq | Stop a listening session, review a task, queue it and expand an agent. |
+| 05 · Nightshift | Follow checkout latency from the command prompt through investigation and recovery. |
+| 06 · Activity and progress | Inspect the listening animation, its reduced-motion state and the numeric progress grids. |
+| 07 · Component catalog | Find the reusable finance, agent, console and adaptive components. |
+| 08 · Platform adaptations | Inspect the TV console, watch and widget layouts, and wide desktop workspace. |
+| 09 · Icon library | Inspect the Lucide geometry and source symbols. |
 
-Twelve accent families (Cobalt, Azure, Lagoon, Jade, Fern, Citron, Saffron, Tangerine, Vermilion, Berry, Orchid and Iris), a Graphite neutral and four status ramps. Each family follows a Tailwind CSS v4 family's lightness and chroma step for step (Cobalt on blue, Lagoon on cyan, Berry on pink and so on), turned plus or minus 2 to 4 degrees to its own hue: the median OKLab distance to the matching Tailwind step is 0.007. Roles are measured per family: bright families fill at 500 with an ink label, deep families at 600 with a white label, and accent text uses each family's measured text step. Every supported pair is at least 4.5:1: labels on fills, accent text on canvas, container and tint, and dark text on dark surfaces. On the web, keyboard focus changes a control by at least 3:1. Page 39 shows the ramps, live accent modes, the measured roles and color-vision-checked sets.
+The native file contains 110 component masters and 42 variables. The [component inventory](Component%20inventory.json) names each master and its board. The [portable tokens](Kozu.tokens.json) define material, color, typography, spacing, interaction and feedback. The [web reference](web/README.md) includes plain CSS, Tailwind v4 mappings and local interactions.
 
-Unchecked checkboxes and radios use unmarked tonal fills. A rounded square identifies a checkbox and a circle identifies a radio. On selection, the accent tint carries a check or radio dot. A mixed checkbox carries a dash.
+The six background images and three fictional portraits are embedded in FigCraft and supplied separately in [Assets](Assets). Controls, charts, labels and progress marks remain editable. [Asset provenance](Assets/Source%20notes.json) · [Font setup](Fonts/README.md) · [Design references](Platform%20references.json)
 
-## Websites
+## Verification
 
-Pages 40 and 41 hold the web foundations (frame and grid, type, section grounds, states, motion) and the `Web / *` masters. Pages 42 to 45 show them in use: a studio portfolio, the Paperboy landing page, a print store with a frosted bag sheet, and documentation with a changelog article, each at 1440 and 390. To use the tokens on a site:
-
-```css
-@import "./kozu.css";            /* any stack */
-@import "./kozu.tailwind.css";   /* Tailwind CSS v4, after @import "tailwindcss" */
-```
-
-Set `data-accent="lagoon"` (or any family) on `<html>` or any section; `data-theme="dark"` or `"light"` forces a theme for that subtree. `kozu.tailwind.css` resets Tailwind's default colors so only Kozu values are available; remove its `--color-*: initial;` line while migrating an existing site.
-
-## Fonts and icons
-
-Inter is the default for all type, including display headings, controls and financial numbers. Source Serif 4 is optional for an individual financial number or editorial heading. FigCraft uses the bundled family name `RR Serif` for those examples. Page 48 uses Helvetica Neue for the task list, voice input and agent monitor. The family and spacing were matched to the supplied Synq images. The source pack does not identify its original typeface. The macOS menu clock uses SF Pro. [Font setup and license](Fonts/README.md)
-
-Icons come from [Aria Icons](https://icons.leularia.com/) using Lucide geometry. [Icon assets, licenses and source IDs](Icons)
-
-This is an editable design reference, not production app code. Native accessibility, remote focus, watch scrolling, text scaling, device blur and browser behavior need runtime validation.
-
-Regenerate the Spectrum (for example after changing a family's Tailwind base or hue offset) with `python3 tools/kozu_spectrum.py`, which prints the palette JSON using only the standard library.
-
-Geometry verification uses Python's standard library and an installed FigCraft CLI:
+From the checkout, run the two geometry checks and the system check. The browser check takes a disposable local directory for its temporary Chrome profile.
 
 ```sh
-python3 tools/verify_geometry.py --self-test
-python3 tools/verify_geometry.py --cli /path/to/figcraft-cli
+python3 -B tools/verify_geometry.py --self-test
+python3 -B tools/verify_geometry.py
+python3 -B tools/verify_system.py
+node web/check.mjs /path/to/task-scratch
 ```
+
+The [QA record](Design%20QA.json) lists the exported artboards, counts, review findings and test scope. Payments, listening, agent work and incident recovery use sample data. Check native accessibility, host sizing, remote or rotary input and glass performance in the shipping app.
+
+Edition 1.0 replaces the previous component IDs and palette. Existing consumers can retrieve the 0.7 kit and its review history from [the previous edition](https://github.com/thekozugroup/KozuUI/tree/058cfd5acc777748e5b04c94c436ab1c96f4ebf0).

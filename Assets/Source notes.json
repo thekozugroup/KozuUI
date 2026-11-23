@@ -1,6 +1,28 @@
 {
-  "file": "Creative landscape.png",
-  "method": "Built-in image_gen tool",
-  "prompt": "Use case: stylized-concept. Asset type: original artwork shown inside a tablet sketching app canvas, not a UI mockup. Create a polished expressive gouache illustration of a dramatic coastal mountain landscape with a winding turquoise inlet, cream sandy shore, rich indigo mountains, terracotta wildflowers and sage foliage in the foreground. Hand-painted brush texture and confident editorial composition. Landscape 3:2 framing, no text, no logos, no border, no interface. Keep distinct paint strokes and a strong focal point. High quality art suitable for demonstrating a professional creative application.",
-  "usage": "Embedded canvas artwork and illustrative preview content. The surrounding app UI remains native and editable."
+  "materials": {
+    "origin": "Six original static fields synthesized from color, directional light, grain and square halftone. Each is embedded in the editable design file and available separately.",
+    "assets": {
+      "blue": "Assets/Materials/blue.jpg",
+      "story": "Assets/Materials/story.jpg",
+      "smoke": "Assets/Materials/smoke.jpg",
+      "agents": "Assets/Materials/agents.jpg",
+      "acid": "Assets/Materials/acid.jpg",
+      "night": "Assets/Materials/night.jpg"
+    }
+  },
+  "people": {
+    "origin": "Three fictional portraits generated for this edition and cropped from one original studio contact sheet.",
+    "assets": [
+      "Assets/People/alex.jpg",
+      "Assets/People/oliver.jpg",
+      "Assets/People/james.jpg"
+    ]
+  },
+  "icons": {
+    "source": "Aria Icons / Lucide",
+    "license": "Icons/LICENSE.txt"
+  },
+  "fonts": {
+    "Inter": "RSMS Inter, official InterVariable.woff2 from commit 353b61b9f4430d5f420d56605a6e7993e0941470. See Fonts/OFL-Inter.txt."
+  }
 }

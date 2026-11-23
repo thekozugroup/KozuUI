@@ -1,241 +1,293 @@
 {
- "edition": "0.7-review",
- "date": "2026-11-21",
- "projectAgnostic": true,
- "boards": 49,
- "nativeNodes": 11448,
- "componentMasters": 319,
- "componentSets": 12,
- "instances": 503,
- "variables": 155,
- "mastersWithProperties": 103,
- "autoLayoutMasters": 108,
- "changes": [
-  "Inter is the default for display, headings, body, controls and balances. Page 47 compares three settings using identical statement data.",
-  "The surface audit covered the 46 base pages. Section spacing, tonal control fills and accent fields were revised on 40 pages.",
-  "Page 46 adds four linked activity patterns, a dictation prototype, timed and steady pulse variants and numeric progress variants. Pages 16 and 26 reuse these masters.",
-  "Page 48 reproduces the three views of a multi-agent workspace with original blue light artwork, editable dot matrices, service icons and a native agent-detail prototype.",
-  "Tablet icon rails and labeled sidebars float 16 units inside the leading edge, centered within the usable window.",
-  "The workspace and tablet materials use editable accent-bound gradients over glass surfaces. The Synq study uses measured Helvetica Neue type roles across its board and prototypes."
- ],
- "palette": {
-  "base": "Tailwind CSS v4 lightness and chroma per step, with Kozu hue offsets",
-  "closenessToTailwind": {
-   "medianDeltaE": 0.0072,
-   "maxDeltaE": 0.0336,
-   "note": "OKLab distance from each step to the same step of its Tailwind v4 family"
+  "edition": "1.0",
+  "date": "2026-11-22",
+  "counts": {
+    "pages": 9,
+    "artboards": 31,
+    "nodes": 4649,
+    "masters": 110,
+    "componentSets": 1,
+    "instances": 297,
+    "variableBindings": 2144,
+    "variables": 42,
+    "typeStyles": 9,
+    "prototypeActions": 130,
+    "backgroundBlurs": 94,
+    "gradientPaints": 11,
+    "embeddedImages": 9
   },
-  "rolePairsAllAtLeast4.5": true,
-  "focusChangeMinimum": {
-   "lightPrimary": 3.25,
-   "note": "dark focus pairs measure 4.9:1 or more"
-  },
-  "cvdSets": {
-   "perTab4": {
-    "families": [
-     "Cobalt",
-     "Tangerine",
-     "Saffron",
-     "Berry"
-    ],
-    "minDeltaE": 0.08
-   },
-   "perTab5": {
-    "families": [
-     "Cobalt",
-     "Tangerine",
-     "Saffron",
-     "Jade",
-     "Orchid"
-    ],
-    "minDeltaE": 0.054
-   },
-   "chart6": {
-    "families": [
-     "Tangerine",
-     "Saffron",
-     "Lagoon",
-     "Cobalt",
-     "Orchid",
-     "Berry"
-    ],
-    "minDeltaE": 0.053
-   },
-   "note": "Smallest OKLab difference across the light fill and text roles, under normal vision and Machado 2009 protan, deutan and tritan simulation."
-  },
-  "history": "An earlier 0.6 draft used an equal-contrast ladder with hues placed between Tailwind and Apple hues (independently audited: 132/132 contrast pairs passed). The owner then asked for the Spectrum to sit closer to Tailwind, which produced the current version."
- },
- "automatedChecks": {
-  "geometryGuardSelfTest": "passed",
-  "geometryGuard": "passed on the complete native file",
-  "nativeHierarchy": "All nodes reached exactly once. Parent, component, source, interaction target, image and variable references resolve.",
-  "nativeVariables": "Portable snapshot matches the current FigCraft variable.export output.",
-  "fonts": {
-   "Inter": 3155,
-   "Liberation Mono": 10,
-   "RR Serif": 2,
-   "Helvetica Neue": 196,
-   "SF Pro": 8
-  },
-  "baseTextFit": {
-   "textLayers": 2992,
-   "inputBoards": 46,
-   "measuredBy": "FigCraft text.refit on each original text layer after the typography pass"
-  },
-  "nativeFinanceVariants": 3,
-  "unchangedReviewComments": 14,
-  "webComponentChecks": [
-   "Tailwind CSS 4.3.3 compilation",
-   "Chrome font loading, progress values, reduced motion, forced colors and 200% text",
-   "Text contrast on CSS accent gradients exceeds 8:1 across 12 families in light and dark"
-  ],
-  "pdfPages": 49,
-  "nativeProgressVariants": "All eleven percentages, from 0% to 100%, switch the dot count and label together across six tested instances.",
-  "webSourceMarks": "Chrome verified 8-unit overlap in LTR and RTL at 100% and 200% text, a single accessible name and at least 4.57:1 glyph contrast in the tested appearances.",
-  "workspaceFlows": [
-   "Multi-agent workspace",
-   "Review an agent",
-   "Voice request",
-   "Voice request · reduced motion"
-  ],
-  "workspaceBoardTranscriptMinimumContrast": [
-   5.39,
-   6.07,
-   9.76
-  ],
-  "workspaceProgressPercentages": [
-   74,
-   41,
-   22
-  ],
-  "workspacePrototypeTransitions": 28,
-  "portfolioPreviewPlacementsRefreshed": 10,
-  "pdfExports": "All 49 page sizes match the PNGs. All pages have selectable text. All rendered PDF pages were compared with the corresponding native PNG.",
-  "tabletNavigation": {
-   "usableWindowCenter": "checked at 600, 776, 840 and 1504 units, including 64-unit window chrome",
-   "leadingInset": 16,
-   "itemGap": 8,
-   "innerPadding": 8,
-   "reusableMasters": [
-    6376,
-    229113
-   ]
-  },
-  "workspaceBoardText": {
-   "measuredLayers": 37,
-   "minimumContrast": 4.63,
-   "method": "Compare authored foreground with the native backing at rendered glyph pixels in the three-panel board."
-  },
-  "workspaceFontFit": {
-   "reference": "QClay Synq",
-   "referenceFamilyIdentification": "inferred from raster letterforms",
-   "testedFamilies": 11,
-   "glyphComparison": [
-    "Scheduling",
-    "Listening",
-    "Nova"
-   ],
-   "meanGlyphMaskOverlap": {
-    "Helvetica Neue Medium": 0.916,
-    "SF Pro Medium": 0.883,
-    "Roboto Medium": 0.871,
-    "Inter Medium": 0.793
-   },
-   "distinctTextBoxes": 87,
-   "prototypeFrames": 15
-  }
- },
- "reviews": [
-  {
-   "area": "Existing surfaces, typography and financial comparisons",
-   "result": "193 original layers revised in the surface pass. A native text-fit pass repaired existing missing line clearance on studio, watch and widget labels. Financial variants reconcile to $86,420 and keep small labels sans serif."
-  },
-  {
-   "area": "Independent editorial and interaction review",
-   "finding": "Editing measurable progress could desynchronize dots and label. One saved dictation instruction lost “by owner”. The feedback board mixed known and unknown durations and the portfolio still showed prior-edition thumbnails.",
-   "resolution": "Use linked percentage variants, preserve the reviewed transcript, pair each progress example with its own label, and refresh the portfolio thumbnails from current native frames."
-  },
-  {
-   "area": "Multi-agent workspace compared with all three supplied Synq crops",
-   "finding": "The first transcript had low contrast over the light streak. The Notion mark lost its inner letter, and glass tints obscured the backdrop.",
-   "resolution": "Added a feathered transcript scrim, restored the vector letter and adjusted the glass tints at the illuminated edges. The task-list crop, three-row waveform and expanded Atlas panel follow the reference."
-  }
- ],
- "limits": [
-  "Native prototypes use illustrative data. Real microphone input, scheduling and agent execution belong to an implementation.",
-  "Production screen readers, text scaling on native devices, focus return, presenter timing and GPU blur performance need platform validation.",
-  "Static examples use representative widget bounds. Device hosts choose final sizes.",
-  "Chrome checks cover the portable examples. Safari, Firefox and assistive-technology testing remain outstanding."
- ],
- "previousEdition": {
-  "edition": "0.6-review",
-  "boards": 46,
-  "componentMasters": 277,
-  "variables": 147,
-  "automatedChecks": {
-   "geometryGuardSelfTest": "passed",
-   "geometryGuard": "passed on the 46-board document (no concentricity, centering or border-state issues)",
-   "websiteTextContrast": {
-    "textLayersMeasured": 447,
-    "failures": 0,
-    "minimum": 4.64,
-    "method": "each text layer against its composited backdrop, WCAG 2 thresholds, all website frames"
-   },
-   "remainingTailwindV3HexInPaints": 0
-  },
-  "changes": [
-   "Kozu Spectrum: twelve accent families on Tailwind CSS v4 lightness and chroma with 2 to 4 degree Kozu hue offsets; Graphite neutral; status ramps on Tailwind green, amber, red and sky. Accent modes renamed (Blue to Cobalt and so on) with mode IDs kept; Vermilion, Citron, Lagoon and Orchid added.",
-   "Every hard-coded Tailwind and slate color across the 39 earlier boards, components, gradients, shadows and platform variables moved to Spectrum or Graphite values; no Tailwind v3 hex remains in fills or strokes.",
-   "Borders removed where they were decorative: device and window outlines (now neutral layered shadows), swatch outlines (tonal well), fader outlines (knob shadow), footer and wearable header rules. Kept: icon strokes, unchecked checkbox and radio outlines, pro-tool dividers.",
-   "App theme overrides card removed from Foundations at the owner's request; replaced by a live Kozu Spectrum card.",
-   "New pages 39 to 45: Kozu Spectrum, Web foundations, Web components (13 web masters, 31 icon masters), Portfolio, Landing page (Paperboy), Ecommerce, Docs and articles.",
-   "web/kozu.css, web/kozu.tailwind.css and web/README.md for websites."
-  ],
-  "reviews": [
-   {
-    "agent": "palette audit (independent model)",
-    "verdict": "not approved on the first draft: CVD collapses, near-Tailwind roles, warning/danger tie",
-    "resolution": "hue optimization, CVD-checked sets, warning lightness split; later superseded by the Tailwind-aligned version"
-   },
-   {
-    "agent": "web mockup critique",
-    "scores": {
-     "portfolio": 6.0,
-     "landing": 6.5
+  "artboards": [
+    {
+      "id": 2,
+      "title": "Kozu UI",
+      "page": "01 · Kozu UI",
+      "width": 1280,
+      "height": 810,
+      "preview": "01 Kozu UI.png"
     },
-    "verdict": "not ready: cropped TV tile, stretched buttons packed left, three-line phone headline",
-    "resolution": "portfolio and landing rebuilt: one tile ratio on a tonal ground with whole works visible, distinct works, quiet nav action, aligned 12-column grid, centered and end-slot button content, two-line headlines, real blocked-sender row, no-wrap code, correct icons"
-   },
-   {
-    "agent": "token and CSS audit",
-    "verdict": "first pass not ready (reduced transparency lost in dark, dark focus under 3:1); re-audit of v2: CSS scoping, Tailwind syntax and 187/187 hex parity clean, 298 contrast pairs checked",
-    "resolution": "light-dark() scoping with an @supports light fallback, theme-aware focus tokens (light minimum 3.25:1, dark 4.92:1), @theme inline, contrast-safe link role, heading clamp set to half the display from 768 up, supported-pair wording narrowed, Tailwind leftovers replaced. Native app focus keeps platform focus plus tone and lift; the 3:1 claim is scoped to the web."
-   }
+    {
+      "id": 135,
+      "title": "Materials and typography",
+      "page": "02 · Materials and typography",
+      "width": 1280,
+      "height": 844,
+      "preview": "02 Materials and typography.png"
+    },
+    {
+      "id": 189,
+      "title": "Finance / Account home",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "03 Finance — Account home.png"
+    },
+    {
+      "id": 191,
+      "title": "Finance / Analytics",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "04 Finance — Analytics.png"
+    },
+    {
+      "id": 193,
+      "title": "Finance / Weekly update",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "05 Finance — Weekly update.png"
+    },
+    {
+      "id": 195,
+      "title": "Finance / Home-screen widgets",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "06 Finance — Home-screen widgets.png"
+    },
+    {
+      "id": 197,
+      "title": "Finance / Analytics · Week",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "07 Finance — Analytics · Week.png"
+    },
+    {
+      "id": 199,
+      "title": "Finance / Account menu",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "08 Finance — Account menu.png"
+    },
+    {
+      "id": 201,
+      "title": "Finance / Send money",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "09 Finance — Send money.png"
+    },
+    {
+      "id": 203,
+      "title": "Finance / Request money",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "10 Finance — Request money.png"
+    },
+    {
+      "id": 205,
+      "title": "Finance / Analytics · Day",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "11 Finance — Analytics · Day.png"
+    },
+    {
+      "id": 207,
+      "title": "Finance / Analytics · Year",
+      "page": "03 · Paylane",
+      "width": 390,
+      "height": 844,
+      "preview": "12 Finance — Analytics · Year.png"
+    },
+    {
+      "id": 1417,
+      "title": "Synq / Listening",
+      "page": "04 · Synq",
+      "width": 540,
+      "height": 675,
+      "preview": "13 Synq — Listening.png"
+    },
+    {
+      "id": 1419,
+      "title": "Synq / Active Flow",
+      "page": "04 · Synq",
+      "width": 540,
+      "height": 675,
+      "preview": "14 Synq — Active Flow.png"
+    },
+    {
+      "id": 1421,
+      "title": "Synq / New task",
+      "page": "04 · Synq",
+      "width": 540,
+      "height": 675,
+      "preview": "15 Synq — New task.png"
+    },
+    {
+      "id": 1423,
+      "title": "Synq / Review task",
+      "page": "04 · Synq",
+      "width": 540,
+      "height": 675,
+      "preview": "16 Synq — Review task.png"
+    },
+    {
+      "id": 1425,
+      "title": "Synq / Active Flow · Collapsed",
+      "page": "04 · Synq",
+      "width": 540,
+      "height": 675,
+      "preview": "17 Synq — Active Flow · Collapsed.png"
+    },
+    {
+      "id": 1427,
+      "title": "Synq / Meeting briefings · Queued",
+      "page": "04 · Synq",
+      "width": 540,
+      "height": 675,
+      "preview": "18 Synq — Meeting briefings · Queued.png"
+    },
+    {
+      "id": 1429,
+      "title": "Synq / Queued task · Agent details",
+      "page": "04 · Synq",
+      "width": 540,
+      "height": 675,
+      "preview": "19 Synq — Queued task · Agent details.png"
+    },
+    {
+      "id": 2269,
+      "title": "Nightshift / Command",
+      "page": "05 · Nightshift",
+      "width": 540,
+      "height": 675,
+      "preview": "20 Nightshift — Command.png"
+    },
+    {
+      "id": 2271,
+      "title": "Nightshift / Investigating",
+      "page": "05 · Nightshift",
+      "width": 540,
+      "height": 675,
+      "preview": "21 Nightshift — Investigating.png"
+    },
+    {
+      "id": 2273,
+      "title": "Nightshift / Resolved incident",
+      "page": "05 · Nightshift",
+      "width": 540,
+      "height": 675,
+      "preview": "22 Nightshift — Resolved incident.png"
+    },
+    {
+      "id": 2550,
+      "title": "Activity and progress",
+      "page": "06 · Activity and progress",
+      "width": 1120,
+      "height": 824,
+      "preview": "23 Activity and progress.png"
+    },
+    {
+      "id": 2824,
+      "title": "Components / Paylane",
+      "page": "07 · Component catalog",
+      "width": 1440,
+      "height": 882,
+      "preview": "24 Components — Paylane.png"
+    },
+    {
+      "id": 2826,
+      "title": "Components / Synq",
+      "page": "07 · Component catalog",
+      "width": 1440,
+      "height": 882,
+      "preview": "25 Components — Synq.png"
+    },
+    {
+      "id": 2828,
+      "title": "Components / Nightshift",
+      "page": "07 · Component catalog",
+      "width": 1440,
+      "height": 882,
+      "preview": "26 Components — Nightshift.png"
+    },
+    {
+      "id": 2830,
+      "title": "Components / Adaptive examples",
+      "page": "07 · Component catalog",
+      "width": 1440,
+      "height": 882,
+      "preview": "27 Components — Adaptive examples.png"
+    },
+    {
+      "id": 3897,
+      "title": "Platforms / Nightshift TV",
+      "page": "08 · Platform adaptations",
+      "width": 1440,
+      "height": 810,
+      "preview": "28 Platforms — Nightshift TV.png"
+    },
+    {
+      "id": 3899,
+      "title": "Platforms / Wearables and small widgets",
+      "page": "08 · Platform adaptations",
+      "width": 1280,
+      "height": 612,
+      "preview": "29 Platforms — Wearables and small widgets.png"
+    },
+    {
+      "id": 3901,
+      "title": "Platforms / Synq wide workspace",
+      "page": "08 · Platform adaptations",
+      "width": 1600,
+      "height": 948,
+      "preview": "30 Platforms — Synq wide workspace.png"
+    },
+    {
+      "id": 4326,
+      "title": "Icon library",
+      "page": "09 · Icon library",
+      "width": 1248,
+      "height": 1030,
+      "preview": "31 Icon library.png"
+    }
   ],
-  "previousEdition": {
-   "edition": "0.5-review",
-   "boards": 39,
-   "componentMasters": 210,
-   "variables": 140,
-   "dynamicNativeColorChecks": {
-    "passed": 144,
-    "themes": [
-     "Light",
-     "Dark"
+  "checks": [
+    "FigCraft native reopen, PDF and PNG render of every artboard",
+    "Component, prototype, per-variable native and web values, image hashes, and complete tree integrity",
+    "Geometry guardrail self-test and native verification",
+    "Chrome keyboard and pointer paths, local fonts and images, reduced motion, 320/390/768/1440 viewport widths, 200% text at 390",
+    "Tailwind 4.3.3 PostCSS compilation of bg-kozu-panel, text-kozu-ink, font-kozu and backdrop-blur-kozu-overlay",
+    "PDF contains 31 populated pages whose media boxes match the artboard inventory.",
+    "Tailwind CSS v4 compiled the panel, ink, font and overlay blur utilities."
+  ],
+  "visualReview": {
+    "reviewers": [
+      "GPT-6.2 Sol screen and material implementation",
+      "Google Gemini 4 Hydrogen source and render comparisons",
+      "Lead visual and structural review"
     ],
-    "accentFamilies": 8,
-    "policies": [
-     "Shared accent",
-     "Per tab"
-    ],
-    "iconAndDerivedTintMatch": true,
-    "minSelectedLabelContrastOnDefinedCanvas": 4.65,
-    "savedTestEdits": false
-   },
-   "primaryLabelContrast": {
-    "pairsPassed": 16,
-    "minimumOnDefinedCanvas": 5.48
-   }
-  }
- }
+    "revisions": [
+      "Paylane sheet lowered to source position, two-tone balance, isolated portrait rows, single analytics sheet with 30 needles and a selected amount, gradient Pay action and story back/Start controls",
+      "Synq right-side light preserved in agent glass, three levels of transcript emphasis, vector Atlas spark and presentation source glyph",
+      "Nightshift incident window matched to 456 × 497 within a 540 × 675 board with six time-stamped events, recovery histogram and command strip",
+      "Synq glass carries the blue edge light into the listening control and agent workspace.",
+      "Nightshift restores both agent and model labels, keeps the run action within the visible composer and darkens the lower console."
+    ]
+  },
+  "scope": "Editable design reference and local web prototype. Financial values, voice input, agent activity and incident recovery are demonstrations. Wear, TV, widget hosts, assistive technology and device blur performance require implementation testing."
 }

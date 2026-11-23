@@ -1,144 +1,19 @@
-Kozu Universal UI Kit — review edition 0.7
-November 21, 2026
+Kozu UI 1.0 review guide
 
-OPEN AND COMMENT
-Open Kozu Universal UI Kit.figcraft in FigCraft. Choose a page in the left sidebar. Press C or choose Comment, then pin feedback to a component or screen. Fourteen existing review comments identify decisions for discussion. The native document is the editable source. The PDF and PNG previews are reference exports.
+Open Kozu Universal UI Kit.figcraft in FigCraft to inspect and edit the layers. Open Kozu Universal UI Kit.pdf to review all 31 boards in order. Previews contains a PNG of each board.
 
-This project-agnostic foundation contains 49 boards, 319 component masters (including 12 variant sets), 503 linked instances and 155 variables. 103 masters expose component properties and 108 use auto layout. Dense creative examples include illustrative compositions alongside reusable controls.
+Start on page 01 and select a product. Use FigCraft presentation mode to follow the prototype actions. In the browser, open web/index.html from disk and choose a product in the top navigation.
 
-DEFAULTS
-Typography uses Inter for display, headings, body, labels, controls and financial numbers. A financial number or editorial heading may use Source Serif 4. Its FigCraft family name is RR Serif. Keep supporting labels and units in Inter. See Fonts/README.md for setup.
-Icons: Aria Icons, https://icons.leularia.com/. Use one coherent Lucide line collection by default. Icons contains the SVG assets, source IDs and upstream license. Preserve semantic icon strokes and checkmarks when removing outer state borders. Aria is a catalog; check the selected collection's license when adding icons.
-Materials: circular top actions, icon-only floating toolbars and selected surfaces use frosted backing with sampled background blur. Default control blur is 28 logical units; menu/overlay blur is 40. Increase backing opacity or use a solid fallback over busy content and for reduced transparency. Content panels remain stable reading surfaces.
-Geometry: innerRadius = max(0, outerRadius - inset). Keep nested circles concentric. Use symmetric container padding and centered icon targets. Derive each inner radius from its actual inset.
-Centering: in text buttons, match the paired icon's optical height (actual visible ink) to the label's cap height at its font, size and weight. The icon frame, font size and line height are not the matching measurement. Center icon and label vertically; balance leading and trailing slots to keep the label centered within the whole button. Keep the icon-only default at a 24-unit icon in a 48-unit target and retain larger platform hit areas. Center icons within chips, navigation targets and toolbar cells, with only explicit optical corrections for asymmetric glyphs.
-Paired icon geometry: measure button-local coordinates from the top-left. Leading visible-ink center = (buttonHeight / 2, buttonHeight / 2); trailing visible-ink center = (buttonWidth - buttonHeight / 2, buttonHeight / 2). Each matches the rounded endcap center, as if an invisible circle of diameter buttonHeight occupied that end. Position the visible ink, not just its frame. Keep the whole label centered at (buttonWidth / 2, buttonHeight / 2), with balanced end slots and icon ink sized to label cap height. The circle is a placement guide; draw no extra circle or border. This rule also applies to TV text buttons; retain the large hit areas.
-States: no outer state, focus, selected or pressed borders anywhere. Keyboard and TV remote focus use native tone, lift or scale; selection retains its own tint/checkmarks and selected semantics. Press uses tone/fill. Reduced motion uses static tone and text weight, with no animated zoom, scale or parallax. Keep focus visible independently from selection.
-For edition 0.7, check the empty control silhouette against its actual surface. An unchecked checkbox is an unmarked tonal rounded square. An unchecked radio is an unmarked tonal circle. Both are borderless. Enabled shapes need at least 3:1 contrast with the adjacent surface. Selected and mixed states use an accent tint with a check, radio dot or mixed dash. Keep those marks distinct from keyboard focus.
+Paylane
+Open Account home, then Analytics. Compare the white sheet, selected date, two-tone balance and Pay and Request controls. Review Weekly update and Home-screen widgets alongside the phone views.
 
-COLOR CONFIGURATION
-Use Kozu / navigation policy to choose Shared accent or Per tab. Shared accent resolves every destination to the app accent. Per tab resolves each destination to its configured color. Set Kozu / accent theme to one of the twelve Kozu Spectrum families (Cobalt, Azure, Lagoon, Jade, Fern, Citron, Saffron, Tangerine, Vermilion, Berry, Orchid or Iris), then set destination scopes as needed. Review 0.6 renamed the earlier modes (Blue to Cobalt, Violet to Iris, Orange to Tangerine, Teal to Jade, Rose to Berry, Amber to Saffron, Sky to Azure, Emerald to Fern) and kept their mode IDs, so existing bindings follow.
-The selected icon and tinted background resolve from the same accent. Light selections mix 16% accent with light backing; dark selections mix 32% accent with neutral dark backing. Accent text and icons use each family's measured text step on light surfaces and its dark text step on dark. Change foreground and selected background together. Page 19 compares both policies; page 24 defines color roles and states.
-The palette is the Kozu Spectrum. Each family follows one Tailwind CSS v4 family's lightness and chroma step for step and is turned plus or minus 2 to 4 degrees to its own hue (median OKLab distance 0.007 to the matching Tailwind step). Roles are measured per family: Tangerine, Saffron, Citron, Fern, Jade and Lagoon fill at 500 with ink labels; Cobalt, Azure, Vermilion, Berry, Orchid and Iris fill at 600 with white labels; accent text uses each family's measured text step. Semantic roles remain separate from decorative accents: Success, Warning, Danger and Info follow Tailwind green, amber, red and sky. Status messages also include a label, icon or shape. Page 39 shows every ramp, the live modes, the measured roles and the color-vision-checked sets.
-Kozu.tokens.json includes readable roles, resolved pairs, geometry rules, platform guidance and the exact native variable export. Component inventory.json records master IDs and exposed properties.
+Synq
+Start on Listening. Stop the sample, review and queue the task, then inspect the expanded agent. Compare the light passing through the agent panel with the darker transcript area. Page 06 shows the animated and steady listening states side by side with numeric progress.
 
-LIGHT AND DARK VISIBILITY
-Page 25 includes examples and rules for both modes. Use semantic foreground/background pairs. Target WCAG contrast of 4.5:1 for normal text, 3:1 for large text and essential control graphics. Disabled states must remain understandable, although inactive controls have different contrast requirements.
-Test frosted controls over the lightest, darkest and busiest expected backdrops. Increase backing opacity before increasing blur. Provide a solid reduced-transparency fallback. Do not depend on shadows alone for separation in dark mode. Show focus, selection, validation and disabled behavior independently.
+Nightshift
+Open Command, Investigating and Resolved incident in sequence. Follow the same incident through its timestamps, histogram, closure and report command.
 
-PAGE CATALOG
-00 Kozu UI — overview and generic app-family examples.
-01 Foundations — typography, spacing, shapes, color roles and the Kozu Spectrum at a glance.
-02 Frosted materials — light/dark controls, menus and fallback surfaces.
-03 Actions and states — buttons, hover, press, focus and disabled.
-04 Navigation and toolbars — circular top actions, floating icon bars, tabs and filters.
-05 Inputs and selection — fields, search, selection and progress.
-06 Content and feedback — rows, cards, banners, dialogs and sheets.
-07 Adaptive layouts — compact and expanded application shells.
-08 Tablet and Googlebook — rail, touch and keyboard guidance.
-09 Desktop and dark — Linux/macOS window and pointer conventions.
-10 Theme examples and dark — app-family examples in dark mode.
-11 Accessibility and motion — targets, contrast, focus, text and motion.
-12 Review and implementation — customization and implementation checklist.
-13 Reusable composition — properties, linked instances and wrapping states.
-14 Extended forms — radio, mixed checkbox, combobox, full calendar, textarea and password.
-15 Data and density — tables, sorting, pagination and pointer density.
-16 Overlays and async states — command menu, recovery, undo, loading and tooltips.
-17 Same task across sizes — selected record on phone, tablet and laptop.
-18 Boundary behavior — 600/840-unit boundaries and dual-pane minimums.
-19 Navigation color policies — shared accent versus per-destination colors.
-20 Concentric geometry — radius, inset, focus and alignment rules.
-21 Sketching on a tablet — artwork canvas, brushes, layers and frosted tools.
-22 Vector illustration workspace — editable poster, layers and properties.
-23 More app patterns — notes/documents and analytics examples.
-24 Color roles and states — accent families, semantics and selected colors.
-25 Visibility in light and dark — contrast, material backing and state distinctions.
-26 Core components sheet — consolidated linked component instances.
-27 Music creation studio — arrangement, piano roll, mixer and transport.
-28 Video editing studio — preview, timeline, clips and inspector.
-29 Android widget sizes — representative grid footprints and resizing.
-30 Android widget content — media, calendar, activity and utility examples.
-31 Apple widget families — iOS/iPadOS/macOS families and host guidance.
-32 TV components — remote focus, actions, search, media and playback controls.
-33 TV Media home — large-screen browsing and focused content selection.
-34 Wear OS round faces — circular faces, complications and reusable parts.
-35 Wear OS app tiles — lists, media, summaries and round-screen safe areas.
-36 Apple Watch — conceptual faces, complications and application controls.
-37 Native Wear OS edge and scroll — bezel-following controls, three scroll positions, native text-motion contract and a simulated motion flow.
-38 Accent and material defaults — one accent per app, near-white canvas, airy states and platform material capabilities.
-39 Kozu Spectrum — twelve families on Tailwind's curves with Kozu hues, live accent modes, measured roles and color-vision-checked sets.
-40 Web foundations — frame and grid, web type, section grounds instead of borders, states and motion.
-41 Web components — icons, buttons, navigation, forms, cards, callouts, code, cart and page close masters.
-42 Website · Portfolio — a studio portfolio at 1440 and 390 (Experience mode).
-43 Website · Landing page — Paperboy, a public Kozu project, at 1440 and 390 (Persuade mode).
-44 Website · Ecommerce — collection, product page, bag sheet and phone product page with editable product photography.
-45 Website · Docs and articles — a documentation page and a changelog article (Read mode).
-46 Activity and connections — a single accent gradient field, dot indicators, progress, listening states and overlapping service marks with one visible source label.
-47 Financial typography — compare Inter throughout with Source Serif 4 on either the balance or the statement heading.
-48 Multi-agent workspace — task activity, voice input and an agent monitor based on the supplied QClay Synq reference. Choose Nova, Atlas or Orion to inspect its work. The backdrop art is original, and the dot grids, source marks and controls are editable native layers. Prototype flows: Multi-agent workspace, Review an agent, Voice request, Voice request · reduced motion. Page 48 uses Helvetica Neue for the task list, voice input and agent monitor. The family and spacing were matched to the supplied Synq images. The source pack does not identify its original typeface. The macOS menu clock uses SF Pro.
+Components and platforms
+Use page 07 for the masters and page 08 for TV, watch, widget and wide desktop examples. Inspect icon source shapes on page 09.
 
-On page 46, present “Dictate a task instruction” to record, review and add an example instruction.
-
-ADAPTIVE RULES
-Below 600: compact navigation and one primary content pane.
-600–719: rail plus one content pane; details replace the master list when necessary.
-720–839: rail plus master/detail only if a 240-unit master and a detail pane of at least 280 units both fit.
-840+: sidebar; add panes only when each minimum width fits. The overview inspector begins at 1100.
-Preserve selected records, drafts and scroll position across layout changes. Keep workspace navigation separate from record actions. Respect native window controls, safe areas, IME behavior and platform shortcuts.
-
-WIDGET AND WEARABLE SIZING
-Android is the primary widget reference. The illustrated grid uses an 82dp cell and 16dp gap: 2x2 = 180x180, 4x1 = 376x82, 4x2 = 376x180, 4x4 = 376x376. These are representative canvases; launcher-provided bounds and resize ranges are authoritative. Home-screen widgets cannot reproduce application backdrop blur on every host.
-Apple examples use standard widget families, with representative device rows documented on page 31. Dimensions vary by device, OS and host. Use WidgetKit family bounds and system margins instead of hardcoding preview dimensions.
-Wear OS round canvases and Apple Watch canvases are logical design references, not physical device pixel specifications. Validate round-screen safe regions. Apple Watch faces are concepts: deliver supported app views and complication families; this kit does not imply unrestricted third-party system watch-face installation.
-TV uses a tvOS-inspired centered top navigation row and full-bleed image cards. The 1440×810 preview uses 300×168.75 cards (16:9); the focused card is 318×178.875 (1.06×). The image reaches every card edge, with no inset thumbnail or separate opaque text panel. A bottom-up dark scrim is transparent through 25% of card height, reaches 82% black at 60%, and 94% at the bottom. Place titles and metadata below 60% and check at least 4.5:1 contrast against the actual composited image; strengthen the scrim or use an opaque fallback when needed. The contrast threshold is an acceptance requirement, not a claim that all imagery has passed.
-TV text-button labels use Inter at 22 logical units, like the top category labels. Match the paired icon's actual ink height to the label's cap height and center both vertically. Balance icon slots to keep the label centered within the whole button; keep the large hit area.
-TV focus uses native tone/lift/scale while persistent selection retains tint/check. Reduced motion uses static tone and text weight, with no animated zoom. Check directional movement, focus return, Back behavior, viewing-distance legibility and safe regions on target hardware. The 72-unit preview side inset maps to 96 pt at 1920 width, exceeding Apple's 80 pt side guidance. Verify top/bottom safe areas separately; native framework safe areas and focus geometry are authoritative. The centered navigation, card sizes and scrim stops are Kozu choices, not mandatory Apple dimensions. Official Apple references are recorded in Platform references.json.
-
-REUSE AND REVIEW
-Create instances from native masters. Change exposed Label, Value, Error, Title and Supporting text properties where available. Set semantic modes and accent/navigation policies before duplicating components. Page 26 is the main component review sheet; pages 21–23 and 27–36 demonstrate composition across app types and platforms.
-Review hierarchy and task flow first, then visibility, active colors, concentricity, centering, density, overflow and interaction states. Pin comments to the specific component or screen and describe the trigger and desired result.
-AGENTS.md records defaults for future work. After native edits, run:
-python3 tools/verify_geometry.py --self-test
-python3 tools/verify_geometry.py
-The guard requires the installed FigCraft CLI. Use its results as scoped static geometry evidence for curved insets, toolbar padding and icon/button centering; they do not prove runtime focus or accessibility behavior.
-
-QA AND LIMITS
-Recorded static review results, not rerun for this documentation update: two independent critique agents reviewed the work, with subjective grades of 9.0/10 for foundations and targeted examples and 9.2/10 for corrected TV/watch visuals. Those targeted reviews reported no blocking issues. Recorded automated inspection reported no text overflow, legacy project names or geometry/centering failures, and 144 native shared/per-tab icon/tint checks across both modes and all eight app accents. Recorded selected-label contrast was at least 4.65:1 on the defined canvas; 16 primary-label pairs were at least 5.48:1. Design QA.json records counts and limitations. These earlier results do not certify the current revision, runtime behavior or contrast over arbitrary imagery.
-This is a static editable design kit. Screen-reader behavior, 200% text scaling, remote/rotary navigation, native widget behavior, blur performance and hardware rendering require implementation and platform testing.
-Platform references.json links primary palette, icon, widget, TV and wearable references. Assets contains the original creative artwork used by the mockups and its source note.
-
-LOCAL SETUP
-Canonical GitHub repository: https://github.com/thekozugroup/KozuUI. Use the local checkout at /Users/michaelwong/Developer/KozuUI (~/Developer/KozuUI). The user has authorized work on main.
-FigCraft CLI 0.15.1 is registered as the figcraft MCP server, with the command:
-/Users/michaelwong/Developer/Tools/figcraft/figcraft-cli-0.15.1-macos-universal/figcraft-cli mcp
-The reusable CLI folder occupies about 194.3 MiB. It remains installed for future authoring. Aria MCP is registered at https://icons.leularia.com/api/mcp.
-Portable font setup. Make Inter available separately for the default kit. Install Fonts/Kozu-SourceSerif4.ttf to review the optional serif treatments in FigCraft under the family name RR Serif. Fonts/OFL-SourceSerif4.txt contains the version-matched Adobe OFL-1.1 license. Fonts/SourceSerif4.source.json records names, source references, variable axes and hashes.
-Earlier research and a preserved review file remain separately at /Users/michaelwong/Developer/Tools/figcraft/Research archive. They are outside this project-agnostic kit.
-The 19-page review copy and the subsequent 39-page edition are earlier versions. Page 37 includes the “Wear OS / Scroll and text motion” prototype. Present it, drag or press Down/Up, and press R to reset.
-
-EARLIER CLEANUP RECORD
-The earlier authoring pass recorded removal of its task-owned scratch, authoring scripts, intermediate native files, logs and orchestration runs. The Codex-managed MCP server and FigCraft app remained available. That pass recorded no VM, emulator or container creation. This documentation update performs no resource deletion.
-
-HISTORY — EDITION 0.4 DEFAULTS
-Light canvas: #FCFCFC. White containers sit above the near-white base. Shared accent is the default per app; cards, chips, actions, avatars and selection marks inherit that family. Per-tab palettes are opt-in. Neutralize a card or derive its tint from the local action when deliberately using another accent. Unrelated decorative accent fills should not touch. Status colors and meaningful data categories retain their explicit roles.
-Float the tablet rail 16 units inside the leading safe edge and center it vertically in the usable window. The 72-unit frosted capsule has 8-unit padding, 56-unit circular targets and 8-unit gaps. At expanded tablet widths, use the same placement for 48-unit labeled rows. Center each 24-unit icon within its target. Avatars expose Initial and center Inter text in a 56-unit circle. Geometry checks cover rail targets, initials, chips and whole-button labels.
-Frost backing is reduced by 10 percentage points: controls about 58% light/65% dark, toolbars 62%/70%, overlays 84%. The heavy 28/40-unit blur remains. Pale checkbox/radio/mixed fills use clear accent marks rather than opaque saturated state blocks. Blue and orange foreground tones are stronger to retain label contrast.
-Wear OS uses ScreenScaffold, TransformingLazyColumn, SurfaceTransformation and native EdgeButton geometry. Rows and their text transform together. Edge-button text follows native reveal height; add no delayed custom text fade or separate scroll entrance delay. FadingExpandingLabel is for changing multiline content, not scroll reveal. Respect LocalReduceMotion; reduced-motion focus uses static tone and text weight without animated zoom. Keep native typography and native device/font-scale previews. The FigCraft transition is a simulation; it does not prove native continuous-scroll behavior.
-Wear OS and Android home widgets exclude portable backdrop blur by default and use native tonal surfaces. Apple widgets use host-provided Liquid Glass only where supported by the chosen appearance and rendering mode; retain full-color and accessibility fallbacks. Tiles do not scroll.
-The latest critique addressed mixed navigation/actions, duplicate creative tools, chart units/values, a conflicting music playhead, watch-label alignment and a missing error icon. New guidance is on pages 37–38. Dynamic imagery still needs implementation-specific contrast and performance checks. No static kit can prove all runtime metrics.
-
-SOURCE AND REVIEW COPIES
-The GitHub checkout at ~/Developer/KozuUI is the canonical development source on main. The Documents folder is the review export. Update the review export from main; avoid editing both copies concurrently.
-
-FINAL CLEANUP AND REVIEW WINDOW
-Completed the proportional review/refinement run and removed its owned scratch root: /private/tmp/ai-development/kozu-review-refinement-1793999344164009000-44041-0 (6,098,944 allocated bytes before removal; this is not a free-space reclamation claim). All six review agents are closed. No task-owned VM, emulator, container or background service remains.
-Retained intentionally: FigCraft MCP CLI at /Users/michaelwong/Developer/Tools/figcraft/figcraft-cli-0.15.1-macos-universal (199,008 KiB allocated) for ongoing authoring; font /Users/michaelwong/Library/Fonts/Kozu-SourceSerif4.ttf (264 KiB allocated); preserved user review archive /Users/michaelwong/Developer/Tools/figcraft/Research archive (344 KiB allocated). The persistent Codex-managed MCP and FigCraft app are kept for review.
-At the time of that review, the window showed 39 pages and 140 variables. Final window input returned noWindowsAvailable, so the repository copy could not be reopened automatically. Open ~/Developer/KozuUI/Kozu Universal UI Kit.figcraft to review the latest source.
-
-HISTORY — EDITION 0.6 COLOR, WEB AND FEWER LINES
-Kozu Spectrum: twelve accent families on Tailwind CSS v4 lightness and chroma with plus or minus 2 to 4 degree Kozu hue offsets (median OKLab distance 0.007 to the matching Tailwind step), the Graphite neutral and Tailwind-based status ramps. Roles are measured per family; every supported role pair is at least 4.5:1 and web focus changes a control by at least 3:1 in both themes. Native app focus keeps the platform focus treatment plus tone and lift. Accent modes were renamed with their IDs kept (Blue to Cobalt, Violet to Iris, Orange to Tangerine, Teal to Jade, Rose to Berry, Amber to Saffron, Sky to Azure, Emerald to Fern) and Vermilion, Citron, Lagoon and Orchid were added. Hard-coded Tailwind and slate colors on every earlier board, component, gradient, shadow and platform variable now use Spectrum or Graphite values.
-Edition 0.6 replaced device and window outlines with neutral layered shadows, swatch outlines with a tonal well and fader outlines with a knob shadow. It removed footer and wearable header rules and retained outlined unchecked checkboxes and radios. Edition 0.7 replaced those outlines with tonal filled shapes. Both editions retain semantic icon and data strokes and dense pro-tool dividers. The geometry guard still recognizes legacy unchecked outlines.
-Foundations: the App theme overrides card was removed at the owner's request and replaced by a live Kozu Spectrum card; Token architecture now reads Spectrum, primitive, semantic, component.
-Web: page 40 (frame and grid, type, section grounds, states, motion), page 41 (13 Web / * masters and 31 icon masters), and four sites at 1440 and 390 on pages 42 to 45. web/kozu.css, web/kozu.tailwind.css and web/README.md carry the tokens to real sites.
-QA: three independent review agents (palette, web mockups, tokens and CSS) found blockers that were fixed and re-checked; the geometry guard passes; 447 website text layers measured with no contrast failures. Design QA.json records the evidence. Static boards still cannot prove browser focus, zoom or motion.
-Authoring: this edition was built through FigCraft's MCP server (figcraft-cli 0.15.1 mcp) driven from a task-local bridge; no FigCraft settings or app state were changed.
+When leaving feedback, include the page, artboard and component or action. For layout or interaction issues, note the viewport or platform and the state that exposed the problem. The web prototype runs sample interactions locally. Native watch, TV and widget behavior needs testing on the target host.
