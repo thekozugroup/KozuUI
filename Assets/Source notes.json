@@ -1,6 +1,6 @@
 {
   "materials": {
-    "origin": "Six original static fields synthesized from color, directional light, grain and square halftone. Each is embedded in the editable design file and available separately.",
+    "origin": "Original Kozu materials generated procedurally. All six use a dark navy base, a rising diagonal of blue and jade light, subtle grain and a fine halftone.",
     "assets": {
       "blue": "Assets/Materials/blue.jpg",
       "story": "Assets/Materials/story.jpg",
@@ -8,6 +8,14 @@
       "agents": "Assets/Materials/agents.jpg",
       "acid": "Assets/Materials/acid.jpg",
       "night": "Assets/Materials/night.jpg"
+    },
+    "descriptions": {
+      "blue": "Broad light through the center and right",
+      "story": "Upper light fading to navy below",
+      "smoke": "Narrow diagonal along the right edge",
+      "agents": "Upper-right light beside a dark workspace",
+      "acid": "Jade across the upper field",
+      "night": "Low light with a soft blue edge"
     }
   },
   "people": {

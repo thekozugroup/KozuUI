@@ -1,37 +1,41 @@
-# Kozu web reference
+# Kozu web workspace
 
-Open [index.html](index.html) in a browser. The page runs directly from disk using HTML, CSS and JavaScript. Keep `web/` next to the checkout’s `Assets/` and `Fonts/` directories. The core experience uses local assets and requires no build, account or network.
+Open [the workspace](index.html) or [the design guide](guide.html) in a browser. Keep `web/` next to `Assets/` and `Fonts/`. The workspace uses local sample data and resets on reload.
 
-- **Paylane** has a blue grain masthead and a continuous paper sheet. Use the dock to switch between Home, Analytics and the weekly update. Expand the ledger to see older transactions and switch Analytics between week and month. Pay and Request open local previews.
-- **Synq** uses Helvetica Neue and a blue smoke field. Expand an agent to pause, resume or advance its progress. Enter a task to queue it. Listen previews a 3×9 dot matrix and supplies a sample transcription when stopped with an empty composer.
-- **Nightshift** uses an acid-green pixel field and a dark timestamped terminal. Switch environments, scrub the replay with the range control and open the incident report.
+- **Accounts** includes balances, transactions, spending analytics and the weekly update. Pay and Request open previews. The spending view shows week or month totals and labels the final needle with its exact value.
+- **Tasks** includes the composer and the Inbox, Flow and Scout agents. Expand an agent to pause, resume or advance it. Start and stop the listening preview to see the waveform and get a sample transcription.
+- **Activity** includes the incident timeline, environment picker, replay control and report. Move the replay control to show a specific step in the incident.
 
-The sample date is Sunday, November 22, 2026. The Paylane balance is **$117,450.17**. Spending totals come from the sample ledger. All actions use in-page sample data and reset on reload.
+## Shared materials and type
 
-## Keyboard and motion
+The workspace uses blue-to-jade textured fields, white reading surfaces and layered navy panels. In Accounts, compare the translucent account chip on the textured header with the opaque transaction sheet. In Tasks, compare the glass agent list with the white composer.
 
-Use Tab to move through controls, Left and Right to switch tabs, and Home and End to jump to the first or last tab. Enter or Space opens an agent, Escape closes a payment preview, and the replay range supports arrow keys. Focus uses a tonal fill or a text underline. System reduced motion keeps the Listening dots steady. Controls use 28px backdrop blur where frosted, and the demo dialog backdrop uses 40px.
+[The palette](palette.css) defines Orange, Green, Blue, Gold, Violet and Rose, and the neutral Graphite ramp. It supplies shared `--kz-*` interaction and status roles. Blue is used for action and information, orange for attention, and green for recovery. Gold, Violet and Rose are available for comparative series. The palette also defines focus colors for each context.
 
-## CSS
+[The stylesheet](kozu.css) imports the palette. Choose `data-theme="light"` for white surfaces or `data-theme="dark" data-surface="navy"` for the workspace's navy surfaces. The semantic `--kozu-*` aliases supply the local action, control, focus and status colors. For Tailwind CSS v4 projects, import [kozu.tailwind.css](kozu.tailwind.css) after Tailwind.
 
-Link [kozu.css](kozu.css) for plain CSS. Set `data-surface="paylane"`, `"synq"` or `"nightshift"` on the root or a themed region. Use the semantic custom properties for canvas, panel, ink, muted text, accent, control and focus. Paylane and Nightshift use bundled Inter with a system sans fallback. See the [Inter license](../Fonts/OFL-Inter.txt). Synq prefers Helvetica Neue.
+Inter is used for body text, controls and financial values. Helvetica Neue is used for compact display and voice headings and falls back to Inter and system sans. Telemetry values use Menlo with a system monospace fallback. The bundled Inter and Lucide symbols retain their licenses. [Inter license](../Fonts/OFL-Inter.txt) · [Lucide license](../Icons/LICENSE.txt)
 
-For a project already using Tailwind CSS v4, import [kozu.tailwind.css](kozu.tailwind.css) after Tailwind. It includes the plain CSS and exposes utilities such as `bg-kozu-panel`, `text-kozu-ink`, `font-kozu`, `rounded-kozu` and `backdrop-blur-kozu-overlay`. Theme values resolve at the component from the closest surface.
+## Accessibility
 
-| Role | Paylane | Synq | Nightshift |
-| --- | --- | --- | --- |
-| Canvas | `#F7F7F7` | `#090F19` | `#020908` |
-| Panel | `#FFFFFF` | `#1B2634` | `#17231A` |
-| Ink | `#090B14` | `#F5F7FC` | `#F1F5F1` |
-| Muted | `#575A64` | `#BAC6DA` | `#ACBCB5` |
-| Accent | `#345A98` | `#D4E6FF` | `#BFDF38` |
-| Accent ink | `#FFFFFF` | `#152239` | `#1A240D` |
-| Focus | `#172F58` | `#E5EFFF` | `#EFFFD0` |
+Tab moves through controls. Left and Right move between tabs, Up and Down also work in the tablet rail, and Home and End jump to the first or last tab. Escape closes the transfer preview and restores focus. Mobile controls have at least 48 CSS pixels of target area. The workspace reflows for larger text and respects viewport safe areas. [Apple Human Interface Guidelines on accessibility](https://developer.apple.com/design/human-interface-guidelines/accessibility)
 
-Paylane's balance uses `#090B14` with `#646B70` cents. Synq uses `#101A2AC2` for frost. Nightshift uses `#041916CD` for frost. The main control target is 48 CSS pixels.
+Glass uses 42% light or 34% dark fill for controls, 52% light or 44% dark fill for cards and toolbars, and 70% light or 60% dark fill for overlays. Controls, cards and toolbars use 28px backdrop blur. Overlays use 40px. Reduced transparency uses opaque fills. Reduced motion keeps the listening matrix steady.
 
-Blue, story, smoke, agents, acid and night are the shared local material images. Paylane uses three generated portraits from `Assets/People/`. The layout, text, charts and controls are editable HTML and CSS. Lucide symbols derive from the adjacent [icon sources and license](../Icons/LICENSE.txt).
+## Dot grids
 
-## Browser regression checks
+Load [dot-grid.js](dot-grid.js) with `defer` alongside `kozu.css`. Give the grid a width-constrained container. Leave the grid element empty and provide the accessible name, exact completion value or listening state separately.
 
-Run `node web/check.mjs /path/to/task-scratch` with Node.js 22+ and Chrome. Set `CHROME` to the browser binary on hosts where Chrome uses a different installation path. The test opens the actual `file:` entry, checks keyboard and pointer-driven interactions, and verifies layouts at 320px, 390px, 768px and 1440px, including 200% text at 390px. Add `--capture` to write desktop and mobile screenshots to the supplied scratch directory. The test deletes its temporary Chrome profile on exit.
+```html
+<div data-dot-grid="progress" data-dot-value="65" aria-hidden="true"></div>
+<span>65%</span>
+```
+
+- Use `data-dot-grid="progress"` for two rows, `"listening"` for three and `"waveform"` for seven.
+- Dots are 4 CSS pixels in diameter at an 8 CSS pixel pitch on both axes. The helper uses `max(0, 1 + floor((width - 4) / 8))` columns and centers the grid on the available content width. An intrinsically sized container reserves one 4 CSS pixel column. A specified width below 4 CSS pixels fits zero columns.
+- Update `element.dataset.dotValue` with the exact percentage. Progress lights `floor(totalVisibleDots × percent / 100)` dots, from the leading column to the trailing column, top cell then bottom cell. At 0% the entire grid stays muted. At 100% every fitted dot is lit. Keep the independently displayed percentage in sync.
+- Grids resize automatically and initialize when inserted. Listening and waveform animate dot opacity when motion is allowed. Both retain their complete geometry and static pattern with reduced motion. Set `--kozu-dot-active` and `--kozu-dot-muted` to customize dot paint.
+
+## Browser regression
+
+Run `node web/check.mjs /path/to/task-scratch` with Node.js 22+ and Chrome. Use `CHROME` to override the Chrome binary path. Add `--capture` for screenshots, including the same Tasks workspace with glass and with opaque fills. The test loads the local entry, measures contrast against the brightest and darkest rendered pixels in glass samples, checks keyboard and pointer interactions and dot geometry, and verifies adaptive layouts at 320px, 390px, 600px, 768px and 1440px. It also checks 200% text at compact and tablet widths. The temporary Chrome profile is removed on exit.

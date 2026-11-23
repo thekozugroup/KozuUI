@@ -1,19 +1,25 @@
-Kozu UI 1.0 review guide
+Kozu UI review guide
 
-Open Kozu Universal UI Kit.figcraft in FigCraft to inspect and edit the layers. Open Kozu Universal UI Kit.pdf to review all 31 boards in order. Previews contains a PNG of each board.
+Open Kozu Universal UI Kit.figcraft to inspect and edit the kit in FigCraft. Open Kozu Universal UI Kit.pdf to review the boards in order. The Previews folder contains a PNG for each board.
 
-Start on page 01 and select a product. Use FigCraft presentation mode to follow the prototype actions. In the browser, open web/index.html from disk and choose a product in the top navigation.
+Start on the cover. Select the account, task or service-health card in the workspace overview, or use the library links. Use FigCraft presentation mode to try the sample interactions. To review the browser prototype, open web/index.html and choose a destination in the navigation.
 
-Paylane
-Open Account home, then Analytics. Compare the white sheet, selected date, two-tone balance and Pay and Request controls. Review Weekly update and Home-screen widgets alongside the phone views.
+Accounts
+Start with 03 Accounts — Account home. Open Analytics and switch time ranges. Try Pay and Request. Check the balance baseline and number alignment. Compare the weekly update and home-screen widgets with the phone layouts.
 
-Synq
-Start on Listening. Stop the sample, review and queue the task, then inspect the expanded agent. Compare the light passing through the agent panel with the darker transcript area. Page 06 shows the animated and steady listening states side by side with numeric progress.
+Tasks
+Start with 13 Tasks — Listening. Stop listening, review and queue a sample task, then expand the agent details. Page 06 shows the listening animation, its steady reduced-motion state and determinate progress with an exact percentage. Compare dot matrices at different widths. Look for whole columns, equal left and right margins, and even spacing in both directions. In progress samples, count all visible dots, including trailing dim dots. Verify that progress fills each column top then bottom from the leading edge and that 0% is fully dim and 100% fully lit.
 
-Nightshift
-Open Command, Investigating and Resolved incident in sequence. Follow the same incident through its timestamps, histogram, closure and report command.
+Activity
+Follow Command, Investigating and 22 Activity — Resolved incident. Check the order of the command, evidence and outcome. Review event times, the histogram and the report action. Check that each status is clear from its label and glyph.
+
+Design handbook
+Start with docs/foundations.md for tokens, geometry and the frost versus opaque comparison. Use docs/platforms.md for host adaptations and release checks, docs/patterns.md for workflows and states, and docs/components.md for component specifications. Open web/guide.html to try the interactive specimens.
 
 Components and platforms
-Use page 07 for the masters and page 08 for TV, watch, widget and wide desktop examples. Inspect icon source shapes on page 09.
+Page 07 contains reusable components. Page 08 covers TV, watch, widget and wide desktop layouts. Page 09 shows the icon library. Component specimen pages follow it.
 
-When leaving feedback, include the page, artboard and component or action. For layout or interaction issues, note the viewport or platform and the state that exposed the problem. The web prototype runs sample interactions locally. Native watch, TV and widget behavior needs testing on the target host.
+Include the page, board, control and state in review feedback. For layout or interaction issues, add the viewport or device and the input method. Verify accessibility, text scaling and native input on the target host.
+
+PDF review points
+Page 23 shows the task progress rows with equal side insets. Page 30 shows the wide listening input. Page 36 compares light and dark frost against solid fills. Pages 45–46 show the responsive waveform and its Reduce Motion state.

@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Kozu Group design system. Browse foundations and try accessible components offline.">
+  <title>Design system · Kozu Group</title>
+  <link rel="stylesheet" href="kozu.css">
+  <link rel="stylesheet" href="palette.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="guide.css">
+  <script src="dot-grid.js" defer></script>
+  <script src="guide.js" defer></script>
+</head>
+<body class="guide-page">
+  <!-- Icons from the bundled Lucide library. License in ../Icons/LICENSE.txt. -->
+  <svg class="kozu-symbols" aria-hidden="true">
+    <symbol id="guide-icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="guide-icon-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="guide-icon-bell" viewBox="0 0 24 24"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></symbol>
+    <symbol id="guide-icon-bookmark" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></symbol>
+    <symbol id="guide-icon-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="guide-icon-circle-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></symbol>
+    <symbol id="guide-icon-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="guide-icon-ellipsis" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></symbol>
+    <symbol id="guide-icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+    <symbol id="guide-icon-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+    <symbol id="guide-icon-layout-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></symbol>
+    <symbol id="guide-icon-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></symbol>
+    <symbol id="guide-icon-mouse-pointer-2" viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></symbol>
+    <symbol id="guide-icon-notebook" viewBox="0 0 24 24"><path d="M2 6h4"/><path d="M2 10h4"/><path d="M2 14h4"/><path d="M2 18h4"/><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M16 2v20"/></symbol>
+    <symbol id="guide-icon-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="guide-icon-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></symbol>
+    <symbol id="guide-icon-settings" viewBox="0 0 24 24"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="guide-icon-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></symbol>
+    <symbol id="guide-icon-square-dashed" viewBox="0 0 24 24"><path d="M5 3a2 2 0 0 0-2 2"/><path d="M19 3a2 2 0 0 1 2 2"/><path d="M21 19a2 2 0 0 1-2 2"/><path d="M5 21a2 2 0 0 1-2-2"/><path d="M9 3h1"/><path d="M9 21h1"/><path d="M14 3h1"/><path d="M14 21h1"/><path d="M3 9v1"/><path d="M21 9v1"/><path d="M3 14v1"/><path d="M21 14v1"/></symbol>
+    <symbol id="guide-icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="guide-icon-trash-2" viewBox="0 0 24 24"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+    <symbol id="guide-icon-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  </svg>
+  <a class="guide-skip" href="#overview">Skip to content</a>
+  <header class="guide-top">
+    <div class="guide-top-inner">
+      <a class="guide-brand" href="#overview"><span class="kozu-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Kozu Group</span></a>
+      <div class="guide-tools">
+        <button type="button" class="guide-search-trigger" data-guide-search aria-haspopup="dialog" aria-label="Search guide"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-search"></use></svg><span>Search guide</span><kbd aria-hidden="true">/</kbd></button>
+        <a class="guide-demo-link" href="index.html">Product demos <svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-up-right"></use></svg></a>
+        <button type="button" class="guide-appearance" data-appearance aria-label="Switch appearance"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-sun"></use></svg><span>Paper</span></button>
+      </div>
+    </div>
+  </header>
+  <div class="guide-shell">
+    <aside class="guide-sidebar">
+      <nav aria-label="Guide">
+        <a class="guide-home-link" href="#overview" data-guide-nav aria-current="location"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-notebook"></use></svg> Overview</a>
+        <p>Library</p>
+        <ul role="list"><li><a href="#foundations" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layers"></use></svg><span>Foundations</span></a></li><li><a href="#actions" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-mouse-pointer-2"></use></svg><span>Actions</span></a></li><li><a href="#inputs" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-sliders-horizontal"></use></svg><span>Inputs</span></a></li><li><a href="#navigation" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layout-grid"></use></svg><span>Navigation</span></a></li><li><a href="#content" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-notebook"></use></svg><span>Content</span></a></li><li><a href="#overlays" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-square-dashed"></use></svg><span>Overlays</span></a></li><li><a href="#feedback" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-bell"></use></svg><span>Feedback</span></a></li></ul>
+        <p>Resources</p>
+        <ul class="guide-resource-links" role="list">
+          <li><a href="../Kozu.tokens.json">Design tokens <svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-up-right"></use></svg></a></li>
+          <li><a href="../Kozu%20Universal%20UI%20Kit.figcraft">Editable UI kit <svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-up-right"></use></svg></a></li>
+          <li><a href="../docs/components.md">Component reference <svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-up-right"></use></svg></a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="overview" tabindex="-1">
+      <details class="kozu-accordion guide-mobile-nav">
+        <summary>Browse guide</summary>
+        <nav aria-label="Guide sections"><ul role="list"><li><a href="#foundations" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layers"></use></svg><span>Foundations</span></a></li><li><a href="#actions" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-mouse-pointer-2"></use></svg><span>Actions</span></a></li><li><a href="#inputs" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-sliders-horizontal"></use></svg><span>Inputs</span></a></li><li><a href="#navigation" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layout-grid"></use></svg><span>Navigation</span></a></li><li><a href="#content" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-notebook"></use></svg><span>Content</span></a></li><li><a href="#overlays" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-square-dashed"></use></svg><span>Overlays</span></a></li><li><a href="#feedback" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-bell"></use></svg><span>Feedback</span></a></li></ul></nav>
+      </details>
+      <section class="guide-hero" aria-labelledby="guide-title" data-theme="dark">
+        <div class="guide-hero-copy">
+          <h1 id="guide-title" class="kozu-display">Kozu design<br>system</h1>
+          <p>Foundations, components, and patterns for clear, accessible product experiences.</p>
+          <div class="kozu-row"><a class="guide-hero-action" href="#library">Browse components <svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-right"></use></svg></a></div>
+        </div>
+        <div class="guide-hero-art" aria-hidden="true">
+          <div class="guide-art-frame"></div>
+          <div class="guide-art-card kozu-material" data-frost="card">
+            <span class="guide-art-title"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layers"></use></svg> Workspace</span>
+            <span class="guide-art-value kozu-numeral">14<span> / 20</span></span>
+            <div data-dot-grid="progress" data-dot-value="70" aria-hidden="true"></div>
+            <span class="guide-art-caption">Tasks complete</span>
+          </div>
+          <div class="guide-art-listen kozu-material" data-frost="control">
+            <span>Listening</span><div data-dot-grid="waveform" aria-hidden="true"></div><span class="guide-art-stop">Stop</span>
+          </div>
+          <div class="guide-art-status"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-check"></use></svg> Synced</div>
+        </div>
+      </section>
+      <section class="guide-start" aria-labelledby="start-title">
+        <h2 id="start-title">Start here</h2>
+        <div class="guide-start-grid">
+        <a class="guide-start-card" href="../docs/foundations.md"><span class="guide-start-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layers"></use></svg></span><span><strong>Foundations</strong><small>Roles, type, shape, and materials.</small></span><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-up-right"></use></svg></a><a class="guide-start-card" href="../docs/platforms.md"><span class="guide-start-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layout-grid"></use></svg></span><span><strong>Platforms</strong><small>Adaptive layout and native behavior.</small></span><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-up-right"></use></svg></a><a class="guide-start-card" href="../docs/patterns.md"><span class="guide-start-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-sliders-horizontal"></use></svg></span><span><strong>Patterns</strong><small>Flows and component combinations.</small></span><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-up-right"></use></svg></a><a class="guide-start-card" href="../docs/components.md"><span class="guide-start-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-notebook"></use></svg></span><span><strong>Component reference</strong><small>Detailed guidance and HTML examples.</small></span><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-up-right"></use></svg></a>
+        </div>
+      </section>
+      <section class="guide-library" id="library" tabindex="-1" aria-labelledby="library-title">
+        <div class="guide-library-intro"><div><h2 id="library-title">Component library</h2><p>Try the live specimens, then open usage and code for anatomy, states, and accessibility.</p></div></div>
+        <nav aria-label="Component families"><ul class="guide-family-jump" role="list"><li><a href="#foundations" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layers"></use></svg><span>Foundations</span></a></li><li><a href="#actions" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-mouse-pointer-2"></use></svg><span>Actions</span></a></li><li><a href="#inputs" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-sliders-horizontal"></use></svg><span>Inputs</span></a></li><li><a href="#navigation" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layout-grid"></use></svg><span>Navigation</span></a></li><li><a href="#content" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-notebook"></use></svg><span>Content</span></a></li><li><a href="#overlays" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-square-dashed"></use></svg><span>Overlays</span></a></li><li><a href="#feedback" data-guide-nav><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-bell"></use></svg><span>Feedback</span></a></li></ul></nav>
+      </section>
+  <section class="guide-group" id="foundations" tabindex="-1" aria-labelledby="foundations-title">
+    <div class="guide-group-head">
+      <span class="guide-family-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layers"></use></svg></span>
+      <div><h2 id="foundations-title">Foundations</h2><p>Surface roles, type, spacing, icons, and materials.</p></div>
+    </div>
+    <div class="guide-entries">
+      <article class="guide-entry guide-entry-wide" id="color-and-surfaces" aria-labelledby="color-and-surfaces-title" tabindex="-1" data-search="palette ramp shades tokens graphite orange green blue gold violet rose accent paper ink roles contrast">
+        <h3 id="color-and-surfaces-title">Color and surfaces</h3>
+        <p class="guide-choice">Use Paper for light reading surfaces and Ink for dark workspaces. Use Blue for general action and information, Orange for attention, and Green for recovery. Reserve Gold, Violet, and Rose for comparative series. Graphite is the neutral ramp.</p>
+        <div class="guide-stage"><div class="guide-palette">
+      <div class="guide-swatch-readout" aria-live="polite"><span class="guide-role-chip" style="--swatch:var(--kz-blue-300)" aria-hidden="true"></span><strong>Blue 300</strong><code>--kz-blue-300</code><span class="kozu-numeral">#ABC1FF</span></div>
+      <p id="guide-ramp-help" class="kozu-sr">Use arrow keys to move between shades and Enter to inspect a color.</p>
+      <div class="guide-ramp-region" role="region" aria-label="Color ramps" aria-describedby="guide-ramp-help" tabindex="0">
+        <table class="guide-ramps"><caption class="kozu-sr">Kozu color ramps from step 50 through 950</caption><thead><tr><th scope="col">Ramp</th><th scope="col"><span class="kozu-sr">50</span></th><th scope="col"><span class="kozu-sr">100</span></th><th scope="col"><span class="kozu-sr">200</span></th><th scope="col"><span class="kozu-sr">300</span></th><th scope="col"><span class="kozu-sr">400</span></th><th scope="col"><span class="kozu-sr">500</span></th><th scope="col"><span class="kozu-sr">600</span></th><th scope="col"><span class="kozu-sr">700</span></th><th scope="col"><span class="kozu-sr">800</span></th><th scope="col"><span class="kozu-sr">900</span></th><th scope="col"><span class="kozu-sr">950</span></th></tr></thead><tbody>
+          <tr><th scope="row">Orange</th><td style="--swatch:var(--kz-orange-50)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-50" aria-label="Orange 50, #FFF9F6" aria-pressed="false"><span>50</span></button></td><td style="--swatch:var(--kz-orange-100)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-100" aria-label="Orange 100, #FFEBE2" aria-pressed="false"><span>100</span></button></td><td style="--swatch:var(--kz-orange-200)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-200" aria-label="Orange 200, #FFD5C1" aria-pressed="false"><span>200</span></button></td><td style="--swatch:var(--kz-orange-300)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-300" aria-label="Orange 300, #FFB08C" aria-pressed="false"><span>300</span></button></td><td style="--swatch:var(--kz-orange-400)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-400" aria-label="Orange 400, #FF9765" aria-pressed="false"><span>400</span></button></td><td style="--swatch:var(--kz-orange-500)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-500" aria-label="Orange 500, #E46A26" aria-pressed="false"><span>500</span></button></td><td style="--swatch:var(--kz-orange-600)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-600" aria-label="Orange 600, #B75216" aria-pressed="false"><span>600</span></button></td><td style="--swatch:var(--kz-orange-700)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-700" aria-label="Orange 700, #8C3F15" aria-pressed="false"><span>700</span></button></td><td style="--swatch:var(--kz-orange-800)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-800" aria-label="Orange 800, #672F12" aria-pressed="false"><span>800</span></button></td><td style="--swatch:var(--kz-orange-900)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-900" aria-label="Orange 900, #472210" aria-pressed="false"><span>900</span></button></td><td style="--swatch:var(--kz-orange-950)"><button class="guide-swatch" type="button" data-swatch="--kz-orange-950" aria-label="Orange 950, #2B160B" aria-pressed="false"><span>950</span></button></td></tr>
+          <tr><th scope="row">Green</th><td style="--swatch:var(--kz-green-50)"><button class="guide-swatch" type="button" data-swatch="--kz-green-50" aria-label="Green 50, #F3FEF2" aria-pressed="false"><span>50</span></button></td><td style="--swatch:var(--kz-green-100)"><button class="guide-swatch" type="button" data-swatch="--kz-green-100" aria-label="Green 100, #E0F7DF" aria-pressed="false"><span>100</span></button></td><td style="--swatch:var(--kz-green-200)"><button class="guide-swatch" type="button" data-swatch="--kz-green-200" aria-label="Green 200, #C7EAC5" aria-pressed="false"><span>200</span></button></td><td style="--swatch:var(--kz-green-300)"><button class="guide-swatch" type="button" data-swatch="--kz-green-300" aria-label="Green 300, #A7D5A4" aria-pressed="false"><span>300</span></button></td><td style="--swatch:var(--kz-green-400)"><button class="guide-swatch" type="button" data-swatch="--kz-green-400" aria-label="Green 400, #7BC878" aria-pressed="false"><span>400</span></button></td><td style="--swatch:var(--kz-green-500)"><button class="guide-swatch" type="button" data-swatch="--kz-green-500" aria-label="Green 500, #51AA4F" aria-pressed="false"><span>500</span></button></td><td style="--swatch:var(--kz-green-600)"><button class="guide-swatch" type="button" data-swatch="--kz-green-600" aria-label="Green 600, #3D873C" aria-pressed="false"><span>600</span></button></td><td style="--swatch:var(--kz-green-700)"><button class="guide-swatch" type="button" data-swatch="--kz-green-700" aria-label="Green 700, #31672F" aria-pressed="false"><span>700</span></button></td><td style="--swatch:var(--kz-green-800)"><button class="guide-swatch" type="button" data-swatch="--kz-green-800" aria-label="Green 800, #254C24" aria-pressed="false"><span>800</span></button></td><td style="--swatch:var(--kz-green-900)"><button class="guide-swatch" type="button" data-swatch="--kz-green-900" aria-label="Green 900, #1B351A" aria-pressed="false"><span>900</span></button></td><td style="--swatch:var(--kz-green-950)"><button class="guide-swatch" type="button" data-swatch="--kz-green-950" aria-label="Green 950, #10210F" aria-pressed="false"><span>950</span></button></td></tr>
+          <tr><th scope="row">Blue</th><td style="--swatch:var(--kz-blue-50)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-50" aria-label="Blue 50, #F8FAFF" aria-pressed="false"><span>50</span></button></td><td style="--swatch:var(--kz-blue-100)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-100" aria-label="Blue 100, #E9EFFF" aria-pressed="false"><span>100</span></button></td><td style="--swatch:var(--kz-blue-200)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-200" aria-label="Blue 200, #D2DEFF" aria-pressed="false"><span>200</span></button></td><td style="--swatch:var(--kz-blue-300)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-300" aria-label="Blue 300, #ABC1FF" aria-pressed="true"><span>300</span></button></td><td style="--swatch:var(--kz-blue-400)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-400" aria-label="Blue 400, #93AEFE" aria-pressed="false"><span>400</span></button></td><td style="--swatch:var(--kz-blue-500)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-500" aria-label="Blue 500, #6889FE" aria-pressed="false"><span>500</span></button></td><td style="--swatch:var(--kz-blue-600)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-600" aria-label="Blue 600, #4C69D8" aria-pressed="false"><span>600</span></button></td><td style="--swatch:var(--kz-blue-700)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-700" aria-label="Blue 700, #3A50A7" aria-pressed="false"><span>700</span></button></td><td style="--swatch:var(--kz-blue-800)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-800" aria-label="Blue 800, #2A3B7C" aria-pressed="false"><span>800</span></button></td><td style="--swatch:var(--kz-blue-900)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-900" aria-label="Blue 900, #1D2A57" aria-pressed="false"><span>900</span></button></td><td style="--swatch:var(--kz-blue-950)"><button class="guide-swatch" type="button" data-swatch="--kz-blue-950" aria-label="Blue 950, #121A35" aria-pressed="false"><span>950</span></button></td></tr>
+          <tr><th scope="row">Gold</th><td style="--swatch:var(--kz-gold-50)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-50" aria-label="Gold 50, #FFFAED" aria-pressed="false"><span>50</span></button></td><td style="--swatch:var(--kz-gold-100)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-100" aria-label="Gold 100, #FFEEC6" aria-pressed="false"><span>100</span></button></td><td style="--swatch:var(--kz-gold-200)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-200" aria-label="Gold 200, #FFDB83" aria-pressed="false"><span>200</span></button></td><td style="--swatch:var(--kz-gold-300)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-300" aria-label="Gold 300, #EFBF37" aria-pressed="false"><span>300</span></button></td><td style="--swatch:var(--kz-gold-400)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-400" aria-label="Gold 400, #DBAB06" aria-pressed="false"><span>400</span></button></td><td style="--swatch:var(--kz-gold-500)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-500" aria-label="Gold 500, #B68D01" aria-pressed="false"><span>500</span></button></td><td style="--swatch:var(--kz-gold-600)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-600" aria-label="Gold 600, #8F6F06" aria-pressed="false"><span>600</span></button></td><td style="--swatch:var(--kz-gold-700)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-700" aria-label="Gold 700, #6F5501" aria-pressed="false"><span>700</span></button></td><td style="--swatch:var(--kz-gold-800)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-800" aria-label="Gold 800, #523E02" aria-pressed="false"><span>800</span></button></td><td style="--swatch:var(--kz-gold-900)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-900" aria-label="Gold 900, #3A2C01" aria-pressed="false"><span>900</span></button></td><td style="--swatch:var(--kz-gold-950)"><button class="guide-swatch" type="button" data-swatch="--kz-gold-950" aria-label="Gold 950, #251A00" aria-pressed="false"><span>950</span></button></td></tr>
+          <tr><th scope="row">Violet</th><td style="--swatch:var(--kz-violet-50)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-50" aria-label="Violet 50, #FBF9FF" aria-pressed="false"><span>50</span></button></td><td style="--swatch:var(--kz-violet-100)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-100" aria-label="Violet 100, #F4EBFF" aria-pressed="false"><span>100</span></button></td><td style="--swatch:var(--kz-violet-200)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-200" aria-label="Violet 200, #E9D6FF" aria-pressed="false"><span>200</span></button></td><td style="--swatch:var(--kz-violet-300)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-300" aria-label="Violet 300, #D7B3FE" aria-pressed="false"><span>300</span></button></td><td style="--swatch:var(--kz-violet-400)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-400" aria-label="Violet 400, #CA97FE" aria-pressed="false"><span>400</span></button></td><td style="--swatch:var(--kz-violet-500)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-500" aria-label="Violet 500, #AF6FEB" aria-pressed="false"><span>500</span></button></td><td style="--swatch:var(--kz-violet-600)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-600" aria-label="Violet 600, #8E51C4" aria-pressed="false"><span>600</span></button></td><td style="--swatch:var(--kz-violet-700)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-700" aria-label="Violet 700, #6D3E97" aria-pressed="false"><span>700</span></button></td><td style="--swatch:var(--kz-violet-800)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-800" aria-label="Violet 800, #502E6F" aria-pressed="false"><span>800</span></button></td><td style="--swatch:var(--kz-violet-900)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-900" aria-label="Violet 900, #38214D" aria-pressed="false"><span>900</span></button></td><td style="--swatch:var(--kz-violet-950)"><button class="guide-swatch" type="button" data-swatch="--kz-violet-950" aria-label="Violet 950, #221430" aria-pressed="false"><span>950</span></button></td></tr>
+          <tr><th scope="row">Rose</th><td style="--swatch:var(--kz-rose-50)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-50" aria-label="Rose 50, #FFF8F9" aria-pressed="false"><span>50</span></button></td><td style="--swatch:var(--kz-rose-100)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-100" aria-label="Rose 100, #FFE9EB" aria-pressed="false"><span>100</span></button></td><td style="--swatch:var(--kz-rose-200)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-200" aria-label="Rose 200, #FFD2D6" aria-pressed="false"><span>200</span></button></td><td style="--swatch:var(--kz-rose-300)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-300" aria-label="Rose 300, #FEABB5" aria-pressed="false"><span>300</span></button></td><td style="--swatch:var(--kz-rose-400)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-400" aria-label="Rose 400, #FE899A" aria-pressed="false"><span>400</span></button></td><td style="--swatch:var(--kz-rose-500)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-500" aria-label="Rose 500, #E95C76" aria-pressed="false"><span>500</span></button></td><td style="--swatch:var(--kz-rose-600)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-600" aria-label="Rose 600, #C03F5A" aria-pressed="false"><span>600</span></button></td><td style="--swatch:var(--kz-rose-700)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-700" aria-label="Rose 700, #933145" aria-pressed="false"><span>700</span></button></td><td style="--swatch:var(--kz-rose-800)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-800" aria-label="Rose 800, #6D2432" aria-pressed="false"><span>800</span></button></td><td style="--swatch:var(--kz-rose-900)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-900" aria-label="Rose 900, #4D1A23" aria-pressed="false"><span>900</span></button></td><td style="--swatch:var(--kz-rose-950)"><button class="guide-swatch" type="button" data-swatch="--kz-rose-950" aria-label="Rose 950, #301016" aria-pressed="false"><span>950</span></button></td></tr>
+          <tr><th scope="row">Graphite</th><td style="--swatch:var(--kz-graphite-50)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-50" aria-label="Graphite 50, #FCFCFC" aria-pressed="false"><span>50</span></button></td><td style="--swatch:var(--kz-graphite-100)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-100" aria-label="Graphite 100, #F0F2F5" aria-pressed="false"><span>100</span></button></td><td style="--swatch:var(--kz-graphite-200)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-200" aria-label="Graphite 200, #DFE3E9" aria-pressed="false"><span>200</span></button></td><td style="--swatch:var(--kz-graphite-300)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-300" aria-label="Graphite 300, #C3CAD4" aria-pressed="false"><span>300</span></button></td><td style="--swatch:var(--kz-graphite-400)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-400" aria-label="Graphite 400, #A0A9B7" aria-pressed="false"><span>400</span></button></td><td style="--swatch:var(--kz-graphite-500)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-500" aria-label="Graphite 500, #7D8899" aria-pressed="false"><span>500</span></button></td><td style="--swatch:var(--kz-graphite-600)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-600" aria-label="Graphite 600, #5E6879" aria-pressed="false"><span>600</span></button></td><td style="--swatch:var(--kz-graphite-700)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-700" aria-label="Graphite 700, #45505F" aria-pressed="false"><span>700</span></button></td><td style="--swatch:var(--kz-graphite-800)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-800" aria-label="Graphite 800, #303946" aria-pressed="false"><span>800</span></button></td><td style="--swatch:var(--kz-graphite-900)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-900" aria-label="Graphite 900, #202732" aria-pressed="false"><span>900</span></button></td><td style="--swatch:var(--kz-graphite-950)"><button class="guide-swatch" type="button" data-swatch="--kz-graphite-950" aria-label="Graphite 950, #141A23" aria-pressed="false"><span>950</span></button></td></tr></tbody></table>
+      </div>
+      <h4>Semantic roles</h4>
+      <dl class="guide-roles"><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-canvas)" aria-hidden="true"></span>Canvas</dt><dd><code>--kz-canvas</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-surface)" aria-hidden="true"></span>Surface</dt><dd><code>--kz-surface</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-ink)" aria-hidden="true"></span>Ink</dt><dd><code>--kz-ink</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-secondary)" aria-hidden="true"></span>Secondary</dt><dd><code>--kz-secondary</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-action)" aria-hidden="true"></span>Action</dt><dd><code>--kz-action</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-on-action)" aria-hidden="true"></span>On action</dt><dd><code>--kz-on-action</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-tint)" aria-hidden="true"></span>Tint</dt><dd><code>--kz-tint</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-focus)" aria-hidden="true"></span>Focus</dt><dd><code>--kz-focus</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-notice)" aria-hidden="true"></span>Attention</dt><dd><code>--kz-notice</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-success)" aria-hidden="true"></span>Recovery</dt><dd><code>--kz-success</code></dd></div><div><dt><span class="guide-role-chip" style="--swatch:var(--kz-info)" aria-hidden="true"></span>Information</dt><dd><code>--kz-info</code></dd></div></dl>
+    </div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for color and surfaces</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Each of the seven ramps publishes eleven steps: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950. Reference semantic roles in product surfaces so foreground, tint, action, and focus change together. In a chart, use primitives when the same series must remain recognizable across contexts.</dd></div>
+<div><dt>Variants and states</dt><dd>Nest one raised surface over the canvas when grouping clarifies reading order. Style hover, pressed, selected, and keyboard focus as distinct conditions. Pair attention, recovery, and information tones with a word or a distinct mark.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Measure text contrast against its actual background in both roles. Check the boundary of every necessary control and data mark. Verify foreground/background pairs separately on tinted, frosted, selected, and focused surfaces.</dd></div>
+<div><dt>Implementation</dt><dd>Apply a surface role to the document or a contained workspace. Load the shared CSS before using these roles.<pre><code>&lt;section data-theme=&quot;dark&quot; class=&quot;kozu-surface&quot;&gt;
+  &lt;h2&gt;Activity&lt;/h2&gt;
+  &lt;p&gt;Three transfers completed.&lt;/p&gt;
+&lt;/section&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A well-contrasted color in the palette can become unreadable when composited over a material. Measure the final pixels.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="typography" aria-labelledby="typography-title" tabindex="-1" data-search="">
+        <h3 id="typography-title">Typography</h3>
+        <p class="guide-choice">Use Inter for reading, controls, and financial values. Set compact display or voice headings in Helvetica Neue with Inter and system sans as fallbacks. Use Menlo for telemetry and preserve the native system face in platform chrome.</p>
+        <div class="guide-stage"><div class="guide-type-stack"><div><span>Display · Helvetica Neue</span><strong class="kozu-display">Morning briefing</strong></div><div><span>Body and financial · Inter</span><strong class="kozu-numeral">$12,480.75</strong></div><div><span>Telemetry · Menlo</span><time class="kozu-telemetry" datetime="14:32:00Z">14:32:00 UTC</time></div></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for typography</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Align measures and values on one baseline and use tabular lining figures. For a split balance, keep fractional digits legible and retain a complete localized currency string for assistive technology.</dd></div>
+<div><dt>Variants and states</dt><dd>Use size and weight to order headings. Use secondary ink for supporting text. Allow labels and text blocks to expand before tightening their measure or changing the layout.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Preserve semantic heading order at every width. In web layouts use relative font sizes and test 200% text and 320 CSS pixels with long localized labels. Preserve system text settings on native platforms.</dd></div>
+<div><dt>Implementation</dt><dd>Apply the role classes to existing semantic elements.<pre><code>&lt;h2 class=&quot;kozu-display&quot;&gt;Account balance&lt;/h2&gt;
+&lt;p class=&quot;kozu-numeral&quot;&gt;$12,480.75&lt;/p&gt;
+&lt;p class=&quot;kozu-telemetry&quot;&gt;&lt;time datetime=&quot;14:32:00&quot;&gt;14:32 UTC&lt;/time&gt;&lt;/p&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Fixed-height controls clip ascenders, long labels, or the second line when text size increases.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="spacing-and-shape" aria-labelledby="spacing-and-shape-title" tabindex="-1" data-search="">
+        <h3 id="spacing-and-shape-title">Spacing and shape</h3>
+        <p class="guide-choice">Use spacing to show which label, value, control, or row belongs together. Use a continuous sheet for a connected task and group independent summaries in cards.</p>
+        <div class="guide-stage"><div class="guide-shape"><div class="guide-outer kozu-surface"><div class="guide-inner kozu-inset"></div></div><dl><div><dt>Outer radius</dt><dd>24 units</dd></div><div><dt>Inset</dt><dd>8 units</dd></div><div><dt>Inner radius</dt><dd>16 units</dd></div></dl></div><figure class="guide-dot-measure"><div class="guide-dot-strip"><div data-dot-grid="progress" data-dot-value="100" aria-hidden="true"></div></div><figcaption>48-unit track · 6 whole columns · 2-unit gutters<br>4-unit diameter · 8-unit pitch on both axes</figcaption></figure></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for spacing and shape</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Start with 8 units between related controls, 16 at panel edges and between groups, and 24 for larger breaks. A 24-unit outer radius and 8-unit inset yield a 16-unit inner radius. For a smaller inset surface use <code>max(0, outerRadius - inset)</code>.</dd></div>
+<div><dt>Variants and states</dt><dd>Increase outer padding on wider layouts while keeping row density readable. Reflow side-by-side controls into rows when text consumes the available measure.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Leave room for a 48-unit touch target and the focused fill. Keep DOM order aligned with visual order across breakpoints. Avoid containers that clip focus or text.</dd></div>
+<div><dt>Implementation</dt><dd>Use the shared stack and row classes with native content.<pre><code>&lt;div class=&quot;kozu-stack&quot;&gt;
+  &lt;h2&gt;Transfer details&lt;/h2&gt;
+  &lt;div class=&quot;kozu-row&quot;&gt;&lt;span&gt;Total&lt;/span&gt;&lt;strong&gt;$120.00&lt;/strong&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Assigning the same radius to inset and outer panels makes their corners diverge visually.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="icons" aria-labelledby="icons-title" tabindex="-1" data-search="">
+        <h3 id="icons-title">Icons</h3>
+        <p class="guide-choice">Use a familiar glyph to aid recognition or add a redundant status cue. Keep a visible label for unfamiliar commands, and group utility icons where users can predict their purpose.</p>
+        <div class="guide-stage"><ul class="guide-icon-samples" role="list"><li><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-arrow-up-right"></use></svg><span>Open</span></li><li><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-bookmark"></use></svg><span>Save</span></li><li><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-check"></use></svg><span>Done</span></li><li><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-sliders-horizontal"></use></svg><span>Adjust</span></li></ul></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for icons</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Use the supplied Lucide library on a 24-unit grid at 1.8-unit source stroke. Center visible ink within the control. In a text button, scale the ink to the label’s cap height and balance the slots around the label.</dd></div>
+<div><dt>Variants and states</dt><dd>Pair the selection check and the status glyph with labels or structural semantics. Match glyph color to the adjacent text when both carry the same meaning.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Mark redundant graphics decorative. Give the enclosing button a concise accessible action name. Give standalone meaningful graphics text or an accessible equivalent.</dd></div>
+<div><dt>Implementation</dt><dd>Use the shared icon sizing inside an icon button and reference the bundled artwork. Preserve its license when redistributing.<pre><code>&lt;button class=&quot;kozu-button kozu-icon-button&quot; type=&quot;button&quot; aria-label=&quot;Add item&quot;&gt;
+  &lt;svg class=&quot;kozu-glyph&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;path d=&quot;M5 12h14M12 5v14&quot;/&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>An unlabelled button can expose only the icon file name or announce “button” without the action.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry guide-entry-wide" id="motion-and-materials" aria-labelledby="motion-and-materials-title" tabindex="-1" data-search="glass translucency frost opaque blur grain texture">
+        <h3 id="motion-and-materials-title">Motion and materials</h3>
+        <p class="guide-choice">Use static directional light, grain, or matte surfaces to establish depth. Use motion for a running process, an immediate state change, or continuity between two positions.</p>
+        <div class="guide-stage"><div class="guide-material-layout">
+      <div class="guide-frost-scene" data-theme="light">
+        <div class="guide-frost-scene-label">Paper</div>
+        <div class="guide-frost-pair">
+          <div class="kozu-surface kozu-material" data-frost="card"><strong>Frosted card</strong><span>52% fill</span></div>
+          <div class="kozu-surface kozu-material-solid"><strong>Opaque card</strong><span>Solid fill</span></div>
+        </div>
+        <div class="guide-frost-pair">
+          <div class="kozu-surface kozu-material" data-frost="control"><strong>Control</strong><span>42% fill</span></div>
+          <div class="kozu-surface kozu-material" data-frost="overlay"><strong>Overlay</strong><span>70% fill</span></div>
+        </div>
+      </div>
+      <div class="guide-frost-scene" data-theme="dark">
+        <div class="guide-frost-scene-label">Ink</div>
+        <div class="guide-frost-pair">
+          <div class="kozu-surface kozu-material" data-frost="card"><strong>Frosted card</strong><span>44% fill</span></div>
+          <div class="kozu-surface kozu-material-solid"><strong>Opaque card</strong><span>Solid fill</span></div>
+        </div>
+        <div class="guide-frost-pair">
+          <div class="kozu-surface kozu-material" data-frost="control"><strong>Control</strong><span>34% fill</span></div>
+          <div class="kozu-surface kozu-material" data-frost="overlay"><strong>Overlay</strong><span>60% fill</span></div>
+        </div>
+      </div>
+    </div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for motion and materials</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Use 28 units of backdrop blur on frosted controls, cards, and toolbars, and 40 on overlays. Start with light #FCFCFC at 42% for controls, 52% for cards and toolbars, and 70% for overlays. Start with dark #0D1726 at 34%, 44%, and 60% respectively. Keep the underlying texture visible and limit blur to the area behind the floating surface.</dd></div>
+<div><dt>Variants and states</dt><dd>Provide an opaque surface equivalent for reduced transparency. Use opaque sheets for dense reading and compare frosted and opaque samples over the same texture. Test text and control contrast against the brightest and darkest crop before releasing. Use short easing for optional transitions and keep a steady waveform or static busy mark under reduced motion.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Honor reduced-motion preferences and preserve the visible state, stop control, focus position, and completion message. Test moving and static examples with the same reading order.</dd></div>
+<div><dt>Implementation</dt><dd>Offer the opaque surface as the base and enable frosted rendering as an enhancement.<pre><code>&lt;section class=&quot;kozu-surface kozu-material&quot; aria-labelledby=&quot;workspace-title&quot;&gt;
+  &lt;h2 id=&quot;workspace-title&quot;&gt;Workspace&lt;/h2&gt;
+&lt;/section&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Stacking several full-width layers of backdrop blur raises rendering cost and makes the foreground harder to measure.</dd></div></dl>
+        </details>
+      </article>
+    </div>
+  </section>
+  <section class="guide-group" id="actions" tabindex="-1" aria-labelledby="actions-title">
+    <div class="guide-group-head">
+      <span class="guide-family-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-mouse-pointer-2"></use></svg></span>
+      <div><h2 id="actions-title">Actions</h2><p>Commands with a clear priority and accessible names.</p></div>
+    </div>
+    <div class="guide-entries">
+      <article class="guide-entry" id="button" aria-labelledby="button-title" tabindex="-1" data-search="primary secondary action command submit">
+        <h3 id="button-title">Button</h3>
+        <p class="guide-choice">Use a button for a command, submission, or state change. Give the primary action to the most important next step. Use a link for navigation to a URL.</p>
+        <div class="guide-stage"><div class="kozu-row"><button class="kozu-button kozu-primary" type="button" data-report="Changes saved.">Save changes</button><button class="kozu-button" type="button" data-report="Preview opened.">Preview</button><button class="kozu-button kozu-quiet" type="button" data-report="Preview dismissed.">Cancel</button><button class="kozu-button" type="button" disabled>Unavailable</button></div><p class="guide-output" role="status">Choose an action.</p></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for button</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Use an action label, balanced inline padding, and a 48-unit minimum target. When an icon appears with text, center the label within the whole control and keep enough room at both ends.</dd></div>
+<div><dt>Variants and states</dt><dd>Use filled for primary, tonal for secondary, and quiet for tertiary. Keep a disabled reason nearby if users can resolve it. Use a busy label and block repeat submissions while a request runs.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use a native button. Space and Enter activate it. Give ordinary commands <code>type="button"</code>, and set <code>type="submit"</code> only for the action that submits the form. Toggle buttons expose <code>aria-pressed</code>.</dd></div>
+<div><dt>Implementation</dt><dd>Connect the button to exactly one user action. Update status separately when completion is asynchronous.<pre><code>&lt;button class=&quot;kozu-button kozu-primary&quot; type=&quot;submit&quot;&gt;Save changes&lt;/button&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Several filled actions compete for priority and weaken the next step.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="icon-button" aria-labelledby="icon-button-title" tabindex="-1" data-search="toolbar toggle">
+        <h3 id="icon-button-title">Icon button</h3>
+        <p class="guide-choice">Use for a familiar or repeated command in a tight toolbar. Add visible text when the icon can reasonably have two meanings.</p>
+        <div class="guide-stage"><div class="kozu-row"><button class="kozu-button kozu-icon-button" type="button" aria-label="Pin item" aria-pressed="false" data-toggle="Pinned.|Pin removed."><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-bookmark"></use></svg></button><button class="kozu-button kozu-quiet kozu-icon-button" type="button" aria-label="Add item" data-report="Item added."><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-plus"></use></svg></button><button class="kozu-button kozu-icon-button" type="button" aria-label="Delete item" disabled><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-trash-2"></use></svg></button></div><p class="guide-output" role="status">Use a toolbar action.</p></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for icon button</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Center a 24-unit glyph inside the 48-unit target. Use a pill or round fill and keep neighboring targets clear of the icon’s hit area.</dd></div>
+<div><dt>Variants and states</dt><dd>Use tonal or quiet styles for utilities. For a mute or pin toggle, keep the accessible name stable and signal its pressed state.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use a native button, keyboard activation, and an action name such as “Copy link”. Decorative icon children stay out of the accessible name.</dd></div>
+<div><dt>Implementation</dt><dd>Provide a tooltip only when explanation helps and retain the action name on the button.<pre><code>&lt;button class=&quot;kozu-button kozu-icon-button&quot; type=&quot;button&quot; aria-label=&quot;Pin item&quot; aria-pressed=&quot;false&quot;&gt;
+  &lt;svg class=&quot;kozu-glyph&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;path d=&quot;M6 4h12v16l-6-4-6 4z&quot;/&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Shrinking the hit area to the visible glyph makes adjacent actions hard to distinguish by touch.</dd></div></dl>
+        </details>
+      </article>
+    </div>
+  </section>
+  <section class="guide-group" id="inputs" tabindex="-1" aria-labelledby="inputs-title">
+    <div class="guide-group-head">
+      <span class="guide-family-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-sliders-horizontal"></use></svg></span>
+      <div><h2 id="inputs-title">Inputs</h2><p>Enter information, make a selection, or change a setting.</p></div>
+    </div>
+    <div class="guide-entries">
+      <article class="guide-entry" id="text-field" aria-labelledby="text-field-title" tabindex="-1" data-search="input single line error validation">
+        <h3 id="text-field-title">Text field</h3>
+        <p class="guide-choice">Use a single line for a name, code, amount, or other short answer. Set the specific <code>type</code>, <code>autocomplete</code>, and <code>inputmode</code> that match the value.</p>
+        <div class="guide-stage"><div class="kozu-field"><label for="sample-reference">Reference</label><input class="kozu-input" type="text" id="sample-reference" placeholder="e.g. Studio deposit" aria-describedby="sample-reference-help"><small id="sample-reference-help">Appears on the recipient’s statement.</small></div><div class="kozu-field"><label for="sample-account-code">Account code</label><input class="kozu-input" type="text" id="sample-account-code" value="710" aria-invalid="true" aria-describedby="sample-account-code-help"><small data-error id="sample-account-code-help">Enter the four-digit account code.</small></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for text field</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Stack a persistent label, a filled control at least 48 units tall, and helper or error text. Use 6–8 units between label and control, with another 6–8 before help.</dd></div>
+<div><dt>Variants and states</dt><dd>Support empty, filled, focused, invalid, disabled, and read-only. Keep a read-only value selectable. Give invalid fields a localized error that describes the correction.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Associate the label and descriptions by IDs. Use a solid focus fill with paired ink and preserve native input affordances. Set <code>aria-invalid</code> when validation finds an error. Preserve caret movement, selection, paste, and autofill.</dd></div>
+<div><dt>Implementation</dt><dd>Keep instructions adjacent and include the error ID in <code>aria-describedby</code> when it appears.<pre><code>&lt;div class=&quot;kozu-field&quot;&gt;
+  &lt;label for=&quot;reference&quot;&gt;Payment reference&lt;/label&gt;
+  &lt;input class=&quot;kozu-input&quot; id=&quot;reference&quot; name=&quot;reference&quot; aria-describedby=&quot;reference-help&quot;&gt;
+  &lt;small id=&quot;reference-help&quot;&gt;Appears on the recipient’s statement.&lt;/small&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Placeholder-only labels disappear just when the user needs to confirm the field’s purpose.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="search-field" aria-labelledby="search-field-title" tabindex="-1" data-search="">
+        <h3 id="search-field-title">Search field</h3>
+        <p class="guide-choice">Use to query a collection or a destination index. Use a regular text field when collecting a value for a form.</p>
+        <div class="guide-stage"><div class="kozu-field" role="search" aria-label="Project sample search"><label for="sample-query">Find a project</label><input class="kozu-input" id="sample-query" data-local-search type="search" placeholder="Try “studio”"><p class="guide-output" role="status">3 projects</p><ul class="kozu-list" role="list"><li class="kozu-list-row">Studio refresh</li><li class="kozu-list-row">Quarterly review</li><li class="kozu-list-row">Design audit</li></ul></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for search field</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Pair a labelled 48-unit input with a search icon when useful, an optional clear or submit action, and an adjacent result area. Keep both inset slots balanced if the input has a leading and trailing action.</dd></div>
+<div><dt>Variants and states</dt><dd>Support empty, querying, no results, populated, and error states. Keep the query visible after submission. For local filtering, show the matching count after an update.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use <code>type="search"</code> with an associated label. Announce concise count changes with a polite status, and keep focus in the field during filtering. If adding an ARIA combobox, implement its complete keyboard and active-option model.</dd></div>
+<div><dt>Implementation</dt><dd>Wrap a submitted query with a search landmark or use the same labelled input to filter results in place.<pre><code>&lt;form role=&quot;search&quot; action=&quot;/search&quot; class=&quot;kozu-field&quot;&gt;
+  &lt;label for=&quot;query&quot;&gt;Search projects&lt;/label&gt;
+  &lt;input class=&quot;kozu-input&quot; type=&quot;search&quot; id=&quot;query&quot; name=&quot;q&quot;&gt;
+&lt;/form&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Replacing or focusing the results on each keystroke interrupts typing and assistive announcements.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="text-area" aria-labelledby="text-area-title" tabindex="-1" data-search="multiline textarea notes">
+        <h3 id="text-area-title">Text area</h3>
+        <p class="guide-choice">Use for notes, descriptions, and messages expected to span several lines.</p>
+        <div class="guide-stage"><div class="kozu-field"><label for="sample-note">Handoff note</label><textarea class="kozu-input" id="sample-note" rows="3" aria-describedby="sample-note-help" placeholder="Add a note for the next reviewer"></textarea><small id="sample-note-help">Include the decision and its owner.</small></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for text area</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Use the same label and description structure as a text field. Give the editable region about three visible lines at first and preserve vertical resizing or comfortable growth.</dd></div>
+<div><dt>Variants and states</dt><dd>Provide empty, filled, read-only, invalid, and disabled states. If the service has a length limit, show it near the field and report the remaining count at useful intervals.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Preserve newline, selection, paste, and input-method composition. Keep Enter available for a newline. Document any optional send shortcut adjacent to the editor.</dd></div>
+<div><dt>Implementation</dt><dd>Set an initial row count and connect the help to the field.<pre><code>&lt;div class=&quot;kozu-field&quot;&gt;
+  &lt;label for=&quot;note&quot;&gt;Handoff note&lt;/label&gt;
+  &lt;textarea class=&quot;kozu-input&quot; id=&quot;note&quot; name=&quot;note&quot; rows=&quot;3&quot; aria-describedby=&quot;note-help&quot;&gt;&lt;/textarea&gt;
+  &lt;small id=&quot;note-help&quot;&gt;Include the decision and its owner.&lt;/small&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Intercepting plain Enter for submission can send incomplete text and break input methods.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="select" aria-labelledby="select-title" tabindex="-1" data-search="dropdown options combo form">
+        <h3 id="select-title">Select</h3>
+        <p class="guide-choice">Use for one choice from a known list when a radio group would consume too much space. Use a searchable picker when the list is long and typing would materially help.</p>
+        <div class="guide-stage"><div class="kozu-field"><label for="sample-format">Export format</label><select class="kozu-input" id="sample-format"><option value="csv">CSV · Spreadsheet</option><option value="pdf">PDF · Document</option><option value="json">JSON · Data</option></select></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for select</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Provide a persistent label, selected value or prompt, disclosure marker, and the native option list. Keep the closed control at least 48 units tall.</dd></div>
+<div><dt>Variants and states</dt><dd>Support optional and required selection, disabled options, and grouped options. Include an empty choice for optional data users may need to clear.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Prefer the native select so the platform controls arrows, type-ahead, dismissal, and mobile pickers. Associate the label. Put instructions outside the option text.</dd></div>
+<div><dt>Implementation</dt><dd>Match the stored value with the option’s stable value. Localize the visible wording independently.<pre><code>&lt;div class=&quot;kozu-field&quot;&gt;
+  &lt;label for=&quot;format&quot;&gt;Export format&lt;/label&gt;
+  &lt;select class=&quot;kozu-input&quot; id=&quot;format&quot; name=&quot;format&quot;&gt;
+    &lt;option value=&quot;csv&quot;&gt;CSV&lt;/option&gt;
+    &lt;option value=&quot;pdf&quot;&gt;PDF&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A custom menu styled like a select often loses native type-ahead and form semantics.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="checkbox" aria-labelledby="checkbox-title" tabindex="-1" data-search="">
+        <h3 id="checkbox-title">Checkbox</h3>
+        <p class="guide-choice">Use for independent options or multi-selection. A grouped control may represent all, some, or none of its descendants.</p>
+        <div class="guide-stage"><fieldset class="kozu-options" data-check-group><legend>Include in export</legend><label class="kozu-choice"><input type="checkbox" data-check-all> Select all</label><label class="kozu-choice"><input type="checkbox" checked> Notes</label><label class="kozu-choice"><input type="checkbox"> Attachments</label></fieldset></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for checkbox</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Center the mark beside its label within a 48-unit labelled row. Keep related options in one fieldset. Use a check mark for selected and a dash for mixed.</dd></div>
+<div><dt>Variants and states</dt><dd>Support unchecked, checked, mixed, focused, and disabled. Assign the native <code>indeterminate</code> property from child state and update it whenever the group changes.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Let the entire label activate the control. Space toggles the focused native checkbox. Use a visible legend to name the group.</dd></div>
+<div><dt>Implementation</dt><dd>Give each checkbox a stable value. Browser form submission includes the checked values.<pre><code>&lt;fieldset class=&quot;kozu-options&quot;&gt;
+  &lt;legend&gt;Include in export&lt;/legend&gt;
+  &lt;label class=&quot;kozu-choice&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;include&quot; value=&quot;notes&quot;&gt; Notes&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A mixed visual mark alone leaves assistive technology reporting the wrong state.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="radio-button" aria-labelledby="radio-button-title" tabindex="-1" data-search="single choice">
+        <h3 id="radio-button-title">Radio button</h3>
+        <p class="guide-choice">Use when exactly one of a few options can be selected and the user benefits from comparing all choices.</p>
+        <div class="guide-stage"><fieldset class="kozu-options"><legend>Update frequency</legend><label class="kozu-choice"><input type="radio" name="sample-frequency" value="daily" checked> Daily</label><label class="kozu-choice"><input type="radio" name="sample-frequency" value="weekly"> Weekly</label><label class="kozu-choice"><input type="radio" name="sample-frequency" value="monthly" disabled> Monthly</label></fieldset></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for radio button</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Place a selected-dot mark and label in a 48-unit row. Keep a shared legend and consistent alignment across options.</dd></div>
+<div><dt>Variants and states</dt><dd>Support selected, unselected, focused, and disabled. Preselect a safe default if the product has one. Use a separate explicit “None” option when the user can clear the choice.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Give radios in one group the same name and distinct values. The browser handles Tab into the group and arrow movement among options.</dd></div>
+<div><dt>Implementation</dt><dd>Use one labelled native input per choice.<pre><code>&lt;fieldset class=&quot;kozu-options&quot;&gt;
+  &lt;legend&gt;Update frequency&lt;/legend&gt;
+  &lt;label class=&quot;kozu-choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;frequency&quot; value=&quot;daily&quot; checked&gt; Daily&lt;/label&gt;
+  &lt;label class=&quot;kozu-choice&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;frequency&quot; value=&quot;weekly&quot;&gt; Weekly&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Reusing a name across unrelated choices in the same form merges the groups.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="switch" aria-labelledby="switch-title" tabindex="-1" data-search="toggle">
+        <h3 id="switch-title">Switch</h3>
+        <p class="guide-choice">Use for a setting that turns on or off immediately. Use a checkbox when a choice is saved later with the rest of a form.</p>
+        <div class="guide-stage"><label class="kozu-switch"><input type="checkbox" role="switch" data-switch checked><span class="kozu-switch-track" aria-hidden="true"></span><span>Weekly reminders</span></label><p class="guide-output" role="status">Weekly reminders on.</p></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for switch</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Use a stable setting label and a track with a moving thumb. The track is about 42 × 26 units inside a labelled target at least 48 units tall.</dd></div>
+<div><dt>Variants and states</dt><dd>Support off, on, focused, pending, and disabled. If saving fails, revert to the confirmed value and report the failure.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use a checkbox with <code>role="switch"</code>. Its native checked state is the source of truth. Space changes the setting. Keep the name stable in both states.</dd></div>
+<div><dt>Implementation</dt><dd>Listen for the checkbox’s change event and persist the new state with your application.<pre><code>&lt;label class=&quot;kozu-switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; role=&quot;switch&quot; name=&quot;reminders&quot;&gt;
+  &lt;span class=&quot;kozu-switch-track&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+  &lt;span&gt;Weekly reminders&lt;/span&gt;
+&lt;/label&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Changing the name from “Enable alerts” to “Disable alerts” mixes the setting’s identity with its state.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="segmented-control" aria-labelledby="segmented-control-title" tabindex="-1" data-search="segmented picker option choice group">
+        <h3 id="segmented-control-title">Segmented control</h3>
+        <p class="guide-choice">Use for a short mutually exclusive choice within one task, such as a time scale. Use tabs when the chosen item owns a distinct content panel.</p>
+        <div class="guide-stage"><fieldset class="kozu-options"><legend>Time range</legend><div class="kozu-segmented"><label><input type="radio" name="sample-period" value="Day"><span>Day</span></label><label><input type="radio" name="sample-period" value="Week" checked><span>Week</span></label><label><input type="radio" name="sample-period" value="Month"><span>Month</span></label></div></fieldset></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for segmented control</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Use a tonal track with a 4-unit inset, 48-unit option targets, and similarly weighted labels. Let longer labels or options wrap as a group.</dd></div>
+<div><dt>Variants and states</dt><dd>Support selected, unselected, focused, and disabled. Apply the selected condition with a local fill and weight. A layout may wrap the segments where required.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use visually styled radios for a single selection and retain their arrow behavior. Name the group. A focused selected option needs a distinct visible treatment.</dd></div>
+<div><dt>Implementation</dt><dd>Use one name across the group and apply the selected style through the native checked state.<pre><code>&lt;fieldset class=&quot;kozu-options&quot;&gt;
+  &lt;legend&gt;Time range&lt;/legend&gt;
+  &lt;div class=&quot;kozu-segmented&quot;&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;period&quot; value=&quot;week&quot; checked&gt;&lt;span&gt;Week&lt;/span&gt;&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;period&quot; value=&quot;month&quot;&gt;&lt;span&gt;Month&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Treating selected segments as independent toggles lets two incompatible values appear active.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="slider" aria-labelledby="slider-title" tabindex="-1" data-search="">
+        <h3 id="slider-title">Slider</h3>
+        <p class="guide-choice">Use for an approximate bounded value that can change continuously or in steps. Provide a number field when users often need an exact entry.</p>
+        <div class="guide-stage"><div class="kozu-field"><label for="sample-volume">Volume, percent</label><input class="kozu-range" id="sample-volume" data-range type="range" min="0" max="100" value="60"><output class="kozu-numeral" for="sample-volume" aria-hidden="true">60%</output></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for slider</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Include a label, track, thumb, min/max limits when useful, and a readable current value. Keep the interaction region at least 48 units tall.</dd></div>
+<div><dt>Variants and states</dt><dd>Support continuous or stepped values, focus, dragging, and disabled. Align labels with the real min and max. Keep the current value synchronized on input.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use a native range input. Keep the track and thumb distinct when focus changes the surrounding fill. The browser handles arrows and Home/End. Expose the unit in the label or set <code>aria-valuetext</code> when a bare number would be ambiguous.</dd></div>
+<div><dt>Implementation</dt><dd>Use the same value to update the displayed output and the affected preview. Avoid announcing every pointer movement through a live region.<pre><code>&lt;div class=&quot;kozu-field&quot;&gt;
+  &lt;label for=&quot;volume&quot;&gt;Volume, percent&lt;/label&gt;
+  &lt;input class=&quot;kozu-range&quot; id=&quot;volume&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;60&quot;&gt;
+  &lt;output for=&quot;volume&quot;&gt;60%&lt;/output&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A range labeled only at its ends leaves users guessing the current setting.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="date-picker" aria-labelledby="date-picker-title" tabindex="-1" data-search="calendar">
+        <h3 id="date-picker-title">Date picker</h3>
+        <p class="guide-choice">Use a native date field for one calendar date. For ranges, use separate start and end fields and validate their relationship. Provide a task-specific calendar only when the calendar context is essential.</p>
+        <div class="guide-stage"><div class="kozu-field"><label for="sample-date">Review date</label><input class="kozu-input" type="date" id="sample-date" min="2026-01-01" value="2026-12-04" aria-describedby="sample-date-help"><small id="sample-date-help">Choose a date in 2026 or later.</small></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for date picker</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Provide a persistent label, filled 48-unit control, and concise constraint text where useful. Distinguish the date from an instant. Store it as a calendar date.</dd></div>
+<div><dt>Variants and states</dt><dd>Support empty, selected, constrained, invalid, and disabled. Make minimum and maximum requirements visible and ensure server and browser validation agree.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use the native keyboard and calendar behavior. Let the platform render its locale format. Restore focus to the date field when a custom calendar closes.</dd></div>
+<div><dt>Implementation</dt><dd>Set <code>min</code> to the first eligible date if the app has one.<pre><code>&lt;div class=&quot;kozu-field&quot;&gt;
+  &lt;label for=&quot;review-date&quot;&gt;Review date&lt;/label&gt;
+  &lt;input class=&quot;kozu-input&quot; id=&quot;review-date&quot; name=&quot;date&quot; type=&quot;date&quot; min=&quot;2026-01-01&quot;&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Converting a local calendar date to midnight UTC before formatting can shift the displayed day.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="time-picker" aria-labelledby="time-picker-title" tabindex="-1" data-search="clock">
+        <h3 id="time-picker-title">Time picker</h3>
+        <p class="guide-choice">Use for a clock time. Pair it with a date and an explicit zone when it schedules an event across devices or locations.</p>
+        <div class="guide-stage"><div class="kozu-field"><label for="sample-time">Review time</label><input class="kozu-input" type="time" id="sample-time" value="10:30" step="900" aria-describedby="sample-time-help"><small id="sample-time-help">Local time · 15-minute intervals.</small></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for time picker</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Keep a persistent label, filled 48-unit input, and a visible zone or schedule note. Use <code>step</code> to communicate supported increments and explain them when needed.</dd></div>
+<div><dt>Variants and states</dt><dd>Support unset, set, outside allowed hours, and disabled. For scheduling, handle times that are ambiguous or missing on a daylight-saving transition.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Let the platform provide clock or keyboard interaction and 12/24-hour presentation. Describe time zone and business rules alongside the field.</dd></div>
+<div><dt>Implementation</dt><dd>Interpret the submitted wall time with the selected date and time zone in the application.<pre><code>&lt;div class=&quot;kozu-field&quot;&gt;
+  &lt;label for=&quot;review-time&quot;&gt;Review time&lt;/label&gt;
+  &lt;input class=&quot;kozu-input&quot; id=&quot;review-time&quot; name=&quot;time&quot; type=&quot;time&quot; aria-describedby=&quot;review-zone&quot;&gt;
+  &lt;small id=&quot;review-zone&quot;&gt;Time zone: America/New_York&lt;/small&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A time value without its intended zone can schedule the right wall time for the wrong audience.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="chip" aria-labelledby="chip-title" tabindex="-1" data-search="">
+        <h3 id="chip-title">Chip</h3>
+        <p class="guide-choice">Use a chip for a compact filter, an applied value, or a removable token. Use a badge for passive information.</p>
+        <div class="guide-stage"><div class="kozu-row"><button class="kozu-chip" type="button" aria-pressed="true" data-filter>Unread</button><button class="kozu-chip" type="button" aria-pressed="false" data-filter>Assigned to me</button></div><p class="guide-output" role="status">1 filter active.</p></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for chip</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Center the label and optional mark in the rounded fill. Keep a 48-unit activation or removal target. If a token has separate actions, give each action its own sibling control.</dd></div>
+<div><dt>Variants and states</dt><dd>Support unselected, selected with a check, removable, disabled, and focus. Allow chip groups to wrap within their container.</dd></div>
+<div><dt>Input and accessibility</dt><dd>For independent filters use native buttons with <code>aria-pressed</code>. Name a remove action “Remove [value]” and focus the next available control after removal.</dd></div>
+<div><dt>Implementation</dt><dd>Update <code>aria-pressed</code> and the result count from the same filter state.<pre><code>&lt;button class=&quot;kozu-chip&quot; type=&quot;button&quot; aria-pressed=&quot;false&quot;&gt;Unread&lt;/button&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A removal button nested inside a filter button invalidates the markup and makes activation ambiguous.</dd></div></dl>
+        </details>
+      </article>
+    </div>
+  </section>
+  <section class="guide-group" id="navigation" tabindex="-1" aria-labelledby="navigation-title">
+    <div class="guide-group-head">
+      <span class="guide-family-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layout-grid"></use></svg></span>
+      <div><h2 id="navigation-title">Navigation</h2><p>Move between destinations and related views.</p></div>
+    </div>
+    <div class="guide-entries">
+      <article class="guide-entry" id="tabs" aria-labelledby="tabs-title" tabindex="-1" data-search="tab panel tablist">
+        <h3 id="tabs-title">Tabs</h3>
+        <p class="guide-choice">Use tabs for sibling panels within one task or record. Use page links for destinations with their own document or URL identity.</p>
+        <div class="guide-stage"><div class="kozu-tablist" role="tablist" aria-label="Project details"><button type="button" role="tab" id="sample-summary-tab" aria-controls="sample-summary" aria-selected="true">Summary</button><button type="button" role="tab" id="sample-history-tab" aria-controls="sample-history" aria-selected="false" tabindex="-1">Activity</button></div><div role="tabpanel" id="sample-summary" aria-labelledby="sample-summary-tab" class="kozu-surface guide-panel" tabindex="0">Release ready for review.</div><div role="tabpanel" id="sample-history" aria-labelledby="sample-history-tab" class="kozu-surface guide-panel" tabindex="0" hidden>Three changes since Monday.</div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for tabs</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>A labelled tablist leads a set of 48-unit tab targets. Pair each tab with its corresponding panel and use a selected fill or weight. The panel follows in reading order.</dd></div>
+<div><dt>Variants and states</dt><dd>Show one active panel. Let labels wrap or the tab strip scroll within its own region, keeping the selected option visible.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Tab enters the active or currently roving tab. Left/Right move focus in a horizontal tablist. Home and End move to its bounds. Use Space or Enter to select if activation has a delay, and set <code>aria-selected</code> independently of focus.</dd></div>
+<div><dt>Implementation</dt><dd>Apply the roving <code>tabindex</code> and update both panel visibility and selected state together. Use automatic activation only when switching panels is immediate.<pre><code>&lt;div class=&quot;kozu-tablist&quot; role=&quot;tablist&quot; aria-label=&quot;Project details&quot;&gt;
+  &lt;button id=&quot;summary-tab&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-controls=&quot;summary-panel&quot;&gt;Summary&lt;/button&gt;
+&lt;/div&gt;
+&lt;section id=&quot;summary-panel&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;summary-tab&quot; tabindex=&quot;0&quot;&gt;
+  Project summary
+&lt;/section&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Assigning every tab a Tab stop creates redundant keyboard traversal and leaves arrow-key users without the expected behavior.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="navigation-bar" aria-labelledby="navigation-bar-title" tabindex="-1" data-search="dock bottom mobile compact">
+        <h3 id="navigation-bar-title">Navigation bar</h3>
+        <p class="guide-choice">Use a compact bar for a small set of stable top-level destinations below 600 units. Keep the same destination order when switching to the rail.</p>
+        <div class="guide-stage"><nav class="kozu-nav" aria-label="Compact workspace sample" data-demo-nav><a href="#dock-home" aria-current="location"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layout-grid"></use></svg> Overview</a><a href="#dock-activity"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-bell"></use></svg> Activity</a></nav><div id="dock-home" class="kozu-surface guide-panel" tabindex="-1">Overview · 2 active projects</div><div id="dock-activity" class="kozu-surface guide-panel" tabindex="-1" hidden>Activity · 3 updates today</div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for navigation bar</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Balance the insets at both ends of the floating bar. Give each destination at least 48 units and use a selected capsule with a visible label. Apply safe-area insets before spacing the bar.</dd></div>
+<div><dt>Variants and states</dt><dd>Support current, available, and focused destinations. Let labels wrap or offer a different layout for translated or enlarged text.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use a labelled navigation landmark and real links. Mark the current page with <code>aria-current="page"</code>. Tab follows destination order and Enter navigates.</dd></div>
+<div><dt>Implementation</dt><dd>Set <code>aria-current</code> from the route and retain destination state if the viewport changes.<pre><code>&lt;nav class=&quot;kozu-nav&quot; aria-label=&quot;Workspace&quot;&gt;
+  &lt;a href=&quot;/overview&quot; aria-current=&quot;page&quot;&gt;Overview&lt;/a&gt;
+  &lt;a href=&quot;/activity&quot;&gt;Activity&lt;/a&gt;
+&lt;/nav&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Moving the same destinations into a tab panel changes both their semantics and expected keyboard behavior.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="navigation-rail" aria-labelledby="navigation-rail-title" tabindex="-1" data-search="sidebar adaptive wide tablet">
+        <h3 id="navigation-rail-title">Navigation rail</h3>
+        <p class="guide-choice">Introduce a vertical rail from 600 units when the workspace still benefits from a compact destination set. Introduce a sidebar from 840 when labels, hierarchy, and available width justify it.</p>
+        <div class="guide-stage"><div class="guide-rail-specimen"><nav class="kozu-nav kozu-rail" aria-label="Workspace rail sample" data-demo-nav><a href="#rail-home" aria-current="location" aria-label="Overview"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-layout-grid"></use></svg></a><a href="#rail-activity" aria-label="Activity"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-bell"></use></svg></a><a href="#rail-settings" aria-label="Settings"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-settings"></use></svg></a></nav><div id="rail-home" class="kozu-surface guide-panel" tabindex="-1">Overview · 2 active projects</div><div id="rail-activity" class="kozu-surface guide-panel" tabindex="-1" hidden>Activity · 3 updates today</div><div id="rail-settings" class="kozu-surface guide-panel" tabindex="-1" hidden>Settings · Notifications on</div></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for navigation rail</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Float a 72-unit capsule 16 units from the leading safe edge and center it vertically. Use 8-unit inner padding, 56-unit destination targets, and 8-unit gaps. Allow the rail to grow or change layout when labels or safe areas require it.</dd></div>
+<div><dt>Variants and states</dt><dd>Support current and focused states independently. Use recognizable icons for compact destinations. Add a concise label or tooltip where the icon needs help.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use real, named links in a navigation landmark. Preserve focus, selection, scroll, and text input when switching layout. On directional-input hosts, follow native remote focus conventions.</dd></div>
+<div><dt>Implementation</dt><dd>Apply the rail layout to the route links. Use logical positioning for mirrored layouts.<pre><code>&lt;nav class=&quot;kozu-nav kozu-rail&quot; aria-label=&quot;Workspace&quot;&gt;
+  &lt;a href=&quot;/overview&quot; aria-current=&quot;page&quot; aria-label=&quot;Overview&quot;&gt;
+    &lt;svg class=&quot;kozu-glyph&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;7&quot; height=&quot;7&quot; rx=&quot;1&quot;/&gt;
+      &lt;rect x=&quot;14&quot; y=&quot;3&quot; width=&quot;7&quot; height=&quot;7&quot; rx=&quot;1&quot;/&gt;
+      &lt;rect x=&quot;3&quot; y=&quot;14&quot; width=&quot;7&quot; height=&quot;7&quot; rx=&quot;1&quot;/&gt;
+      &lt;rect x=&quot;14&quot; y=&quot;14&quot; width=&quot;7&quot; height=&quot;7&quot; rx=&quot;1&quot;/&gt;
+    &lt;/svg&gt;
+  &lt;/a&gt;
+&lt;/nav&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Remounting the navigation and content when the rail appears can erase scroll, edits, or focus.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="breadcrumb" aria-labelledby="breadcrumb-title" tabindex="-1" data-search="">
+        <h3 id="breadcrumb-title">Breadcrumb</h3>
+        <p class="guide-choice">Use for the hierarchy leading to a page. Use a Back control when the important action is to return to the previous step or history entry.</p>
+        <div class="guide-stage"><nav class="kozu-breadcrumb" aria-label="Example hierarchy" data-demo-breadcrumb><ol role="list"><li><a href="#bread-projects">Projects</a></li><li><a href="#bread-reviews">Reviews</a></li><li aria-current="page">December</li></ol></nav><div id="bread-projects" class="kozu-surface guide-panel" tabindex="-1" hidden>Projects · Choose a project to review.</div><div id="bread-reviews" class="kozu-surface guide-panel" tabindex="-1" hidden>Reviews · Browse monthly reviews.</div><p class="guide-output" role="status">December review</p></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for breadcrumb</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Place a labelled navigation region above the page title. Use an ordered list with consistent separators. Let individual paths wrap at narrow widths.</dd></div>
+<div><dt>Variants and states</dt><dd>Ancestor crumbs are links. The current item is text with <code>aria-current="page"</code>. A collapsed ancestor needs an accessible disclosure if the branch can be reopened.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Tab visits ancestor links in order. Separate separators from the accessible name. Use a literal label for the navigation region.</dd></div>
+<div><dt>Implementation</dt><dd>Build ancestors from the content hierarchy and name the final item from the current route.<pre><code>&lt;nav class=&quot;kozu-breadcrumb&quot; aria-label=&quot;Breadcrumb&quot;&gt;
+  &lt;ol&gt;&lt;li&gt;&lt;a href=&quot;/projects&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;&lt;li aria-current=&quot;page&quot;&gt;Quarterly review&lt;/li&gt;&lt;/ol&gt;
+&lt;/nav&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A path built from session history can show a different hierarchy each time someone opens the same destination.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="pagination" aria-labelledby="pagination-title" tabindex="-1" data-search="">
+        <h3 id="pagination-title">Pagination</h3>
+        <p class="guide-choice">Use when a discrete, addressable page improves navigation or recovery. For exploration without a page concept, consider a Load more action with a stable position.</p>
+        <div class="guide-stage"><nav class="kozu-pagination" aria-label="Example result pages" data-pages><button type="button" data-page="prev" disabled>Previous</button><button type="button" data-page="1" aria-current="page" aria-label="Page 1">1</button><button type="button" data-page="2" aria-label="Page 2">2</button><button type="button" data-page="3" aria-label="Page 3">3</button><button type="button" data-page="next">Next</button></nav><p class="guide-output" role="status">Showing projects 1–3 of 9 · Studio, Archive, Review</p></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for pagination</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Include Previous and Next and a page index or current-range summary. Keep targets 48 units and permit wrapping or a compact arrangement at narrow widths.</dd></div>
+<div><dt>Variants and states</dt><dd>Show the current page and handle first, intermediate, last, loading, and empty states. When filters shrink the collection, clamp or reset the page.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use links for URL-backed pages and use <code>aria-current="page"</code> for the current link. On client-side updates, announce the loaded range and keep reading order predictable.</dd></div>
+<div><dt>Implementation</dt><dd>If the list changes within the same document, update the query parameter, results, and current indicator from one page value.<pre><code>&lt;nav class=&quot;kozu-pagination&quot; aria-label=&quot;Result pages&quot;&gt;
+  &lt;a href=&quot;?page=1&quot;&gt;Previous&lt;/a&gt;
+  &lt;a href=&quot;?page=2&quot; aria-current=&quot;page&quot; aria-label=&quot;Page 2&quot;&gt;2&lt;/a&gt;
+  &lt;a href=&quot;?page=3&quot;&gt;Next&lt;/a&gt;
+&lt;/nav&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A focusable ellipsis styled like an enabled button promises a destination without providing one.</dd></div></dl>
+        </details>
+      </article>
+    </div>
+  </section>
+  <section class="guide-group" id="content" tabindex="-1" aria-labelledby="content-title">
+    <div class="guide-group-head">
+      <span class="guide-family-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-notebook"></use></svg></span>
+      <div><h2 id="content-title">Content</h2><p>Read, compare, and inspect structured information.</p></div>
+    </div>
+    <div class="guide-entries">
+      <article class="guide-entry" id="card" aria-labelledby="card-title" tabindex="-1" data-search="panel">
+        <h3 id="card-title">Card</h3>
+        <p class="guide-choice">Use for a self-contained summary with independent content or action. Use a continuous sheet when adjacent content needs to be read as one sequence.</p>
+        <div class="guide-stage"><article class="kozu-card kozu-surface kozu-stack"><span class="kozu-badge" data-tone="success"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-check"></use></svg> Ready to review</span><div><h4>Monthly report</h4><p>November · Finance workspace</p></div><button class="kozu-button kozu-quiet" type="button" data-report="Report opened for review.">Open report</button></article><p class="guide-output" role="status"></p></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for card</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Use a surface, a heading, and a content area. Add media or actions only when needed. Start with a 24-unit radius and 16–24 units of padding.</dd></div>
+<div><dt>Variants and states</dt><dd>Use passive, contained-action, or single-link cards. Use a frosted card over a field when depth has a purpose and contrast holds at both crop extremes. Make a selected state explicit when cards belong to a selectable set.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use an article or section when content has its own heading. Keep nested actions as distinct targets. Make the interactive element a button or a link.</dd></div>
+<div><dt>Implementation</dt><dd>Keep the heading and primary action in readable DOM order.<pre><code>&lt;article class=&quot;kozu-card kozu-surface&quot;&gt;
+  &lt;h3&gt;Monthly report&lt;/h3&gt;
+  &lt;p&gt;Ready to review.&lt;/p&gt;
+  &lt;a class=&quot;kozu-link&quot; href=&quot;/reports/monthly&quot;&gt;Open report&lt;/a&gt;
+&lt;/article&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A click handler on a whole card with nested buttons creates conflicting activation and ambiguous keyboard focus.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="list" aria-labelledby="list-title" tabindex="-1" data-search="">
+        <h3 id="list-title">List</h3>
+        <p class="guide-choice">Use for entities or events read row by row. Use a table when comparisons depend on stable columns.</p>
+        <div class="guide-stage"><ul class="kozu-list" role="list"><li class="kozu-list-row"><span class="kozu-row"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-check"></use></svg> Deployment complete</span><time class="kozu-telemetry" datetime="14:32:00Z">14:32</time></li><li class="kozu-list-row"><span class="kozu-row"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-search"></use></svg> Investigation started</span><time class="kozu-telemetry" datetime="14:18:00Z">14:18</time></li><li class="kozu-list-row"><span class="kozu-row"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-circle-alert"></use></svg> Attention needed</span><time class="kozu-telemetry" datetime="14:12:00Z">14:12</time></li></ul></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for list</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Align the leading glyph, title and supporting text, and trailing value or action. Keep at least a 48-unit row target for interactive items. Use tabular figures for aligned times and financial values.</dd></div>
+<div><dt>Variants and states</dt><dd>Support plain, linked, selectable, and grouped rows. Show a localized empty state with a useful action if one exists.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use <code>ul</code> or <code>ol</code> for semantic grouping. Put controls inside the item. Preserve label-to-detail order and use visible focus on each real action.</dd></div>
+<div><dt>Implementation</dt><dd>Use <code>time</code> for timestamps and expose the same ordered content at every width.<pre><code>&lt;ul class=&quot;kozu-list&quot; role=&quot;list&quot;&gt;
+  &lt;li class=&quot;kozu-list-row&quot;&gt;
+    &lt;span&gt;Deployment complete&lt;/span&gt;&lt;time class=&quot;kozu-telemetry&quot; datetime=&quot;14:32:00Z&quot;&gt;14:32 UTC&lt;/time&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Using visual position alone to communicate the leading value can reverse the message when reflowing a row.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="table" aria-labelledby="table-title" tabindex="-1" data-search="">
+        <h3 id="table-title">Table</h3>
+        <p class="guide-choice">Use when users compare values across meaningful columns. Use a list for independent items without comparable attributes.</p>
+        <div class="guide-stage"><div class="kozu-table-region" role="region" aria-label="Transfer details" tabindex="0"><table class="kozu-table"><caption>Recent transfers · USD</caption><thead><tr><th scope="col">Reference</th><th scope="col" data-numeric aria-sort="ascending"><button type="button" data-sort>Amount <span aria-hidden="true">↑</span></button></th></tr></thead><tbody><tr data-amount="80"><th scope="row">Studio</th><td data-numeric>$80.00</td></tr><tr data-amount="120"><th scope="row">Reserve</th><td data-numeric>$120.00</td></tr><tr data-amount="320"><th scope="row">Services</th><td data-numeric>$320.00</td></tr></tbody></table></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for table</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Include a caption and scoped column or row headers. Align numeric columns to the logical end and use tabular figures. Keep sort controls in their headers.</dd></div>
+<div><dt>Variants and states</dt><dd>Support sorted, filtered, empty, and loading data. Contain horizontal overflow within the table region, keeping the page itself reflowable.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use a native table. Set <code>aria-sort</code> on the currently sorted header and give the sort button a name. Keep individual cells outside the Tab order unless they contain a real control. A keyboard-focusable scroll region can highlight its caption and headers with focused fill and ink.</dd></div>
+<div><dt>Implementation</dt><dd>Update row order and <code>aria-sort</code> from the same data operation.<pre><code>&lt;div class=&quot;kozu-table-region&quot; role=&quot;region&quot; aria-label=&quot;Transfer details&quot; tabindex=&quot;0&quot;&gt;
+  &lt;table class=&quot;kozu-table&quot;&gt;
+    &lt;caption&gt;Recent transfers&lt;/caption&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Reference&lt;/th&gt;&lt;th scope=&quot;col&quot; data-numeric&gt;Amount&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;&lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Reserve&lt;/th&gt;&lt;td data-numeric&gt;$120.00&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Displaying a flattened card version by removing header associations makes the values harder to interpret.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="accordion" aria-labelledby="accordion-title" tabindex="-1" data-search="disclosure details collapse expand">
+        <h3 id="accordion-title">Accordion</h3>
+        <p class="guide-choice">Use to group optional information into named disclosures. Keep deadlines, required instructions, and current errors visible without opening a panel.</p>
+        <div class="guide-stage"><div class="kozu-stack"><details class="kozu-accordion"><summary>Billing details</summary><p>Invoices appear after the billing period closes.</p></details><details class="kozu-accordion"><summary>Update delivery</summary><p>Updates are also available in your workspace.</p></details></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for accordion</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Each item has a summary at least 48 units high, a disclosure mark, and a content region. Keep summary text visible alongside the mark.</dd></div>
+<div><dt>Variants and states</dt><dd>Support collapsed, expanded, and focused. Multiple open panels often help comparison. Use single-open behavior only where the relationship calls for it.</dd></div>
+<div><dt>Input and accessibility</dt><dd>A native <code>details</code> and <code>summary</code> provide keyboard activation and expanded state. Keep the summary focused on toggle and follow it with the revealed content.</dd></div>
+<div><dt>Implementation</dt><dd>Use independent native disclosure elements unless the task requires a shared accordion state.<pre><code>&lt;details class=&quot;kozu-accordion&quot;&gt;
+  &lt;summary&gt;Billing details&lt;/summary&gt;
+  &lt;p&gt;Invoices appear after each billing period closes.&lt;/p&gt;
+&lt;/details&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Closing a section while focus remains inside its hidden content leaves keyboard users without a clear position.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="avatar" aria-labelledby="avatar-title" tabindex="-1" data-search="">
+        <h3 id="avatar-title">Avatar</h3>
+        <p class="guide-choice">Use to identify a person, team, or agent alongside their name. A passive avatar supplements nearby identity text.</p>
+        <div class="guide-stage"><ul class="guide-person-list" role="list"><li><img class="kozu-avatar" src="../Assets/People/alex.jpg" width="40" height="40" alt="" loading="lazy"><span>Alex Morgan</span></li><li><span class="kozu-avatar" aria-hidden="true">JP</span><span>Jamie Park</span></li></ul></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for avatar</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Place a photo or initials in a circular crop and center the visible subject. Use 40 units for a standalone image by default. Place names adjacent when identity matters.</dd></div>
+<div><dt>Variants and states</dt><dd>Support real image, initials fallback, and unknown identity. If the avatar opens a profile, give the enclosing link its own 48-unit target and visible focus.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use empty alternative text when the adjacent visible name supplies identity. Give the link a clear name if the avatar is the only content.</dd></div>
+<div><dt>Implementation</dt><dd>Keep a text identity alongside the image and substitute initials when the image is unavailable.<pre><code>&lt;div class=&quot;kozu-row&quot;&gt;
+  &lt;img class=&quot;kozu-avatar&quot; src=&quot;../Assets/People/alex.jpg&quot; alt=&quot;&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;
+  &lt;span&gt;Alex Morgan&lt;/span&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Initials and an image’s redundant alternative text can make the same name appear twice in the reading order.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="badge" aria-labelledby="badge-title" tabindex="-1" data-search="">
+        <h3 id="badge-title">Badge</h3>
+        <p class="guide-choice">Use for a brief status or count attached to an entity. Use a chip for a value the user can select or remove.</p>
+        <div class="guide-stage"><div class="kozu-row"><span class="kozu-badge" data-tone="info"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-info"></use></svg> In review</span><span class="kozu-badge" data-tone="notice"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-circle-alert"></use></svg> Action needed</span><span class="kozu-badge" data-tone="success"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-check"></use></svg> Recovered</span></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for badge</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Pair compact wording with an optional distinctive mark. Use restrained tint, a pill shape, and enough padding for localized text to wrap without clipping.</dd></div>
+<div><dt>Variants and states</dt><dd>Use neutral, informational, attention, and recovery treatments. For counts above a cap, expose the complete count where it matters.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Keep passive badges outside the Tab order. Include the badge meaning in the adjacent control’s name or description where needed. Announce changes only when the task benefits from them.</dd></div>
+<div><dt>Implementation</dt><dd>Use a tone and plain-language state.<pre><code>&lt;span class=&quot;kozu-badge&quot; data-tone=&quot;success&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;✓&lt;/span&gt; Recovered&lt;/span&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>An unlabeled orange dot can imply several different conditions without telling anyone which occurred.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry guide-entry-wide" id="chart" aria-labelledby="chart-title" tabindex="-1" data-search="needle graph histogram plot matrix data visualization">
+        <h3 id="chart-title">Chart</h3>
+        <p class="guide-choice">Use needle bars when selecting a precise period and value, dot matrices for discrete or normalized magnitude, and time-aligned histograms for operational frequency. Use a table to inspect and compare exact values.</p>
+        <div class="guide-stage"><div class="guide-chart-grid">
+      <figure class="kozu-chart">
+        <figcaption>Daily transfers · USD</figcaption>
+        <output data-chart-value>Wednesday · $360</output>
+        <div class="kozu-chart-plot"><button class="kozu-needle" style="--level:0.3" type="button" aria-pressed="false" aria-label="Monday, 120 dollars" data-value="Monday · $120">Mon</button><button class="kozu-needle" style="--level:0.6125" type="button" aria-pressed="false" aria-label="Tuesday, 245 dollars" data-value="Tuesday · $245">Tue</button><button class="kozu-needle" style="--level:0.9" type="button" aria-pressed="true" aria-label="Wednesday, 360 dollars" data-value="Wednesday · $360">Wed</button><button class="kozu-needle" style="--level:0.7125" type="button" aria-pressed="false" aria-label="Thursday, 285 dollars" data-value="Thursday · $285">Thu</button><button class="kozu-needle" style="--level:0.4875" type="button" aria-pressed="false" aria-label="Friday, 195 dollars" data-value="Friday · $195">Fri</button></div>
+        <details class="kozu-accordion"><summary>View transfer data</summary><table class="kozu-table"><thead><tr><th scope="col">Day</th><th scope="col" data-numeric>Amount</th></tr></thead><tbody><tr><th scope="row">Monday</th><td data-numeric>$120</td></tr><tr><th scope="row">Tuesday</th><td data-numeric>$245</td></tr><tr><th scope="row">Wednesday</th><td data-numeric>$360</td></tr><tr><th scope="row">Thursday</th><td data-numeric>$285</td></tr><tr><th scope="row">Friday</th><td data-numeric>$195</td></tr></tbody></table></details>
+      </figure>
+      <div class="kozu-stack">
+        <figure class="kozu-chart">
+          <figcaption>Review coverage · 70% (14 of 20)</figcaption>
+          <div data-dot-grid="progress" class="guide-coverage" data-dot-value="70" aria-hidden="true"></div>
+        </figure>
+        <figure class="kozu-chart">
+          <figcaption>Events by hour · 10:00–20:00 UTC</figcaption>
+          <div class="kozu-histogram" style="--series:var(--kz-chart-green)" aria-hidden="true"><span style="--level:0.2"></span><span style="--level:0.4"></span><span style="--level:0.7"></span><span style="--level:0.9"></span><span style="--level:0.55"></span><span style="--level:0.85"></span><span style="--level:0.35"></span><span style="--level:0.45"></span><span style="--level:0.65"></span><span style="--level:0.4"></span></div>
+          <div class="kozu-row kozu-between kozu-telemetry" aria-hidden="true"><span>10:00</span><span>15:00</span><span>20:00</span></div>
+          <details class="kozu-accordion"><summary>View event counts</summary><p>Hourly counts from 10:00 UTC: 2, 4, 7, 9, 6, 9, 4, 5, 7, 4.</p></details>
+        </figure>
+      </div>
+    </div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for chart</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Provide a title, units, time scale, and visible selected value. Align labels with tabular figures or Menlo for telemetry. Use comparable geometry and common time bins for related series. Dot matrices use whole dots on an 8-unit pitch on both axes, centered in available width.</dd></div>
+<div><dt>Variants and states</dt><dd>Support selected, empty, no-data, and loading states. Distinguish zero from missing data. Use Blue for information, Orange for attention, and Green for recovery. Use Gold, Violet, and Rose only where an extra comparative series needs separation.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Give the figure a summary and an available table or text equivalent. Make interactive marks reachable with a keyboard and include the date, value, and unit in their accessible names. Pair colors with labels or distinctive shapes.</dd></div>
+<div><dt>Implementation</dt><dd>Bind selection and text alternatives to the same data. A selected needle can be a toggle whose accessible name includes the exact value. Render a passive matrix with <code>data-dot-grid="progress"</code>, <code>data-dot-value</code> from 0 to 100, and separate visible units or counts.<pre><code>&lt;figure class=&quot;kozu-chart&quot;&gt;
+  &lt;figcaption&gt;Transfer volume in US dollars&lt;/figcaption&gt;
+  &lt;output class=&quot;kozu-numeral&quot;&gt;Wednesday · $360&lt;/output&gt;
+  &lt;div class=&quot;kozu-chart-plot&quot;&gt;
+    &lt;button class=&quot;kozu-needle&quot; style=&quot;--level: .6&quot; type=&quot;button&quot; aria-pressed=&quot;true&quot; aria-label=&quot;Wednesday, 360 dollars&quot;&gt;Wed&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A tooltip as the only source of values prevents touch, keyboard, and assistive users from obtaining the same data.</dd></div></dl>
+        </details>
+      </article>
+    </div>
+  </section>
+  <section class="guide-group" id="overlays" tabindex="-1" aria-labelledby="overlays-title">
+    <div class="guide-group-head">
+      <span class="guide-family-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-square-dashed"></use></svg></span>
+      <div><h2 id="overlays-title">Overlays</h2><p>Present a focused task or contextual actions.</p></div>
+    </div>
+    <div class="guide-entries">
+      <article class="guide-entry" id="dialog" aria-labelledby="dialog-title" tabindex="-1" data-search="modal confirmation overlay">
+        <h3 id="dialog-title">Dialog</h3>
+        <p class="guide-choice">Use a modal dialog when the user must resolve a focused choice before continuing. Use an inline control for light adjustments and a sheet for an extended related task.</p>
+        <div class="guide-stage"><button class="kozu-button" type="button" data-dialog="sample-dialog">Archive report</button><p class="guide-output" role="status"></p><dialog id="sample-dialog" class="kozu-dialog" aria-labelledby="sample-dialog-title"><form method="dialog" class="kozu-stack"><h4 id="sample-dialog-title">Archive this report?</h4><p>You can restore the report from the archive.</p><div class="kozu-row"><button class="kozu-button" value="cancel" autofocus>Cancel</button><button class="kozu-button kozu-primary" value="archive">Archive report</button></div></form></dialog></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for dialog</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Include a title, concise body, action group, and an explicit visible close or cancel control. Allow internal scrolling. Use a 40-unit backdrop blur on a frosted overlay and a solid equivalent.</dd></div>
+<div><dt>Variants and states</dt><dd>Support confirm, destructive confirm, and short input. Show submitting and error states inside the dialog. Keep underlying content visually subordinate and inert.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Open a labelled native dialog with <code>showModal()</code>. Focus the safest meaningful control or a leading heading when content requires reading. Support Escape, keep Tab within the modal, and return focus to its trigger or the logical successor.</dd></div>
+<div><dt>Implementation</dt><dd>Use <code>method="dialog"</code> for local responses. For requests, close after success and retain the response state when submission fails.<pre><code>&lt;dialog class=&quot;kozu-dialog&quot; id=&quot;archive&quot; aria-labelledby=&quot;archive-title&quot;&gt;
+  &lt;form method=&quot;dialog&quot; class=&quot;kozu-stack&quot;&gt;
+    &lt;h2 id=&quot;archive-title&quot;&gt;Archive report?&lt;/h2&gt;
+    &lt;div class=&quot;kozu-row&quot;&gt;
+      &lt;button class=&quot;kozu-button&quot; value=&quot;cancel&quot; autofocus&gt;Cancel&lt;/button&gt;
+      &lt;button class=&quot;kozu-button kozu-primary&quot; value=&quot;archive&quot;&gt;Archive report&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Setting the <code>open</code> attribute directly renders the element without modal focus containment.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="sheet" aria-labelledby="sheet-title" tabindex="-1" data-search="drawer modal overlay">
+        <h3 id="sheet-title">Sheet</h3>
+        <p class="guide-choice">Use a sheet for a focused task that benefits from nearby context, such as export options or a multi-field edit. Use an inline panel for supplementary content that remains available as the user works elsewhere.</p>
+        <div class="guide-stage"><button class="kozu-button" type="button" data-dialog="sample-sheet">Open export options</button><p class="guide-output" role="status"></p><dialog class="kozu-dialog kozu-sheet" id="sample-sheet" aria-labelledby="sample-sheet-title"><form method="dialog" class="kozu-stack"><h4 id="sample-sheet-title" tabindex="-1" autofocus>Export options</h4><div class="kozu-field"><label for="sample-sheet-format">Format</label><select class="kozu-input" id="sample-sheet-format"><option>CSV</option><option>PDF</option></select></div><label class="kozu-choice"><input type="checkbox" checked> Include notes</label><div class="kozu-row"><button class="kozu-button" value="cancel">Cancel</button><button class="kozu-button kozu-primary" value="export">Export report</button></div></form></dialog></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for sheet</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Anchor the surface to the chosen edge, preserve safe areas, and group the heading, scrollable body, and actions. Let the sheet expand with content up to the viewport limit.</dd></div>
+<div><dt>Variants and states</dt><dd>Support modal bottom and wide side treatments, plus opaque and frosted surfaces. Preserve draft data on resize and provide clear close behavior when edits are pending.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use native modal dialog behavior for a blocking sheet. Provide a visible close control, Escape, and focus return. Keep that control available when content scrolls and offer it alongside any gesture.</dd></div>
+<div><dt>Implementation</dt><dd>Use the sheet modifier with a labelled dialog. Connect the result to application state after the dialog closes.<pre><code>&lt;dialog class=&quot;kozu-dialog kozu-sheet&quot; id=&quot;export&quot; aria-labelledby=&quot;export-title&quot;&gt;
+  &lt;form method=&quot;dialog&quot; class=&quot;kozu-stack&quot;&gt;
+    &lt;h2 id=&quot;export-title&quot;&gt;Export options&lt;/h2&gt;
+    &lt;button class=&quot;kozu-button&quot; value=&quot;cancel&quot; autofocus&gt;Close&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Swipe-only dismissal excludes keyboard users and can conflict with scrolling.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="menu" aria-labelledby="menu-title" tabindex="-1" data-search="">
+        <h3 id="menu-title">Menu</h3>
+        <p class="guide-choice">Use for a short set of contextual actions opened from a trigger. Use select for a form value and a navigation list for page destinations.</p>
+        <div class="guide-stage"><button class="kozu-button kozu-icon-button" type="button" popovertarget="sample-menu" aria-label="More actions"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-ellipsis"></use></svg></button><div class="kozu-menu" id="sample-menu" popover><button type="button" data-menu-action="Report duplicated." autofocus><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-copy"></use></svg> Duplicate</button><button type="button" data-menu-action="Rename selected."><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-notebook"></use></svg> Rename</button></div><p class="guide-output" role="status"></p></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for menu</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Keep a named trigger, a packed surface, and rows of at least 48 units. Align labels consistently and allow the surface to move away from the viewport edge.</dd></div>
+<div><dt>Variants and states</dt><dd>Support closed, open, focused, and unavailable actions. Use an explicit menu role only when supplying the complete desktop action-menu interaction model.</dd></div>
+<div><dt>Input and accessibility</dt><dd>A popover of native buttons supports Tab and Escape and suits a small command list. For an ARIA menu, implement arrow navigation, Home/End, Escape, focus return, and the correct menu item roles.</dd></div>
+<div><dt>Implementation</dt><dd>Open a native auto popover from its invoker and hide it after an action. For anchored placement, keep the popover near the invoker and within the viewport.<pre><code>&lt;button class=&quot;kozu-button&quot; type=&quot;button&quot; popovertarget=&quot;actions&quot;&gt;More actions&lt;/button&gt;
+&lt;div class=&quot;kozu-menu&quot; id=&quot;actions&quot; popover&gt;
+  &lt;button type=&quot;button&quot;&gt;Duplicate&lt;/button&gt;
+  &lt;button type=&quot;button&quot;&gt;Rename&lt;/button&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Adding <code>role="menu"</code> to a regular button list changes keyboard expectations without supplying arrow behavior.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="tooltip" aria-labelledby="tooltip-title" tabindex="-1" data-search="hover help hint">
+        <h3 id="tooltip-title">Tooltip</h3>
+        <p class="guide-choice">Use for short, nonessential clarification of an already named control. Use a disclosure or help button for information that touch users need to complete the task.</p>
+        <div class="guide-stage"><div class="kozu-tip-wrap"><button class="kozu-button" type="button" aria-describedby="sample-tooltip" data-report="Visible rows exported.">Export</button><span class="kozu-tooltip" id="sample-tooltip" role="tooltip">Includes visible rows.</span></div><p class="guide-output" role="status"></p></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for tooltip</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Anchor a small text bubble near its trigger. Give it enough contrast, width to wrap, and space from viewport edges.</dd></div>
+<div><dt>Variants and states</dt><dd>Show on hover and keyboard focus, and hide on Escape or after focus and pointer leave. Keep it visible while the pointer travels onto the tooltip itself.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Keep focus on the trigger. Refer to the tooltip with <code>aria-describedby</code> and use <code>role="tooltip"</code> on the text. Keep controls outside the tooltip.</dd></div>
+<div><dt>Implementation</dt><dd>Apply the tooltip class to the described text and wire visibility and dismissal to its trigger. The guide demonstrates Escape and focus handling.<pre><code>&lt;div class=&quot;kozu-tip-wrap&quot;&gt;
+  &lt;button class=&quot;kozu-button&quot; type=&quot;button&quot; aria-describedby=&quot;export-tip&quot;&gt;Export&lt;/button&gt;
+  &lt;span class=&quot;kozu-tooltip&quot; id=&quot;export-tip&quot; role=&quot;tooltip&quot;&gt;Includes visible rows.&lt;/span&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Essential instructions inside a hover tooltip are unavailable on touch and easy to miss with assistive technology.</dd></div></dl>
+        </details>
+      </article>
+    </div>
+  </section>
+  <section class="guide-group" id="feedback" tabindex="-1" aria-labelledby="feedback-title">
+    <div class="guide-group-head">
+      <span class="guide-family-icon"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-bell"></use></svg></span>
+      <div><h2 id="feedback-title">Feedback</h2><p>Show system state, progress, and completion.</p></div>
+    </div>
+    <div class="guide-entries">
+      <article class="guide-entry" id="banner" aria-labelledby="banner-title" tabindex="-1" data-search="">
+        <h3 id="banner-title">Banner</h3>
+        <p class="guide-choice">Use an in-flow banner for persistent, relevant information that affects a page or section. Use a toast for a short confirmation of an action.</p>
+        <div class="guide-stage"><aside class="kozu-banner" data-tone="notice" aria-labelledby="sample-banner-title"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-circle-alert"></use></svg><div><strong id="sample-banner-title">Connection lost</strong><p>Edits are saved on this device.</p></div></aside></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for banner</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Include a distinctive mark, a concise state and explanation, and one relevant action when useful. Use an 8–16-unit internal gap with room to wrap.</dd></div>
+<div><dt>Variants and states</dt><dd>Use information, attention, or recovery. Keep a blocking message visible until the condition changes. A dismissible banner needs a named dismissal and a stable focus destination.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use normal reading order for initially present messages. For a new nonurgent banner, update a status region. Reserve an alert for an urgent condition that merits interruption.</dd></div>
+<div><dt>Implementation</dt><dd>Render the visible message and the action as siblings. Pair color with wording.<pre><code>&lt;aside class=&quot;kozu-banner&quot; data-tone=&quot;notice&quot; aria-labelledby=&quot;offline-title&quot;&gt;
+  &lt;span aria-hidden=&quot;true&quot;&gt;!&lt;/span&gt;
+  &lt;div&gt;&lt;strong id=&quot;offline-title&quot;&gt;Connection lost&lt;/strong&gt;&lt;p&gt;Edits are saved on this device.&lt;/p&gt;&lt;/div&gt;
+&lt;/aside&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Marking every persistent banner as an alert can repeatedly interrupt assistive output.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="toast" aria-labelledby="toast-title" tabindex="-1" data-search="snackbar live status confirmation">
+        <h3 id="toast-title">Toast</h3>
+        <p class="guide-choice">Use for a short confirmation or an update that remains available in context. Put required actions or recovery in a persistent banner or inline state.</p>
+        <div class="guide-stage"><button class="kozu-button" type="button" data-toast>Save draft</button><div class="guide-toast-space"><div class="kozu-toast" role="status" aria-atomic="true"></div></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for toast</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Place the message within safe margins and keep it clear of the current focus or bottom controls. Keep the text brief and support wrapping.</dd></div>
+<div><dt>Variants and states</dt><dd>Stack or replace repeated confirmations deliberately. Keep interactive versions available until dismissed or provide the same action in a persistent location.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Keep the live region mounted and update its text after the action. Use polite status for routine confirmations and keep focus on the user’s current task.</dd></div>
+<div><dt>Implementation</dt><dd>Populate the existing region on demand. Align visual dismissal with the availability of any action.<pre><code>&lt;div class=&quot;kozu-toast&quot; role=&quot;status&quot; aria-atomic=&quot;true&quot;&gt;&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Creating a populated status region at the same moment as the event can leave the message unannounced.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry guide-entry-wide" id="progress-indicator" aria-labelledby="progress-indicator-title" tabindex="-1" data-search="task completion determinate dot matrix percent">
+        <h3 id="progress-indicator-title">Progress indicator</h3>
+        <p class="guide-choice">Use determinate progress whenever the completed fraction is known. Use a spinner when the app cannot measure completion.</p>
+        <div class="guide-stage"><div class="kozu-progress"><div class="kozu-indicator-layout"><span id="sample-progress-label">Sync</span><div data-dot-grid="progress" data-dot-value="72" aria-hidden="true"></div><span class="kozu-numeral" aria-hidden="true" data-progress-text>72%</span></div><progress class="kozu-sr" aria-labelledby="sample-progress-label" value="72" max="100">72%</progress></div><div class="kozu-field guide-progress-control"><label for="sample-progress-level">Set completion</label><input class="kozu-range" type="range" id="sample-progress-level" data-progress min="0" max="100" value="72"><div class="guide-range-endpoints kozu-numeral" aria-hidden="true"><span>0%</span><span>100%</span></div></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for progress indicator</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Place a compact label and exact value at equal outer insets with a wide central data mark. Use two rows of dots for task completion or a bar for a continuous ratio. Dots have a 4-unit diameter and 8-unit pitch on both axes. A width W under 4 units gets zero columns. Otherwise use <code>1 + floor((W - 4) / 8)</code> columns and center the remaining space. Reflow the data mark to its own row when labels or text scaling need more space.</dd></div>
+<div><dt>Variants and states</dt><dd>Support starting, progressing, paused, complete, and failed. Show the exact percentage beside the representation. Light <code>floor(totalVisibleDots * percent / 100)</code> whole dots. Fill from the leading column to the trailing column and fill the top cell before the bottom cell in each column. At 0% every cell is dim. At 100% every cell is lit. Label financial progress with both the saved and target amounts.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Use a labelled native progress element or a named progressbar with an exact value. Keep its decorative duplicate out of the accessible tree and announce useful milestones separately.</dd></div>
+<div><dt>Implementation</dt><dd>Load <code>dot-grid.js</code> with <code>defer</code>. Give the decorative grid an empty element and set <code>dataset.dotValue</code> from 0 to 100. Update the native progress value and visible label from the same number. The shared helper lays out complete columns on resize.<pre><code>&lt;div class=&quot;kozu-progress&quot;&gt;
+  &lt;div class=&quot;kozu-indicator-layout&quot;&gt;
+    &lt;span id=&quot;sync-label&quot;&gt;Sync&lt;/span&gt;
+    &lt;div data-dot-grid=&quot;progress&quot; data-dot-value=&quot;72&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+    &lt;span class=&quot;kozu-numeral&quot; aria-hidden=&quot;true&quot;&gt;72%&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;progress class=&quot;kozu-sr&quot; aria-labelledby=&quot;sync-label&quot; value=&quot;72&quot; max=&quot;100&quot;&gt;72%&lt;/progress&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>A clipped or partly filled dot distorts the grid. Fill whole dots, keep the semantic and visible percentages exact, and let additional width add complete columns.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry" id="spinner" aria-labelledby="spinner-title" tabindex="-1" data-search="indeterminate loading busy">
+        <h3 id="spinner-title">Spinner</h3>
+        <p class="guide-choice">Use for an active task with unknown duration. If work is likely to continue for a while, explain what is happening and offer cancellation where feasible.</p>
+        <div class="guide-stage"><div class="kozu-stack"><div class="kozu-row" role="status"><span class="kozu-spinner" aria-hidden="true" hidden></span><span data-spinner-status>Ready to prepare preview.</span></div><button type="button" class="kozu-button" data-spinner>Prepare preview</button></div></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for spinner</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Pair a compact busy mark with visible state text. Keep its placement stable so the layout does not shift when work starts or finishes.</dd></div>
+<div><dt>Variants and states</dt><dd>Use loading, complete, and error states with distinct text. Under reduced motion show a static mark with the same label. Replace the busy state with a result or actionable error.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Hide the decorative spinner from assistive technology. Use a polite status for a meaningful state transition and <code>aria-busy</code> on content being refreshed as needed.</dd></div>
+<div><dt>Implementation</dt><dd>Update status when the work starts and ends. Avoid delaying an immediate result just to show a spinner.<pre><code>&lt;p class=&quot;kozu-row&quot; role=&quot;status&quot;&gt;
+  &lt;span class=&quot;kozu-spinner&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+  &lt;span&gt;Generating export…&lt;/span&gt;
+&lt;/p&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>An unlabeled spinner can leave users unable to tell which task is running or whether it can stop.</dd></div></dl>
+        </details>
+      </article>
+      <article class="guide-entry guide-entry-wide" id="listening-indicator" aria-labelledby="listening-indicator-title" tabindex="-1" data-search="voice audio microphone waveform stop">
+        <h3 id="listening-indicator-title">Listening indicator</h3>
+        <p class="guide-choice">Use while an audio or voice session is actually listening. Include the state and an immediately available Stop action.</p>
+        <div class="guide-stage"><div class="kozu-listening" data-listening="true"><div class="kozu-indicator-layout"><span role="status">Listening</span><div data-dot-grid="listening" aria-hidden="true"></div><button class="kozu-button" type="button" data-listen>Stop</button></div></div><button class="kozu-chip" type="button" data-wave-mode aria-pressed="false">Wide waveform</button></div>
+        <details class="kozu-accordion guide-notes">
+          <summary><span>Usage and code <span class="kozu-sr">for listening indicator</span></span></summary>
+          <dl><div><dt>Anatomy</dt><dd>Give the compact label and trailing action equal outer insets around a wide, flexible central data mark. Use three rows of dots by default and a seven-row dot waveform when the layout has room. Both add complete columns on an 8-unit pitch as space grows and preserve the 48-unit Stop target. Place the waveform on its own row when text size or width requires more room.</dd></div>
+<div><dt>Variants and states</dt><dd>Support idle, listening, stopped, and unavailable. When motion is reduced, use a steady waveform. Keep the state visible. Update the session and indicator together when the user stops.</dd></div>
+<div><dt>Input and accessibility</dt><dd>Treat the waveform as decorative and announce state changes through concise visible text. Use a native Stop button and return focus to the start control if Stop leaves the view.</dd></div>
+<div><dt>Implementation</dt><dd>Load <code>dot-grid.js</code> with <code>defer</code>. Use <code>data-dot-grid="listening"</code> for three rows and <code>data-dot-grid="waveform"</code> for the wide treatment. Bind the state and motion to the audio session. Handle Stop in the app before reflecting its confirmed state.<pre><code>&lt;div class=&quot;kozu-listening&quot; data-listening=&quot;true&quot;&gt;
+  &lt;div class=&quot;kozu-indicator-layout&quot;&gt;
+    &lt;span role=&quot;status&quot;&gt;Listening&lt;/span&gt;
+    &lt;div data-dot-grid=&quot;listening&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+    &lt;button class=&quot;kozu-button&quot; type=&quot;button&quot;&gt;Stop&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></dd></div>
+<div><dt>Pitfall</dt><dd>Keeping an animated indicator visible after the session ends misrepresents recording state. Changing only the horizontal pitch with width distorts the waveform.</dd></div></dl>
+        </details>
+      </article>
+    </div>
+  </section>
+      <footer class="guide-footer">
+        <a class="guide-brand" href="#overview"><span class="kozu-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Kozu Group</span></a>
+        <nav aria-label="Reference files"><ul role="list"><li><a href="../docs/foundations.md">Foundations</a></li><li><a href="../docs/platforms.md">Platforms</a></li><li><a href="../docs/patterns.md">Patterns</a></li><li><a href="../docs/components.md">Component reference</a></li><li><a href="../Kozu.tokens.json">Design tokens</a></li><li><a href="../Kozu%20Universal%20UI%20Kit.figcraft">Editable UI kit</a></li><li><a href="index.html">Product demos</a></li></ul></nav>
+      </footer>
+    </main>
+  </div>
+  <dialog id="guide-search" class="kozu-dialog guide-search-dialog" aria-labelledby="guide-search-title">
+    <div class="guide-search-head"><h2 id="guide-search-title">Search the guide</h2><form method="dialog"><button class="kozu-button kozu-icon-button kozu-quiet" aria-label="Close search"><svg class="kozu-glyph" viewBox="0 0 24 24" aria-hidden="true"><use href="#guide-icon-x"></use></svg></button></form></div>
+    <div class="kozu-field">
+      <label class="kozu-sr" for="guide-query">Search components and references</label>
+      <input class="kozu-input" id="guide-query" type="search" autocomplete="off" spellcheck="false" placeholder="Try “checkbox” or “frost”" autofocus>
+    </div>
+    <p class="guide-search-status" role="status"></p>
+    <ul class="guide-search-results" role="list"></ul>
+  </dialog>
+</body>
+</html>

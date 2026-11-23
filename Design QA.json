@@ -1,19 +1,19 @@
 {
-  "edition": "1.0",
+  "edition": "2.0",
   "date": "2026-11-22",
   "counts": {
-    "pages": 9,
-    "artboards": 31,
-    "nodes": 4649,
-    "masters": 110,
-    "componentSets": 1,
-    "instances": 297,
-    "variableBindings": 2144,
-    "variables": 42,
-    "typeStyles": 9,
-    "prototypeActions": 130,
-    "backgroundBlurs": 94,
-    "gradientPaints": 11,
+    "pages": 13,
+    "artboards": 46,
+    "nodes": 136714,
+    "masters": 195,
+    "componentSets": 34,
+    "instances": 406,
+    "variableBindings": 18918,
+    "variables": 141,
+    "typeStyles": 14,
+    "prototypeActions": 146,
+    "backgroundBlurs": 108,
+    "gradientPaints": 5,
     "embeddedImages": 9
   },
   "artboards": [
@@ -35,163 +35,163 @@
     },
     {
       "id": 189,
-      "title": "Finance / Account home",
-      "page": "03 · Paylane",
+      "title": "Accounts / Account home",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "03 Finance — Account home.png"
+      "preview": "03 Accounts — Account home.png"
     },
     {
       "id": 191,
-      "title": "Finance / Analytics",
-      "page": "03 · Paylane",
+      "title": "Accounts / Analytics",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "04 Finance — Analytics.png"
+      "preview": "04 Accounts — Analytics.png"
     },
     {
       "id": 193,
-      "title": "Finance / Weekly update",
-      "page": "03 · Paylane",
+      "title": "Accounts / Weekly update",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "05 Finance — Weekly update.png"
+      "preview": "05 Accounts — Weekly update.png"
     },
     {
       "id": 195,
-      "title": "Finance / Home-screen widgets",
-      "page": "03 · Paylane",
+      "title": "Accounts / Home-screen widgets",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "06 Finance — Home-screen widgets.png"
+      "preview": "06 Accounts — Home-screen widgets.png"
     },
     {
       "id": 197,
-      "title": "Finance / Analytics · Week",
-      "page": "03 · Paylane",
+      "title": "Accounts / Analytics · Week",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "07 Finance — Analytics · Week.png"
+      "preview": "07 Accounts — Analytics · Week.png"
     },
     {
       "id": 199,
-      "title": "Finance / Account menu",
-      "page": "03 · Paylane",
+      "title": "Accounts / Account menu",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "08 Finance — Account menu.png"
+      "preview": "08 Accounts — Account menu.png"
     },
     {
       "id": 201,
-      "title": "Finance / Send money",
-      "page": "03 · Paylane",
+      "title": "Accounts / Send money",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "09 Finance — Send money.png"
+      "preview": "09 Accounts — Send money.png"
     },
     {
       "id": 203,
-      "title": "Finance / Request money",
-      "page": "03 · Paylane",
+      "title": "Accounts / Request money",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "10 Finance — Request money.png"
+      "preview": "10 Accounts — Request money.png"
     },
     {
       "id": 205,
-      "title": "Finance / Analytics · Day",
-      "page": "03 · Paylane",
+      "title": "Accounts / Analytics · Day",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "11 Finance — Analytics · Day.png"
+      "preview": "11 Accounts — Analytics · Day.png"
     },
     {
       "id": 207,
-      "title": "Finance / Analytics · Year",
-      "page": "03 · Paylane",
+      "title": "Accounts / Analytics · Year",
+      "page": "03 · Accounts",
       "width": 390,
       "height": 844,
-      "preview": "12 Finance — Analytics · Year.png"
+      "preview": "12 Accounts — Analytics · Year.png"
     },
     {
       "id": 1417,
-      "title": "Synq / Listening",
-      "page": "04 · Synq",
+      "title": "Tasks / Listening",
+      "page": "04 · Tasks",
       "width": 540,
       "height": 675,
-      "preview": "13 Synq — Listening.png"
+      "preview": "13 Tasks — Listening.png"
     },
     {
       "id": 1419,
-      "title": "Synq / Active Flow",
-      "page": "04 · Synq",
+      "title": "Tasks / Task activity",
+      "page": "04 · Tasks",
       "width": 540,
       "height": 675,
-      "preview": "14 Synq — Active Flow.png"
+      "preview": "14 Tasks — Task activity.png"
     },
     {
       "id": 1421,
-      "title": "Synq / New task",
-      "page": "04 · Synq",
+      "title": "Tasks / New task",
+      "page": "04 · Tasks",
       "width": 540,
       "height": 675,
-      "preview": "15 Synq — New task.png"
+      "preview": "15 Tasks — New task.png"
     },
     {
       "id": 1423,
-      "title": "Synq / Review task",
-      "page": "04 · Synq",
+      "title": "Tasks / Review task",
+      "page": "04 · Tasks",
       "width": 540,
       "height": 675,
-      "preview": "16 Synq — Review task.png"
+      "preview": "16 Tasks — Review task.png"
     },
     {
       "id": 1425,
-      "title": "Synq / Active Flow · Collapsed",
-      "page": "04 · Synq",
+      "title": "Tasks / Task activity · Collapsed",
+      "page": "04 · Tasks",
       "width": 540,
       "height": 675,
-      "preview": "17 Synq — Active Flow · Collapsed.png"
+      "preview": "17 Tasks — Task activity · Collapsed.png"
     },
     {
       "id": 1427,
-      "title": "Synq / Meeting briefings · Queued",
-      "page": "04 · Synq",
+      "title": "Tasks / Meeting briefings · Queued",
+      "page": "04 · Tasks",
       "width": 540,
       "height": 675,
-      "preview": "18 Synq — Meeting briefings · Queued.png"
+      "preview": "18 Tasks — Meeting briefings · Queued.png"
     },
     {
       "id": 1429,
-      "title": "Synq / Queued task · Agent details",
-      "page": "04 · Synq",
+      "title": "Tasks / Queued task · Agent details",
+      "page": "04 · Tasks",
       "width": 540,
       "height": 675,
-      "preview": "19 Synq — Queued task · Agent details.png"
+      "preview": "19 Tasks — Queued task · Agent details.png"
     },
     {
       "id": 2269,
-      "title": "Nightshift / Command",
-      "page": "05 · Nightshift",
+      "title": "Activity / Command",
+      "page": "05 · Activity",
       "width": 540,
       "height": 675,
-      "preview": "20 Nightshift — Command.png"
+      "preview": "20 Activity — Command.png"
     },
     {
       "id": 2271,
-      "title": "Nightshift / Investigating",
-      "page": "05 · Nightshift",
+      "title": "Activity / Investigating",
+      "page": "05 · Activity",
       "width": 540,
       "height": 675,
-      "preview": "21 Nightshift — Investigating.png"
+      "preview": "21 Activity — Investigating.png"
     },
     {
       "id": 2273,
-      "title": "Nightshift / Resolved incident",
-      "page": "05 · Nightshift",
+      "title": "Activity / Resolved incident",
+      "page": "05 · Activity",
       "width": 540,
       "height": 675,
-      "preview": "22 Nightshift — Resolved incident.png"
+      "preview": "22 Activity — Resolved incident.png"
     },
     {
       "id": 2550,
@@ -203,27 +203,27 @@
     },
     {
       "id": 2824,
-      "title": "Components / Paylane",
+      "title": "Components / Accounts",
       "page": "07 · Component catalog",
       "width": 1440,
       "height": 882,
-      "preview": "24 Components — Paylane.png"
+      "preview": "24 Components — Accounts.png"
     },
     {
       "id": 2826,
-      "title": "Components / Synq",
+      "title": "Components / Tasks",
       "page": "07 · Component catalog",
       "width": 1440,
       "height": 882,
-      "preview": "25 Components — Synq.png"
+      "preview": "25 Components — Tasks.png"
     },
     {
       "id": 2828,
-      "title": "Components / Nightshift",
+      "title": "Components / Activity",
       "page": "07 · Component catalog",
       "width": 1440,
       "height": 882,
-      "preview": "26 Components — Nightshift.png"
+      "preview": "26 Components — Activity.png"
     },
     {
       "id": 2830,
@@ -235,11 +235,11 @@
     },
     {
       "id": 3897,
-      "title": "Platforms / Nightshift TV",
+      "title": "Platforms / Activity TV",
       "page": "08 · Platform adaptations",
       "width": 1440,
       "height": 810,
-      "preview": "28 Platforms — Nightshift TV.png"
+      "preview": "28 Platforms — Activity TV.png"
     },
     {
       "id": 3899,
@@ -251,11 +251,11 @@
     },
     {
       "id": 3901,
-      "title": "Platforms / Synq wide workspace",
+      "title": "Platforms / Tasks wide workspace",
       "page": "08 · Platform adaptations",
       "width": 1600,
       "height": 948,
-      "preview": "30 Platforms — Synq wide workspace.png"
+      "preview": "30 Platforms — Tasks wide workspace.png"
     },
     {
       "id": 4326,
@@ -264,31 +264,133 @@
       "width": 1248,
       "height": 1030,
       "preview": "31 Icon library.png"
+    },
+    {
+      "id": 4730,
+      "title": "Foundations / Color ramps",
+      "page": "10 · Foundations",
+      "width": 1280,
+      "height": 850,
+      "preview": "32 Foundations — Color ramps.png"
+    },
+    {
+      "id": 4909,
+      "title": "Foundations / Semantic roles and contrast",
+      "page": "10 · Foundations",
+      "width": 1280,
+      "height": 1010,
+      "preview": "33 Foundations — Semantic roles and contrast.png"
+    },
+    {
+      "id": 5035,
+      "title": "Foundations / Typography and numerals",
+      "page": "10 · Foundations",
+      "width": 1280,
+      "height": 842,
+      "preview": "34 Foundations — Typography and numerals.png"
+    },
+    {
+      "id": 5077,
+      "title": "Foundations / Layout, materials and access",
+      "page": "10 · Foundations",
+      "width": 1280,
+      "height": 1070,
+      "preview": "35 Foundations — Layout, materials and access.png"
+    },
+    {
+      "id": 5188,
+      "title": "Foundations / Frost and opaque surfaces",
+      "page": "10 · Foundations",
+      "width": 1280,
+      "height": 964,
+      "preview": "36 Foundations — Frost and opaque surfaces.png"
+    },
+    {
+      "id": 5285,
+      "title": "Core / Actions and chips",
+      "page": "11 · Core controls",
+      "width": 1280,
+      "height": 866,
+      "preview": "37 Core — Actions and chips.png"
+    },
+    {
+      "id": 5392,
+      "title": "Core / Fields and search",
+      "page": "11 · Core controls",
+      "width": 1280,
+      "height": 1055,
+      "preview": "38 Core — Fields and search.png"
+    },
+    {
+      "id": 5482,
+      "title": "Core / Selection and range",
+      "page": "11 · Core controls",
+      "width": 1280,
+      "height": 882,
+      "preview": "39 Core — Selection and range.png"
+    },
+    {
+      "id": 5584,
+      "title": "Core / Lists, cards and tables",
+      "page": "12 · Core patterns",
+      "width": 1280,
+      "height": 891,
+      "preview": "40 Core — Lists, cards and tables.png"
+    },
+    {
+      "id": 5683,
+      "title": "Core / Overlays and messages",
+      "page": "12 · Core patterns",
+      "width": 1280,
+      "height": 1032,
+      "preview": "41 Core — Overlays and messages.png"
+    },
+    {
+      "id": 5786,
+      "title": "Core / Navigation and scheduling",
+      "page": "12 · Core patterns",
+      "width": 1280,
+      "height": 1260,
+      "preview": "42 Core — Navigation and scheduling.png"
+    },
+    {
+      "id": 5984,
+      "title": "Core / Progress and telemetry",
+      "page": "12 · Core patterns",
+      "width": 1280,
+      "height": 1086,
+      "preview": "43 Core — Progress and telemetry.png"
+    },
+    {
+      "id": 6126,
+      "title": "Apple / Safe areas, type and focus",
+      "page": "13 · Apple platform refinements",
+      "width": 1280,
+      "height": 1080,
+      "preview": "44 Apple — Safe areas, type and focus.png"
+    },
+    {
+      "id": 6317,
+      "title": "Adaptive listening",
+      "page": "13 · Apple platform refinements",
+      "width": 1200,
+      "height": 760,
+      "preview": "45 Adaptive listening.png"
+    },
+    {
+      "id": 7547,
+      "title": "Wide workspace / Reduce Motion",
+      "page": "13 · Apple platform refinements",
+      "width": 1600,
+      "height": 948,
+      "preview": "46 Wide workspace — Reduce Motion.png"
     }
   ],
   "checks": [
-    "FigCraft native reopen, PDF and PNG render of every artboard",
-    "Component, prototype, per-variable native and web values, image hashes, and complete tree integrity",
-    "Geometry guardrail self-test and native verification",
-    "Chrome keyboard and pointer paths, local fonts and images, reduced motion, 320/390/768/1440 viewport widths, 200% text at 390",
-    "Tailwind 4.3.3 PostCSS compilation of bg-kozu-panel, text-kozu-ink, font-kozu and backdrop-blur-kozu-overlay",
-    "PDF contains 31 populated pages whose media boxes match the artboard inventory.",
-    "Tailwind CSS v4 compiled the panel, ink, font and overlay blur utilities.",
-    "Both the cover and Account home contain the complete $117,450.17 on one line in the rendered PDF."
+    "Reopened the native design file and exported every artboard to a PNG and one ordered PDF. Checked the PDF page count, media boxes, example text and complete balance.",
+    "Verified all 52 native grids share 4-unit circles and 8-unit horizontal and vertical pitch. Compared the rendered lit and dim dots at 74%, 41% and 22% across nine track widths from 85.7 to 1920. In the wide listening example, slots of 350, 422, 535 and 1210 units rendered 44, 53, 67 and 151 columns.",
+    "Measured the six native frost specimens on light and dark crops. The lowest tested label contrast was 5.11:1. The rendered web Tasks sample measured at least 7.99:1.",
+    "Chrome verified local destination flows, 40 live guide specimens, keyboard input, reduced motion and transparency, and adaptive dot geometry through 200% text. SwiftUI and Compose templates compiled; SwiftUI raster checks and Compose geometry checks covered pitch and whole-dot fill."
   ],
-  "visualReview": {
-    "reviewers": [
-      "GPT-6.2 Sol screen and material implementation",
-      "Google Gemini 4 Hydrogen source and render comparisons",
-      "Lead visual and structural review"
-    ],
-    "revisions": [
-      "Paylane sheet lowered to source position, two-tone balance, isolated portrait rows, single analytics sheet with 30 needles and a selected amount, gradient Pay action and story back/Start controls",
-      "Synq right-side light preserved in agent glass, three levels of transcript emphasis, vector Atlas spark and presentation source glyph",
-      "Nightshift incident window matched to 456 × 497 within a 540 × 675 board with six time-stamped events, recovery histogram and command strip",
-      "Synq glass carries the blue edge light into the listening control and agent workspace.",
-      "Nightshift restores both agent and model labels, keeps the run action within the visible composer and darkens the lower console."
-    ]
-  },
-  "scope": "Editable design reference and local web prototype. Financial values, voice input, agent activity and incident recovery are demonstrations. Wear, TV, widget hosts, assistive technology and device blur performance require implementation testing."
+  "scope": "The interaction examples use local sample data. Test final native apps with assistive technology on physical devices, including motion, transparency and blur performance."
 }

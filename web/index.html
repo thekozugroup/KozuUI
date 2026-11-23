@@ -1,14 +1,15 @@
 <!doctype html>
-<html lang="en" data-surface="paylane">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
-  <title>Kozu UI Kit</title>
+  <title>Kozu</title>
   <link rel="stylesheet" href="kozu.css">
+  <script src="dot-grid.js" defer></script>
   <script src="demo.js" defer></script>
 </head>
-<body>
+<body class="workspace" data-surface="navy" data-theme="dark">
   <svg class="kozu-symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="icon-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
     <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
@@ -24,91 +25,92 @@
     <symbol id="icon-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
     <symbol id="icon-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></symbol>
     <symbol id="icon-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+    <symbol id="icon-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></symbol>
     <symbol id="icon-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="icon-file" viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="icon-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
     <symbol id="icon-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
     <symbol id="icon-analytics" viewBox="0 0 24 24"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></symbol>
   </svg>
   <a class="kozu-skip" href="#main">Skip to content</a>
-  <header class="kit-header">
-    <div class="kit-brand"><span class="kit-mark" aria-hidden="true"></span>Kozu <span class="kit-brand-sub">UI Kit</span></div>
-    <div class="kozu-tabs kit-tabs kozu-frost" role="tablist" aria-label="Reference apps">
-      <button type="button" id="tab-paylane" role="tab" aria-selected="true" aria-controls="paylane">Paylane</button>
-      <button type="button" id="tab-synq" role="tab" aria-selected="false" aria-controls="synq" tabindex="-1">Synq</button>
-      <button type="button" id="tab-nightshift" role="tab" aria-selected="false" aria-controls="nightshift" tabindex="-1">Nightshift</button>
+  <header class="workspace-header kozu-field">
+    <div class="workspace-brand"><span class="kozu-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Kozu</div>
+    <div class="kozu-tabs workspace-tabs kozu-frost" role="tablist" aria-label="Workspace">
+      <button type="button" id="tab-accounts" role="tab" aria-selected="true" aria-controls="accounts"><svg class="kozu-icon" aria-hidden="true"><use href="#icon-wallet"></use></svg><span>Accounts</span></button>
+      <button type="button" id="tab-tasks" role="tab" aria-selected="false" aria-controls="tasks" tabindex="-1"><svg class="kozu-icon" aria-hidden="true"><use href="#icon-layers"></use></svg><span>Tasks</span></button>
+      <button type="button" id="tab-activity" role="tab" aria-selected="false" aria-controls="activity" tabindex="-1"><svg class="kozu-icon" aria-hidden="true"><use href="#icon-analytics"></use></svg><span>Activity</span></button>
     </div>
-    <span class="kit-meta">Sample workspace</span>
+    <a class="workspace-guide kozu-button" href="guide.html">Design guide</a>
   </header>
 
-  <main id="main" class="kit-main" tabindex="-1">
-    <section id="paylane" class="view paylane" role="tabpanel" aria-labelledby="tab-paylane" tabindex="0">
-      <div class="paylane-shell kozu-blue">
-        <header class="paylane-heading">
-          <h1>Paylane</h1>
-          <div class="paylane-context"><time datetime="2026-11-22">Sun, Nov 22</time><div class="account-chip"><img class="account-photo" src="../Assets/People/alex.jpg" width="28" height="28" alt=""><div><span>Main account</span><span aria-label="Account ending in 4821">•••• 4821</span></div></div></div>
-        </header>
+  <main id="main" class="workspace-main" tabindex="-1">
+    <section id="accounts" class="view" role="tabpanel" aria-labelledby="tab-accounts" tabindex="0">
+      <header class="view-heading kozu-field">
+        <h1 class="kozu-display">Accounts</h1>
+        <div class="account-chip kozu-frost kozu-frost-control"><img class="account-photo" src="../Assets/People/alex.jpg" width="28" height="28" alt=""><div><span>Main account</span><span aria-label="Account ending in 4821">•••• 4821</span></div></div>
+      </header>
 
-        <div class="paylane-sheet">
-          <div class="dock-wrap">
-            <div class="kozu-tabs paylane-dock" role="tablist" aria-label="Paylane views">
-              <button type="button" id="dock-home" role="tab" aria-label="Home" aria-selected="true" aria-controls="paylane-home"><svg class="kozu-icon icon-home" aria-hidden="true"><use href="#icon-home"></use></svg><span>Home</span></button>
-              <button type="button" id="dock-analytics" role="tab" aria-label="Analytics" aria-selected="false" aria-controls="paylane-analytics" tabindex="-1"><svg class="kozu-icon icon-analytics" aria-hidden="true"><use href="#icon-analytics"></use></svg><span>Analytics</span></button>
-              <button type="button" id="dock-update" role="tab" aria-label="Weekly update" aria-selected="false" aria-controls="paylane-update" tabindex="-1"><svg class="kozu-icon icon-sparkles" aria-hidden="true"><use href="#icon-sparkles"></use></svg><span>Update</span></button>
+      <div class="accounts-sheet kozu-card" data-surface="paper" data-theme="light">
+        <div class="accounts-navigation">
+          <div class="kozu-tabs accounts-dock" role="tablist" aria-label="Accounts views">
+            <button type="button" id="dock-home" role="tab" aria-label="Home" aria-selected="true" aria-controls="accounts-home"><svg class="kozu-icon icon-home" aria-hidden="true"><use href="#icon-home"></use></svg><span>Home</span></button>
+            <button type="button" id="dock-analytics" role="tab" aria-label="Analytics" aria-selected="false" aria-controls="accounts-analytics" tabindex="-1"><svg class="kozu-icon icon-analytics" aria-hidden="true"><use href="#icon-analytics"></use></svg><span>Analytics</span></button>
+            <button type="button" id="dock-update" role="tab" aria-label="Weekly update" aria-selected="false" aria-controls="accounts-update" tabindex="-1"><svg class="kozu-icon icon-sparkles" aria-hidden="true"><use href="#icon-sparkles"></use></svg><span>Update</span></button>
+          </div>
+        </div>
+        <div class="accounts-pane accounts-home" id="accounts-home" role="tabpanel" aria-labelledby="dock-home" tabindex="0">
+          <section class="balance" aria-labelledby="balance-heading">
+            <h2 id="balance-heading">Total balance</h2>
+            <p class="balance-value kozu-numeral"><span class="kozu-sr">117,450 dollars and 17 cents</span><span class="balance-amount" aria-hidden="true"><span>$117,450</span><span class="balance-cents">.17</span></span></p>
+            <div class="balance-actions">
+              <button type="button" class="kozu-button kozu-primary kozu-paired" data-transfer="pay"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg>Pay</button>
+              <button type="button" class="kozu-button kozu-paired" data-transfer="request"><svg class="kozu-icon icon-download" aria-hidden="true"><use href="#icon-download"></use></svg>Request</button>
             </div>
-          </div>
-          <div class="paylane-pane paylane-home" id="paylane-home" role="tabpanel" aria-labelledby="dock-home" tabindex="0">
-            <section class="balance" aria-labelledby="balance-heading">
-              <h2 id="balance-heading">Total balance</h2>
-              <p class="balance-value kozu-numeral" aria-label="117,450 dollars and 17 cents"><span>$117,450</span><span class="balance-cents">.17</span></p>
-              <div class="balance-actions">
-                <button type="button" class="kozu-button kozu-paired pay-button" data-transfer="pay"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg>Pay</button>
-                <button type="button" class="kozu-button kozu-paired" data-transfer="request"><svg class="kozu-icon icon-download" aria-hidden="true"><use href="#icon-download"></use></svg>Request</button>
-              </div>
-              <p id="transfer-result" class="transfer-result" role="status"></p>
-            </section>
-            <section class="ledger" aria-labelledby="ledger-heading">
-              <header class="section-heading"><h2 id="ledger-heading">Transactions</h2><button type="button" class="kozu-button kozu-quiet" id="ledger-toggle" aria-controls="older-transactions" aria-expanded="false">Show all</button></header>
-              <ul role="list" class="ledger-list">
-                <li data-spend="217" data-day="2026-11-22"><img class="ledger-photo" src="../Assets/People/oliver.jpg" width="40" height="40" alt=""><div><strong>Oliver Bennett</strong><time datetime="2026-11-22T19:30">Today · 7:30 PM</time></div><span class="kozu-numeral">−$217.00</span></li>
-                <li data-spend="450.5" data-day="2026-11-22"><img class="ledger-photo" src="../Assets/People/james.jpg" width="40" height="40" alt=""><div><strong>James Parker</strong><time datetime="2026-11-22T16:15">Today · 4:15 PM</time></div><span class="kozu-numeral">−$450.50</span></li>
-              </ul>
-              <ul role="list" class="ledger-list" id="older-transactions" hidden>
-                <li data-spend="84.25" data-day="2026-11-22"><span class="ledger-icon tone-sand"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Common Market</strong><span>Today · 11:42 AM</span></div><span class="kozu-numeral">−$84.25</span></li>
-                <li><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-download" aria-hidden="true"><use href="#icon-download"></use></svg></span><div><strong>Studio payout</strong><span>Nov 21 · 9:00 AM</span></div><span class="kozu-numeral ledger-income">+$4,800.00</span></li>
-                <li data-spend="310" data-day="2026-11-21"><span class="ledger-icon tone-violet"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg></span><div><strong>Union Studio</strong><span>Nov 21 · 8:42 AM</span></div><span class="kozu-numeral">−$310.00</span></li>
-                <li data-spend="129" data-day="2026-11-20"><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Field Notes</strong><span>Nov 20 · 1:20 PM</span></div><span class="kozu-numeral">−$129.00</span></li>
-                <li data-spend="540" data-day="2026-11-19"><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg></span><div><strong>Northstar Works</strong><span>Nov 19 · 12:16 PM</span></div><span class="kozu-numeral">−$540.00</span></li>
-                <li data-spend="72" data-day="2026-11-18"><span class="ledger-icon tone-sand"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Courier Coffee</strong><span>Nov 18 · 9:04 AM</span></div><span class="kozu-numeral">−$72.00</span></li>
-                <li data-spend="244.25" data-day="2026-11-17"><span class="ledger-icon tone-sand"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Common Market</strong><span>Nov 17 · 6:31 PM</span></div><span class="kozu-numeral">−$244.25</span></li>
-                <li data-spend="127.8" data-day="2026-11-16"><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg></span><div><strong>Park Mobile</strong><span>Nov 16 · 11:07 AM</span></div><span class="kozu-numeral">−$127.80</span></li>
-                <li data-spend="1875" data-day="2026-11-12"><span class="ledger-icon tone-violet"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg></span><div><strong>West End Properties</strong><span>Nov 12 · 10:02 AM</span></div><span class="kozu-numeral">−$1,875.00</span></li>
-                <li><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-download" aria-hidden="true"><use href="#icon-download"></use></svg></span><div><strong>Studio payout</strong><span>Nov 11 · 9:00 AM</span></div><span class="kozu-numeral ledger-income">+$4,000.00</span></li>
-                <li data-spend="486" data-day="2026-11-04"><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Field Notes</strong><span>Nov 4 · 3:30 PM</span></div><span class="kozu-numeral">−$486.00</span></li>
-              </ul>
-            </section>
-          </div>
-          <section class="spending paylane-pane" id="paylane-analytics" role="tabpanel" aria-labelledby="dock-analytics" tabindex="0" hidden>
-            <header class="section-heading">
-              <h2 id="spending-heading">Spending</h2>
-              <div class="kozu-segment" role="group" aria-label="Spending period">
-                <button type="button" data-period="week" aria-pressed="true">Week</button>
-                <button type="button" data-period="month" aria-pressed="false">Month</button>
-              </div>
-            </header>
-            <p class="spending-total kozu-numeral" id="spending-total" aria-live="polite"></p>
-            <p class="spending-date" id="spending-date"></p>
-            <ul role="list" class="spending-chart" id="spending-chart" aria-label="Spending by day"></ul>
+            <p id="transfer-result" class="transfer-result" role="status"></p>
           </section>
-          <section class="weekly kozu-story paylane-pane" id="paylane-update" role="tabpanel" aria-labelledby="dock-update" tabindex="0" hidden>
-            <h2 id="weekly-heading"><svg class="kozu-icon icon-sparkles" aria-hidden="true"><use href="#icon-sparkles"></use></svg>Weekly update</h2>
-            <div class="weekly-message">
-              <p>Your income<br>is up <strong>20%.</strong></p>
-              <p class="weekly-caption">$4,800 this week · $4,000 last week</p>
-            </div>
+          <section class="ledger" aria-labelledby="ledger-heading">
+            <header class="section-heading"><h2 id="ledger-heading">Transactions</h2><button type="button" class="kozu-button kozu-quiet" id="ledger-toggle" aria-controls="older-transactions" aria-expanded="false">Show all</button></header>
+            <ul role="list" class="ledger-list">
+              <li data-spend="217" data-day="2026-11-22"><img class="ledger-photo" src="../Assets/People/oliver.jpg" width="40" height="40" alt=""><div><strong>Morgan Lee</strong><time datetime="2026-11-22T19:30">Today · 7:30 PM</time></div><span class="kozu-numeral">−$217.00</span></li>
+              <li data-spend="450.5" data-day="2026-11-22"><img class="ledger-photo" src="../Assets/People/james.jpg" width="40" height="40" alt=""><div><strong>Sam Rivera</strong><time datetime="2026-11-22T16:15">Today · 4:15 PM</time></div><span class="kozu-numeral">−$450.50</span></li>
+            </ul>
+            <ul role="list" class="ledger-list" id="older-transactions" hidden>
+              <li data-spend="84.25" data-day="2026-11-22"><span class="ledger-icon tone-neutral"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Common Market</strong><span>Today · 11:42 AM</span></div><span class="kozu-numeral">−$84.25</span></li>
+              <li><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-download" aria-hidden="true"><use href="#icon-download"></use></svg></span><div><strong>Studio payout</strong><span>Nov 21 · 9:00 AM</span></div><span class="kozu-numeral ledger-income">+$4,800.00</span></li>
+              <li data-spend="310" data-day="2026-11-21"><span class="ledger-icon tone-jade"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg></span><div><strong>Union Studio</strong><span>Nov 21 · 8:42 AM</span></div><span class="kozu-numeral">−$310.00</span></li>
+              <li data-spend="129" data-day="2026-11-20"><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Field Notes</strong><span>Nov 20 · 1:20 PM</span></div><span class="kozu-numeral">−$129.00</span></li>
+              <li data-spend="540" data-day="2026-11-19"><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg></span><div><strong>Northstar Works</strong><span>Nov 19 · 12:16 PM</span></div><span class="kozu-numeral">−$540.00</span></li>
+              <li data-spend="72" data-day="2026-11-18"><span class="ledger-icon tone-neutral"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Courier Coffee</strong><span>Nov 18 · 9:04 AM</span></div><span class="kozu-numeral">−$72.00</span></li>
+              <li data-spend="244.25" data-day="2026-11-17"><span class="ledger-icon tone-neutral"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Common Market</strong><span>Nov 17 · 6:31 PM</span></div><span class="kozu-numeral">−$244.25</span></li>
+              <li data-spend="127.8" data-day="2026-11-16"><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg></span><div><strong>Park Mobile</strong><span>Nov 16 · 11:07 AM</span></div><span class="kozu-numeral">−$127.80</span></li>
+              <li data-spend="1875" data-day="2026-11-12"><span class="ledger-icon tone-jade"><svg class="kozu-icon icon-up-right" aria-hidden="true"><use href="#icon-up-right"></use></svg></span><div><strong>West End Properties</strong><span>Nov 12 · 10:02 AM</span></div><span class="kozu-numeral">−$1,875.00</span></li>
+              <li><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-download" aria-hidden="true"><use href="#icon-download"></use></svg></span><div><strong>Studio payout</strong><span>Nov 11 · 9:00 AM</span></div><span class="kozu-numeral ledger-income">+$4,000.00</span></li>
+              <li data-spend="486" data-day="2026-11-04"><span class="ledger-icon tone-blue"><svg class="kozu-icon icon-shopping" aria-hidden="true"><use href="#icon-shopping"></use></svg></span><div><strong>Field Notes</strong><span>Nov 4 · 3:30 PM</span></div><span class="kozu-numeral">−$486.00</span></li>
+            </ul>
           </section>
         </div>
+        <section class="spending accounts-pane" id="accounts-analytics" role="tabpanel" aria-labelledby="dock-analytics" tabindex="0" hidden>
+          <header class="section-heading">
+            <h2 id="spending-heading">Spending</h2>
+            <div class="kozu-segment" role="group" aria-label="Spending period">
+              <button type="button" data-period="week" aria-pressed="true">Week</button>
+              <button type="button" data-period="month" aria-pressed="false">Month</button>
+            </div>
+          </header>
+          <p class="spending-total kozu-numeral" id="spending-total" aria-live="polite"></p>
+          <p class="spending-date" id="spending-date"></p>
+          <p id="spending-selection" class="spending-selection kozu-numeral"></p>
+          <ul role="list" class="spending-chart" id="spending-chart" aria-label="Spending by day"></ul>
+        </section>
+        <section class="weekly kozu-field accounts-pane" data-surface="navy" data-theme="dark" id="accounts-update" role="tabpanel" aria-labelledby="dock-update" tabindex="0" hidden>
+          <h2 id="weekly-heading"><svg class="kozu-icon icon-sparkles" aria-hidden="true"><use href="#icon-sparkles"></use></svg>Weekly update</h2>
+          <div class="weekly-message">
+            <p>Your income<br>is up <strong>20%.</strong></p>
+            <p class="weekly-caption">$4,800 this week · $4,000 last week</p>
+          </div>
+        </section>
       </div>
-      <dialog class="transfer-dialog" id="transfer-dialog" aria-labelledby="transfer-title">
+      <dialog class="transfer-dialog" data-surface="paper" data-theme="light" id="transfer-dialog" aria-labelledby="transfer-title">
         <form id="transfer-form">
           <header class="section-heading"><h2 id="transfer-title">Pay</h2><button class="kozu-button kozu-icon-button kozu-quiet" id="transfer-close" type="button" aria-label="Close"><svg class="kozu-icon icon-close" aria-hidden="true"><use href="#icon-close"></use></svg></button></header>
           <p class="dialog-help">Sample transaction</p>
@@ -119,31 +121,31 @@
       </dialog>
     </section>
 
-    <section id="synq" class="view synq" role="tabpanel" aria-labelledby="tab-synq" tabindex="0" hidden>
-      <header class="view-heading">
-        <div><h1>Active Flow</h1><p>Synq workspace</p></div>
+    <section id="tasks" class="view" role="tabpanel" aria-labelledby="tab-tasks" tabindex="0" hidden>
+      <header class="view-heading kozu-field">
+        <h1 class="kozu-display">Tasks</h1>
         <button type="button" class="kozu-button kozu-frost kozu-paired" id="new-task"><svg class="kozu-icon icon-plus" aria-hidden="true"><use href="#icon-plus"></use></svg>Add task</button>
       </header>
 
-      <div class="synq-grid">
+      <div class="tasks-grid">
         <section class="agents kozu-frost" aria-labelledby="agents-heading">
           <header class="section-heading"><h2 id="agents-heading">Agents</h2><span class="panel-note" id="agent-count">3 in progress</span></header>
           <details class="agent" data-progress="74" name="agents">
-            <summary><span class="agent-icon"><svg class="kozu-icon icon-sparkles" aria-hidden="true"><use href="#icon-sparkles"></use></svg></span><span class="agent-identity"><strong>Nova</strong><span>Personal assistant</span></span><span class="agent-meter" aria-hidden="true"><span class="kozu-dotmeter"></span></span><span class="agent-percent kozu-numeral">74%</span><svg class="kozu-icon icon-chevron" aria-hidden="true"><use href="#icon-chevron"></use></svg></summary>
+            <summary><span class="agent-icon"><svg class="kozu-icon icon-sparkles" aria-hidden="true"><use href="#icon-sparkles"></use></svg></span><span class="agent-identity"><strong>Inbox</strong></span><span class="agent-meter" data-dot-grid="progress" aria-hidden="true"></span><span class="agent-percent kozu-numeral">74%</span><svg class="kozu-icon icon-chevron" aria-hidden="true"><use href="#icon-chevron"></use></svg><span class="agent-caption"><span>Personal assistant</span></span></summary>
             <div class="agent-detail">
               <ul role="list" class="agent-tasks"><li><span class="dot complete"></span><span>Sort incoming email</span><span>Done</span></li><li><span class="dot working"></span><span>Prepare meeting briefs</span><span>In progress</span></li></ul>
               <div class="agent-actions"><span class="agent-state">In progress</span><button type="button" class="kozu-button kozu-quiet" data-agent-action="pause">Pause</button><button type="button" class="kozu-button kozu-quiet" data-agent-action="advance">+10 points</button></div>
             </div>
           </details>
           <details class="agent" data-progress="41" name="agents" open>
-            <summary><span class="agent-icon"><svg class="kozu-icon icon-layers" aria-hidden="true"><use href="#icon-layers"></use></svg></span><span class="agent-identity"><strong>Atlas</strong><span>Automation agent</span></span><span class="agent-meter" aria-hidden="true"><span class="kozu-dotmeter"></span></span><span class="agent-percent kozu-numeral">41%</span><svg class="kozu-icon icon-chevron" aria-hidden="true"><use href="#icon-chevron"></use></svg></summary>
+            <summary><span class="agent-icon"><svg class="kozu-icon icon-layers" aria-hidden="true"><use href="#icon-layers"></use></svg></span><span class="agent-identity"><strong>Flow</strong></span><span class="agent-meter" data-dot-grid="progress" aria-hidden="true"></span><span class="agent-percent kozu-numeral">41%</span><svg class="kozu-icon icon-chevron" aria-hidden="true"><use href="#icon-chevron"></use></svg><span class="agent-caption"><span>Automation agent</span></span></summary>
             <div class="agent-detail">
               <ul role="list" class="agent-tasks"><li><span class="dot complete"></span><span>Process spreadsheets</span><span>Done</span></li><li><span class="dot working"></span><span>Gather industry reports</span><span>In progress</span></li><li><span class="dot"></span><span>Draft presentation</span><span>Queued</span></li></ul>
               <div class="agent-actions"><span class="agent-state">In progress</span><button type="button" class="kozu-button kozu-quiet" data-agent-action="pause">Pause</button><button type="button" class="kozu-button kozu-quiet" data-agent-action="advance">+10 points</button></div>
             </div>
           </details>
           <details class="agent" data-progress="22" name="agents">
-            <summary><span class="agent-icon"><svg class="kozu-icon icon-search" aria-hidden="true"><use href="#icon-search"></use></svg></span><span class="agent-identity"><strong>Orion</strong><span>Research agent</span></span><span class="agent-meter" aria-hidden="true"><span class="kozu-dotmeter"></span></span><span class="agent-percent kozu-numeral">22%</span><svg class="kozu-icon icon-chevron" aria-hidden="true"><use href="#icon-chevron"></use></svg></summary>
+            <summary><span class="agent-icon"><svg class="kozu-icon icon-search" aria-hidden="true"><use href="#icon-search"></use></svg></span><span class="agent-identity"><strong>Scout</strong></span><span class="agent-meter" data-dot-grid="progress" aria-hidden="true"></span><span class="agent-percent kozu-numeral">22%</span><svg class="kozu-icon icon-chevron" aria-hidden="true"><use href="#icon-chevron"></use></svg><span class="agent-caption"><span>Research agent</span></span></summary>
             <div class="agent-detail">
               <ul role="list" class="agent-tasks"><li><span class="dot working"></span><span>Review source material</span><span>In progress</span></li><li><span class="dot"></span><span>Write research summary</span><span>Queued</span></li></ul>
               <div class="agent-actions"><span class="agent-state">In progress</span><button type="button" class="kozu-button kozu-quiet" data-agent-action="pause">Pause</button><button type="button" class="kozu-button kozu-quiet" data-agent-action="advance">+10 points</button></div>
@@ -152,18 +154,17 @@
           <p class="kozu-sr" id="agent-announcement" role="status"></p>
         </section>
 
-        <div class="synq-side">
-          <section class="synq-composer kozu-frost" aria-labelledby="composer-heading">
-            <header class="section-heading"><h2 id="composer-heading">Ask Synq</h2><span class="panel-note">Sample input</span></header>
+        <div class="tasks-side">
+          <section class="task-composer kozu-card" data-surface="paper" data-theme="light" aria-labelledby="composer-heading">
+            <header class="section-heading"><h2 id="composer-heading" class="kozu-display">Task composer</h2></header>
             <form id="task-form">
               <label for="task-input" class="kozu-sr">Task description</label>
-              <textarea id="task-input" required maxlength="160" placeholder="Ask anything…"></textarea>
+              <textarea id="task-input" required maxlength="160" placeholder="Describe a task…"></textarea>
               <div class="composer-actions">
                 <button type="button" id="listen" class="kozu-button kozu-quiet kozu-paired"><svg class="kozu-icon icon-mic" aria-hidden="true"><use href="#icon-mic"></use></svg><span id="listen-label">Listen</span></button>
-                <div class="waveform" aria-hidden="true" hidden>
-                  <span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-                  <span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-                  <span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <div class="listening-indicator" hidden>
+                  <span class="listening-label">Listening</span>
+                  <div data-dot-grid="listening" aria-hidden="true"></div>
                 </div>
                 <button type="submit" class="kozu-button kozu-icon-button kozu-primary" aria-label="Queue task"><svg class="kozu-icon icon-arrow-up" aria-hidden="true"><use href="#icon-arrow-up"></use></svg></button>
               </div>
@@ -181,9 +182,9 @@
       </div>
     </section>
 
-    <section id="nightshift" class="view nightshift" role="tabpanel" aria-labelledby="tab-nightshift" tabindex="0" hidden>
-      <header class="view-heading">
-        <div><h1>On-call terminal</h1><p>Nightshift</p></div>
+    <section id="activity" class="view" role="tabpanel" aria-labelledby="tab-activity" tabindex="0" hidden>
+      <header class="view-heading kozu-field">
+        <h1 class="kozu-display">Activity</h1>
         <span class="kozu-state"><span class="dot complete" aria-hidden="true"></span>On call</span>
       </header>
 
@@ -228,6 +229,5 @@
       </div>
     </section>
   </main>
-  <footer class="kit-footer"><span>Kozu UI Kit</span><span>Web reference</span></footer>
 </body>
 </html>

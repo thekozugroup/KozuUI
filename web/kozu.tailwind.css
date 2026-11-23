@@ -4,6 +4,7 @@
 @theme inline {
   --font-kozu: var(--kozu-font);
   --font-kozu-mono: var(--kozu-mono);
+  --font-kozu-display: var(--kozu-display);
   --color-kozu-canvas: var(--kozu-canvas);
   --color-kozu-panel: var(--kozu-panel);
   --color-kozu-ink: var(--kozu-ink);
@@ -11,6 +12,10 @@
   --color-kozu-accent: var(--kozu-accent);
   --color-kozu-on-accent: var(--kozu-on-accent);
   --color-kozu-control: var(--kozu-control);
+  --color-kozu-selection: var(--kozu-selection);
+  --color-kozu-attention: var(--kozu-attention);
+  --color-kozu-recovery: var(--kozu-recovery);
+  --color-kozu-info: var(--kozu-info);
   --color-kozu-hover: var(--kozu-hover);
   --color-kozu-focus: var(--kozu-focus);
   --color-kozu-on-focus: var(--kozu-on-focus);

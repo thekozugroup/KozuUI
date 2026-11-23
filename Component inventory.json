@@ -3,6 +3,7 @@
     "id": 139,
     "name": "Blue paper material",
     "page": "02 · Materials and typography",
+    "board": "Materials and typography",
     "width": 384,
     "height": 334,
     "properties": [],
@@ -12,6 +13,7 @@
     "id": 156,
     "name": "Smoke glass material",
     "page": "02 · Materials and typography",
+    "board": "Materials and typography",
     "width": 384,
     "height": 334,
     "properties": [],
@@ -21,6 +23,7 @@
     "id": 173,
     "name": "Terminal glass material",
     "page": "02 · Materials and typography",
+    "board": "Materials and typography",
     "width": 384,
     "height": 334,
     "properties": [],
@@ -29,7 +32,8 @@
   {
     "id": 210,
     "name": "Phone status",
-    "page": "03 · Paylane",
+    "page": "03 · Accounts",
+    "board": "Accounts / Account home",
     "width": 390,
     "height": 36,
     "properties": [
@@ -40,7 +44,8 @@
   {
     "id": 1177,
     "name": "Everyday account · Small widget",
-    "page": "03 · Paylane",
+    "page": "03 · Accounts",
+    "board": "Accounts / Home-screen widgets",
     "width": 164,
     "height": 164,
     "properties": [],
@@ -49,7 +54,8 @@
   {
     "id": 1193,
     "name": "Everyday account · Medium widget",
-    "page": "03 · Paylane",
+    "page": "03 · Accounts",
+    "board": "Accounts / Home-screen widgets",
     "width": 342,
     "height": 164,
     "properties": [
@@ -60,8 +66,9 @@
   },
   {
     "id": 1464,
-    "name": "Synq / macOS menu bar",
-    "page": "04 · Synq",
+    "name": "Tasks / macOS menu bar",
+    "page": "04 · Tasks",
+    "board": "Tasks / Task activity",
     "width": 470,
     "height": 27,
     "properties": [
@@ -71,8 +78,9 @@
   },
   {
     "id": 1484,
-    "name": "Synq / Agent summary / Nova",
-    "page": "04 · Synq",
+    "name": "Tasks / Agent summary / Inbox",
+    "page": "04 · Tasks",
+    "board": "Tasks / Task activity",
     "width": 366,
     "height": 51,
     "properties": [
@@ -84,8 +92,9 @@
   },
   {
     "id": 1518,
-    "name": "Synq / Agent details / Atlas",
-    "page": "04 · Synq",
+    "name": "Tasks / Agent details / Flow",
+    "page": "04 · Tasks",
+    "board": "Tasks / Task activity",
     "width": 366,
     "height": 230,
     "properties": [
@@ -97,8 +106,9 @@
   },
   {
     "id": 1598,
-    "name": "Synq / Agent summary / Orion",
-    "page": "04 · Synq",
+    "name": "Tasks / Agent summary / Scout",
+    "page": "04 · Tasks",
+    "board": "Tasks / Task activity",
     "width": 366,
     "height": 51,
     "properties": [
@@ -110,8 +120,9 @@
   },
   {
     "id": 1723,
-    "name": "Synq / Agent summary / Atlas",
-    "page": "04 · Synq",
+    "name": "Tasks / Agent summary / Flow",
+    "page": "04 · Tasks",
+    "board": "Tasks / Task activity · Collapsed",
     "width": 366,
     "height": 51,
     "properties": [
@@ -123,8 +134,9 @@
   },
   {
     "id": 1936,
-    "name": "Synq / Queued task / Meeting briefings",
-    "page": "04 · Synq",
+    "name": "Tasks / Queued task / Meeting briefings",
+    "page": "04 · Tasks",
+    "board": "Tasks / Meeting briefings · Queued",
     "width": 396,
     "height": 44,
     "properties": [
@@ -135,8 +147,9 @@
   },
   {
     "id": 2349,
-    "name": "Nightshift / Environment tabs",
-    "page": "05 · Nightshift",
+    "name": "Activity / Environment tabs",
+    "page": "05 · Activity",
+    "board": "Activity / Resolved incident",
     "width": 456,
     "height": 46,
     "properties": [
@@ -149,6 +162,7 @@
     "id": 2554,
     "name": "Phase=One",
     "page": "06 · Activity and progress",
+    "board": "Activity and progress",
     "width": 244,
     "height": 68,
     "properties": [
@@ -160,6 +174,7 @@
     "id": 2586,
     "name": "Phase=Two",
     "page": "06 · Activity and progress",
+    "board": "Activity and progress",
     "width": 244,
     "height": 68,
     "properties": [
@@ -171,6 +186,7 @@
     "id": 2618,
     "name": "Phase=Three",
     "page": "06 · Activity and progress",
+    "board": "Activity and progress",
     "width": 244,
     "height": 68,
     "properties": [
@@ -182,19 +198,21 @@
     "id": 2650,
     "name": "Phase=Steady",
     "page": "06 · Activity and progress",
+    "board": "Activity and progress",
     "width": 244,
     "height": 68,
     "properties": [
       "State"
     ],
-    "instances": 1
+    "instances": 3
   },
   {
     "id": 2754,
-    "name": "Nova progress",
+    "name": "Inbox progress",
     "page": "06 · Activity and progress",
+    "board": "Activity and progress",
     "width": 337,
-    "height": 93,
+    "height": 78,
     "properties": [
       "Agent",
       "Progress value"
@@ -203,10 +221,11 @@
   },
   {
     "id": 2777,
-    "name": "Atlas progress",
+    "name": "Flow progress",
     "page": "06 · Activity and progress",
+    "board": "Activity and progress",
     "width": 337,
-    "height": 93,
+    "height": 78,
     "properties": [
       "Agent",
       "Progress value"
@@ -215,10 +234,11 @@
   },
   {
     "id": 2800,
-    "name": "Orion progress",
+    "name": "Scout progress",
     "page": "06 · Activity and progress",
+    "board": "Activity and progress",
     "width": 337,
-    "height": 93,
+    "height": 78,
     "properties": [
       "Agent",
       "Progress value"
@@ -227,8 +247,9 @@
   },
   {
     "id": 2850,
-    "name": "Button / Paylane / Pay",
+    "name": "Button / Pay",
     "page": "07 · Component catalog",
+    "board": "Components / Accounts",
     "width": 148,
     "height": 48,
     "properties": [
@@ -238,8 +259,9 @@
   },
   {
     "id": 2858,
-    "name": "Button / Paylane / Request",
+    "name": "Button / Request",
     "page": "07 · Component catalog",
+    "board": "Components / Accounts",
     "width": 148,
     "height": 48,
     "properties": [
@@ -249,8 +271,9 @@
   },
   {
     "id": 2866,
-    "name": "Range / Paylane / Week",
+    "name": "Range / Week",
     "page": "07 · Component catalog",
+    "board": "Components / Accounts",
     "width": 264,
     "height": 48,
     "properties": [],
@@ -258,8 +281,9 @@
   },
   {
     "id": 2873,
-    "name": "Range / Paylane / Month",
+    "name": "Range / Month",
     "page": "07 · Component catalog",
+    "board": "Components / Accounts",
     "width": 264,
     "height": 48,
     "properties": [],
@@ -267,8 +291,9 @@
   },
   {
     "id": 2883,
-    "name": "Chart / Paylane / Cash flow",
+    "name": "Chart / Cash flow",
     "page": "07 · Component catalog",
+    "board": "Components / Accounts",
     "width": 320,
     "height": 132,
     "properties": [
@@ -278,8 +303,9 @@
   },
   {
     "id": 2918,
-    "name": "Progress / Paylane / Reserve goal",
+    "name": "Progress / Reserve goal",
     "page": "07 · Component catalog",
+    "board": "Components / Accounts",
     "width": 296,
     "height": 68,
     "properties": [
@@ -289,8 +315,9 @@
   },
   {
     "id": 3011,
-    "name": "Input / Synq / Composer",
+    "name": "Input / Composer",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 436,
     "height": 102,
     "properties": [
@@ -300,8 +327,9 @@
   },
   {
     "id": 3026,
-    "name": "Input / Synq / Keyboard focus",
+    "name": "Input / Keyboard focus",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 408,
     "height": 48,
     "properties": [
@@ -313,6 +341,7 @@
     "id": 3032,
     "name": "Checkbox / Unchecked",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 48,
     "height": 48,
     "properties": [],
@@ -322,6 +351,7 @@
     "id": 3035,
     "name": "Checkbox / Checked",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 48,
     "height": 48,
     "properties": [],
@@ -331,6 +361,7 @@
     "id": 3040,
     "name": "Checkbox / Mixed",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 48,
     "height": 48,
     "properties": [],
@@ -340,6 +371,7 @@
     "id": 3044,
     "name": "Radio / Unselected",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 48,
     "height": 48,
     "properties": [],
@@ -349,6 +381,7 @@
     "id": 3047,
     "name": "Radio / Selected",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 48,
     "height": 48,
     "properties": [],
@@ -356,8 +389,9 @@
   },
   {
     "id": 3052,
-    "name": "Activity / Synq / Listening",
+    "name": "Activity / Tasks / Listening",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 320,
     "height": 54,
     "properties": [
@@ -367,8 +401,9 @@
   },
   {
     "id": 3094,
-    "name": "Toolbar / Synq / Context actions",
+    "name": "Toolbar / Context actions",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 176,
     "height": 60,
     "properties": [],
@@ -378,6 +413,7 @@
     "id": 3109,
     "name": "Navigation / side rail",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 72,
     "height": 200,
     "properties": [],
@@ -385,8 +421,9 @@
   },
   {
     "id": 3129,
-    "name": "Activity / Synq / Lyra",
+    "name": "Activity / Tasks / Lyra",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 408,
     "height": 76,
     "properties": [
@@ -396,8 +433,9 @@
   },
   {
     "id": 3203,
-    "name": "Activity / Synq / Meridian",
+    "name": "Activity / Tasks / Meridian",
     "page": "07 · Component catalog",
+    "board": "Components / Tasks",
     "width": 408,
     "height": 76,
     "properties": [
@@ -407,8 +445,9 @@
   },
   {
     "id": 3364,
-    "name": "Command / Nightshift / /investigate / selected",
+    "name": "Command / /investigate / selected",
     "page": "07 · Component catalog",
+    "board": "Components / Activity",
     "width": 132,
     "height": 36,
     "properties": [
@@ -418,8 +457,9 @@
   },
   {
     "id": 3366,
-    "name": "Command / Nightshift / /show-logs",
+    "name": "Command / /show-logs",
     "page": "07 · Component catalog",
+    "board": "Components / Activity",
     "width": 132,
     "height": 36,
     "properties": [
@@ -429,8 +469,9 @@
   },
   {
     "id": 3368,
-    "name": "Command / Nightshift / /review",
+    "name": "Command / /review",
     "page": "07 · Component catalog",
+    "board": "Components / Activity",
     "width": 132,
     "height": 36,
     "properties": [
@@ -440,8 +481,9 @@
   },
   {
     "id": 3372,
-    "name": "Status / Nightshift / Monitoring",
+    "name": "Status / Monitoring",
     "page": "07 · Component catalog",
+    "board": "Components / Activity",
     "width": 148,
     "height": 36,
     "properties": [
@@ -453,6 +495,7 @@
     "id": 3378,
     "name": "Incident row / Checkout latency / keyboard focus",
     "page": "07 · Component catalog",
+    "board": "Components / Activity",
     "width": 372,
     "height": 44,
     "properties": [
@@ -464,6 +507,7 @@
     "id": 3383,
     "name": "Incident row / Queue delay",
     "page": "07 · Component catalog",
+    "board": "Components / Activity",
     "width": 372,
     "height": 44,
     "properties": [
@@ -475,6 +519,7 @@
     "id": 3389,
     "name": "Incident row / API heartbeat",
     "page": "07 · Component catalog",
+    "board": "Components / Activity",
     "width": 372,
     "height": 44,
     "properties": [
@@ -484,8 +529,9 @@
   },
   {
     "id": 3570,
-    "name": "Chart / Nightshift / Latency",
+    "name": "Chart / Latency",
     "page": "07 · Component catalog",
+    "board": "Components / Activity",
     "width": 320,
     "height": 100,
     "properties": [
@@ -495,8 +541,9 @@
   },
   {
     "id": 3992,
-    "name": "Chart / Nightshift / Export queue",
+    "name": "Chart / Export queue",
     "page": "08 · Platform adaptations",
+    "board": "Platforms / Activity TV",
     "width": 132,
     "height": 48,
     "properties": [],
@@ -504,8 +551,9 @@
   },
   {
     "id": 4050,
-    "name": "Switch / Nightshift / On",
+    "name": "Switch / On",
     "page": "08 · Platform adaptations",
+    "board": "Platforms / Activity TV",
     "width": 48,
     "height": 28,
     "properties": [],
@@ -513,26 +561,29 @@
   },
   {
     "id": 4062,
-    "name": "Brand / Synq / Briefing glyph",
+    "name": "Brand / Tasks / Briefing glyph",
     "page": "08 · Platform adaptations",
+    "board": "Platforms / Wearables and small widgets",
     "width": 40,
     "height": 40,
     "properties": [],
-    "instances": 1
+    "instances": 2
   },
   {
     "id": 4323,
-    "name": "Switch / Synq / On",
+    "name": "Switch / Off",
     "page": "08 · Platform adaptations",
+    "board": "Platforms / Tasks wide workspace",
     "width": 48,
     "height": 28,
     "properties": [],
-    "instances": 0
+    "instances": 1
   },
   {
     "id": 4330,
     "name": "Icon / arrow-down-left",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -542,42 +593,47 @@
     "id": 4335,
     "name": "Icon / arrow-left",
     "page": "09 · Icon library",
+    "board": "Icon library",
+    "width": 24,
+    "height": 24,
+    "properties": [],
+    "instances": 10
+  },
+  {
+    "id": 4340,
+    "name": "Icon / arrow-right",
+    "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
     "instances": 7
   },
   {
-    "id": 4340,
-    "name": "Icon / arrow-right",
+    "id": 4345,
+    "name": "Icon / arrow-up",
     "page": "09 · Icon library",
+    "board": "Icon library",
+    "width": 24,
+    "height": 24,
+    "properties": [],
+    "instances": 6
+  },
+  {
+    "id": 4350,
+    "name": "Icon / arrow-up-right",
+    "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
     "instances": 4
   },
   {
-    "id": 4345,
-    "name": "Icon / arrow-up",
-    "page": "09 · Icon library",
-    "width": 24,
-    "height": 24,
-    "properties": [],
-    "instances": 5
-  },
-  {
-    "id": 4350,
-    "name": "Icon / arrow-up-right",
-    "page": "09 · Icon library",
-    "width": 24,
-    "height": 24,
-    "properties": [],
-    "instances": 7
-  },
-  {
     "id": 4355,
     "name": "Icon / battery-full",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -587,6 +643,7 @@
     "id": 4363,
     "name": "Icon / bell",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -596,24 +653,27 @@
     "id": 4368,
     "name": "Icon / bookmark",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 2
+    "instances": 4
   },
   {
     "id": 4372,
     "name": "Icon / calendar-days",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 9
+    "instances": 11
   },
   {
     "id": 4385,
     "name": "Icon / camera",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -623,6 +683,7 @@
     "id": 4390,
     "name": "Icon / chart-column",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -632,6 +693,7 @@
     "id": 4397,
     "name": "Icon / chart-pie",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -641,60 +703,67 @@
     "id": 4402,
     "name": "Icon / check",
     "page": "09 · Icon library",
+    "board": "Icon library",
+    "width": 24,
+    "height": 24,
+    "properties": [],
+    "instances": 22
+  },
+  {
+    "id": 4406,
+    "name": "Icon / chevron-down",
+    "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
     "instances": 10
   },
   {
-    "id": 4406,
-    "name": "Icon / chevron-down",
+    "id": 4410,
+    "name": "Icon / chevron-right",
     "page": "09 · Icon library",
+    "board": "Icon library",
+    "width": 24,
+    "height": 24,
+    "properties": [],
+    "instances": 13
+  },
+  {
+    "id": 4414,
+    "name": "Icon / chevron-up",
+    "page": "09 · Icon library",
+    "board": "Icon library",
+    "width": 24,
+    "height": 24,
+    "properties": [],
+    "instances": 3
+  },
+  {
+    "id": 4418,
+    "name": "Icon / circle",
+    "page": "09 · Icon library",
+    "board": "Icon library",
+    "width": 24,
+    "height": 24,
+    "properties": [],
+    "instances": 3
+  },
+  {
+    "id": 4422,
+    "name": "Icon / circle-alert",
+    "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
     "instances": 7
   },
   {
-    "id": 4410,
-    "name": "Icon / chevron-right",
-    "page": "09 · Icon library",
-    "width": 24,
-    "height": 24,
-    "properties": [],
-    "instances": 6
-  },
-  {
-    "id": 4414,
-    "name": "Icon / chevron-up",
-    "page": "09 · Icon library",
-    "width": 24,
-    "height": 24,
-    "properties": [],
-    "instances": 2
-  },
-  {
-    "id": 4418,
-    "name": "Icon / circle",
-    "page": "09 · Icon library",
-    "width": 24,
-    "height": 24,
-    "properties": [],
-    "instances": 1
-  },
-  {
-    "id": 4422,
-    "name": "Icon / circle-alert",
-    "page": "09 · Icon library",
-    "width": 24,
-    "height": 24,
-    "properties": [],
-    "instances": 2
-  },
-  {
     "id": 4428,
     "name": "Icon / circle-user-round",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -704,42 +773,47 @@
     "id": 4434,
     "name": "Icon / clock",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 7
+    "instances": 8
   },
   {
     "id": 4439,
     "name": "Icon / copy",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 3
+    "instances": 9
   },
   {
     "id": 4444,
     "name": "Icon / download",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 2
+    "instances": 4
   },
   {
     "id": 4450,
     "name": "Icon / ellipsis",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 5
+    "instances": 9
   },
   {
     "id": 4456,
     "name": "Icon / external-link",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -749,33 +823,37 @@
     "id": 4462,
     "name": "Icon / file-text",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 8
+    "instances": 11
   },
   {
     "id": 4470,
     "name": "Icon / folder",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 1
+    "instances": 10
   },
   {
     "id": 4474,
     "name": "Icon / house",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 5
+    "instances": 7
   },
   {
     "id": 4479,
     "name": "Icon / image",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -785,15 +863,17 @@
     "id": 4485,
     "name": "Icon / inbox",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 4
+    "instances": 6
   },
   {
     "id": 4490,
     "name": "Icon / landmark",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -803,15 +883,17 @@
     "id": 4499,
     "name": "Icon / layers",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 6
+    "instances": 11
   },
   {
     "id": 4505,
     "name": "Icon / layout-grid",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -821,24 +903,27 @@
     "id": 4512,
     "name": "Icon / loader-circle",
     "page": "09 · Icon library",
-    "width": 24,
-    "height": 24,
-    "properties": [],
-    "instances": 1
-  },
-  {
-    "id": 4516,
-    "name": "Icon / mail",
-    "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
     "instances": 3
   },
   {
+    "id": 4516,
+    "name": "Icon / mail",
+    "page": "09 · Icon library",
+    "board": "Icon library",
+    "width": 24,
+    "height": 24,
+    "properties": [],
+    "instances": 5
+  },
+  {
     "id": 4521,
     "name": "Icon / map-pin",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -848,6 +933,7 @@
     "id": 4526,
     "name": "Icon / menu",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -857,15 +943,17 @@
     "id": 4532,
     "name": "Icon / message-circle",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 1
+    "instances": 4
   },
   {
     "id": 4536,
     "name": "Icon / mic",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -875,6 +963,7 @@
     "id": 4542,
     "name": "Icon / moon",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -884,6 +973,7 @@
     "id": 4546,
     "name": "Icon / notebook",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -893,6 +983,7 @@
     "id": 4555,
     "name": "Icon / phone",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -902,6 +993,7 @@
     "id": 4559,
     "name": "Icon / plus",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -911,15 +1003,17 @@
     "id": 4564,
     "name": "Icon / search",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 6
+    "instances": 9
   },
   {
     "id": 4569,
     "name": "Icon / send",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -929,15 +1023,17 @@
     "id": 4574,
     "name": "Icon / settings",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 2
+    "instances": 10
   },
   {
     "id": 4579,
     "name": "Icon / sheet",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -947,6 +1043,7 @@
     "id": 4587,
     "name": "Icon / shield-check",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -956,6 +1053,7 @@
     "id": 4592,
     "name": "Icon / signal",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -965,24 +1063,27 @@
     "id": 4600,
     "name": "Icon / sparkles",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 7
+    "instances": 8
   },
   {
     "id": 4607,
     "name": "Icon / square",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 3
+    "instances": 6
   },
   {
     "id": 4611,
     "name": "Icon / sun",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -992,6 +1093,7 @@
     "id": 4623,
     "name": "Icon / terminal",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -1001,6 +1103,7 @@
     "id": 4628,
     "name": "Icon / toggle-left",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -1010,6 +1113,7 @@
     "id": 4633,
     "name": "Icon / toggle-right",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -1019,24 +1123,27 @@
     "id": 4638,
     "name": "Icon / upload",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 2
+    "instances": 1
   },
   {
     "id": 4644,
     "name": "Icon / user-round",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
-    "instances": 2
+    "instances": 3
   },
   {
     "id": 4649,
     "name": "Icon / users",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -1046,6 +1153,7 @@
     "id": 4656,
     "name": "Icon / wallet",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -1055,6 +1163,7 @@
     "id": 4661,
     "name": "Icon / wifi",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
@@ -1064,9 +1173,1001 @@
     "id": 4668,
     "name": "Icon / x",
     "page": "09 · Icon library",
+    "board": "Icon library",
     "width": 24,
     "height": 24,
     "properties": [],
+    "instances": 4
+  },
+  {
+    "id": 5293,
+    "name": "Primary button=Default",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 152,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
     "instances": 1
+  },
+  {
+    "id": 5296,
+    "name": "Primary button=Focus",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 152,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5300,
+    "name": "Primary button=Pressed",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 152,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5303,
+    "name": "Primary button=Loading",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 152,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5308,
+    "name": "Primary button=Disabled",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 152,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5311,
+    "name": "Primary button=Destructive",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 152,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5320,
+    "name": "Supporting button=Secondary",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 156,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5323,
+    "name": "Supporting button=Quiet",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 156,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5326,
+    "name": "Supporting button=Leading icon",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 156,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5338,
+    "name": "Icon button=Secondary",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5344,
+    "name": "Icon button=Focus",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5351,
+    "name": "Icon button=Pressed",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5357,
+    "name": "Icon button=Disabled",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5365,
+    "name": "Filter chip=Off",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 116,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5369,
+    "name": "Filter chip=On",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 116,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5375,
+    "name": "Filter chip=Remove",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 116,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5382,
+    "name": "Filter chip=Disabled",
+    "page": "11 · Core controls",
+    "board": "Core / Actions and chips",
+    "width": 116,
+    "height": 48,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5400,
+    "name": "Text field=Empty",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 244,
+    "height": 108,
+    "properties": [
+      "Field label",
+      "Value",
+      "Supporting text"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5406,
+    "name": "Text field=Focus",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 244,
+    "height": 108,
+    "properties": [
+      "Field label",
+      "Value",
+      "Supporting text"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5413,
+    "name": "Text field=Invalid",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 244,
+    "height": 108,
+    "properties": [
+      "Field label",
+      "Value",
+      "Supporting text"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5423,
+    "name": "Text field=Disabled",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 244,
+    "height": 108,
+    "properties": [
+      "Field label",
+      "Value",
+      "Supporting text"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5434,
+    "name": "Search=Empty",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 244,
+    "height": 108,
+    "properties": [
+      "Field label",
+      "Value"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5442,
+    "name": "Search=Filled",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 244,
+    "height": 108,
+    "properties": [
+      "Field label",
+      "Value",
+      "Supporting text"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5453,
+    "name": "Select=Empty",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 244,
+    "height": 108,
+    "properties": [
+      "Field label",
+      "Value"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5460,
+    "name": "Select=Filled",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 244,
+    "height": 108,
+    "properties": [
+      "Field label",
+      "Value"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5472,
+    "name": "Text area=Filled",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 488,
+    "height": 118,
+    "properties": [
+      "Field label",
+      "Value"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5477,
+    "name": "Text area=Read only",
+    "page": "11 · Core controls",
+    "board": "Core / Fields and search",
+    "width": 488,
+    "height": 118,
+    "properties": [
+      "Field label",
+      "Value"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5490,
+    "name": "Checkbox=Off",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5495,
+    "name": "Checkbox=On",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 1
+  },
+  {
+    "id": 5500,
+    "name": "Checkbox=Mixed",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5504,
+    "name": "Checkbox=Focus",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5512,
+    "name": "Radio=Off",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5517,
+    "name": "Radio=On",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5521,
+    "name": "Radio=Focus",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 48,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5529,
+    "name": "Switch=Off",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 56,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5533,
+    "name": "Switch=On",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 56,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5537,
+    "name": "Switch=Focus",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 56,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5548,
+    "name": "Slider=Default",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 244,
+    "height": 78,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5556,
+    "name": "Slider=Focus",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 244,
+    "height": 78,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5566,
+    "name": "Slider=Disabled",
+    "page": "11 · Core controls",
+    "board": "Core / Selection and range",
+    "width": 244,
+    "height": 78,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5592,
+    "name": "List row=Default",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 164,
+    "height": 56,
+    "properties": [
+      "Title",
+      "Detail"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5600,
+    "name": "List row=Selected",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 164,
+    "height": 56,
+    "properties": [
+      "Title",
+      "Detail"
+    ],
+    "instances": 1
+  },
+  {
+    "id": 5608,
+    "name": "List row=Focus",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 164,
+    "height": 56,
+    "properties": [
+      "Title",
+      "Detail"
+    ],
+    "instances": 1
+  },
+  {
+    "id": 5619,
+    "name": "Summary card=Default",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 242,
+    "height": 94,
+    "properties": [
+      "Title",
+      "Detail"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5625,
+    "name": "Summary card=Emphasized",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 242,
+    "height": 94,
+    "properties": [
+      "Title",
+      "Detail"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5639,
+    "name": "Data table=Sorted",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 240,
+    "height": 115,
+    "properties": [
+      "Row 1 title",
+      "Row 1 count",
+      "Row 2 title",
+      "Row 2 count"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5651,
+    "name": "Data table=Selected",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 240,
+    "height": 115,
+    "properties": [
+      "Row 1 title",
+      "Row 1 count",
+      "Row 2 title",
+      "Row 2 count"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5666,
+    "name": "Avatar=Initials",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 64,
+    "height": 48,
+    "properties": [
+      "Initials"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5670,
+    "name": "Avatar=Placeholder",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 64,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5678,
+    "name": "Badge=Count",
+    "page": "12 · Core patterns",
+    "board": "Core / Lists, cards and tables",
+    "width": 64,
+    "height": 48,
+    "properties": [
+      "Count"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5691,
+    "name": "Menu=Menu",
+    "page": "12 · Core patterns",
+    "board": "Core / Overlays and messages",
+    "width": 236,
+    "height": 143,
+    "properties": [
+      "Item 1",
+      "Item 2",
+      "Item 3"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5709,
+    "name": "Menu=Menu focus",
+    "page": "12 · Core patterns",
+    "board": "Core / Overlays and messages",
+    "width": 236,
+    "height": 143,
+    "properties": [
+      "Item 1",
+      "Item 2",
+      "Item 3"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5731,
+    "name": "Tooltip=Tooltip",
+    "page": "12 · Core patterns",
+    "board": "Core / Overlays and messages",
+    "width": 144,
+    "height": 42,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5736,
+    "name": "Banner=Attention",
+    "page": "12 · Core patterns",
+    "board": "Core / Overlays and messages",
+    "width": 496,
+    "height": 56,
+    "properties": [
+      "Message"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5746,
+    "name": "Banner=Information",
+    "page": "12 · Core patterns",
+    "board": "Core / Overlays and messages",
+    "width": 496,
+    "height": 56,
+    "properties": [
+      "Message"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5756,
+    "name": "Dialog=Dialog",
+    "page": "12 · Core patterns",
+    "board": "Core / Overlays and messages",
+    "width": 410,
+    "height": 171,
+    "properties": [
+      "Title",
+      "Message"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5766,
+    "name": "Sheet=Sheet",
+    "page": "12 · Core patterns",
+    "board": "Core / Overlays and messages",
+    "width": 410,
+    "height": 171,
+    "properties": [
+      "Title",
+      "Message"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5777,
+    "name": "Toast=Recovery",
+    "page": "12 · Core patterns",
+    "board": "Core / Overlays and messages",
+    "width": 410,
+    "height": 52,
+    "properties": [
+      "Message"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5794,
+    "name": "Tab bar=Tabs",
+    "page": "12 · Core patterns",
+    "board": "Core / Navigation and scheduling",
+    "width": 471,
+    "height": 80,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5813,
+    "name": "Rail=Rail",
+    "page": "12 · Core patterns",
+    "board": "Core / Navigation and scheduling",
+    "width": 72,
+    "height": 200,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5834,
+    "name": "Breadcrumb=Breadcrumb",
+    "page": "12 · Core patterns",
+    "board": "Core / Navigation and scheduling",
+    "width": 252,
+    "height": 48,
+    "properties": [
+      "Current location"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5843,
+    "name": "Breadcrumb=Truncated",
+    "page": "12 · Core patterns",
+    "board": "Core / Navigation and scheduling",
+    "width": 252,
+    "height": 48,
+    "properties": [
+      "Current location"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5854,
+    "name": "Pagination=Pages",
+    "page": "12 · Core patterns",
+    "board": "Core / Navigation and scheduling",
+    "width": 272,
+    "height": 48,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 5876,
+    "name": "Accordion=Collapsed",
+    "page": "12 · Core patterns",
+    "board": "Core / Navigation and scheduling",
+    "width": 246,
+    "height": 114,
+    "properties": [
+      "Heading"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5881,
+    "name": "Accordion=Expanded",
+    "page": "12 · Core patterns",
+    "board": "Core / Navigation and scheduling",
+    "width": 246,
+    "height": 114,
+    "properties": [
+      "Heading",
+      "Content"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5889,
+    "name": "Date picker=Selected",
+    "page": "12 · Core patterns",
+    "board": "Core / Navigation and scheduling",
+    "width": 364,
+    "height": 337,
+    "properties": [
+      "Month"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5936,
+    "name": "Date picker=Focus",
+    "page": "12 · Core patterns",
+    "board": "Core / Navigation and scheduling",
+    "width": 364,
+    "height": 337,
+    "properties": [
+      "Month"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 5992,
+    "name": "Progress indicator=Determinate",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 160,
+    "height": 90,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 6016,
+    "name": "Progress indicator=Spinner",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 160,
+    "height": 90,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 6021,
+    "name": "Progress indicator=Steady",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 160,
+    "height": 90,
+    "properties": [
+      "Label"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 6066,
+    "name": "Telemetry chart=Needles",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 240,
+    "height": 225,
+    "properties": [
+      "Title"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 6089,
+    "name": "Telemetry chart=Histogram",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 240,
+    "height": 225,
+    "properties": [
+      "Title"
+    ],
+    "instances": 0
+  },
+  {
+    "id": 6321,
+    "name": "Phase=First",
+    "page": "13 · Apple platform refinements",
+    "board": "Adaptive listening",
+    "width": 452,
+    "height": 52,
+    "properties": [],
+    "instances": 2
+  },
+  {
+    "id": 6493,
+    "name": "Phase=Second",
+    "page": "13 · Apple platform refinements",
+    "board": "Adaptive listening",
+    "width": 452,
+    "height": 52,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 6667,
+    "name": "Phase=Third",
+    "page": "13 · Apple platform refinements",
+    "board": "Adaptive listening",
+    "width": 452,
+    "height": 52,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 6849,
+    "name": "Phase=Steady",
+    "page": "13 · Apple platform refinements",
+    "board": "Adaptive listening",
+    "width": 452,
+    "height": 52,
+    "properties": [],
+    "instances": 2
+  },
+  {
+    "id": 124481,
+    "name": "Width=76, Progress=0%",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 134,
+    "height": 25,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 125514,
+    "name": "Width=76, Progress=41%",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 134,
+    "height": 25,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 128414,
+    "name": "Width=76, Progress=100%",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 134,
+    "height": 25,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 129448,
+    "name": "Width=169, Progress=0%",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 227,
+    "height": 25,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 130481,
+    "name": "Width=169, Progress=41%",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 227,
+    "height": 25,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 133381,
+    "name": "Width=169, Progress=100%",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 227,
+    "height": 25,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 134415,
+    "name": "Width=262, Progress=0%",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 320,
+    "height": 25,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 135448,
+    "name": "Width=262, Progress=41%",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 320,
+    "height": 25,
+    "properties": [],
+    "instances": 0
+  },
+  {
+    "id": 138348,
+    "name": "Width=262, Progress=100%",
+    "page": "12 · Core patterns",
+    "board": "Core / Progress and telemetry",
+    "width": 320,
+    "height": 25,
+    "properties": [],
+    "instances": 0
   }
 ]

@@ -23,6 +23,10 @@ function wireTabs(tablist, activate) {
         Home: 0,
         End: last,
       };
+      if (tablist.getAttribute("aria-orientation") === "vertical") {
+        destinations.ArrowUp = destinations.ArrowLeft;
+        destinations.ArrowDown = destinations.ArrowRight;
+      }
       const destination = destinations[event.key];
       if (!Number.isInteger(destination)) return;
       event.preventDefault();
@@ -30,22 +34,26 @@ function wireTabs(tablist, activate) {
       tabs[destination].click();
     });
   }
-
 }
 
-function wirePanels(tablist, onActivate = () => {}) {
+function wirePanels(tablist) {
   const panels = Array.from(tablist.querySelectorAll('[role="tab"]'), (tab) => byId(tab.getAttribute("aria-controls")));
   wireTabs(tablist, (tab) => {
     const active = byId(tab.getAttribute("aria-controls"));
     for (const panel of panels) panel.hidden = panel !== active;
-    onActivate(active);
   });
 }
 
-wirePanels(document.querySelector(".kit-tabs"), (panel) => {
-  document.documentElement.dataset.surface = panel.id;
-});
-wirePanels(document.querySelector(".paylane-dock"));
+const workspaceTabs = document.querySelector(".workspace-tabs");
+const tabletRail = matchMedia("(600px <= width < 1024px)");
+function setTabOrientation() {
+  workspaceTabs.setAttribute("aria-orientation", tabletRail.matches ? "vertical" : "horizontal");
+}
+tabletRail.addEventListener("change", setTabOrientation);
+setTabOrientation();
+
+wirePanels(workspaceTabs);
+wirePanels(document.querySelector(".accounts-dock"));
 
 const ledgerToggle = byId("ledger-toggle");
 const olderTransactions = byId("older-transactions");
@@ -91,6 +99,7 @@ function showSpending(period) {
   }
   byId("spending-total").textContent = money.format(values.reduce((sum, value) => sum + value, 0) / 100);
   byId("spending-date").textContent = caption;
+  byId("spending-selection").textContent = "Nov " + groups.at(-1)[1] + " · " + money.format(values.at(-1) / 100);
   chart.setAttribute("aria-label", "Spending by " + basis);
   chart.replaceChildren(...groups.map(([, , label], index) => {
     const item = document.createElement("li");
@@ -156,7 +165,7 @@ function renderAgent(agent) {
   const state = complete ? "Complete" : paused ? "Paused" : "In progress";
 
   agent.querySelector(".agent-percent").textContent = percent + "%";
-  agent.querySelector(".kozu-dotmeter").style.setProperty("--progress", percent + "%");
+  agent.querySelector(".agent-meter").dataset.dotValue = String(percent);
   agent.querySelector(".agent-state").textContent = state;
 
   const inlineState = agent.querySelector(".agent-inline-state");
@@ -188,7 +197,7 @@ function renderAgent(agent) {
 for (const agent of agents) {
   const inlineState = document.createElement("span");
   inlineState.className = "agent-inline-state";
-  agent.querySelector(".agent-identity").append(inlineState);
+  agent.querySelector(".agent-caption").append(inlineState);
   renderAgent(agent);
 
   for (const button of agent.querySelectorAll("[data-agent-action]")) {
@@ -205,14 +214,15 @@ for (const agent of agents) {
 
 const taskInput = byId("task-input");
 const listen = byId("listen");
-const waveform = document.querySelector(".waveform");
+const listeningIndicator = document.querySelector(".listening-indicator");
 
 byId("new-task").addEventListener("click", () => taskInput.focus());
 taskInput.addEventListener("input", () => taskInput.setCustomValidity(""));
 listen.addEventListener("click", () => {
-  const start = waveform.hidden;
-  waveform.hidden = !start;
-  byId("listen-label").textContent = start ? "Stop listening" : "Listen";
+  const start = listeningIndicator.hidden;
+  listeningIndicator.hidden = !start;
+  byId("listen-label").textContent = start ? "Stop" : "Listen";
+  listen.setAttribute("aria-label", start ? "Stop listening" : "Listen");
   byId("listen-status").textContent = start ? "Listening demo started." : "Listening demo stopped.";
   if (!start && !taskInput.value.trim()) {
     taskInput.setCustomValidity("");
@@ -302,6 +312,7 @@ function renderReplay() {
   const eventMax = incident.log.length;
   const samplesSeen = Math.ceil(incident.values.length * step / eventMax);
 
+  const statusIcons = { alert: "alert", trace: "search", fixed: "check" };
   byId("run-log").replaceChildren(...incident.log.slice(0, step).map(([timestamp, kind, message]) => {
     const row = document.createElement("li");
     const time = document.createElement("time");
@@ -310,7 +321,16 @@ function renderReplay() {
     time.dateTime = "2026-11-22T" + timestamp + "Z";
     time.textContent = timestamp;
     type.className = "log-kind log-" + kind;
-    type.textContent = kind;
+    if (statusIcons[kind]) {
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      const use = document.createElementNS(svg.namespaceURI, "use");
+      svg.setAttribute("class", "kozu-icon");
+      svg.setAttribute("aria-hidden", "true");
+      use.setAttribute("href", "#icon-" + statusIcons[kind]);
+      svg.append(use);
+      type.append(svg);
+    }
+    type.append(kind);
     detail.textContent = message;
     row.append(time, type, detail);
     return row;

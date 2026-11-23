@@ -1,42 +1,141 @@
 {
-  "name": "Kozu UI",
-  "version": "1.0.0",
+  "name": "Kozu Group Design System",
+  "version": "2.0.0",
   "units": "logical units; web lengths in CSS pixels",
   "colors": {
-    "paper/canvas": "#F7F7F7",
+    "paper/canvas": "#FCFCFC",
     "paper/sheet": "#FFFFFF",
-    "paper/control": "#F5F5F5",
-    "paper/subtle": "#FAFAFA",
-    "paper/ink": "#090B14",
-    "paper/secondary": "#575A64",
-    "paper/quiet": "#696C76",
-    "blue/depth": "#14295F",
-    "blue/mid": "#345A98",
-    "blue/light": "#79A3DD",
-    "smoke/ground": "#090F19",
-    "smoke/panel": "#101A2AC2",
-    "smoke/surface": "#0B14239E",
-    "smoke/content": "#F5F7FC",
-    "smoke/secondary": "#BAC6DA",
-    "smoke/soft": "#CEDBF0",
-    "console/ground": "#020908",
-    "console/panel": "#041916CD",
-    "console/ink": "#F1F5F1",
-    "console/metadata": "#ACBCB5",
-    "console/acid": "#BFDF38",
+    "paper/control": "#F0F2F5",
+    "paper/subtle": "#F0F2F5",
+    "paper/ink": "#141A23",
+    "paper/secondary": "#5E6879",
+    "paper/quiet": "#5E6879",
+    "blue/depth": "#1D2A57",
+    "blue/mid": "#3A50A7",
+    "blue/light": "#ABC1FF",
+    "smoke/ground": "#141A23",
+    "smoke/panel": "#0D172670",
+    "smoke/surface": "#0D172657",
+    "smoke/content": "#FCFCFC",
+    "smoke/secondary": "#C3CAD4",
+    "smoke/soft": "#C3CAD4",
+    "console/ground": "#141A23",
+    "console/panel": "#0D172699",
+    "console/ink": "#FCFCFC",
+    "console/metadata": "#C3CAD4",
+    "console/acid": "#A7D5A4",
     "status/alert": "#FF9765",
     "status/information": "#ABC1FF",
     "status/resolved": "#A7D5A4",
-    "paper/input": "#F0F1F3",
-    "blue/on-field": "#DCE8FD",
-    "smoke/opaque": "#1B2634",
-    "smoke/selection": "#D4E6FF",
-    "console/opaque": "#17231A",
-    "console/on-acid": "#1A240D",
-    "paper/active-bar": "#14151A",
-    "paper/inactive-bar": "#CCCCD0",
-    "blue/selection": "#DDE8FA",
-    "smoke/muted-grid": "#728195"
+    "paper/input": "#F0F2F5",
+    "blue/on-field": "#E9EFFF",
+    "smoke/opaque": "#202732",
+    "smoke/selection": "#ABC1FF",
+    "console/opaque": "#202732",
+    "console/on-acid": "#141A23",
+    "paper/active-bar": "#141A23",
+    "paper/inactive-bar": "#7D8899",
+    "blue/selection": "#E9EFFF",
+    "smoke/muted-grid": "#7D8899",
+    "palette/Orange/50": "#FFF9F6",
+    "palette/Orange/100": "#FFEBE2",
+    "palette/Orange/200": "#FFD5C1",
+    "palette/Orange/300": "#FFB08C",
+    "palette/Orange/400": "#FF9765",
+    "palette/Orange/500": "#E46A26",
+    "palette/Orange/600": "#B75216",
+    "palette/Orange/700": "#8C3F15",
+    "palette/Orange/800": "#672F12",
+    "palette/Orange/900": "#472210",
+    "palette/Orange/950": "#2B160B",
+    "palette/Green/50": "#F3FEF2",
+    "palette/Green/100": "#E0F7DF",
+    "palette/Green/200": "#C7EAC5",
+    "palette/Green/300": "#A7D5A4",
+    "palette/Green/400": "#7BC878",
+    "palette/Green/500": "#51AA4F",
+    "palette/Green/600": "#3D873C",
+    "palette/Green/700": "#31672F",
+    "palette/Green/800": "#254C24",
+    "palette/Green/900": "#1B351A",
+    "palette/Green/950": "#10210F",
+    "palette/Blue/50": "#F8FAFF",
+    "palette/Blue/100": "#E9EFFF",
+    "palette/Blue/200": "#D2DEFF",
+    "palette/Blue/300": "#ABC1FF",
+    "palette/Blue/400": "#93AEFE",
+    "palette/Blue/500": "#6889FE",
+    "palette/Blue/600": "#4C69D8",
+    "palette/Blue/700": "#3A50A7",
+    "palette/Blue/800": "#2A3B7C",
+    "palette/Blue/900": "#1D2A57",
+    "palette/Blue/950": "#121A35",
+    "palette/Gold/50": "#FFFAED",
+    "palette/Gold/100": "#FFEEC6",
+    "palette/Gold/200": "#FFDB83",
+    "palette/Gold/300": "#EFBF37",
+    "palette/Gold/400": "#DBAB06",
+    "palette/Gold/500": "#B68D01",
+    "palette/Gold/600": "#8F6F06",
+    "palette/Gold/700": "#6F5501",
+    "palette/Gold/800": "#523E02",
+    "palette/Gold/900": "#3A2C01",
+    "palette/Gold/950": "#251A00",
+    "palette/Violet/50": "#FBF9FF",
+    "palette/Violet/100": "#F4EBFF",
+    "palette/Violet/200": "#E9D6FF",
+    "palette/Violet/300": "#D7B3FE",
+    "palette/Violet/400": "#CA97FE",
+    "palette/Violet/500": "#AF6FEB",
+    "palette/Violet/600": "#8E51C4",
+    "palette/Violet/700": "#6D3E97",
+    "palette/Violet/800": "#502E6F",
+    "palette/Violet/900": "#38214D",
+    "palette/Violet/950": "#221430",
+    "palette/Rose/50": "#FFF8F9",
+    "palette/Rose/100": "#FFE9EB",
+    "palette/Rose/200": "#FFD2D6",
+    "palette/Rose/300": "#FEABB5",
+    "palette/Rose/400": "#FE899A",
+    "palette/Rose/500": "#E95C76",
+    "palette/Rose/600": "#C03F5A",
+    "palette/Rose/700": "#933145",
+    "palette/Rose/800": "#6D2432",
+    "palette/Rose/900": "#4D1A23",
+    "palette/Rose/950": "#301016",
+    "palette/Graphite/50": "#FCFCFC",
+    "palette/Graphite/100": "#F0F2F5",
+    "palette/Graphite/200": "#DFE3E9",
+    "palette/Graphite/300": "#C3CAD4",
+    "palette/Graphite/400": "#A0A9B7",
+    "palette/Graphite/500": "#7D8899",
+    "palette/Graphite/600": "#5E6879",
+    "palette/Graphite/700": "#45505F",
+    "palette/Graphite/800": "#303946",
+    "palette/Graphite/900": "#202732",
+    "palette/Graphite/950": "#141A23",
+    "role/canvas": "#FCFCFC",
+    "role/surface": "#FFFFFF",
+    "role/subtle": "#F0F2F5",
+    "role/ink": "#141A23",
+    "role/secondary": "#5E6879",
+    "role/action": "#3A50A7",
+    "role/onAction": "#FFFFFF",
+    "role/tint": "#E9EFFF",
+    "role/focus": "#8E51C4",
+    "role/notice": "#8C3F15",
+    "role/success": "#31672F",
+    "role/info": "#3A50A7",
+    "role/chartOrange": "#B75216",
+    "role/chartGreen": "#3D873C",
+    "role/chartBlue": "#4C69D8",
+    "role/chartGold": "#8F6F06",
+    "role/chartViolet": "#8E51C4",
+    "role/chartRose": "#C03F5A",
+    "glass/control": "#FCFCFC6B",
+    "glass/card": "#FCFCFC85",
+    "glass/overlay": "#FCFCFCB2",
+    "material/frost-base": "#FCFCFC"
   },
   "dimensions": {
     "blur/control": 28,
@@ -80,7 +179,7 @@
         1080,
         1350
       ],
-      "description": "Deep cobalt upper right; lighter mid-blue across the left and lower field. Fine paper grain."
+      "description": "Broad light through the center and right"
     },
     "story": {
       "asset": "Assets/Materials/story.jpg",
@@ -88,7 +187,7 @@
         1080,
         1350
       ],
-      "description": "Cobalt and diffuse blue over the upper half, graduating to #060912 ink by the bottom fifth."
+      "description": "Upper light fading to navy below"
     },
     "smoke": {
       "asset": "Assets/Materials/smoke.jpg",
@@ -96,7 +195,7 @@
         1080,
         1350
       ],
-      "description": "Dark left half with soft diagonal bands falling toward bottom right. Icy-blue light peaks at the right edge."
+      "description": "Narrow diagonal along the right edge"
     },
     "agents": {
       "asset": "Assets/Materials/agents.jpg",
@@ -104,7 +203,7 @@
         1080,
         1350
       ],
-      "description": "Broad diagonal bands rise into a spectral blue-white light source beyond the upper-right edge. Dark lower half."
+      "description": "Upper-right light beside a dark workspace"
     },
     "acid": {
       "asset": "Assets/Materials/acid.jpg",
@@ -112,7 +211,7 @@
         1080,
         1350
       ],
-      "description": "Chartreuse through emerald and dark teal to black. Colored square screen at 4.7 logical units pitch."
+      "description": "Jade across the upper field"
     },
     "night": {
       "asset": "Assets/Materials/night.jpg",
@@ -120,7 +219,7 @@
         1080,
         1350
       ],
-      "description": "Warm olive light at the top, diagonal moss bands and a muted center/right. Colored square screen at 4.7 logical units pitch."
+      "description": "Low light with a soft blue edge"
     }
   },
   "portraits": [
@@ -135,9 +234,10 @@
         "system-ui",
         "sans-serif"
       ],
-      "workspace": [
+      "display": [
         "Helvetica Neue",
-        "Arial",
+        "Inter",
+        "system-ui",
         "sans-serif"
       ],
       "telemetry": [
@@ -148,7 +248,7 @@
     },
     "styles": {
       "Display / Title": {
-        "family": "Inter",
+        "family": "Helvetica Neue",
         "weight": "Medium",
         "size": 48,
         "lineHeight": 55.68,
@@ -171,15 +271,15 @@
       "Body / Standard": {
         "family": "Inter",
         "weight": "Regular",
-        "size": 16,
-        "lineHeight": 18.56,
+        "size": 17,
+        "lineHeight": 24,
         "trackingPercent": 0
       },
       "Control / Label": {
         "family": "Inter",
         "weight": "Medium",
         "size": 14,
-        "lineHeight": 16.24,
+        "lineHeight": 20,
         "trackingPercent": 0
       },
       "Label / Caption": {
@@ -190,7 +290,7 @@
         "trackingPercent": 0
       },
       "Workspace / Body": {
-        "family": "Helvetica Neue",
+        "family": "Inter",
         "weight": "Regular",
         "size": 14,
         "lineHeight": 16.24,
@@ -209,29 +309,52 @@
         "size": 12,
         "lineHeight": 13.92,
         "trackingPercent": 0
+      },
+      "Kozu / Display / Title": {
+        "family": "Inter",
+        "weight": "Medium",
+        "size": 48,
+        "lineHeight": 56,
+        "trackingPercent": 0
+      },
+      "Kozu / Compact display": {
+        "family": "Helvetica Neue",
+        "weight": "Medium",
+        "size": 32,
+        "lineHeight": 38,
+        "trackingPercent": 0
+      },
+      "Kozu / Body": {
+        "family": "Inter",
+        "weight": "Regular",
+        "size": 17,
+        "lineHeight": 24,
+        "trackingPercent": 0
+      },
+      "Kozu / Data": {
+        "family": "Menlo",
+        "weight": "Regular",
+        "size": 12,
+        "lineHeight": 18,
+        "trackingPercent": 0
+      },
+      "Kozu / Enlarged body specimen": {
+        "family": "Inter",
+        "weight": "Regular",
+        "size": 34,
+        "lineHeight": 44,
+        "trackingPercent": 0
       }
     },
     "numbers": "Enable tnum for changing values, timestamps, and aligned currency. Keep signs, decimal separators and fractions in the same reading order."
   },
   "surface": {
-    "paylane": {
-      "ground": "blue",
-      "sheet": "paper/sheet",
-      "label": "paper/ink",
-      "secondary": "paper/secondary"
-    },
-    "synq": {
-      "ground": "smoke",
-      "taskGround": "agents",
-      "panel": "smoke/panel",
-      "label": "smoke/content"
-    },
-    "nightshift": {
-      "ground": "night",
-      "incidentGround": "acid",
-      "panel": "console/panel",
-      "label": "console/ink"
-    }
+    "canvas": "role/canvas",
+    "sheet": "role/surface",
+    "inset": "role/subtle",
+    "floating": "glass/card",
+    "sheetOverlay": "glass/overlay",
+    "interactive": "glass/control"
   },
   "geometry": {
     "space": [
@@ -263,33 +386,214 @@
       "rail": 600,
       "twoPanes": 720,
       "sidebar": 840
-    }
+    },
+    "siblingGap": 8
   },
   "feedback": {
     "listening": {
-      "columns": 9,
       "rows": 3,
       "phaseDelayMs": 550,
       "transitionMs": 110,
-      "reducedMotion": "steady matrix with Listening label and Stop action"
+      "reducedMotion": "steady matrix with Listening label and Stop action",
+      "wide": {
+        "trackSizing": "fill",
+        "preferredColumnPitch": 8,
+        "dotDiameter": 4,
+        "maxRows": 7,
+        "stopTarget": 48,
+        "narrowLayout": "stack when the label and control would crowd the waveform"
+      }
     },
     "progress": {
-      "columns": 10,
       "rows": 2,
-      "value": "show the exact percent next to the grid"
+      "value": "show the exact percent next to the grid",
+      "labelSize": 14,
+      "valueSize": 14,
+      "sideInset": 20,
+      "sideSlot": 60,
+      "trackSizing": "fill remaining width"
     },
     "goal": {
       "min": 0,
       "max": 100,
       "fill": "saved / target",
       "label": "numeric value and saved amount"
+    },
+    "dotGrid": {
+      "diameter": 4,
+      "pitch": 8,
+      "gap": 4,
+      "alignment": "center",
+      "columnCount": "W < 4 ? 0 : 1 + floor((W - 4) / 8)",
+      "quantization": "Draw whole circles only. Fill floor(totalDots * percent / 100) dots, column by column from the leading edge. Report the exact numeric value independently."
     }
   },
   "interaction": {
     "focus": "use a contrast change in fill and text weight",
     "selection": "label or check plus tint",
     "press": "adjust fill",
-    "reducedTransparency": "replace glass with the opaque family panel",
+    "reducedTransparency": "Use the opaque semantic surface for the current appearance.",
     "status": "pair semantic color with a glyph and a word"
+  },
+  "palette": {
+    "ramps": {
+      "orange": {
+        "50": "#FFF9F6",
+        "100": "#FFEBE2",
+        "200": "#FFD5C1",
+        "300": "#FFB08C",
+        "400": "#FF9765",
+        "500": "#E46A26",
+        "600": "#B75216",
+        "700": "#8C3F15",
+        "800": "#672F12",
+        "900": "#472210",
+        "950": "#2B160B"
+      },
+      "green": {
+        "50": "#F3FEF2",
+        "100": "#E0F7DF",
+        "200": "#C7EAC5",
+        "300": "#A7D5A4",
+        "400": "#7BC878",
+        "500": "#51AA4F",
+        "600": "#3D873C",
+        "700": "#31672F",
+        "800": "#254C24",
+        "900": "#1B351A",
+        "950": "#10210F"
+      },
+      "blue": {
+        "50": "#F8FAFF",
+        "100": "#E9EFFF",
+        "200": "#D2DEFF",
+        "300": "#ABC1FF",
+        "400": "#93AEFE",
+        "500": "#6889FE",
+        "600": "#4C69D8",
+        "700": "#3A50A7",
+        "800": "#2A3B7C",
+        "900": "#1D2A57",
+        "950": "#121A35"
+      },
+      "gold": {
+        "50": "#FFFAED",
+        "100": "#FFEEC6",
+        "200": "#FFDB83",
+        "300": "#EFBF37",
+        "400": "#DBAB06",
+        "500": "#B68D01",
+        "600": "#8F6F06",
+        "700": "#6F5501",
+        "800": "#523E02",
+        "900": "#3A2C01",
+        "950": "#251A00"
+      },
+      "violet": {
+        "50": "#FBF9FF",
+        "100": "#F4EBFF",
+        "200": "#E9D6FF",
+        "300": "#D7B3FE",
+        "400": "#CA97FE",
+        "500": "#AF6FEB",
+        "600": "#8E51C4",
+        "700": "#6D3E97",
+        "800": "#502E6F",
+        "900": "#38214D",
+        "950": "#221430"
+      },
+      "rose": {
+        "50": "#FFF8F9",
+        "100": "#FFE9EB",
+        "200": "#FFD2D6",
+        "300": "#FEABB5",
+        "400": "#FE899A",
+        "500": "#E95C76",
+        "600": "#C03F5A",
+        "700": "#933145",
+        "800": "#6D2432",
+        "900": "#4D1A23",
+        "950": "#301016"
+      },
+      "graphite": {
+        "50": "#FCFCFC",
+        "100": "#F0F2F5",
+        "200": "#DFE3E9",
+        "300": "#C3CAD4",
+        "400": "#A0A9B7",
+        "500": "#7D8899",
+        "600": "#5E6879",
+        "700": "#45505F",
+        "800": "#303946",
+        "900": "#202732",
+        "950": "#141A23"
+      }
+    },
+    "semantic": {
+      "light": {
+        "canvas": "#FCFCFC",
+        "surface": "#FFFFFF",
+        "subtle": "#F0F2F5",
+        "ink": "#141A23",
+        "secondary": "#5E6879",
+        "action": "#3A50A7",
+        "onAction": "#FFFFFF",
+        "tint": "#E9EFFF",
+        "focus": "#8E51C4",
+        "notice": "#8C3F15",
+        "success": "#31672F",
+        "info": "#3A50A7",
+        "chartOrange": "#B75216",
+        "chartGreen": "#3D873C",
+        "chartBlue": "#4C69D8",
+        "chartGold": "#8F6F06",
+        "chartViolet": "#8E51C4",
+        "chartRose": "#C03F5A"
+      },
+      "dark": {
+        "canvas": "#141A23",
+        "surface": "#202732",
+        "subtle": "#303946",
+        "ink": "#FCFCFC",
+        "secondary": "#C3CAD4",
+        "action": "#ABC1FF",
+        "onAction": "#141A23",
+        "tint": "#1D2A57",
+        "focus": "#EFBF37",
+        "notice": "#FFB08C",
+        "success": "#A7D5A4",
+        "info": "#ABC1FF",
+        "chartOrange": "#FF9765",
+        "chartGreen": "#7BC878",
+        "chartBlue": "#93AEFE",
+        "chartGold": "#DBAB06",
+        "chartViolet": "#CA97FE",
+        "chartRose": "#FE899A"
+      }
+    }
+  },
+  "glass": {
+    "tint": {
+      "light": "#FCFCFC",
+      "dark": "#0D1726"
+    },
+    "recipes": {
+      "control": {
+        "lightOpacity": 0.42,
+        "darkOpacity": 0.34,
+        "blur": 28
+      },
+      "card": {
+        "lightOpacity": 0.52,
+        "darkOpacity": 0.44,
+        "blur": 28
+      },
+      "overlay": {
+        "lightOpacity": 0.7,
+        "darkOpacity": 0.6,
+        "blur": 40
+      }
+    },
+    "reducedTransparency": "Use semantic surface in the current appearance. Check text and focus on the actual composite."
   }
 }
